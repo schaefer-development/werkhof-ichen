@@ -74,6 +74,8 @@ export default {
     },
   },
 
+  /** loading: false, **/
+
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module

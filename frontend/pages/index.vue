@@ -1,5 +1,7 @@
 <template>
   <v-layout column justify-center align-center>
+    <h1>startseite</h1>
+
     <v-flex xs12 sm8 md6>
       <seminar-tile
         v-for="seminar in seminars"
