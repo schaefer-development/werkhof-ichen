@@ -18,23 +18,9 @@ export default {
   components: {
     SeminarTile,
   },
-  data() {
-    return {
-      seminars: [
-        {
-          id: 1,
-          title: 'Testseminar Title',
-          created_at: '2020-07-08T14:21:03.862Z',
-          updated_at: '2020-07-08T14:23:50.817Z',
-        },
-        {
-          id: 2,
-          title: 'Zweiter Testseminar Title',
-          created_at: '2020-07-08T14:24:11.487Z',
-          updated_at: '2020-07-08T14:24:11.487Z',
-        },
-      ],
-    }
+  async asyncData({ $axios }) {
+    const seminars = await $axios.$get('/api/seminars')
+    return { seminars }
   },
 }
 </script>
