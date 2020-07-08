@@ -46,11 +46,7 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module',
-    '@nuxtjs/vuetify',
-  ],
+  buildModules: ['@nuxtjs/vuetify'],
   /*
    ** Nuxt.js modules
    */
@@ -102,11 +98,5 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {
-    hotMiddleware: {
-      client: {
-        overlay: false,
-      },
-    },
-  },
+  build: {},
 }
