@@ -3,7 +3,7 @@
     <v-flex class="text-center">
       <img src="/v.png" alt="Vuetify.js" class="mb-5" />
       <blockquote class="blockquote">
-        <h1>Impressum</h1>
+        <h1>Leder</h1>
         <footer>
           <small>
             <em>&mdash;John Johnson</em>
