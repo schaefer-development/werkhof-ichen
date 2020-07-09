@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "buchungen",
+  "info": {
+    "name": "Buchung"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "email_adresse": {
+      "type": "email",
+      "private": true,
+      "unique": false,
+      "required": true
+    },
+    "name": {
+      "type": "string"
+    },
+    "seminar": {
+      "model": "seminar",
+      "via": "buchungen"
+    }
+  }
+}
