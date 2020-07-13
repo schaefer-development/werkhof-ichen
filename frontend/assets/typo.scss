@@ -43,11 +43,5 @@
        url('~assets/fonts/fira-sans-v10-latin-800.svg#FiraSans') format('svg'); /* Legacy iOS */
 }
 
-$body-font-family: 'Overlock', sans-serif;
-
-
-h1{
-  font-family: 'Overlock';
-  font-style: normal;
-  font-weight: 900;
-}
+$body-font-family: 'Fira Sans', Arial, sans-serif;
+$font-size-root: 16 !default;

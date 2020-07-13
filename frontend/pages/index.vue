@@ -3,12 +3,8 @@
     <h1>startseite</h1>
 
     <v-flex xs12 sm8 md6>
-      <seminar-tile
-        v-for="seminar in seminars"
-        :key="seminar.id"
-        :seminar="seminar"
-      >
-      </seminar-tile>
+      <seminar-tile v-for="seminar in seminars" :key="seminar.id" :seminar="seminar"></seminar-tile>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eos ex veniam dolorem accusantium minima explicabo excepturi eveniet nam maxime beatae nesciunt quaerat corrupti sunt tenetur necessitatibus, pariatur laudantium. Neque!</p>
     </v-flex>
   </v-layout>
 </template>
@@ -26,3 +22,11 @@ export default {
   },
 }
 </script>
+
+
+<style scoped>
+p {
+  min-height: 100vh !important;
+  border: 1px solid red !important;
+}
+</style>

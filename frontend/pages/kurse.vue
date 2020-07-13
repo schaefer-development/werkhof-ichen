@@ -1,13 +1,29 @@
 <template>
   <v-layout column justify-center align-center>
-    <v-flex xs12 sm8 md6>
-      <seminar-tile
-        v-for="seminar in seminars"
-        :key="seminar.id"
-        :seminar="seminar"
+    <seminar-tile v-for="seminar in seminars" :key="seminar.id" :seminar="seminar"></seminar-tile>
+    <v-card class="mx-auto" max-width="400">
+      <v-img
+        class="white--text align-end"
+        height="200px"
+        src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
       >
-      </seminar-tile>
-    </v-flex>
+        <v-card-title>sdfsdfsdf</v-card-title>
+      </v-img>
+
+      <v-card-subtitle class="pb-0">Number 10</v-card-subtitle>
+
+      <v-card-text class="text--primary">
+        <div>Whitehaven Beach</div>
+
+        <div>Whitsunday Island, Whitsunday Islands</div>
+      </v-card-text>
+
+      <v-card-actions>
+        <v-btn color="orange" text>Share</v-btn>
+
+        <v-btn color="orange" text>Explore</v-btn>
+      </v-card-actions>
+    </v-card>
   </v-layout>
 </template>
 
