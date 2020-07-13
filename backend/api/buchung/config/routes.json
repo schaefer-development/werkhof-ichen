@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/buchungs",
+      "handler": "buchung.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/buchungs/count",
+      "handler": "buchung.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/buchungs/:id",
+      "handler": "buchung.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/buchungs",
+      "handler": "buchung.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/buchungs/:id",
+      "handler": "buchung.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/buchungs/:id",
+      "handler": "buchung.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

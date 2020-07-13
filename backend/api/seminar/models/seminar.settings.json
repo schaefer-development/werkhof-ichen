@@ -11,6 +11,10 @@
   "attributes": {
     "title": {
       "type": "string"
+    },
+    "buchungen": {
+      "via": "seminar",
+      "collection": "buchung"
     }
   }
 }
