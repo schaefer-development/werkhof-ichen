@@ -1,11 +1,28 @@
 <template>
   <v-layout column justify-center align-center>
-    <h1>startseite</h1>
+    <v-container>
+      <v-row>
+        <v-col>
+          <v-card class="mx-auto" max-width="400">
+            <v-img
+              class="white--text align-end"
+              height="200px"
+              src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+            >
+              <v-card-title>Startseite</v-card-title>
+            </v-img>
 
-    <v-flex xs12 sm8 md6>
-      <seminar-tile v-for="seminar in seminars" :key="seminar.id" :seminar="seminar"></seminar-tile>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eos ex veniam dolorem accusantium minima explicabo excepturi eveniet nam maxime beatae nesciunt quaerat corrupti sunt tenetur necessitatibus, pariatur laudantium. Neque!</p>
-    </v-flex>
+            <v-card-text class="text--primary">
+              <div>Whitehaven Beach</div>
+            </v-card-text>
+
+            <v-card-actions>
+              <v-btn color="orange" text>Share</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
   </v-layout>
 </template>
 
