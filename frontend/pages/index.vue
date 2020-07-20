@@ -25,8 +25,4 @@ export default {
 
 
 <style scoped>
-p {
-  min-height: 100vh !important;
-  border: 1px solid red !important;
-}
 </style>

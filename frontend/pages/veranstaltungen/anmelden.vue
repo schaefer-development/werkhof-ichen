@@ -1,6 +1,5 @@
 <template>
   <v-layout>
-    <h1>anfertigungen</h1>
-    <nuxt-child />
+    <h1>anmelden</h1>
   </v-layout>
 </template>

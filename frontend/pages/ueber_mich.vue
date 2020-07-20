@@ -1,5 +1,5 @@
 an<template>
   <v-layout>
-    <h1>anmelden</h1>
+    <h1>über mich</h1>
   </v-layout>
 </template>
