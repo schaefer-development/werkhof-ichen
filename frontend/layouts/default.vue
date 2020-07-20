@@ -1,39 +1,22 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer" fixed app>
-      <v-btn text nuxt link to="/">Start</v-btn>
-      <v-menu offset-y open-on-hover>
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn text v-bind="attrs" v-on="on">Veranstaltungen</v-btn>
-        </template>
-        <v-list>
-          <nuxt-link
-            to="/veranstaltungen/kurse_fuer_kinder_und_jugendliche"
-          >Kurse für Kinder und Jugendliche</nuxt-link>
-          <nuxt-link to="/veranstaltungen/kurse_fuer_erwachsene">Kurse für Erwachsene</nuxt-link>
-          <nuxt-link to="/veranstaltungen/geburtstagsevents">Geburtstagsevents</nuxt-link>
-          <nuxt-link to="/veranstaltungen/anmelden">Anmelden</nuxt-link>
-        </v-list>
-      </v-menu>
-      <v-menu offset-y open-on-hover>
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn text v-bind="attrs" v-on="on">Anfertigungen</v-btn>
-        </template>
-        <v-list>
-          <nuxt-link to="/anfertigungen/leder">Leder</nuxt-link>
-          <nuxt-link to="/anfertigungen/weitere_textilien">Weitere Textilien</nuxt-link>
-        </v-list>
-      </v-menu>
-      <v-btn text nuxt link to="/kurse">Kurse</v-btn>
-
-      <v-btn text nuxt link to="/kontakt">Kontakt</v-btn>
-      <v-btn text nuxt link to="/ueber_mich">Über mich</v-btn>
+    <v-navigation-drawer v-model="drawer" temporary app>
+      <v-row justify="end" class="pr-2">
+        <v-btn icon @click.stop="drawer = !drawer">
+          <v-icon>mdi-close</v-icon>
+        </v-btn>
+      </v-row>
+      <v-row>
+        <navigation-items></navigation-items>
+      </v-row>
     </v-navigation-drawer>
 
-    <v-app-bar height="100px" flat color="rgba(255,255,255,0)" app absolute>
+    <v-app-bar height="100px" flat color="rgba(255,255,255,0)" absolute app clipped-left>
       <v-toolbar-title v-text="title" />
-
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <div class="d-none d-lg-block">
+        <navigation-items></navigation-items>
+      </div>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="d-lg-none" />
     </v-app-bar>
 
     <v-main>
@@ -87,12 +70,17 @@
 </template>
 
 <script>
+import NavigationItems from '../components/NavigationItems.vue'
+
 export default {
+    components: {
+    NavigationItems,
+  },
   data() {
     return {
       fixed: false,
       title: 'werkhof ichen',
-      drawer: false,
+      drawer: null
     }
   },
 }
