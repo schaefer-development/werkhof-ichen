@@ -21,38 +21,29 @@
     </v-app-bar>
 
     <v-main>
-      <v-container>
+      <v-container pb-10>
         <nuxt />
       </v-container>
     </v-main>
 
-    <div id="footer_gallery">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-
     <v-footer color="rgba(72,65,61,0.9)" padless>
-      <v-container fluid padless>
-        <v-row justify="center">
-          <v-col v-for="n in 10" :key="n" class="d-flex child-flex" cols="1">
-            <v-img
-              :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
-              :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
-              aspect-ratio="1"
-              class="grey lighten-2"
-            ></v-img>
-          </v-col>
+      <v-container fluid pt-0 pb-6>
+        <v-row>
+          <div id="footer_gallery">
+            <div class="house"></div>
+            <div class="shield"></div>
+            <div class="collection1"></div>
+            <div class="garden"></div>
+            <div class="sew"></div>
+            <div class="collection2"></div>
+            <div class="kater_schroeder"></div>
+            <div class="flower"></div>
+            <div class="texture"></div>
+            <div class="lamp"></div>
+          </div>
         </v-row>
 
-        <v-row justify="center" no-gutters light>
+        <v-row justify="center">
           <v-col cols="2">LOGO</v-col>
           <v-col cols="2">
             <strong>werkhof ichen</strong>
@@ -109,34 +100,34 @@ body {
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    &:nth-child(1) {
+    &.house {
       background-image: url(../static/footer_images/house.jpg);
     }
-    &:nth-child(2) {
+    &.shield {
       background-image: url(../static/footer_images/shield.jpg);
     }
-    &:nth-child(3) {
+    &.collection1 {
       background-image: url(../static/footer_images/collection1.jpg);
     }
-    &:nth-child(4) {
+    &.garden {
       background-image: url(../static/footer_images/garden.jpg);
     }
-    &:nth-child(5) {
+    &.sew {
       background-image: url(../static/footer_images/sew.jpg);
     }
-    &:nth-child(6) {
+    &.collection2 {
       background-image: url(../static/footer_images/collection2.jpg);
     }
-    &:nth-child(7) {
+    &.kater_schroeder {
       background-image: url(../static/footer_images/kater_schroeder.jpg);
     }
-    &:nth-child(8) {
+    &.flower {
       background-image: url(../static/footer_images/flower.jpg);
     }
-    &:nth-child(9) {
+    &.texture {
       background-image: url(../static/footer_images/texture.jpg);
     }
-    &:nth-child(10) {
+    &.lamp {
       background-image: url(../static/footer_images/lamp.jpg);
     }
   }
