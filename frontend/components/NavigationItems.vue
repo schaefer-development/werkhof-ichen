@@ -1,7 +1,7 @@
 <template>
   <div class="navigation-items">
     <v-btn text nuxt link to="/">Start</v-btn>
-    <v-menu offset-y open-on-hover>
+    <v-menu offset-y>
       <template v-slot:activator="{ on, attrs }">
         <v-btn text v-bind="attrs" v-on="on">Veranstaltungen</v-btn>
       </template>

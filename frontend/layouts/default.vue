@@ -2,8 +2,8 @@
   <v-app>
     <v-navigation-drawer v-model="drawer" temporary app>
       <v-row justify="end" class="pr-2">
-        <v-btn icon @click.stop="drawer = !drawer">
-          <v-icon>mdi-close</v-icon>
+        <v-btn icon @click.stop="drawer = !drawer" class="pa-8 mr-0">
+          <v-icon color="#2a434c" large>mdi-close</v-icon>
         </v-btn>
       </v-row>
       <v-row>
@@ -11,12 +11,20 @@
       </v-row>
     </v-navigation-drawer>
 
-    <v-app-bar height="100px" flat color="rgba(255,255,255,0)" absolute app clipped-left>
-      <v-toolbar-title v-text="title" />
-      <div class="d-none d-lg-block">
-        <navigation-items></navigation-items>
-      </div>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="d-lg-none" />
+    <v-app-bar height="160px" flat color="rgba(255,255,255,0)" absolute app clipped-left>
+      <v-container>
+        <v-row justify="center" align="center">
+          <nuxt-link to="/">
+            <v-img src="/logo_ichen.svg" alt="Logo Werkhof ichen" max-width="120px" class="ma-6" />
+          </nuxt-link>
+          <div class="d-none d-md-block">
+            <navigation-items></navigation-items>
+          </div>
+          <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="d-md-none">
+            <v-icon color="#2a434c" large>mdi-menu</v-icon>
+          </v-app-bar-nav-icon>
+        </v-row>
+      </v-container>
     </v-app-bar>
 
     <v-main>
@@ -30,9 +38,9 @@
         <v-row>
           <div id="footer_gallery">
             <div class="house"></div>
-            <div class="shield"></div>
+            <div class="etui"></div>
             <div class="collection1"></div>
-            <div class="garden"></div>
+            <div class="hearts"></div>
             <div class="sew"></div>
             <div class="collection2"></div>
             <div class="kater_schroeder"></div>
@@ -42,9 +50,9 @@
           </div>
         </v-row>
 
-        <v-row justify="center">
-          <v-col cols="2">
-            <img src="/logo_ichen.svg" alt="Logo Werkhof ichen" class="mb-5" />
+        <v-row justify="center" class="pt-6">
+          <v-col cols="2" justify="center">
+            <v-img src="/logo_ichen_outline.svg" alt="Logo Werkhof ichen" max-width="90px" />
           </v-col>
           <v-col cols="2">
             <strong>werkhof ichen</strong>
@@ -87,11 +95,11 @@ export default {
 </script>
 
 <style lang="scss" scoped >
-body {
+#app {
   background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: contain;
-  background-image: url('../static/bg.jpg') !important;
+  background-position: 50% 0%;
+  background-size: cover;
+  background-image: url(../static/bg.jpg);
 }
 
 footer {
@@ -107,19 +115,19 @@ footer {
       margin: 0;
       padding: 0;
       background-size: cover;
-      background-position: 50% 50%;
+      background-position: 50% 100%;
       background-repeat: no-repeat;
       &.house {
         background-image: url(../static/footer_images/house.jpg);
       }
-      &.shield {
-        background-image: url(../static/footer_images/shield.jpg);
+      &.etui {
+        background-image: url(../static/footer_images/etui.jpg);
       }
       &.collection1 {
         background-image: url(../static/footer_images/collection1.jpg);
       }
-      &.garden {
-        background-image: url(../static/footer_images/garden.jpg);
+      &.hearts {
+        background-image: url(../static/footer_images/hearts.jpg);
       }
       &.sew {
         background-image: url(../static/footer_images/sew.jpg);
