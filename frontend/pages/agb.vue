@@ -1,5 +1,5 @@
 <template>
   <v-layout>
-    <h1>kontakt</h1>
+    <h1>agb</h1>
   </v-layout>
 </template>
