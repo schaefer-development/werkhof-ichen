@@ -11,9 +11,17 @@
       </v-row>
     </v-navigation-drawer>
 
-    <v-app-bar height="160px" flat color="rgba(255,255,255,0)" absolute app clipped-left>
+    <v-app-bar
+      height="160px"
+      flat
+      color="rgba(255,255,255,0)"
+      absolute
+      app
+      clipped-left
+      class="test"
+    >
       <v-container>
-        <v-row justify="center" align="center">
+        <v-row justify-lg="center" align="center">
           <nuxt-link to="/">
             <v-img src="/logo_ichen.svg" alt="Logo Werkhof ichen" max-width="120px" class="ma-6" />
           </nuxt-link>
@@ -28,9 +36,9 @@
     </v-app-bar>
 
     <v-main>
-      <v-container pb-12>
+      <v-layout column justify-center align-center pb-12>
         <nuxt />
-      </v-container>
+      </v-layout>
     </v-main>
 
     <v-footer color="rgba(72,65,61,0.9)" padless>
@@ -51,21 +59,21 @@
         </v-row>
 
         <v-row justify="center" class="pt-6">
-          <v-col xs="12" sm="12" md="2" align="center">
+          <v-col xs="12" sm="6" md="2" align="center">
             <v-img src="/logo_ichen_outline.svg" alt="Logo Werkhof ichen" max-width="80px" />
           </v-col>
-          <v-col xs="12" sm="4" md="2">
+          <v-col xs="12" sm="6" md="2">
             <strong>werkhof ichen</strong>
             <br />02246 . 31 97
             <br />
             <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>
           </v-col>
-          <v-col xs="12" sm="4" md="2">
+          <v-col xs="12" sm="6" md="2">
             Datenschutz
             <br />Impressum
             <br />
           </v-col>
-          <v-col xs="12" sm="4" md="2">
+          <v-col xs="12" sm="6" md="2">
             AGB
             <br />
             Copyright {{ new Date().getFullYear() }}
