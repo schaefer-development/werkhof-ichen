@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "veranstaltungs",
+  "info": {
+    "name": "Veranstaltung"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Titel": {
+      "type": "string"
+    },
+    "Beschreibung": {
+      "type": "richtext"
+    },
+    "Datum": {
+      "type": "datetime"
+    },
+    "Preis": {
+      "type": "decimal"
+    },
+    "buchungen": {
+      "collection": "buchung",
+      "via": "veranstaltung"
+    },
+    "Vorschaubild": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/seminars",
-      "handler": "seminar.find",
+      "path": "/veranstaltungs",
+      "handler": "veranstaltung.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/seminars/count",
-      "handler": "seminar.count",
+      "path": "/veranstaltungs/count",
+      "handler": "veranstaltung.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/seminars/:id",
-      "handler": "seminar.findOne",
+      "path": "/veranstaltungs/:id",
+      "handler": "veranstaltung.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/seminars",
-      "handler": "seminar.create",
+      "path": "/veranstaltungs",
+      "handler": "veranstaltung.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/seminars/:id",
-      "handler": "seminar.update",
+      "path": "/veranstaltungs/:id",
+      "handler": "veranstaltung.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/seminars/:id",
-      "handler": "seminar.delete",
+      "path": "/veranstaltungs/:id",
+      "handler": "veranstaltung.delete",
       "config": {
         "policies": []
       }

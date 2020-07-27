@@ -8,3 +8,12 @@
 @import '~vuetify/src/styles/styles.sass';
 @import '~assets/typo.scss';
 
+.v-ripple__container {
+    display:none !important;
+}
+
+.v-btn{
+    border-radius: 0px!important;
+ } 
+
+ 

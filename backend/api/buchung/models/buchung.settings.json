@@ -18,10 +18,9 @@
     "name": {
       "type": "string"
     },
-    "seminar": {
-      "unique": true,
-      "model": "seminar",
-      "via": "buchungen"
+    "veranstaltung": {
+      "via": "buchungen",
+      "model": "veranstaltung"
     }
   }
 }

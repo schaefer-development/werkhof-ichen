@@ -1,8 +1,8 @@
 <template>
   <v-col xs="12" sm="6" md="4">
-    <v-card rounded="0" flat class="seminar-tile" max-width="400">
+    <v-card rounded="0" flat class="veranstaltung-tile" max-width="400">
       <v-img class="white--text align-end" height="200px" src="/footer_images/kater_schroeder.jpg"></v-img>
-      <v-card-title>{{ seminar.title }}</v-card-title>
+      <v-card-title>{{ veranstaltung.Titel }}</v-card-title>
       <v-card-text class="text--primary pb-0">
         <div class="veranstaltungen_details">
           <ul>
@@ -50,7 +50,7 @@
 <script>
 export default {
   props: {
-    seminar: {
+    veranstaltung: {
       type: Object,
       required: true,
     },

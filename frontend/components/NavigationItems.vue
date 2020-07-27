@@ -3,7 +3,10 @@
     <v-btn text nuxt link to="/">Start</v-btn>
     <v-menu offset-y>
       <template v-slot:activator="{ on, attrs }">
-        <v-btn text v-bind="attrs" v-on="on">Veranstaltungen</v-btn>
+        <v-btn text v-bind="attrs" v-on="on">
+          Veranstaltungen
+          <v-icon>mdi-chevron-down</v-icon>
+        </v-btn>
       </template>
       <v-list>
         <nuxt-link
@@ -14,20 +17,94 @@
         <nuxt-link to="/veranstaltungen/anmelden">Anmelden</nuxt-link>
       </v-list>
     </v-menu>
-    <v-menu offset-y open-on-hover>
+    <v-menu offset-y>
       <template v-slot:activator="{ on, attrs }">
-        <v-btn text v-bind="attrs" v-on="on">Anfertigungen</v-btn>
+        <v-btn text v-bind="attrs" v-on="on">
+          Anfertigungen
+          <v-icon>mdi-chevron-down</v-icon>
+        </v-btn>
       </template>
       <v-list>
         <nuxt-link to="/anfertigungen/leder">Leder</nuxt-link>
         <nuxt-link to="/anfertigungen/weitere_textilien">Weitere Textilien</nuxt-link>
       </v-list>
     </v-menu>
-    <v-btn text nuxt link to="/kurse">Kurse</v-btn>
-
+    <v-btn text nuxt link to="/media">Media</v-btn>
     <v-btn text nuxt link to="/kontakt">Kontakt</v-btn>
     <v-btn text nuxt link to="/ueber_mich">Über mich</v-btn>
+    <v-btn
+      text
+      link
+      target="_blanc"
+      class="pl-0 pr-0"
+      href="https://de-de.facebook.com/pages/category/Education/Werkhof-ichen-130771390426775/"
+    >
+      <v-icon color="#2a434c" medium>mdi-facebook</v-icon>
+    </v-btn>
+    <v-btn text link target="_blanc" class="pl-0 pr-0" href="#">
+      <v-icon color="#2a434c" medium>mdi-instagram</v-icon>
+    </v-btn>
   </div>
 </template>
 
 
+
+<style lang="scss">
+.v-ripple__container {
+  display: none !important;
+}
+
+.navigation-items {
+  .v-btn {
+    padding: 0 10px !important;
+    font-size: 0.8em !important;
+    -webkit-transition: all 0.3s ease-in-out !important;
+    -moz-transition: all 0.3s ease-in-out !important;
+    -o-transition: all 0.3s ease-in-out !important;
+    transition: all 0.3s ease-in-out !important;
+    &:before {
+      background-color: transparent !important;
+    }
+    &:hover {
+      color: #2a434c !important;
+    }
+    &.v-btn--active {
+      color: #e0124d !important;
+    }
+    &[aria-expanded='true'] {
+      color: #2a434c !important;
+    }
+    &:nth-last-child(2),
+    &:last-child {
+      // last child => facebook and instagram
+      min-width: 35px !important;
+    }
+  }
+}
+
+.v-menu__content {
+  border-radius: 0 !important;
+  .v-list {
+    padding: 0em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: #2a434c !important;
+
+    a {
+      font-size: 0.9em;
+      display: block;
+      padding: 0.75em 1.25em;
+
+      color: #fff;
+      text-decoration: none;
+      -webkit-transition: all 0.3s ease-in-out !important;
+      -moz-transition: all 0.3s ease-in-out !important;
+      -o-transition: all 0.3s ease-in-out !important;
+      transition: all 0.3s ease-in-out !important;
+      &:hover {
+        color: #e0124d;
+      }
+    }
+  }
+}
+</style>

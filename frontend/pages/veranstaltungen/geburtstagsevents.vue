@@ -1,15 +1,29 @@
 <template>
-  <v-layout>
-    <v-flex class="text-center">
-      <img src="/v.png" alt="Vuetify.js" class="mb-5" />
-      <blockquote class="blockquote">
-        <h1>geburtstagsevents</h1>
-        <footer>
-          <small>
-            <em>&mdash;John Johnson</em>
-          </small>
-        </footer>
-      </blockquote>
-    </v-flex>
-  </v-layout>
+  <v-container>
+    <v-row>
+      <veranstaltung-tile
+        v-for="veranstaltung in veranstaltungs"
+        :key="veranstaltung.id"
+        :veranstaltung="veranstaltung"
+      ></veranstaltung-tile>
+    </v-row>
+  </v-container>
 </template>
+
+
+
+
+
+<script>
+import VeranstaltungTile from '../../components/VeranstaltungTile.vue'
+
+export default {
+  components: {
+    VeranstaltungTile,
+  },
+  async asyncData({ $axios }) {
+    const veranstaltungs = await $axios.$get('/api/veranstaltungs')
+    return { veranstaltungs }
+  },
+}
+</script>

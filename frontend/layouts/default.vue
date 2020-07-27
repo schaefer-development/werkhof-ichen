@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer" temporary app>
+    <v-navigation-drawer v-model="drawer" temporary app overlay-color="#2a434c" width="38%">
       <v-row justify="end" class="pr-2">
         <v-btn icon @click.stop="drawer = !drawer" class="pa-8 mr-0">
           <v-icon color="#2a434c" large>mdi-close</v-icon>
@@ -18,24 +18,28 @@
       absolute
       app
       clipped-left
-      class="test"
+      class="custom_max_width"
     >
-      <v-container>
-        <v-row justify-lg="center" align="center">
-          <nuxt-link to="/">
-            <v-img src="/logo_ichen.svg" alt="Logo Werkhof ichen" max-width="120px" class="ma-6" />
-          </nuxt-link>
-          <div class="d-none d-md-block">
-            <navigation-items></navigation-items>
-          </div>
-          <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="d-md-none">
-            <v-icon color="#2a434c" large>mdi-menu</v-icon>
-          </v-app-bar-nav-icon>
+      <v-container class="pa-0 custom_max_width">
+        <v-row justify-lg="center" align="center" class>
+          <v-col md="auto ml-6">
+            <nuxt-link to="/">
+              <v-img src="/logo_ichen.svg" alt="Logo Werkhof ichen" max-width="120px" />
+            </nuxt-link>
+          </v-col>
+          <v-col align="right">
+            <div class="d-none d-md-block">
+              <navigation-items></navigation-items>
+            </div>
+            <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="d-md-none">
+              <v-icon color="#2a434c" large>mdi-menu</v-icon>
+            </v-app-bar-nav-icon>
+          </v-col>
         </v-row>
       </v-container>
     </v-app-bar>
 
-    <v-main>
+    <v-main class="main custom_max_width">
       <v-layout column justify-center align-center pb-12>
         <nuxt />
       </v-layout>
@@ -107,6 +111,28 @@ export default {
   background-position: 50% 0%;
   background-size: cover;
   background-image: url(../static/bg.jpg);
+}
+
+.v-navigation-drawer {
+  border: 3px solid red;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  .navigation-items {
+    border: 1px solid red;
+    width: 100%;
+    flex-shrink: 0;
+    .v-btn {
+      flex-shrink: 0;
+    }
+  }
+}
+
+.custom_max_width {
+  max-width: 1185px !important;
+  margin: auto;
 }
 
 footer {
