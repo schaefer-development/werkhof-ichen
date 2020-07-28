@@ -28,6 +28,8 @@ export default {
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'stylesheet', href: 'https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' }],
+
   },
   /*
    ** Global CSS
@@ -37,7 +39,9 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: [
+    { src: '~/plugins/mapbox', mode: 'client' },
+  ],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
