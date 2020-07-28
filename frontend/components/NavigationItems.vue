@@ -1,7 +1,7 @@
 <template>
   <div class="navigation-items">
     <v-btn text nuxt link to="/">Start</v-btn>
-    <v-menu offset-y>
+    <v-menu offset-y transition="slide-y-transition" bottom>
       <template v-slot:activator="{ on, attrs }">
         <v-btn text v-bind="attrs" v-on="on">
           Veranstaltungen
@@ -17,7 +17,15 @@
         <nuxt-link to="/veranstaltungen/anmelden">Anmelden</nuxt-link>
       </v-list>
     </v-menu>
-    <v-menu offset-y>
+
+    <v-expansion-panels>
+      <v-expansion-panel>
+        <v-expansion-panel-header>Veranstaltungen</v-expansion-panel-header>
+        <v-expansion-panel-content>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</v-expansion-panel-content>
+      </v-expansion-panel>
+    </v-expansion-panels>
+
+    <v-menu offset-y transition="slide-y-transition" bottom>
       <template v-slot:activator="{ on, attrs }">
         <v-btn text v-bind="attrs" v-on="on">
           Anfertigungen
@@ -50,11 +58,8 @@
 
 
 <style lang="scss">
-.v-ripple__container {
-  display: none !important;
-}
-
 .navigation-items {
+  // desktop //
   .v-btn {
     padding: 0 10px !important;
     font-size: 0.8em !important;
@@ -66,13 +71,13 @@
       background-color: transparent !important;
     }
     &:hover {
-      color: #2a434c !important;
+      color: #e0124d !important;
     }
     &.v-btn--active {
       color: #e0124d !important;
     }
     &[aria-expanded='true'] {
-      color: #2a434c !important;
+      color: #47737f !important;
     }
     &:nth-last-child(2),
     &:last-child {
@@ -84,6 +89,7 @@
 
 .v-menu__content {
   border-radius: 0 !important;
+  box-shadow: none !important;
   .v-list {
     padding: 0em;
     padding-top: 1em;
@@ -94,7 +100,6 @@
       font-size: 0.9em;
       display: block;
       padding: 0.75em 1.25em;
-
       color: #fff;
       text-decoration: none;
       -webkit-transition: all 0.3s ease-in-out !important;

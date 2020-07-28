@@ -1,4 +1,4 @@
-an<template>
+<template>
   <v-layout>
     <v-container>
       <v-row>
