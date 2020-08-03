@@ -1,6 +1,7 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer" temporary app width="100%">
+    <div id="background"></div>
+    <v-navigation-drawer v-model="drawer" temporary app width="60%">
       <v-row justify="end" class="pr-2">
         <v-btn icon @click.stop="drawer = !drawer" class="pa-8 mr-0">
           <v-icon large>mdi-close</v-icon>
@@ -11,20 +12,12 @@
       </v-row>
     </v-navigation-drawer>
 
-    <v-app-bar
-      height="160px"
-      flat
-      color="rgba(255,255,255,0)"
-      absolute
-      app
-      clipped-left
-      class="custom_max_width"
-    >
-      <v-container class="pa-0 custom_max_width">
+    <v-app-bar height="160px" flat color="rgba(255,255,255,0)" absolute app clipped-left>
+      <v-container class="pa-0">
         <v-row justify-lg="center" align="center" class>
           <v-col md="auto ml-6">
             <nuxt-link to="/">
-              <v-img src="/logo_ichen.svg" alt="Logo Werkhof ichen" max-width="120px" />
+              <v-img src="/logo_ichen.svg" alt="Logo Werkhof ichen" max-width="110px" />
             </nuxt-link>
           </v-col>
           <v-col align="right">
@@ -39,7 +32,7 @@
       </v-container>
     </v-app-bar>
 
-    <v-main class="main custom_max_width">
+    <v-main class="main">
       <v-layout column justify-center align-center pb-12>
         <nuxt />
       </v-layout>
@@ -55,10 +48,12 @@
 import NavigationItems from '../components/NavigationItems.vue'
 import FooterComponent from '../components/FooterComponent.vue'
 
+
 export default {
     components: {
     NavigationItems,
     FooterComponent,
+
   },
   data() {
     return {
@@ -72,6 +67,12 @@ export default {
 
 <style lang="scss">
 #app {
+}
+
+#background {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
   background-repeat: no-repeat;
   background-position: 50% 0%;
   background-size: cover;
@@ -160,6 +161,11 @@ export default {
 }
 
 .custom_max_width {
+  max-width: 1185px !important;
+  margin: auto;
+}
+
+.layout .container .row:last-child {
   max-width: 1185px !important;
   margin: auto;
 }

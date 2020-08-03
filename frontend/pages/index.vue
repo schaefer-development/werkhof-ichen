@@ -1,8 +1,8 @@
 <template>
   <v-container>
-    <v-row justify="center">
+    <v-row>
       <v-col xs="12" sm="6" md="4">
-        <v-card rounded="0" flat class="beige" max-width="400">
+        <v-card rounded="0" flat class="default">
           <v-img
             class="white--text align-end"
             height="200px"
@@ -11,25 +11,26 @@
           <v-card-title>werkhof ichen</v-card-title>
           <v-card-text class="text--primary">
             <div>
-              Im werkhof ichen werden Kurse im künstlerischen
-              Handwerk veranstaltet.
-              Außerdem finden Sie hier die ichen Kollektion,
-              maßgefertigte Kleidung und eine erlesene
-              Auswahl an Stoffen und Nähutensilien.
-              Ich freue mich auf Ihren Kontakt.
+              <p>
+                Im werkhof ichen werden Kurse im künstlerischen
+                Handwerk veranstaltet.
+              </p>
+              <p>
+                Außerdem finden Sie hier die ichen Kollektion,
+                maßgefertigte Kleidung und eine erlesene
+                Auswahl an Stoffen und Nähutensilien.
+              </p>
+              <p>Ich freue mich auf Ihren Kontakt.</p>
             </div>
           </v-card-text>
 
-          <v-card-actions>
-            <v-btn color="orange" text>Share</v-btn>
-          </v-card-actions>
           <div class="sloping_edge">
             <div class="primary"></div>
           </div>
         </v-card>
       </v-col>
       <v-col xs="12" sm="6" md="4">
-        <v-card rounded="0" flat class="green" max-width="400">
+        <v-card rounded="0" flat class="green">
           <v-img
             class="white--text align-end"
             height="200px"
@@ -44,16 +45,13 @@
             </div>
           </v-card-text>
 
-          <v-card-actions>
-            <v-btn color="orange" text>Share</v-btn>
-          </v-card-actions>
           <div class="sloping_edge">
             <div class="green"></div>
           </div>
         </v-card>
       </v-col>
       <v-col xs="12" sm="6" md="4">
-        <v-card pb="12" rounded="0" flat class="blue" max-width="400">
+        <v-card rounded="0" flat class="blue">
           <v-img
             class="white--text align-end"
             height="200px"
@@ -61,13 +59,22 @@
           ></v-img>
           <v-card-title>Veranstaltungen</v-card-title>
           <v-card-text class="text--primary">
-            <div>Whitehaven Beach</div>
+            <div>
+              <ul class="shortlist">
+                <veranstaltung-short-list
+                  v-for="veranstaltung in veranstaltungs"
+                  :key="veranstaltung.id"
+                  :veranstaltung="veranstaltung"
+                ></veranstaltung-short-list>
+              </ul>
+            </div>
           </v-card-text>
 
-          <v-card-actions>
-            <v-btn color="orange" text>Share</v-btn>
+          <v-card-actions class="pa-4">
+            <nuxt-link to="#">
+              <v-btn depressed color="red">Mehr</v-btn>
+            </nuxt-link>
           </v-card-actions>
-          <p>ldnfln aenfljnasdf lkaenfl asflkanf,mas fl a,f alsd fas,f alr fas flalsd fas,f alr fas flalsd fas,f alr fas fla lf asd,f asd flas df alsdf asd f,asd flasdf</p>
           <div class="sloping_edge">
             <div class="blue"></div>
           </div>
@@ -79,6 +86,20 @@
 
 
 
+
+<script>
+import VeranstaltungShortList from '../components/VeranstaltungShortList.vue'
+
+export default {
+  components: {
+    VeranstaltungShortList,
+  },
+  async asyncData({ $axios }) {
+    const veranstaltungs = await $axios.$get('/api/veranstaltungs')
+    return { veranstaltungs }
+  },
+}
+</script>
 
 <style lang="scss" scoped>
 .sloping_edge {
@@ -100,5 +121,11 @@
     -webkit-transform: skew(0, -4deg);
     transform: skew(0, -4deg);
   }
+}
+
+ul.shortlist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 </style>

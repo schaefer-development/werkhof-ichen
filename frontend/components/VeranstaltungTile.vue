@@ -1,19 +1,22 @@
 <template>
-  <v-col xs="12" sm="6" md="4">
-    <v-card rounded="0" flat class="veranstaltung-tile" max-width="400">
-      <v-img class="white--text align-end" height="200px" src="/footer_images/kater_schroeder.jpg"></v-img>
+  <v-col xs="12" sm="6" md="4" id="veranstaltung">
+    <v-card rounded="0" flat class="veranstaltung-tile">
+      <v-img
+        class="white--text align-end"
+        height="200px"
+        :src="'/../api' +  veranstaltung.Vorschaubild.url"
+      ></v-img>
       <v-card-title>{{ veranstaltung.Titel }}</v-card-title>
       <v-card-text class="text--primary pb-0">
         <div class="veranstaltungen_details">
           <ul>
+            <li>{{ veranstaltung.Datum }}</li>
+
+            <li>{{ veranstaltung.Beschreibung}}</li>
+
             <li>
-              <strong>DATE:</strong>XX.XX.2020
-            </li>
-            <li>
-              <strong>PRICE:</strong>123 Euro
-            </li>
-            <li>
-              <strong>TEASER:</strong>Lorem ipsum dolor sit amet
+              {{ veranstaltung.Preis
+              }} Euro
             </li>
           </ul>
           <p>
@@ -36,18 +39,20 @@
         </div>
       </div>
       -->
-      <div class="goToBooking">
-        <div>
-          <v-card-actions class="pt-6 pb-8 pr-4">
+      <div>
+        <v-card-actions class="pt-6 pb-8 pr-4">
+          <nuxt-link to="/anmelden/anmelden">
             <v-btn depressed color="red">Anmelden</v-btn>
-          </v-card-actions>
-        </div>
+          </nuxt-link>
+        </v-card-actions>
       </div>
     </v-card>
   </v-col>
 </template>
 
 <script>
+
+
 export default {
   props: {
     veranstaltung: {
@@ -55,6 +60,7 @@ export default {
       required: true,
     },
   },
+
 }
 </script>
 
