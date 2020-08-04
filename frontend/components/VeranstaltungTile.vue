@@ -39,7 +39,7 @@
 
       <div>
         <v-card-actions class="pt-6 pb-8 pr-4">
-          <nuxt-link to="/anmelden/anmelden">
+          <nuxt-link to="/anmelden/{ id: { id: 1 }}">
             <v-btn depressed color="red">Anmelden</v-btn>
           </nuxt-link>
         </v-card-actions>
