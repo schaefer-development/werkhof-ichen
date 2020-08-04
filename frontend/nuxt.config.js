@@ -1,5 +1,3 @@
-import colors from 'vuetify/es5/util/colors'
-
 export default {
   /*
    ** Nuxt rendering mode
@@ -27,9 +25,13 @@ export default {
         content: process.env.npm_package_description || '',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    link: [{ rel: 'stylesheet', href: 'https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' }],
-
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css',
+      },
+    ],
   },
   /*
    ** Global CSS
@@ -41,6 +43,7 @@ export default {
    */
   plugins: [
     { src: '~/plugins/mapbox', mode: 'client' },
+    '~plugins/formatDate.js',
   ],
   /*
    ** Auto import components

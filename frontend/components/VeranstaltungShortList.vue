@@ -4,13 +4,16 @@
     <br />
     {{ veranstaltung.Datum }}
     <br />
-    <v-img class="shortlist_divider" src="/shortlist_divider.svg" alt="Nähnaht" max-width="400px" />
+    <v-img
+      class="shortlist_divider"
+      src="/shortlist_divider.svg"
+      alt="Nähnaht"
+      max-width="400px"
+    />
   </li>
 </template>
 
 <script>
-
-
 export default {
   props: {
     veranstaltung: {
@@ -18,10 +21,8 @@ export default {
       required: true,
     },
   },
-
 }
 </script>
-
 
 <style lang="scss" scoped>
 li.shortlist_item {

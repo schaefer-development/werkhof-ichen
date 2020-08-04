@@ -1475,11 +1475,6 @@
   optionalDependencies:
     prettier "^1.18.2"
 
-"@vuejs-community/vue-filter-date-format@^1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@vuejs-community/vue-filter-date-format/-/vue-filter-date-format-1.5.0.tgz#a94ec54a44d076175586aeb52d7e0b7438b0bcb0"
-  integrity sha512-EWfb435gHj733PQH5M0P0HXDMGjWdGYX8YD2PYaNesCeDNFAepjBUqr31INzzg8MhwLaUdk7a8FF+aKRowxHoQ==
-
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.9.0.tgz#bd850604b4042459a5a41cd7d338cbed695ed964"
@@ -3051,6 +3046,11 @@ cyclist@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
   integrity sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=
+
+date-fns@^2.15.0:
+  version "2.15.0"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.15.0.tgz#424de6b3778e4e69d3ff27046ec136af58ae5d5f"
+  integrity sha512-ZCPzAMJZn3rNUvvQIMlXhDr4A+Ar07eLeGsGREoWU19a3Pqf5oYa+ccd+B3F6XVtQY6HANMFdOQ8A+ipFnvJdQ==
 
 de-indent@^1.0.2:
   version "1.0.2"

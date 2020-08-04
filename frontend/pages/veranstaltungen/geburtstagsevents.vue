@@ -10,10 +10,6 @@
   </v-container>
 </template>
 
-
-
-
-
 <script>
 import VeranstaltungTile from '../../components/VeranstaltungTile.vue'
 

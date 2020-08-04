@@ -3,7 +3,7 @@
     <div id="background"></div>
     <v-navigation-drawer v-model="drawer" temporary app width="60%">
       <v-row justify="end" class="pr-2">
-        <v-btn icon @click.stop="drawer = !drawer" class="pa-8 mr-0">
+        <v-btn icon class="pa-8 mr-0" @click.stop="drawer = !drawer">
           <v-icon large>mdi-close</v-icon>
         </v-btn>
       </v-row>
@@ -12,19 +12,33 @@
       </v-row>
     </v-navigation-drawer>
 
-    <v-app-bar height="160px" flat color="rgba(255,255,255,0)" absolute app clipped-left>
+    <v-app-bar
+      height="160px"
+      flat
+      color="rgba(255,255,255,0)"
+      absolute
+      app
+      clipped-left
+    >
       <v-container class="pa-0">
         <v-row justify-lg="center" align="center" class>
           <v-col md="auto ml-6">
             <nuxt-link to="/">
-              <v-img src="/logo_ichen.svg" alt="Logo Werkhof ichen" max-width="110px" />
+              <v-img
+                src="/logo_ichen.svg"
+                alt="Logo Werkhof ichen"
+                max-width="110px"
+              />
             </nuxt-link>
           </v-col>
           <v-col align="right">
             <div class="d-none d-md-block">
               <navigation-items></navigation-items>
             </div>
-            <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="d-md-none text">
+            <v-app-bar-nav-icon
+              class="d-md-none text"
+              @click.stop="drawer = !drawer"
+            >
               <v-icon color="#2a434c" large>mdi-menu</v-icon>
             </v-app-bar-nav-icon>
           </v-col>
@@ -48,18 +62,16 @@
 import NavigationItems from '../components/NavigationItems.vue'
 import FooterComponent from '../components/FooterComponent.vue'
 
-
 export default {
-    components: {
+  components: {
     NavigationItems,
     FooterComponent,
-
   },
   data() {
     return {
       fixed: false,
       title: 'werkhof ichen',
-      drawer: null
+      drawer: null,
     }
   },
 }

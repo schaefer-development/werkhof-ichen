@@ -12,13 +12,12 @@
           <v-card-text class="text--primary">
             <div>
               <p>
-                Im werkhof ichen werden Kurse im künstlerischen
-                Handwerk veranstaltet.
+                Im werkhof ichen werden Kurse im künstlerischen Handwerk
+                veranstaltet.
               </p>
               <p>
-                Außerdem finden Sie hier die ichen Kollektion,
-                maßgefertigte Kleidung und eine erlesene
-                Auswahl an Stoffen und Nähutensilien.
+                Außerdem finden Sie hier die ichen Kollektion, maßgefertigte
+                Kleidung und eine erlesene Auswahl an Stoffen und Nähutensilien.
               </p>
               <p>Ich freue mich auf Ihren Kontakt.</p>
             </div>
@@ -39,9 +38,8 @@
           <v-card-title>Anfertigungen</v-card-title>
           <v-card-text class="text--primary">
             <div>
-              Meine Kollektionen sind zeitlose, individuelle
-              Entwicklungen, die nur bedingt den Trends des
-              Modemarktes unterworfen sind.
+              Meine Kollektionen sind zeitlose, individuelle Entwicklungen, die
+              nur bedingt den Trends des Modemarktes unterworfen sind.
             </div>
           </v-card-text>
 
@@ -83,9 +81,6 @@
     </v-row>
   </v-container>
 </template>
-
-
-
 
 <script>
 import VeranstaltungShortList from '../components/VeranstaltungShortList.vue'

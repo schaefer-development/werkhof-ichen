@@ -121,10 +121,15 @@
               @blur="$v.checkbox.$touch()"
             ></v-checkbox>
             <p class="booking_info">
-              <v-icon color="#2a434c">mdi-alert-circle</v-icon>Ihr Platz ist erst mit Zahlungseingang reserviert.
+              <v-icon color="#2a434c">mdi-alert-circle</v-icon>Ihr Platz ist
+              erst mit Zahlungseingang reserviert.
             </p>
-            <v-btn class="mr-4" @click="submit" depressed color="red">Buchen</v-btn>
-            <v-btn class="mr-4" @click="submit" depressed color="blue">Abbrechen</v-btn>
+            <v-btn class="mr-4" depressed color="red" @click="submit"
+              >Buchen</v-btn
+            >
+            <v-btn class="mr-4" depressed color="blue" @click="submit"
+              >Abbrechen</v-btn
+            >
           </form>
         </v-card>
       </v-col>
@@ -132,86 +137,82 @@
   </v-container>
 </template>
 
-
-
-
 <script>
-  import { validationMixin } from 'vuelidate'
-  import { required, maxLength, email } from 'vuelidate/lib/validators'
+import { validationMixin } from 'vuelidate'
+import { required, maxLength, email } from 'vuelidate/lib/validators'
 
-  export default {
-    mixins: [validationMixin],
+export default {
+  mixins: [validationMixin],
 
-    validations: {
-      name: { required, maxLength: maxLength(10) },
-      email: { required, email },
-      select: { required },
-      checkbox: {
-        checked (val) {
-          return val
-        },
+  validations: {
+    name: { required, maxLength: maxLength(10) },
+    email: { required, email },
+    select: { required },
+    checkbox: {
+      checked(val) {
+        return val
       },
     },
+  },
 
-    data: () => ({
-      name: '',
-      email: '',
-      select: null,
-      items: [
-        'Frau',
-        'Herr',
-      ],
-      checkbox: false,
-    }),
+  data: () => ({
+    name: '',
+    email: '',
+    select: null,
+    items: ['Frau', 'Herr'],
+    checkbox: false,
+  }),
 
-    computed: {
-      checkboxErrors () {
-        const errors = []
-        if (!this.$v.checkbox.$dirty) return errors
-        !this.$v.checkbox.checked && errors.push('Sie müssen den AGB zustimmen, um fortzufahren ')
-        return errors
-      },
-      selectErrors () {
-        const errors = []
-        if (!this.$v.select.$dirty) return errors
-        !this.$v.select.required && errors.push('Feld ist notwendig')
-        return errors
-      },
-      nameErrors () {
-        const errors = []
-        if (!this.$v.name.$dirty) return errors
-        !this.$v.name.required && errors.push('Feld ist notwendig.')
-        return errors
-      },
-      emailErrors () {
-        const errors = []
-        if (!this.$v.email.$dirty) return errors
-        !this.$v.email.email && errors.push('Muss eine gültige E-Mailadresse sein')
-        !this.$v.email.required && errors.push('E-mail ist notwendig')
-        return errors
-      },
-      phoneErrors () {
-        const errors = []
-        if (!this.$v.name.$dirty) return errors
-        !this.$v.name.maxLength && errors.push('Telefonnummer ist notwendig')
-        !this.$v.name.required && errors.push('Feld ist notwendig.')
-        return errors
-      },
+  computed: {
+    checkboxErrors() {
+      const errors = []
+      if (!this.$v.checkbox.$dirty) return errors
+      !this.$v.checkbox.checked &&
+        errors.push('Sie müssen den AGB zustimmen, um fortzufahren ')
+      return errors
     },
-
-    methods: {
-      submit () {
-        this.$v.$touch()
-      },
-      clear () {
-        this.$v.$reset()
-        this.name = ''
-        this.email = ''
-        this.select = null
-        this.checkbox = false
-      },
+    selectErrors() {
+      const errors = []
+      if (!this.$v.select.$dirty) return errors
+      !this.$v.select.required && errors.push('Feld ist notwendig')
+      return errors
     },
-  }
+    nameErrors() {
+      const errors = []
+      if (!this.$v.name.$dirty) return errors
+      !this.$v.name.required && errors.push('Feld ist notwendig.')
+      return errors
+    },
+    emailErrors() {
+      const errors = []
+      if (!this.$v.email.$dirty) return errors
+      !this.$v.email.email &&
+        errors.push('Muss eine gültige E-Mailadresse sein')
+      !this.$v.email.required && errors.push('E-mail ist notwendig')
+      return errors
+    },
+    phoneErrors() {
+      const errors = []
+      if (!this.$v.name.$dirty) return errors
+      !this.$v.name.maxLength && errors.push('Telefonnummer ist notwendig')
+      !this.$v.name.required && errors.push('Feld ist notwendig.')
+      return errors
+    },
+  },
+
+  methods: {
+    submit() {
+      this.$v.$touch()
+    },
+    clear() {
+      this.$v.$reset()
+      this.name = ''
+      this.email = ''
+      this.select = null
+      this.checkbox = false
+    },
+  },
+}
 </script>
 
 <style lang="scss">

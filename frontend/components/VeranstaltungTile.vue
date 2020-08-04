@@ -1,23 +1,20 @@
 <template>
-  <v-col xs="12" sm="6" md="4" id="veranstaltung">
+  <v-col id="veranstaltung" xs="12" sm="6" md="4">
     <v-card rounded="0" flat class="veranstaltung-tile">
       <v-img
         class="white--text align-end"
         height="200px"
-        :src="'/../api' +  veranstaltung.Vorschaubild.url"
+        :src="'/../api' + veranstaltung.Vorschaubild.url"
       ></v-img>
       <v-card-title>{{ veranstaltung.Titel }}</v-card-title>
       <v-card-text class="text--primary pb-0">
         <div class="veranstaltungen_details">
           <ul>
-            <li>{{ veranstaltung.Datum }}</li>
+            <li>{{ veranstaltung.Datum | formatDate }}</li>
 
-            <li>{{ veranstaltung.Beschreibung}}</li>
+            <li>{{ veranstaltung.Beschreibung }}</li>
 
-            <li>
-              {{ veranstaltung.Preis
-              }} Euro
-            </li>
+            <li>{{ veranstaltung.Preis }} Euro</li>
           </ul>
           <p>
             <strong>still free places</strong>
@@ -39,6 +36,7 @@
         </div>
       </div>
       -->
+
       <div>
         <v-card-actions class="pt-6 pb-8 pr-4">
           <nuxt-link to="/anmelden/anmelden">
@@ -51,8 +49,6 @@
 </template>
 
 <script>
-
-
 export default {
   props: {
     veranstaltung: {
@@ -60,10 +56,11 @@ export default {
       required: true,
     },
   },
-
+  data: () => ({
+    rawDate: new Date(20124, 0, 11),
+  }),
 }
 </script>
-
 
 <style lang="scss">
 div.veranstaltungen_details {
