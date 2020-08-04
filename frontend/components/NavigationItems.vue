@@ -18,13 +18,6 @@
       </v-list>
     </v-menu>
 
-    <v-expansion-panels>
-      <v-expansion-panel>
-        <v-expansion-panel-header>Veranstaltungen</v-expansion-panel-header>
-        <v-expansion-panel-content>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</v-expansion-panel-content>
-      </v-expansion-panel>
-    </v-expansion-panels>
-
     <v-menu offset-y transition="slide-y-transition" bottom>
       <template v-slot:activator="{ on, attrs }">
         <v-btn text v-bind="attrs" v-on="on">
@@ -63,6 +56,10 @@
   .v-btn {
     padding: 0 10px !important;
     font-size: 0.8em !important;
+    font-family: 'Overlock';
+    font-style: normal;
+    font-weight: 900;
+    color: #2a434c !important;
     -webkit-transition: all 0.3s ease-in-out !important;
     -moz-transition: all 0.3s ease-in-out !important;
     -o-transition: all 0.3s ease-in-out !important;
