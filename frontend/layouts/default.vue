@@ -12,33 +12,19 @@
       </v-row>
     </v-navigation-drawer>
 
-    <v-app-bar
-      height="160px"
-      flat
-      color="rgba(255,255,255,0)"
-      absolute
-      app
-      clipped-left
-    >
+    <v-app-bar height="160px" flat color="rgba(255,255,255,0)" absolute app clipped-left>
       <v-container class="pa-0">
         <v-row justify-lg="center" align="center" class>
           <v-col md="auto ml-6">
             <nuxt-link to="/">
-              <v-img
-                src="/logo_ichen.svg"
-                alt="Logo Werkhof ichen"
-                max-width="110px"
-              />
+              <v-img src="/logo_ichen.svg" alt="Logo Werkhof ichen" max-width="110px" />
             </nuxt-link>
           </v-col>
           <v-col align="right">
             <div class="d-none d-md-block">
               <navigation-items></navigation-items>
             </div>
-            <v-app-bar-nav-icon
-              class="d-md-none text"
-              @click.stop="drawer = !drawer"
-            >
+            <v-app-bar-nav-icon class="d-md-none text" @click.stop="drawer = !drawer">
               <v-icon color="#2a434c" large>mdi-menu</v-icon>
             </v-app-bar-nav-icon>
           </v-col>
@@ -82,7 +68,7 @@ export default {
 }
 
 #background {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100vh;
   background-repeat: no-repeat;
