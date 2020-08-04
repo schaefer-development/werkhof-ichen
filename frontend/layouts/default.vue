@@ -1,6 +1,8 @@
 <template>
   <v-app>
-    <div id="background"></div>
+    <div id="background">
+      <v-parallax height="1000" src="/bg.jpg"></v-parallax>
+    </div>
     <v-navigation-drawer v-model="drawer" temporary app width="60%">
       <v-row justify="end" class="pr-2">
         <v-btn icon class="pa-8 mr-0" @click.stop="drawer = !drawer">
@@ -68,13 +70,12 @@ export default {
 }
 
 #background {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 100vh;
   background-repeat: no-repeat;
   background-position: 50% 0%;
   background-size: cover;
-  background-image: url(../static/bg.jpg);
 }
 
 .v-ripple__container {
