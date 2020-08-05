@@ -11,7 +11,7 @@
       <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">
         <v-card rounded="0" flat color="rgba(214,189,157,0.4)">
           <v-card-actions class="pa-6">
-            <nuxt-link to="/..">
+            <nuxt-link :to="'/veranstaltungen/' + veranstaltung.Kategorie">
               <v-btn depressed color="blue">Abbrechen</v-btn>
             </nuxt-link>
           </v-card-actions>
@@ -126,7 +126,9 @@
               erst mit Zahlungseingang reserviert.
             </p>
             <v-btn class="mr-4" depressed color="red" @click="submit">Buchen</v-btn>
-            <v-btn class="mr-4" depressed color="blue" @click="submit">Abbrechen</v-btn>
+            <nuxt-link :to="'/veranstaltungen/' + veranstaltung.Kategorie">
+              <v-btn depressed color="blue">Abbrechen</v-btn>
+            </nuxt-link>
           </form>
         </v-card>
       </v-col>

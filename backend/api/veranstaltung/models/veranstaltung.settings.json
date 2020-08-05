@@ -33,6 +33,15 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "Kategorie": {
+      "type": "enumeration",
+      "enum": [
+        "kurse_fuer_kinder_und_jugendliche",
+        "kurse_fuer_erwachsene",
+        "geburtstagsevents"
+      ],
+      "required": true
     }
   }
 }
