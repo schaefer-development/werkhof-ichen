@@ -5,25 +5,26 @@
         <v-img
           class="white--text align-end"
           height="200px"
-          src="/footer_images/kater_schroeder.jpg"
+          :src="'/../api' + veranstaltung.Vorschaubild.url"
         ></v-img>
       </v-col>
       <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">
         <v-card rounded="0" flat color="rgba(214,189,157,0.4)">
           <v-card-actions class="pa-6">
-            <nuxt-link to="/buchung_cancel">
+            <nuxt-link to="/..">
               <v-btn depressed color="blue">Abbrechen</v-btn>
             </nuxt-link>
           </v-card-actions>
           <hr />
-          <v-card-title>titel</v-card-title>
+          <v-card-title>{{ veranstaltung.Titel }}</v-card-title>
           <v-card-text class="text--primary">
             <div class="veranstaltungen_details">
               <ul>
-                <li>datum</li>
-                <li>beschreibung</li>
+                <li>{{ veranstaltung.Datum | formatDate }}</li>
 
-                <li>preis</li>
+                <li>{{ veranstaltung.Beschreibung }}</li>
+
+                <li>{{ veranstaltung.Preis }} Euro</li>
               </ul>
             </div>
             <div></div>
@@ -134,10 +135,22 @@
 </template>
 
 <script>
+
+
+ 
+
 import { validationMixin } from 'vuelidate'
 import { required, maxLength, email } from 'vuelidate/lib/validators'
 
 export default {
+
+ async asyncData(context) {
+    const veranstaltung = await context.$axios.$get('/api/veranstaltungs/' + context.params.id)
+    console.log(veranstaltung)
+    return { veranstaltung }
+  },
+
+
   mixins: [validationMixin],
 
   validations: {
@@ -154,9 +167,12 @@ export default {
   data: () => ({
     name: '',
     email: '',
+    zip:'',
+    street_and_number:'',
     select: null,
     items: ['Frau', 'Herr'],
     checkbox: false,
+
   }),
 
   computed: {

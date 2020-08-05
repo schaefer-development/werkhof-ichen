@@ -17,8 +17,8 @@ export default {
   components: {
     VeranstaltungTile,
   },
-  async asyncData({ $axios }) {
-    const veranstaltungs = await $axios.$get('/api/veranstaltungs')
+  async asyncData(context) {
+    const veranstaltungs = await context.$axios.$get('/api/veranstaltungs')
     return { veranstaltungs }
   },
 
