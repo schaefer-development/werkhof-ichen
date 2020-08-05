@@ -21,5 +21,8 @@ export default {
     const veranstaltungs = await $axios.$get('/api/veranstaltungs')
     return { veranstaltungs }
   },
+
 }
+
+
 </script>
