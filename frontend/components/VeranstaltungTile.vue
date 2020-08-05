@@ -56,9 +56,7 @@ export default {
       required: true,
     },
   },
-  data: () => ({
-    rawDate: new Date(20124, 0, 11),
-  }),
+
 }
 </script>
 
