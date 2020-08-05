@@ -5177,19 +5177,6 @@ http-signature@~1.2.0:
     jsprim "^1.2.2"
     sshpk "^1.7.0"
 
-httpntlm@1.7.6:
-  version "1.7.6"
-  resolved "https://registry.yarnpkg.com/httpntlm/-/httpntlm-1.7.6.tgz#6991e8352836007d67101b83db8ed0f915f906d0"
-  integrity sha1-aZHoNSg2AH1nEBuD247Q+RX5BtA=
-  dependencies:
-    httpreq ">=0.4.22"
-    underscore "~1.7.0"
-
-httpreq@>=0.4.22:
-  version "0.4.24"
-  resolved "https://registry.yarnpkg.com/httpreq/-/httpreq-0.4.24.tgz#4335ffd82cd969668a39465c929ac61d6393627f"
-  integrity sha1-QzX/2CzZaWaKOUZckprGHWOTYn8=
-
 https-browserify@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
@@ -6312,10 +6299,10 @@ lodash@4.17.12:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.12.tgz#a712c74fdc31f7ecb20fe44f157d802d208097ef"
   integrity sha512-+CiwtLnsJhX03p20mwXuvhoebatoh5B3tt+VvYlrPgZC1g36y+RRbkufX95Xa+X4I59aWEacDFYwnJZiyBh9gA==
 
-lodash@4.17.15:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+lodash@4.17.19:
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
+  integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
 
 lodash@^4.1.1, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5:
   version "4.17.17"
@@ -6934,13 +6921,6 @@ nodemailer-fetch@1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/nodemailer-fetch/-/nodemailer-fetch-1.6.0.tgz#79c4908a1c0f5f375b73fe888da9828f6dc963a4"
   integrity sha1-ecSQihwPXzdbc/6IjamCj23JY6Q=
-
-nodemailer-ntlm-auth@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/nodemailer-ntlm-auth/-/nodemailer-ntlm-auth-1.0.1.tgz#6fda083ab8e560170b7097d9f071088496443f95"
-  integrity sha512-nQK3NHGpyVU0CcGfpq2rzM3Xg/ZLYOwBGfIAz+oxW3Jhaj3opPC6eLXuei0doK5++Hm0zjl/PH+y7ZCc8sDFtg==
-  dependencies:
-    httpntlm "1.7.6"
 
 nodemailer-shared@1.1.0:
   version "1.1.0"
@@ -9504,14 +9484,14 @@ strapi-plugin-users-permissions@3.0.5:
     strapi-utils "3.0.5"
     uuid "^3.1.0"
 
-"strapi-provider-email-nodemailer-v3@https://github.com/roschaefer/strapi-provider-email-nodemailer.git":
-  version "1.0.2"
-  resolved "https://github.com/roschaefer/strapi-provider-email-nodemailer.git#26bf897a5f6581d4f4b355d6616520a70683de1f"
+strapi-provider-email-nodemailer@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/strapi-provider-email-nodemailer/-/strapi-provider-email-nodemailer-3.0.0.tgz#7b20673115b5b25e16b0da813820016f802f1b12"
+  integrity sha512-Pj6TU85kDufcs3dvbO22OWuNwrhSe+DCelezu5esQxHmbzHs7QWD0TTPc2mmEP+cY+/iQskM2XDxddb9xm1CJg==
   dependencies:
     dotenv "8.1.0"
-    lodash "4.17.15"
+    lodash "4.17.19"
     nodemailer "6.3.0"
-    nodemailer-ntlm-auth "1.0.1"
 
 strapi-provider-email-sendmail@3.0.5:
   version "3.0.5"
@@ -10111,11 +10091,6 @@ unc-path-regex@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/unc-path-regex/-/unc-path-regex-0.1.2.tgz#e73dd3d7b0d7c5ed86fbac6b0ae7d8c6a69d50fa"
   integrity sha1-5z3T17DXxe2G+6xrCufYxqadUPo=
-
-underscore@~1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.7.0.tgz#6bbaf0877500d36be34ecaa584e0db9fef035209"
-  integrity sha1-a7rwh3UA02vjTsqlhODbn+8DUgk=
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
