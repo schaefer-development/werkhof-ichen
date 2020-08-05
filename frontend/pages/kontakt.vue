@@ -6,15 +6,7 @@
       </v-col>
     </v-row>
     <v-row class="align-baseline">
-      <v-col
-        class="pl-sm-12 pr-sm-12"
-        cols="12"
-        xs="12"
-        sm="12"
-        md="4"
-        lg="4"
-        xl="4"
-      >
+      <v-col class="pl-sm-12 pr-sm-12" cols="12" xs="12" sm="12" md="4" lg="4" xl="4">
         <h1 class="text-sm-left text-md-right">Anfahrt</h1>
       </v-col>
       <v-col
@@ -74,6 +66,9 @@ export default {
         maxZoom: 20,
       })
       this.map.addControl(new mapboxgl.NavigationControl())
+      new mapboxgl.Marker({
+        color: "#e0124d"
+      }).setLngLat([7.2719627, 50.8557119]).addTo(this.map)
     },
   },
 }

@@ -39,7 +39,9 @@
 
       <div>
         <v-card-actions class="pt-6 pb-8 pr-4">
-          <nuxt-link :to="{ name: 'anmelden-id', params: { id: veranstaltung.id } }">
+          <nuxt-link
+            :to="{ name: 'anmelden-id', params: { id: veranstaltung.id } }"
+          >
             <v-btn depressed color="red">Anmelden</v-btn>
           </nuxt-link>
         </v-card-actions>
@@ -56,7 +58,6 @@ export default {
       required: true,
     },
   },
-
 }
 </script>
 

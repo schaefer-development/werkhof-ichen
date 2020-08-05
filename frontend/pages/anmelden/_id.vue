@@ -125,7 +125,9 @@
               <v-icon color="#2a434c">mdi-alert-circle</v-icon>Ihr Platz ist
               erst mit Zahlungseingang reserviert.
             </p>
-            <v-btn class="mr-4" depressed color="red" @click="submit">Buchen</v-btn>
+            <v-btn class="mr-4" depressed color="red" @click="submit"
+              >Buchen</v-btn
+            >
             <nuxt-link :to="'/veranstaltungen/' + veranstaltung.Kategorie">
               <v-btn depressed color="blue">Abbrechen</v-btn>
             </nuxt-link>
@@ -137,23 +139,18 @@
 </template>
 
 <script>
-
-
- 
-
 import { validationMixin } from 'vuelidate'
 import { required, maxLength, email } from 'vuelidate/lib/validators'
 
 export default {
+  mixins: [validationMixin],
 
- async asyncData(context) {
-    const veranstaltung = await context.$axios.$get('/api/veranstaltungs/' + context.params.id)
-    console.log(veranstaltung)
+  async asyncData(context) {
+    const veranstaltung = await context.$axios.$get(
+      '/api/veranstaltungs/' + context.params.id
+    )
     return { veranstaltung }
   },
-
-
-  mixins: [validationMixin],
 
   validations: {
     name: { required, maxLength: maxLength(10) },
@@ -169,12 +166,11 @@ export default {
   data: () => ({
     name: '',
     email: '',
-    zip:'',
-    street_and_number:'',
+    zip: '',
+    street_and_number: '',
     select: null,
     items: ['Frau', 'Herr'],
     checkbox: false,
-
   }),
 
   computed: {
