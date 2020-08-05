@@ -31,7 +31,7 @@
           <form class="pt-4 pr-4 pb-12 pl-4">
             <v-select
               v-model="select"
-              outlined="true"
+              outlined
               flat
               :items="items"
               :error-messages="selectErrors"
@@ -42,7 +42,7 @@
             ></v-select>
             <v-text-field
               v-model="name"
-              outlined="true"
+              outlined
               flat
               :error-messages="nameErrors"
               label="Vorname"
@@ -52,7 +52,7 @@
             ></v-text-field>
             <v-text-field
               v-model="name"
-              outlined="true"
+              outlined
               flat
               :error-messages="nameErrors"
               label="Nachname"
@@ -62,7 +62,7 @@
             ></v-text-field>
             <v-text-field
               v-model="email"
-              outlined="true"
+              outlined
               flat
               :error-messages="emailErrors"
               label="E-mail"
@@ -72,7 +72,7 @@
             ></v-text-field>
             <v-text-field
               v-model="email"
-              outlined="true"
+              outlined
               flat
               :error-messages="phoneErrors"
               label="Telefon"
@@ -82,7 +82,7 @@
             ></v-text-field>
             <v-text-field
               v-model="street_and_number"
-              outlined="true"
+              outlined
               flat
               :error-messages="nameErrors"
               label="Straße und Hausnummer"
@@ -92,7 +92,7 @@
             ></v-text-field>
             <v-text-field
               v-model="zip"
-              outlined="true"
+              outlined
               flat
               :error-messages="nameErrors"
               label="Postleitzahl"
@@ -102,7 +102,7 @@
             ></v-text-field>
             <v-text-field
               v-model="zip"
-              outlined="true"
+              outlined
               flat
               :error-messages="nameErrors"
               label="Ort"
@@ -112,7 +112,7 @@
             ></v-text-field>
             <v-checkbox
               v-model="checkbox"
-              outlined="true"
+              outlined
               flat
               :error-messages="checkboxErrors"
               label="Ich habe die AGB gelesen und akzeptiere sie"
@@ -124,12 +124,8 @@
               <v-icon color="#2a434c">mdi-alert-circle</v-icon>Ihr Platz ist
               erst mit Zahlungseingang reserviert.
             </p>
-            <v-btn class="mr-4" depressed color="red" @click="submit"
-              >Buchen</v-btn
-            >
-            <v-btn class="mr-4" depressed color="blue" @click="submit"
-              >Abbrechen</v-btn
-            >
+            <v-btn class="mr-4" depressed color="red" @click="submit">Buchen</v-btn>
+            <v-btn class="mr-4" depressed color="blue" @click="submit">Abbrechen</v-btn>
           </form>
         </v-card>
       </v-col>
