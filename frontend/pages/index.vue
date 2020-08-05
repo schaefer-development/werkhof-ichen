@@ -49,7 +49,7 @@
         </v-card>
       </v-col>
       <v-col xs="12" sm="6" md="4">
-        <v-card rounded="0" flat class="blue">
+        <v-card rounded="0" flat class="ichen_blue">
           <v-img
             class="white--text align-end"
             height="200px"
