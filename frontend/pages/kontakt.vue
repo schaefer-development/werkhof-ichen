@@ -68,7 +68,15 @@ export default {
       this.map.addControl(new mapboxgl.NavigationControl())
       new mapboxgl.Marker({
         color: "#e0124d"
-      }).setLngLat([7.2719627, 50.8557119]).addTo(this.map)
+      })
+      .setPopup(new mapboxgl.Popup().setHTML(`
+      <p>
+      <strong>werkhof ichen</strong><br>
+      Dipl.-Ing. Irmina Maria Schmitz<br>
+      Im alten Breidt 11<br>
+      53797 Lohmar-Breidt<br>
+      </p>`))
+      .setLngLat([7.2719627, 50.8557119]).addTo(this.map)
     },
   },
 }
