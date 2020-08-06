@@ -6,15 +6,7 @@
       </v-col>
     </v-row>
     <v-row class="align-baseline">
-      <v-col
-        class="pl-sm-12 pr-sm-12"
-        cols="12"
-        xs="12"
-        sm="12"
-        md="4"
-        lg="4"
-        xl="4"
-      >
+      <v-col class="pl-sm-12 pr-sm-12" cols="12" xs="12" sm="12" md="4" lg="4" xl="4">
         <h1 class="text-sm-left text-md-right">Anfahrt</h1>
       </v-col>
       <v-col
@@ -68,7 +60,7 @@ export default {
       this.map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/josen/ckd5rgq6z0vwx1ir38367xhb1',
-        zoom: 13,
+        zoom: 11.5,
         center: [7.2719627, 50.8557119],
         minZoom: 2,
         maxZoom: 20,

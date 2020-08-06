@@ -3,26 +3,19 @@
     <v-row>
       <v-col xs="12" sm="6" md="4">
         <v-card rounded="0" flat class="ichen_beige">
-          <v-img
-            class="white--text align-end"
-            height="250px"
-            src="/werkhof.jpg"
-          ></v-img>
+          <v-img class="white--text align-end" height="250px" src="/werkhof.jpg"></v-img>
           <v-card-title>werkhof ichen</v-card-title>
           <v-card-text class="text--primary">
-            <div>
-              <p>
-                Im werkhof ichen werden Kurse im künstlerischen Handwerk
-                veranstaltet.
-              </p>
-              <p>
-                Außerdem finden Sie hier die ichen Kollektion, maßgefertigte
-                Kleidung und eine erlesene Auswahl an Stoffen und Nähutensilien.
-              </p>
-              <p>Ich freue mich auf Ihren Kontakt.</p>
-            </div>
+            <p>
+              Im werkhof ichen werden Kurse im künstlerischen Handwerk
+              veranstaltet.
+            </p>
+            <p>
+              Außerdem finden Sie hier die ichen Kollektion, maßgefertigte
+              Kleidung und eine erlesene Auswahl an Stoffen und Nähutensilien.
+            </p>
+            <p>Ich freue mich auf Ihren Kontakt.</p>
           </v-card-text>
-
           <div class="sloping_edge">
             <div class="ichen_beige"></div>
           </div>
@@ -30,17 +23,11 @@
       </v-col>
       <v-col xs="12" sm="6" md="4">
         <v-card rounded="0" flat class="ichen_green">
-          <v-img
-            class="white--text align-end"
-            height="250px"
-            src="/anfertigungen.jpg"
-          ></v-img>
+          <v-img class="white--text align-end" height="250px" src="/anfertigungen.jpg"></v-img>
           <v-card-title>Anfertigungen</v-card-title>
-          <v-card-text class="text--primary">
-            <div>
-              Meine Kollektionen sind zeitlose, individuelle Entwicklungen, die
-              nur bedingt den Trends des Modemarktes unterworfen sind.
-            </div>
+          <v-card-text class="white--text">
+            Meine Kollektionen sind zeitlose, individuelle Entwicklungen, die
+            nur bedingt den Trends des Modemarktes unterworfen sind.
           </v-card-text>
 
           <div class="sloping_edge">
@@ -50,22 +37,16 @@
       </v-col>
       <v-col xs="12" sm="6" md="4">
         <v-card rounded="0" flat class="ichen_blue">
-          <v-img
-            class="white--text align-end"
-            height="250px"
-            src="/veranstaltungen.jpg"
-          ></v-img>
+          <v-img class="white--text align-end" height="250px" src="/veranstaltungen.jpg"></v-img>
           <v-card-title class="ichen_beige--text">Veranstaltungen</v-card-title>
           <v-card-text class="text--primary">
-            <div>
-              <ul class="shortlist">
-                <veranstaltung-short-list
-                  v-for="veranstaltung in veranstaltungs"
-                  :key="veranstaltung.id"
-                  :veranstaltung="veranstaltung"
-                ></veranstaltung-short-list>
-              </ul>
-            </div>
+            <ul class="shortlist">
+              <veranstaltung-short-list
+                v-for="veranstaltung in veranstaltungs"
+                :key="veranstaltung.id"
+                :veranstaltung="veranstaltung"
+              ></veranstaltung-short-list>
+            </ul>
           </v-card-text>
 
           <div class="sloping_edge">
