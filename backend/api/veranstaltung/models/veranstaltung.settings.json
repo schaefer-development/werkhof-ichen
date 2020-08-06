@@ -22,8 +22,8 @@
       "type": "decimal"
     },
     "buchungen": {
-      "collection": "buchung",
-      "via": "veranstaltung"
+      "via": "veranstaltung",
+      "collection": "buchung"
     },
     "Vorschaubild": {
       "model": "file",

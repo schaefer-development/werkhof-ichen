@@ -106,12 +106,11 @@ export default {
           success: '#4CAF50',
           warning: '#FFC107',
 
-          ichen_beige: '#e5bc80', //ichen beige
-          ichen_green: '#709726', //ichen green
+          ichen_beige: '#e5bc80', // ichen beige
+          ichen_green: '#709726', // ichen green
           ichen_blue: '#2a434c', // ichen blue
-          ichen_red: '#e0124d', //ichen red
-          ichen_brown: '#48413d', //ichen brown
-
+          ichen_red: '#e0124d', // ichen red
+          ichen_brown: '#48413d', // ichen brown
         },
       },
     },

@@ -19,8 +19,18 @@
       "type": "string"
     },
     "veranstaltung": {
-      "via": "buchungen",
-      "model": "veranstaltung"
+      "model": "veranstaltung",
+      "via": "buchungen"
+    },
+    "telefon_nummer": {
+      "type": "string",
+      "required": true
+    },
+    "plz_ort": {
+      "type": "string"
+    },
+    "strasse_hausnummer": {
+      "type": "string"
     }
   }
 }
