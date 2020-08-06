@@ -6,7 +6,15 @@
       </v-col>
     </v-row>
     <v-row class="align-baseline">
-      <v-col class="pl-sm-12 pr-sm-12" cols="12" xs="12" sm="12" md="4" lg="4" xl="4">
+      <v-col
+        class="pl-sm-12 pr-sm-12"
+        cols="12"
+        xs="12"
+        sm="12"
+        md="4"
+        lg="4"
+        xl="4"
+      >
         <h1 class="text-sm-left text-md-right">Anfahrt</h1>
       </v-col>
       <v-col
@@ -67,16 +75,19 @@ export default {
       })
       this.map.addControl(new mapboxgl.NavigationControl())
       new mapboxgl.Marker({
-        color: "#e0124d"
+        color: '#e0124d',
       })
-      .setPopup(new mapboxgl.Popup().setHTML(`
+        .setPopup(
+          new mapboxgl.Popup().setHTML(`
       <p>
       <strong>werkhof ichen</strong><br>
       Dipl.-Ing. Irmina Maria Schmitz<br>
       Im alten Breidt 11<br>
       53797 Lohmar-Breidt<br>
-      </p>`))
-      .setLngLat([7.2719627, 50.8557119]).addTo(this.map)
+      </p>`)
+        )
+        .setLngLat([7.2719627, 50.8557119])
+        .addTo(this.map)
     },
   },
 }

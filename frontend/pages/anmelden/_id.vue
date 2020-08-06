@@ -29,109 +29,74 @@
             </div>
             <div></div>
           </v-card-text>
-          <form class="pt-4 pr-4 pb-12 pl-4">
-            <v-select
-              v-model="select"
-              outlined
-              flat
-              :items="items"
-              :error-messages="selectErrors"
-              label="Anrede"
-              required
-              @change="$v.select.$touch()"
-              @blur="$v.select.$touch()"
-            ></v-select>
+          <div v-if="success">
+            <h1>Hat geklappt!</h1>
+          </div>
+          <v-form
+            v-else
+            ref="form"
+            v-model="valid"
+            class="pt-4 pr-4 pb-12 pl-4"
+          >
             <v-text-field
               v-model="name"
               outlined
-              flat
-              :error-messages="nameErrors"
-              label="Vorname"
+              :rules="requiredRules"
+              label="Vor- und Nachname"
               required
-              @input="$v.name.$touch()"
-              @blur="$v.name.$touch()"
             ></v-text-field>
             <v-text-field
-              v-model="name"
+              v-model="email_adresse"
               outlined
-              flat
-              :error-messages="nameErrors"
-              label="Nachname"
+              :rules="emailRules"
+              label="E-Mail"
               required
-              @input="$v.name.$touch()"
-              @blur="$v.name.$touch()"
             ></v-text-field>
             <v-text-field
-              v-model="email"
+              v-model="telefon_nummer"
               outlined
-              flat
-              :error-messages="emailErrors"
-              label="E-mail"
-              required
-              @input="$v.email.$touch()"
-              @blur="$v.email.$touch()"
-            ></v-text-field>
-            <v-text-field
-              v-model="email"
-              outlined
-              flat
-              :error-messages="phoneErrors"
-              label="Telefon"
-              required
-              @input="$v.email.$touch()"
-              @blur="$v.email.$touch()"
-            ></v-text-field>
-            <v-text-field
-              v-model="street_and_number"
-              outlined
-              flat
-              :error-messages="nameErrors"
-              label="Straße und Hausnummer"
-              required
-              @input="$v.name.$touch()"
-              @blur="$v.name.$touch()"
-            ></v-text-field>
-            <v-text-field
-              v-model="zip"
-              outlined
-              flat
-              :error-messages="nameErrors"
-              label="Postleitzahl"
-              required
-              @input="$v.name.$touch()"
-              @blur="$v.name.$touch()"
-            ></v-text-field>
-            <v-text-field
-              v-model="zip"
-              outlined
-              flat
-              :error-messages="nameErrors"
-              label="Ort"
-              required
-              @input="$v.name.$touch()"
-              @blur="$v.name.$touch()"
-            ></v-text-field>
+              :rules="requiredRules"
+              label="Telefonnummer"
+            >
+            </v-text-field>
+            <v-text-field v-model="strasse_hausnummer" outlined>
+              <template v-slot:label>
+                <div>
+                  Straße und Hausnummer
+                  <small>(optional)</small>
+                </div>
+              </template>
+            </v-text-field>
+            <v-text-field v-model="plz_ort" outlined>
+              <template v-slot:label>
+                <div>
+                  Postleitzahl und Ort
+                  <small>(optional)</small>
+                </div>
+              </template>
+            </v-text-field>
             <v-checkbox
-              v-model="checkbox"
-              outlined
-              flat
-              :error-messages="checkboxErrors"
+              v-model="agb"
+              :rules="agbRules"
               label="Ich habe die AGB gelesen und akzeptiere sie"
               required
-              @change="$v.checkbox.$touch()"
-              @blur="$v.checkbox.$touch()"
             ></v-checkbox>
             <p class="booking_info">
               <v-icon color="#2a434c">mdi-alert-circle</v-icon>Ihr Platz ist
               erst mit Zahlungseingang reserviert.
             </p>
-            <v-btn class="mr-4" depressed color="red" @click="submit"
+            <v-btn
+              class="mr-4"
+              depressed
+              color="red"
+              :disabled="!valid"
+              @click="submit"
               >Buchen</v-btn
             >
             <nuxt-link :to="'/veranstaltungen/' + veranstaltung.Kategorie">
               <v-btn depressed color="blue">Abbrechen</v-btn>
             </nuxt-link>
-          </form>
+          </v-form>
         </v-card>
       </v-col>
     </v-row>
@@ -139,12 +104,7 @@
 </template>
 
 <script>
-import { validationMixin } from 'vuelidate'
-import { required, maxLength, email } from 'vuelidate/lib/validators'
-
 export default {
-  mixins: [validationMixin],
-
   async asyncData(context) {
     const veranstaltung = await context.$axios.$get(
       '/api/veranstaltungs/' + context.params.id
@@ -152,74 +112,35 @@ export default {
     return { veranstaltung }
   },
 
-  validations: {
-    name: { required, maxLength: maxLength(10) },
-    email: { required, email },
-    select: { required },
-    checkbox: {
-      checked(val) {
-        return val
-      },
-    },
-  },
-
   data: () => ({
+    valid: true,
     name: '',
-    email: '',
-    zip: '',
-    street_and_number: '',
-    select: null,
-    items: ['Frau', 'Herr'],
-    checkbox: false,
+    email_adresse: '',
+    telefon_nummer: '',
+    plz_ort: '',
+    strasse_hausnummer: '',
+    agb: false,
+    requiredRules: [(v) => !!v || 'muss ausgefüllt werden'],
+    emailRules: [
+      (v) => !!v || 'muss ausgefüllt werden',
+      (v) => /.+@.+\..+/.test(v) || 'muss gültig sein',
+    ],
+    agbRules: [(v) => !!v || 'Sie müssen den AGB zustimmen, um fortzufahren'],
+    success: false,
   }),
-
-  computed: {
-    checkboxErrors() {
-      const errors = []
-      if (!this.$v.checkbox.$dirty) return errors
-      !this.$v.checkbox.checked &&
-        errors.push('Sie müssen den AGB zustimmen, um fortzufahren ')
-      return errors
-    },
-    selectErrors() {
-      const errors = []
-      if (!this.$v.select.$dirty) return errors
-      !this.$v.select.required && errors.push('Feld ist notwendig')
-      return errors
-    },
-    nameErrors() {
-      const errors = []
-      if (!this.$v.name.$dirty) return errors
-      !this.$v.name.required && errors.push('Feld ist notwendig.')
-      return errors
-    },
-    emailErrors() {
-      const errors = []
-      if (!this.$v.email.$dirty) return errors
-      !this.$v.email.email &&
-        errors.push('Muss eine gültige E-Mailadresse sein')
-      !this.$v.email.required && errors.push('E-mail ist notwendig')
-      return errors
-    },
-    phoneErrors() {
-      const errors = []
-      if (!this.$v.name.$dirty) return errors
-      !this.$v.name.maxLength && errors.push('Telefonnummer ist notwendig')
-      !this.$v.name.required && errors.push('Feld ist notwendig.')
-      return errors
-    },
-  },
-
   methods: {
-    submit() {
-      this.$v.$touch()
-    },
-    clear() {
-      this.$v.$reset()
-      this.name = ''
-      this.email = ''
-      this.select = null
-      this.checkbox = false
+    async submit() {
+      // eslint-disable-next-line
+      const { name, email_adresse, telefon_nummer, plz_ort, strasse_hausnummer, veranstaltung } = this
+      await this.$axios.$post('/api/buchungs/', {
+        name,
+        email_adresse,
+        telefon_nummer,
+        plz_ort,
+        strasse_hausnummer,
+        veranstaltung,
+      })
+      this.success = true
     },
   },
 }
