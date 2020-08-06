@@ -2,12 +2,8 @@
   <v-container>
     <v-row>
       <v-col xs="12" sm="6" md="4">
-        <v-card rounded="0" flat class="default">
-          <v-img
-            class="white--text align-end"
-            height="200px"
-            src="/footer_images/kater_schroeder.jpg"
-          ></v-img>
+        <v-card rounded="0" flat class="ichen_beige">
+          <v-img class="white--text align-end" height="250px" src="/werkhof.jpg"></v-img>
           <v-card-title>werkhof ichen</v-card-title>
           <v-card-text class="text--primary">
             <div>
@@ -24,17 +20,13 @@
           </v-card-text>
 
           <div class="sloping_edge">
-            <div class="primary"></div>
+            <div class="ichen_beige"></div>
           </div>
         </v-card>
       </v-col>
       <v-col xs="12" sm="6" md="4">
-        <v-card rounded="0" flat class="green">
-          <v-img
-            class="white--text align-end"
-            height="200px"
-            src="/footer_images/kater_schroeder.jpg"
-          ></v-img>
+        <v-card rounded="0" flat class="ichen_green">
+          <v-img class="white--text align-end" height="250px" src="/anfertigungen.jpg"></v-img>
           <v-card-title>Anfertigungen</v-card-title>
           <v-card-text class="text--primary">
             <div>
@@ -44,18 +36,14 @@
           </v-card-text>
 
           <div class="sloping_edge">
-            <div class="green"></div>
+            <div class="ichen_green"></div>
           </div>
         </v-card>
       </v-col>
       <v-col xs="12" sm="6" md="4">
         <v-card rounded="0" flat class="ichen_blue">
-          <v-img
-            class="white--text align-end"
-            height="200px"
-            src="/footer_images/kater_schroeder.jpg"
-          ></v-img>
-          <v-card-title>Veranstaltungen</v-card-title>
+          <v-img class="white--text align-end" height="250px" src="/veranstaltungen.jpg"></v-img>
+          <v-card-title class="ichen_beige--text">Veranstaltungen</v-card-title>
           <v-card-text class="text--primary">
             <div>
               <ul class="shortlist">
@@ -68,13 +56,8 @@
             </div>
           </v-card-text>
 
-          <v-card-actions class="pa-4">
-            <nuxt-link to="#">
-              <v-btn depressed color="red">Mehr</v-btn>
-            </nuxt-link>
-          </v-card-actions>
           <div class="sloping_edge">
-            <div class="blue"></div>
+            <div class="ichen_blue"></div>
           </div>
         </v-card>
       </v-col>

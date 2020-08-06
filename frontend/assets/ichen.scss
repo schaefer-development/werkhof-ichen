@@ -1,6 +1,10 @@
+$ichen_beige: #e5bc80;
+$ichen_green: #709726;
+$ichen_blue: #2a434c;
+$ichen_red: #e0124d;
+$ichen_brown: #48413d;
+
 /* LOCAL FONTS */
-
-
 /* overlock-900 - latin */
 @font-face {
   font-family: 'Overlock';
@@ -45,13 +49,20 @@
 
 $body-font-family: 'Fira Sans', Arial, sans-serif;
 $font-size-root: 15 !default;
+/* -------------------------------------------- */
 
 
 
-
-
+/* TYPO */
 h1, h2, .v-card__title{
   font-family: 'Overlock';
   font-style: normal;
   font-weight: 900;
+  color:$ichen_blue;
+  font-size: 2em;
 }
+
+a{
+  text-decoration: none !important;
+}
+
