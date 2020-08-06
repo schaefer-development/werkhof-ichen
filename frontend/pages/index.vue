@@ -3,7 +3,11 @@
     <v-row>
       <v-col xs="12" sm="6" md="4">
         <v-card rounded="0" flat class="ichen_beige">
-          <v-img class="white--text align-end" height="250px" src="/werkhof.jpg"></v-img>
+          <v-img
+            class="white--text align-end"
+            height="250px"
+            src="/werkhof.jpg"
+          ></v-img>
           <v-card-title>werkhof ichen</v-card-title>
           <v-card-text class="text--primary">
             <div>
@@ -26,7 +30,11 @@
       </v-col>
       <v-col xs="12" sm="6" md="4">
         <v-card rounded="0" flat class="ichen_green">
-          <v-img class="white--text align-end" height="250px" src="/anfertigungen.jpg"></v-img>
+          <v-img
+            class="white--text align-end"
+            height="250px"
+            src="/anfertigungen.jpg"
+          ></v-img>
           <v-card-title>Anfertigungen</v-card-title>
           <v-card-text class="text--primary">
             <div>
@@ -42,7 +50,11 @@
       </v-col>
       <v-col xs="12" sm="6" md="4">
         <v-card rounded="0" flat class="ichen_blue">
-          <v-img class="white--text align-end" height="250px" src="/veranstaltungen.jpg"></v-img>
+          <v-img
+            class="white--text align-end"
+            height="250px"
+            src="/veranstaltungen.jpg"
+          ></v-img>
           <v-card-title class="ichen_beige--text">Veranstaltungen</v-card-title>
           <v-card-text class="text--primary">
             <div>
@@ -73,7 +85,13 @@ export default {
     VeranstaltungShortList,
   },
   async asyncData({ $axios }) {
-    const veranstaltungs = await $axios.$get('/api/veranstaltungs')
+    const veranstaltungs = await $axios.$get('/api/veranstaltungs', {
+      params: {
+        _sort: 'Datum:ASC',
+        _limit: 3,
+        Datum_gte: new Date(),
+      },
+    })
     return { veranstaltungs }
   },
 }
