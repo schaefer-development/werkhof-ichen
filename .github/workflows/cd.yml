@@ -24,15 +24,19 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: "frontend/.nuxt,backend/build,deployment"
+          source: "frontend/.nuxt,frontend/package.json,backend/build,backend/package.json,deployment"
           target: "~/werkhof-ichen/"
-      - name: Manual netlify deployment
+      - name: Install npm modules remotely
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: whoami
+          script: |
+            cd ~/werkhof-ichen/frontend
+            npm install --only=production
+            cd ~/werkhof-ichen/backend
+            npm install --only=production
       - name: Restart daemons
         uses: appleboy/ssh-action@master
         with:
