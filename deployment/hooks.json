@@ -1,0 +1,7 @@
+[
+  {
+    "id": "werkhof-ichen",
+    "execute-command": "~/werkhof-ichen/deployment/netlify.sh",
+    "command-working-directory": "~/werkhof-ichen/frontend"
+  }
+]
