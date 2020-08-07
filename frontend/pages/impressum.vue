@@ -3,8 +3,8 @@
     <v-row class="pb-xs-6">
       <v-col cols="12">
         <v-img
-          src="/header_images/header_leather.jpg"
-          alt="werkhof ichen: Eine Auswahl von Leder"
+          src="/header_images/header_ghosts.jpg"
+          alt="werkhof ichen: Textilgespenster"
           class="mb-5 mr-3 ml-3"
         />
       </v-col>

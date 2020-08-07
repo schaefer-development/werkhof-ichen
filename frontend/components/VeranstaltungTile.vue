@@ -1,6 +1,6 @@
 <template>
   <v-col id="veranstaltung" xs="12" sm="6" md="4">
-    <v-card rounded="0" flat class="veranstaltung-tile">
+    <v-card rounded="0" flat class="ichen_beige">
       <v-img
         class="white--text align-end"
         height="200px"
@@ -39,10 +39,8 @@
 
       <div>
         <v-card-actions class="pt-6 pb-8 pr-4">
-          <nuxt-link
-            :to="{ name: 'anmelden-id', params: { id: veranstaltung.id } }"
-          >
-            <v-btn depressed color="red">Anmelden</v-btn>
+          <nuxt-link :to="{ name: 'anmelden-id', params: { id: veranstaltung.id } }">
+            <v-btn depressed small color="ichen_red white--text">Anmelden</v-btn>
           </nuxt-link>
         </v-card-actions>
       </div>

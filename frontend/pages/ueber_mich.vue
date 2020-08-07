@@ -11,7 +11,7 @@
     </v-row>
     <v-row>
       <v-col cols="12" xs="12" sm="12" md="4" lg="4" xl="4">
-        <v-img src="/veranstaltungen.jpg" alt="werkhof ichen: Eine Auswahl von Leder" class />
+        <v-img src="/ichen_portrait.jpg" alt="ichen" class />
       </v-col>
       <v-col cols="12" xs="12" sm="12" md="8" lg="8" xl="8">
         <v-card rounded="0" flat class="ichen_beige">

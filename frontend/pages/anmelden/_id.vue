@@ -9,10 +9,10 @@
         ></v-img>
       </v-col>
       <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">
-        <v-card rounded="0" flat>
+        <v-card rounded="0" flat class="ichen_beige">
           <v-card-actions class="pa-6">
             <nuxt-link :to="'/veranstaltungen/' + veranstaltung.Kategorie">
-              <v-btn depressed color="blue">Abbrechen</v-btn>
+              <v-btn depressed small color="ichen_blue white--text">Abbrechen</v-btn>
             </nuxt-link>
           </v-card-actions>
           <hr />
@@ -79,9 +79,17 @@
               <v-icon color="#2a434c">mdi-alert-circle</v-icon>Ihr Platz ist
               erst mit Zahlungseingang reserviert.
             </p>
-            <v-btn class="mr-4" depressed color="red" :disabled="!valid" @click="submit">Buchen</v-btn>
+
+            <v-btn
+              class="mr-4"
+              depressed
+              small
+              color="ichen_red white--text"
+              :disabled="!valid"
+              @click="submit"
+            >Buchen</v-btn>
             <nuxt-link :to="'/veranstaltungen/' + veranstaltung.Kategorie">
-              <v-btn depressed color="blue">Abbrechen</v-btn>
+              <v-btn depressed small color="ichen_blue white--text">Abbrechen</v-btn>
             </nuxt-link>
           </v-form>
         </v-card>
