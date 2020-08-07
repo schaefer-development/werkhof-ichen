@@ -1,0 +1,39 @@
+name: Continous Deployment
+on: [push]
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install and build remotely
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            source .bash_profile
+            cd werkhof-ichen
+            git pull
+            cd frontend
+            yarn install
+            yarn run build
+            cd ../backend
+            yarn install
+            yarn run build
+      - name: Restart daemons
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            supervisorctl restart werkhof-ichen-backend
+            supervisorctl restart werkhof-ichen-webhook
+      - name: Call netlify webhook
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: curl http://localhost:9000/hooks/werkhof-ichen
