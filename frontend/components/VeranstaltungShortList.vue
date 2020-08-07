@@ -7,21 +7,14 @@
         {{ veranstaltung.Datum | formatDate }}
       </v-col>
       <v-col xs="12" sm="12" md="6" align="right">
-        <nuxt-link
-          :to="{ name: 'anmelden-id', params: { id: veranstaltung.id } }"
-        >
-          <v-btn depressed color="ichen_red white--text">Anmelden</v-btn>
+        <nuxt-link :to="{ name: 'anmelden-id', params: { id: veranstaltung.id } }">
+          <v-btn depressed small color="ichen_red white--text">Anmelden</v-btn>
         </nuxt-link>
       </v-col>
     </v-row>
 
     <br />
-    <v-img
-      class="shortlist_divider"
-      src="/shortlist_divider.svg"
-      alt="Nähnaht"
-      max-width="400px"
-    />
+    <v-img class="shortlist_divider" src="/shortlist_divider.svg" alt="Nähnaht" max-width="400px" />
   </li>
 </template>
 

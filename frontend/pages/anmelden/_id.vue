@@ -1,5 +1,5 @@
 <template>
-  <v-container class="sandbox">
+  <v-container>
     <v-row>
       <v-col cols="12" xs="12" sm="4" md="4" lg="4" xl="4">
         <v-img
@@ -9,7 +9,7 @@
         ></v-img>
       </v-col>
       <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">
-        <v-card rounded="0" flat color="rgba(214,189,157,0.4)">
+        <v-card rounded="0" flat>
           <v-card-actions class="pa-6">
             <nuxt-link :to="'/veranstaltungen/' + veranstaltung.Kategorie">
               <v-btn depressed color="blue">Abbrechen</v-btn>
@@ -32,12 +32,7 @@
           <div v-if="success">
             <h1>Hat geklappt!</h1>
           </div>
-          <v-form
-            v-else
-            ref="form"
-            v-model="valid"
-            class="pt-4 pr-4 pb-12 pl-4"
-          >
+          <v-form v-else ref="form" v-model="valid" class="pt-4 pr-4 pb-12 pl-4">
             <v-text-field
               v-model="name"
               outlined
@@ -57,8 +52,7 @@
               outlined
               :rules="requiredRules"
               label="Telefonnummer"
-            >
-            </v-text-field>
+            ></v-text-field>
             <v-text-field v-model="strasse_hausnummer" outlined>
               <template v-slot:label>
                 <div>
@@ -85,14 +79,7 @@
               <v-icon color="#2a434c">mdi-alert-circle</v-icon>Ihr Platz ist
               erst mit Zahlungseingang reserviert.
             </p>
-            <v-btn
-              class="mr-4"
-              depressed
-              color="red"
-              :disabled="!valid"
-              @click="submit"
-              >Buchen</v-btn
-            >
+            <v-btn class="mr-4" depressed color="red" :disabled="!valid" @click="submit">Buchen</v-btn>
             <nuxt-link :to="'/veranstaltungen/' + veranstaltung.Kategorie">
               <v-btn depressed color="blue">Abbrechen</v-btn>
             </nuxt-link>

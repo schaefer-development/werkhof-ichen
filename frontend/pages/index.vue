@@ -5,7 +5,7 @@
         <v-card rounded="0" flat class="ichen_beige">
           <v-img class="white--text align-end" height="250px" src="/werkhof.jpg"></v-img>
           <v-card-title>werkhof ichen</v-card-title>
-          <v-card-text class="text--primary">
+          <v-card-text>
             <p>
               Im werkhof ichen werden Kurse im künstlerischen Handwerk
               veranstaltet.

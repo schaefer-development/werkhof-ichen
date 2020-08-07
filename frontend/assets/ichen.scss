@@ -4,6 +4,8 @@ $ichen_blue: #2a434c;
 $ichen_red: #e0124d;
 $ichen_brown: #48413d;
 
+
+
 /* LOCAL FONTS */
 /* overlock-900 - latin */
 @font-face {
@@ -53,16 +55,33 @@ $font-size-root: 15 !default;
 
 
 
-/* TYPO */
-h1, h2, .v-card__title{
-  font-family: 'Overlock';
-  font-style: normal;
-  font-weight: 900;
-  color:$ichen_blue;
-  font-size: 1.5em;
-}
 
-a{
-  text-decoration: none !important;
-}
 
+.v-main__wrap{
+  /* TYPO */
+  h1, h2, .v-card__title{
+    font-family: 'Overlock';
+    font-style: normal;
+    font-weight: 900;
+    color:$ichen_blue;
+    font-size: 1.5em;
+  }
+  a{
+    text-decoration: none !important;
+  }
+  
+  button {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    span{
+      font-weight: bold;
+    }
+
+  }
+
+  .theme--light.v-card > .v-card__text, .theme--light.v-card .v-card__subtitle {
+      color: rgba(0, 0, 0, 1);
+  }
+}
