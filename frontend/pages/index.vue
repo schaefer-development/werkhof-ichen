@@ -38,7 +38,7 @@
       <v-col xs="12" sm="6" md="4">
         <v-card rounded="0" flat class="ichen_blue">
           <v-img class="white--text align-end" height="250px" src="/veranstaltungen.jpg"></v-img>
-          <v-card-title class="ichen_beige--text">Veranstaltungen</v-card-title>
+          <v-card-title class="ichen_yellow--text">Veranstaltungen</v-card-title>
           <v-card-text class="text--primary">
             <ul class="shortlist">
               <veranstaltung-short-list

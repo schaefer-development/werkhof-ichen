@@ -40,7 +40,7 @@
             <p>
               Von der B56 Richtung Much links nach "Krahwinkel" abbiegen, den Ort
               durchfahren, geradeaus bis "Breidt", im Ort die 3. Möglichkeit rechts
-              abbiegen (J.-Hofer-Weg) die 2.Möglichkeit rechts, dann liegt der
+              abbiegen (J.-Hofer-Weg) die 2. Möglichkeit rechts, dann liegt der
               werkhof ichen nach 50 m auf der linken Seite.
             </p>
           </v-card-text>
