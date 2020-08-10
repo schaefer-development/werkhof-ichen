@@ -17,7 +17,13 @@
           </v-card-actions>
 
           <hr />
-          <v-card-title class="pl-7 pr-7">{{ veranstaltung.Titel }}</v-card-title>
+          <br />
+          <v-card-title class="pl-7 pr-7">
+            ANMELDUNG
+            <br />
+            <br />
+            {{ veranstaltung.Titel }}
+          </v-card-title>
           <v-card-text class="text--primary pl-7 pr-7">
             <div class="veranstaltungen_details">
               <ul>
@@ -145,6 +151,10 @@ export default {
 </script>
 
 <style lang="scss">
+.v-text-field--outlined {
+  border-radius: 0px !important;
+}
+
 p.booking_info {
   color: #2a434c;
   font-weight: bold;
