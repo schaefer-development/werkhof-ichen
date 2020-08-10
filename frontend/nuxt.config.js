@@ -53,7 +53,7 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ['@nuxtjs/vuetify'],
+  buildModules: ['@nuxtjs/vuetify', '@nuxtjs/netlify-files'],
   /*
    ** Nuxt.js modules
    */
@@ -73,7 +73,6 @@ export default {
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
-   */
   axios: {
     proxy: true,
   },
@@ -84,6 +83,7 @@ export default {
       pathRewrite: { '^/api/': '' },
     },
   },
+   */
 
   /** loading: false, **/
 

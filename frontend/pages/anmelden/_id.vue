@@ -5,7 +5,7 @@
         <v-img
           class="white--text align-end"
           height="200px"
-          :src="'/../api' + veranstaltung.Vorschaubild.url"
+          :src="veranstaltung.Vorschaubild.url"
         ></v-img>
       </v-col>
       <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">
@@ -124,7 +124,7 @@
 export default {
   async asyncData(context) {
     const veranstaltung = await context.$axios.$get(
-      '/api/veranstaltungs/' + context.params.id
+      '/veranstaltungs/' + context.params.id
     )
     return { veranstaltung }
   },
@@ -149,7 +149,7 @@ export default {
     async submit() {
       // eslint-disable-next-line
       const { name, email_adresse, telefon_nummer, plz_ort, strasse_hausnummer, veranstaltung } = this
-      await this.$axios.$post('/api/buchungs/', {
+      await this.$axios.$post('/buchungs/', {
         name,
         email_adresse,
         telefon_nummer,

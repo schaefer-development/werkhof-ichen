@@ -1,39 +1,23 @@
-name: Continous Deployment
-on: [push]
-jobs:
+name: Continuous deployment
 
+on:
+  push:
+    branches:
+      - deployment
+
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Install and build remotely
-        uses: appleboy/ssh-action@master
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.4.6 # This is the action
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            source .bash_profile
-            cd werkhof-ichen
-            git pull
-            cd frontend
-            yarn install
-            yarn run build
-            cd ../backend
-            yarn install
-            yarn run build
-      - name: Restart daemons
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            supervisorctl restart werkhof-ichen-backend
-            supervisorctl restart werkhof-ichen-webhook
-      - name: Call netlify webhook
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: curl http://localhost:9000/hooks/werkhof-ichen
+          heroku_app_name: "werkhof-ichen-backend" #Must be unique in Heroku
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_email: ${{secrets.HEROKU_EMAIL}}
+          appdir: backend
+      - shell: bash
+        env:
+          NETLIFY_WEBHOOK: ${{ secrets.NETLIFY_WEBHOOK }}
+        run: |
+          curl -X POST -d {} "$NETLIFY_WEBHOOK"

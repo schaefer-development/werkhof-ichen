@@ -18,13 +18,22 @@
           <v-card-title>ichen</v-card-title>
           <v-card-text>
             <p>
-              ... kommt von "Kleines I" i-chen und ist seit Urzeiten mein Spitzname.
-              Offiziell: Irmina Maria Schmitz.
+              ... kommt von "Kleines I" i-chen und ist seit Urzeiten mein
+              Spitzname. Offiziell: Irmina Maria Schmitz.
             </p>
-            <p>Spaß an der Näherei hatte ich bereits mit 10 Jahren. Deswegen biete ich heutzutage auch gerne Kindernähkurse an.</p>
-            <p>1987 erhielt ich mein Diplom der Bekleidungstechnik in Mönchengladbach.</p>
+            <p>
+              Spaß an der Näherei hatte ich bereits mit 10 Jahren. Deswegen
+              biete ich heutzutage auch gerne Kindernähkurse an.
+            </p>
+            <p>
+              1987 erhielt ich mein Diplom der Bekleidungstechnik in
+              Mönchengladbach.
+            </p>
             <p>Bereits seit 1988 biete ich Nähkurse an.</p>
-            <p>Seit 1991 betreibe ich den "werkhof ichen" und bin selbständig tätig.</p>
+            <p>
+              Seit 1991 betreibe ich den "werkhof ichen" und bin selbständig
+              tätig.
+            </p>
           </v-card-text>
         </v-card>
       </v-col>
