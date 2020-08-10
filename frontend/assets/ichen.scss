@@ -51,7 +51,7 @@ $ichen_brown: #48413d;
 }
 
 $body-font-family: 'Fira Sans', Arial, sans-serif;
-$font-size-root: 15 !default;
+$font-size-root: 20px !default;
 /* -------------------------------------------- */
 
 
@@ -117,7 +117,7 @@ $font-size-root: 15 !default;
 
 
   hr{
-    width:calc(100% - 4em);
+    width:calc(100% - 2em);
     border:none !important;
     border-bottom:1px solid $ichen_brown !important;  
     margin:auto;
@@ -141,6 +141,13 @@ $font-size-root: 15 !default;
       text-align: right;
     }
   }
+
+
+  .v-card{
+    margin-bottom: 4em;
+  }
+
+
 
   .sloping_edge {
     position: absolute;
