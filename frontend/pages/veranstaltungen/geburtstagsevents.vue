@@ -18,7 +18,11 @@ export default {
     VeranstaltungTile,
   },
   async asyncData(context) {
-    const veranstaltungs = await context.$axios.$get('/api/veranstaltungs')
+    const veranstaltungs = await context.$axios.$get('/api/veranstaltungs', {
+      params: {
+        Kategorie: 'geburtstagsevents'
+      },
+    })
     return { veranstaltungs }
   },
 }
