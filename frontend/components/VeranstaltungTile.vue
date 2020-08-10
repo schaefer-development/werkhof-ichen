@@ -10,7 +10,9 @@
       <v-card-text class="text--primary pb-0">
         <div class="veranstaltungen_details">
           <ul>
-            <li>{{ veranstaltung.Datum | formatDate }}</li>
+            <li>
+              <strong>{{ veranstaltung.Datum | formatDate }} Uhr</strong>
+            </li>
 
             <li>{{ veranstaltung.Beschreibung }}</li>
 
@@ -60,23 +62,6 @@ export default {
 </script>
 
 <style lang="scss">
-div.veranstaltungen_details {
-  ul {
-    display: block;
-    list-style: none;
-    text-indent: 0;
-    padding: 0;
-    li {
-      padding: 0.5em 0;
-      margin: 0;
-    }
-  }
-  p {
-    margin: 1em 0 0 0;
-    text-align: right;
-  }
-}
-
 .v-card__actions {
   justify-content: flex-end;
 }

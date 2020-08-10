@@ -79,27 +79,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.sloping_edge {
-  position: absolute;
-  width: 100%;
-  height: 30px;
-  bottom: -30px;
-  overflow: hidden;
-  div {
-    position: relative;
-    background-color: inherit;
-    width: 101%;
-    border: none;
-    display: inline-block;
-    height: 28px;
-
-    transform-origin: bottom left;
-    -ms-transform: skew(0, -4deg);
-    -webkit-transform: skew(0, -4deg);
-    transform: skew(0, -4deg);
-  }
-}
-
 ul.shortlist {
   list-style: none;
   padding: 0;

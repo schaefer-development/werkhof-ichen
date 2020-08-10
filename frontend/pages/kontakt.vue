@@ -6,7 +6,7 @@
       </v-col>
     </v-row>
     <v-row class="align-baseline">
-      <v-col cols="12" xs="12" sm="12" md="4" lg="4" xl="4">
+      <v-col cols="12" xs="12" sm="6" md="4" lg="4" xl="4">
         <v-card rounded="0" flat class="ichen_green">
           <v-card-title>Anschrift</v-card-title>
           <v-card-text class="white--text">
@@ -24,7 +24,7 @@
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col cols="12" xs="12" sm="12" md="8" lg="8" xl="8">
+      <v-col cols="12" xs="12" sm="6" md="8" lg="8" xl="8">
         <v-card rounded="0" flat class="ichen_beige">
           <v-card-title>Anfahrt</v-card-title>
           <v-card-text>

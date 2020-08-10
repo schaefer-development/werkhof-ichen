@@ -3,27 +3,17 @@
     <v-row class="pb-xs-6">
       <v-col cols="12">
         <v-img
-          src="/header_images/header_ghosts.jpg"
-          alt="werkhof ichen: Textilgespenster"
+          src="/header_images/header_leather.jpg"
+          alt="werkhof ichen: Auswahl von Leder"
           class="mb-5 mr-3 ml-3"
         />
       </v-col>
     </v-row>
-    <v-row class="align-baseline">
-      <v-col
-        cols="12"
-        xs="12"
-        sm="12"
-        offset-md="4"
-        md="8"
-        offset-lg="4"
-        lg="8"
-        offset-xl="4"
-        xl="8"
-      >
-        <v-card rounded="0" flat class="ichen_beige">
+    <v-row>
+      <v-col cols="12" xs="12" sm="6" md="4" lg="4" xl="4">
+        <v-card rounded="0" flat class="ichen_green">
           <v-card-title>Impressum</v-card-title>
-          <v-card-text>
+          <v-card-text class="white--text">
             <p>Verantwortlich für die Webseite werkhof-ichen.de nach § 5 Telemediengesetz ist:</p>
             <p>
               werkhof ichen
@@ -38,6 +28,12 @@
               <br />E-Mail:
               <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>
             </p>
+          </v-card-text>
+        </v-card>
+      </v-col>
+      <v-col cols="12" xs="12" sm="6" md="8" lg="8" xl="8">
+        <v-card rounded="0" flat class="ichen_beige">
+          <v-card-text>
             <h3>Haftungsausschluss</h3>
             <p>Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen. Als Diensteanbieter bin ich gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG bin ich als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werde ich diese Inhalte umgehend entfernen.</p>
             <h3>Haftung für Links</h3>

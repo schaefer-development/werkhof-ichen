@@ -3,8 +3,8 @@
     <v-row class="pb-xs-6">
       <v-col cols="12">
         <v-img
-          src="/header_images/header_leather.jpg"
-          alt="werkhof ichen: Eine Auswahl von Leder"
+          src="/header_images/header_ghosts.jpg"
+          alt="werkhof ichen: Textilgespenster"
           class="mb-5 mr-3 ml-3"
         />
       </v-col>
@@ -184,7 +184,10 @@
             </p>
             <p>
               Erstellt mit
-              <a href="https://datenschutz-generator.de/" target="_blanc">Datenschutz-Generator.de</a> von RA Dr. Thomas Schwenke
+              <a
+                href="https://datenschutz-generator.de/"
+                target="_blanc"
+              >Datenschutz-Generator.de</a> von RA Dr. Thomas Schwenke
             </p>
           </v-card-text>
         </v-card>

@@ -10,17 +10,20 @@
       </v-col>
       <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">
         <v-card rounded="0" flat class="ichen_beige">
-          <v-card-actions class="pa-6">
+          <v-card-actions class="pa-7">
             <nuxt-link :to="'/veranstaltungen/' + veranstaltung.Kategorie">
               <v-btn depressed small color="ichen_blue white--text">Abbrechen</v-btn>
             </nuxt-link>
           </v-card-actions>
+
           <hr />
-          <v-card-title>{{ veranstaltung.Titel }}</v-card-title>
-          <v-card-text class="text--primary">
+          <v-card-title class="pl-7 pr-7">{{ veranstaltung.Titel }}</v-card-title>
+          <v-card-text class="text--primary pl-7 pr-7">
             <div class="veranstaltungen_details">
               <ul>
-                <li>{{ veranstaltung.Datum | formatDate }}</li>
+                <li>
+                  <strong>{{ veranstaltung.Datum | formatDate }} Uhr</strong>
+                </li>
 
                 <li>{{ veranstaltung.Beschreibung }}</li>
 
@@ -32,7 +35,7 @@
           <div v-if="success">
             <h1>Hat geklappt!</h1>
           </div>
-          <v-form v-else ref="form" v-model="valid" class="pt-4 pr-4 pb-12 pl-4">
+          <v-form v-else ref="form" v-model="valid" class="pt-4 pr-6 pb-12 pl-6">
             <v-text-field
               v-model="name"
               outlined
@@ -75,8 +78,8 @@
               label="Ich habe die AGB gelesen und akzeptiere sie"
               required
             ></v-checkbox>
-            <p class="booking_info">
-              <v-icon color="#2a434c">mdi-alert-circle</v-icon>Ihr Platz ist
+            <p class="booking_info pb-6">
+              <v-icon color="#2a434c">mdi-alert-circle</v-icon>&nbsp;Ihr Platz ist
               erst mit Zahlungseingang reserviert.
             </p>
 
