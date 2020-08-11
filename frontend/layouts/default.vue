@@ -8,7 +8,38 @@
         </v-btn>
       </v-row>
       <v-row>
-        <navigation-items></navigation-items>
+        <navigation-items>
+          <v-expansion-panels accordion dark>
+            <v-expansion-panel>
+              <v-expansion-panel-header>
+                Veranstaltungen
+              </v-expansion-panel-header>
+              <v-expansion-panel-content>
+                <nuxt-link
+                  to="/veranstaltungen/kurse_fuer_kinder_und_jugendliche"
+                  >Kurse für Kinder und Jugendliche</nuxt-link
+                >
+                <nuxt-link to="/veranstaltungen/kurse_fuer_erwachsene"
+                  >Kurse für Erwachsene</nuxt-link
+                >
+                <nuxt-link to="/veranstaltungen/geburtstagsevents"
+                  >Geburtstagsevents</nuxt-link
+                >
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+            <v-expansion-panel>
+              <v-expansion-panel-header>
+                Anfertigungen
+              </v-expansion-panel-header>
+              <v-expansion-panel-content>
+                <nuxt-link to="/anfertigungen/leder">Leder</nuxt-link>
+                <nuxt-link to="/anfertigungen/weitere_textilien"
+                  >Weitere Textilien</nuxt-link
+                >
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+          </v-expansion-panels>
+        </navigation-items>
       </v-row>
     </v-navigation-drawer>
 
@@ -33,7 +64,43 @@
           </v-col>
           <v-col align="right">
             <div class="d-none d-md-block">
-              <navigation-items></navigation-items>
+              <navigation-items>
+                <v-menu offset-y transition="slide-y-transition" bottom>
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn text v-bind="attrs" v-on="on">
+                      Veranstaltungen
+                      <v-icon>mdi-chevron-down</v-icon>
+                    </v-btn>
+                  </template>
+                  <v-list>
+                    <nuxt-link
+                      to="/veranstaltungen/kurse_fuer_kinder_und_jugendliche"
+                      >Kurse für Kinder und Jugendliche</nuxt-link
+                    >
+                    <nuxt-link to="/veranstaltungen/kurse_fuer_erwachsene"
+                      >Kurse für Erwachsene</nuxt-link
+                    >
+                    <nuxt-link to="/veranstaltungen/geburtstagsevents"
+                      >Geburtstagsevents</nuxt-link
+                    >
+                  </v-list>
+                </v-menu>
+
+                <v-menu offset-y transition="slide-y-transition" bottom>
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn text v-bind="attrs" v-on="on">
+                      Anfertigungen
+                      <v-icon>mdi-chevron-down</v-icon>
+                    </v-btn>
+                  </template>
+                  <v-list>
+                    <nuxt-link to="/anfertigungen/leder">Leder</nuxt-link>
+                    <nuxt-link to="/anfertigungen/weitere_textilien"
+                      >Weitere Textilien</nuxt-link
+                    >
+                  </v-list>
+                </v-menu>
+              </navigation-items>
             </div>
             <v-app-bar-nav-icon
               class="d-md-none text"
