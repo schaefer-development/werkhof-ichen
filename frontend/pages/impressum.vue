@@ -42,6 +42,13 @@
             <p>Sollten irgendwelche Inhalte oder die designtechnische Gestaltung einzelner Seiten oder Teile dieser Internetseite fremde Rechte Dritter oder gesetzliche Bestimmungen verletzen oder anderweitig in irgendeiner Form wettbewerbsrechtliche Probleme hervorbringen, so bitte ich unter Berufung auf §8 Abs.4 UWG um eine angemessene, ausreichend erläuternde und schnelle Nachricht ohne Kostennote.</p>
             <p>Ich garantiere, dass die zu Recht beanstandeten Passagen oder Teile dieser Webseiten in angemessener Frist entfernt bzw. den rechtlichen Vorgaben entsprechend umfänglich angepasst werden, ohne dass von Ihrer Seite die Einschaltung eines Rechtsbeistandes erforderlich ist.</p>
             <p>Die Einschaltung eines Anwaltes zur für den Diensteanbieter kostenpflichtigen Abmahnung entspricht nicht dessen wirklichen oder mutmaßlichen Willen und würde damit einen Verstoß gegen §13 Abs.5 UWG wegen der Verfolgung sachfremder Ziele als beherrschendes Motiv der Verfahrenseinleitung, insbesondere einer Kostenerzielungsabsicht als eigentliche Triebfeder sowie einen Verstoß gegen die Schadensminderungspflicht darstellen.</p>
+            <hr />
+            <br />
+            <h3>Gestaltung und technische Umsetzung:</h3>
+            <p>
+              Robert und Jo Schäfer (E-Mail:
+              <a href="mailto:mail@joschaefer.com">mail@joschaefer.com</a>)
+            </p>
           </v-card-text>
         </v-card>
       </v-col>
