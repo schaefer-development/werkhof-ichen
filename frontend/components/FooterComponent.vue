@@ -17,7 +17,11 @@
 
     <v-row justify="center" class="pt-8 pl-12 pb-3 pr-12">
       <v-col cols="12" sm="12" md="3" lg="2" xl="2" align="center">
-        <v-img src="/logo_ichen_outline.svg" alt="Logo Werkhof ichen" max-width="90px" />
+        <v-img
+          src="/logo_ichen_outline.svg"
+          alt="Logo Werkhof ichen"
+          max-width="90px"
+        />
       </v-col>
       <v-col cols="12" sm="4" md="3" lg="2" xl="2">
         <strong>werkhof ichen</strong>
