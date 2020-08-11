@@ -26,10 +26,6 @@
             <p>Bereits seit 1988 biete ich Nähkurse an.</p>
             <p>Seit 1991 betreibe ich den "werkhof ichen" und bin selbständig tätig.</p>
           </v-card-text>
-
-          <div class="sloping_edge">
-            <div class="ichen_beige"></div>
-          </div>
         </v-card>
       </v-col>
     </v-row>

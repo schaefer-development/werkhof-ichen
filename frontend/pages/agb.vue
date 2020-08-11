@@ -17,10 +17,6 @@
         <v-card rounded="0" flat class="ichen_beige">
           <v-card-title>Allgemeine Geschäftsbedinungen (AGB)</v-card-title>
           <v-card-text>dnflndflgdfgn.df</v-card-text>
-
-          <div class="sloping_edge">
-            <div class="ichen_beige"></div>
-          </div>
         </v-card>
       </v-col>
     </v-row>

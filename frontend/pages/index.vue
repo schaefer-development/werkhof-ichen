@@ -16,9 +16,6 @@
             </p>
             <p>Ich freue mich auf Ihren Kontakt.</p>
           </v-card-text>
-          <div class="sloping_edge">
-            <div class="ichen_beige"></div>
-          </div>
         </v-card>
       </v-col>
       <v-col xs="12" sm="6" md="4">
@@ -29,10 +26,6 @@
             Meine Kollektionen sind zeitlose, individuelle Entwicklungen, die
             nur bedingt den Trends des Modemarktes unterworfen sind.
           </v-card-text>
-
-          <div class="sloping_edge">
-            <div class="ichen_green"></div>
-          </div>
         </v-card>
       </v-col>
       <v-col xs="12" sm="6" md="4">
@@ -48,10 +41,6 @@
               ></veranstaltung-short-list>
             </ul>
           </v-card-text>
-
-          <div class="sloping_edge">
-            <div class="ichen_blue"></div>
-          </div>
         </v-card>
       </v-col>
     </v-row>

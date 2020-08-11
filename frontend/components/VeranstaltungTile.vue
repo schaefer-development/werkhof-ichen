@@ -46,6 +46,9 @@
           </nuxt-link>
         </v-card-actions>
       </div>
+      <div class="sloping_edge">
+        <div class="ichen_beige"></div>
+      </div>
     </v-card>
   </v-col>
 </template>
