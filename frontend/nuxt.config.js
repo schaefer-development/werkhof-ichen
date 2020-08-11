@@ -1,3 +1,9 @@
+const axios = {}
+if (process.env.NODE_ENV === 'development') {
+  axios.proxy = true
+  axios.prefix = '/api'
+}
+
 export default {
   /*
    ** Nuxt rendering mode
@@ -73,17 +79,18 @@ export default {
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
-  axios: {
-    proxy: true,
-  },
+   */
+  axios,
 
   proxy: {
+    '/uploads/': {
+      target: process.env.BACKEND_URL || 'http://localhost:1337',
+    },
     '/api/': {
       target: process.env.BACKEND_URL || 'http://localhost:1337',
       pathRewrite: { '^/api/': '' },
     },
   },
-   */
 
   /** loading: false, **/
 
