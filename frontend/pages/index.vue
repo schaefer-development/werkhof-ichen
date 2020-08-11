@@ -3,7 +3,11 @@
     <v-row>
       <v-col xs="12" sm="6" md="4">
         <v-card rounded="0" flat class="ichen_beige">
-          <v-img class="white--text align-end" height="250px" src="/werkhof.jpg"></v-img>
+          <v-img
+            class="white--text align-end"
+            height="250px"
+            src="/werkhof.jpg"
+          ></v-img>
           <v-card-title>werkhof ichen</v-card-title>
           <v-card-text>
             <p>
@@ -20,7 +24,11 @@
       </v-col>
       <v-col xs="12" sm="6" md="4">
         <v-card rounded="0" flat class="ichen_green">
-          <v-img class="white--text align-end" height="250px" src="/leather_trouser.jpg"></v-img>
+          <v-img
+            class="white--text align-end"
+            height="250px"
+            src="/leather_trouser.jpg"
+          ></v-img>
           <v-card-title>Anfertigungen</v-card-title>
           <v-card-text class="white--text">
             Meine Kollektionen sind zeitlose, individuelle Entwicklungen, die
@@ -30,8 +38,14 @@
       </v-col>
       <v-col xs="12" sm="6" md="4">
         <v-card rounded="0" flat class="ichen_blue">
-          <v-img class="white--text align-end" height="250px" src="/kid_sewing.jpg"></v-img>
-          <v-card-title class="ichen_yellow--text">Veranstaltungen</v-card-title>
+          <v-img
+            class="white--text align-end"
+            height="250px"
+            src="/kid_sewing.jpg"
+          ></v-img>
+          <v-card-title class="ichen_yellow--text"
+            >Veranstaltungen</v-card-title
+          >
           <v-card-text class="text--primary">
             <ul class="shortlist">
               <veranstaltung-short-list
@@ -55,7 +69,7 @@ export default {
     VeranstaltungShortList,
   },
   async asyncData({ $axios }) {
-    const veranstaltungs = await $axios.$get('/api/veranstaltungs', {
+    const veranstaltungs = await $axios.$get('/veranstaltungs', {
       params: {
         _sort: 'Datum:ASC',
         _limit: 3,

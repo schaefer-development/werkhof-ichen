@@ -4,11 +4,13 @@ module.exports = ({ env }) => ({
     providerOptions: {
       host: env('SMTP_HOST'),
       port: env('SMTP_PORT'),
-      username: env('SMTP_USERNAME'),
-      password: env('SMTP_PASSWORD'),
+      auth: {
+        user: env('SMTP_USERNAME'),
+        pass: env('SMTP_PASSWORD'),
+      }
     },
     settings: {
-      defaultFrom: 'default-from@example.org'
+      defaultFrom: env('SMTP_DEFAULT_FROM', 'default-from@example.org'),
     }
   },
 });

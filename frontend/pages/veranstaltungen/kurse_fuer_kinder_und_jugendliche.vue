@@ -18,9 +18,9 @@ export default {
     VeranstaltungTile,
   },
   async asyncData(context) {
-    const veranstaltungs = await context.$axios.$get('/api/veranstaltungs', {
+    const veranstaltungs = await context.$axios.$get('/veranstaltungs', {
       params: {
-        Kategorie: 'kurse_fuer_kinder_und_jugendliche'
+        Kategorie: 'kurse_fuer_kinder_und_jugendliche',
       },
     })
     return { veranstaltungs }

@@ -19,7 +19,9 @@
                 <nuxt-link to="/anfertigungen/leder">Leder</nuxt-link>
               </li>
               <li>
-                <nuxt-link to="/anfertigungen/weitere_textilien">Weitere Textilien</nuxt-link>
+                <nuxt-link to="/anfertigungen/weitere_textilien"
+                  >Weitere Textilien</nuxt-link
+                >
               </li>
             </ul>
           </v-card-text>
@@ -34,5 +36,3 @@
     </v-row>
   </v-container>
 </template>
-
-

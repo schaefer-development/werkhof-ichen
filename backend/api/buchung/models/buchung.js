@@ -19,7 +19,6 @@ module.exports = {
      strapi.log.debug('Buchung created!', result, data)
      await strapi.plugins['email'].services.email.send({
        to: email_adresse,
-       from: 'werkhof-ichen@example.org',
        subject: 'Ihre Anmeldung auf werkhof-ichen.de',
        text: `
 Hallo  ${ result.name }, 

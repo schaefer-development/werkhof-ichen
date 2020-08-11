@@ -12,8 +12,7 @@
           <v-card-text class="white--text">
             <p>
               werkhof ichen
-              <br />Im alten Breidt 11
-              <br />53797 Lohmar-Breidt
+              <br />Im alten Breidt 11 <br />53797 Lohmar-Breidt
               <br />
             </p>
             <p>
@@ -30,18 +29,18 @@
           <v-card-text>
             <strong>Von Köln kommend:</strong>
             <p>
-              Abfahrt von der A3 "Rösrath/ Lohmar-Nord", an der nächsten T-Kreuzung
-              rechts, ca. 9 Km geradeaus, dann dem Hinweisschild "Breidt/ Geber"
-              nach links folgen, nächste T-Kreuzung rechts, in Breidt die 1. links,
-              die 2. Möglichkeit rechts, dann liegt der "werkhof ichen" nach 50 m
-              auf der linken Seite.
+              Abfahrt von der A3 "Rösrath/ Lohmar-Nord", an der nächsten
+              T-Kreuzung rechts, ca. 9 Km geradeaus, dann dem Hinweisschild
+              "Breidt/ Geber" nach links folgen, nächste T-Kreuzung rechts, in
+              Breidt die 1. links, die 2. Möglichkeit rechts, dann liegt der
+              "werkhof ichen" nach 50 m auf der linken Seite.
             </p>
             <strong>Von Bonn/ Siegburg kommend:</strong>
             <p>
-              Von der B56 Richtung Much links nach "Krahwinkel" abbiegen, den Ort
-              durchfahren, geradeaus bis "Breidt", im Ort die 3. Möglichkeit rechts
-              abbiegen (J.-Hofer-Weg) die 2. Möglichkeit rechts, dann liegt der
-              werkhof ichen nach 50 m auf der linken Seite.
+              Von der B56 Richtung Much links nach "Krahwinkel" abbiegen, den
+              Ort durchfahren, geradeaus bis "Breidt", im Ort die 3. Möglichkeit
+              rechts abbiegen (J.-Hofer-Weg) die 2. Möglichkeit rechts, dann
+              liegt der werkhof ichen nach 50 m auf der linken Seite.
             </p>
           </v-card-text>
         </v-card>

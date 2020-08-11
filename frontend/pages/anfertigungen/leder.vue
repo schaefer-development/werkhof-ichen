@@ -19,7 +19,9 @@
                 <nuxt-link to="/anfertigungen/leder">Leder</nuxt-link>
               </li>
               <li>
-                <nuxt-link to="/anfertigungen/weitere_textilien">Weitere Textilien</nuxt-link>
+                <nuxt-link to="/anfertigungen/weitere_textilien"
+                  >Weitere Textilien</nuxt-link
+                >
               </li>
             </ul>
           </v-card-text>
@@ -33,13 +35,29 @@
             <ul>
               <li>öko-gegerbte Leder</li>
               <li>ohne Einsatz von AZO-Farbstoffen</li>
-              <li>mit waschbaren Fettstoffen ausgerüstete, somit leicht zu pflegende Leder</li>
-              <li>mit hochwertigen, lichtbeständigen Farbstoffen im Fass durchgefärbte Häute</li>
+              <li>
+                mit waschbaren Fettstoffen ausgerüstete, somit leicht zu
+                pflegende Leder
+              </li>
+              <li>
+                mit hochwertigen, lichtbeständigen Farbstoffen im Fass
+                durchgefärbte Häute
+              </li>
             </ul>
             <br />
-            <p>Das Rinderleder stammt aus Deutschland oder Österreich. Büffelleder aus Thailand wird hier in Deutschland ökogerecht weiterbearbeitet.</p>
+            <p>
+              Das Rinderleder stammt aus Deutschland oder Österreich.
+              Büffelleder aus Thailand wird hier in Deutschland ökogerecht
+              weiterbearbeitet.
+            </p>
             <h3>Anfertigung einer Lederhose</h3>
-            <p>Anhand von Farbkarten und Mustern kann sich der Kunde die Lederart und -farbe aussuchen. Nach Modellabsprache und dem Maßnehmen folgt das Nähen eines Probemodells aus Nesselstoff, um die Passform zu kontrollieren. Nach bestandener Anprobe wird die Hose in Leder genäht.</p>
+            <p>
+              Anhand von Farbkarten und Mustern kann sich der Kunde die Lederart
+              und -farbe aussuchen. Nach Modellabsprache und dem Maßnehmen folgt
+              das Nähen eines Probemodells aus Nesselstoff, um die Passform zu
+              kontrollieren. Nach bestandener Anprobe wird die Hose in Leder
+              genäht.
+            </p>
           </v-card-text>
         </v-card>
       </v-col>
