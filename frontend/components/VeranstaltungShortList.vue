@@ -1,27 +1,17 @@
 <template>
   <li class="shortlist_item">
-    <v-row paddless>
-      <v-col xs="12" sm="12" md="8">
-        <strong>{{ veranstaltung.Titel }}</strong>
-        <br />
-        {{ veranstaltung.Datum | formatDate }} Uhr
-      </v-col>
-      <v-col xs="12" sm="12" md="4" align="right">
-        <nuxt-link
-          :to="{ name: 'anmelden-id', params: { id: veranstaltung.id } }"
-        >
-          <v-btn depressed small color="ichen_red white--text">Anmelden</v-btn>
-        </nuxt-link>
-      </v-col>
-    </v-row>
+    <p>
+      <strong>{{ veranstaltung.Titel }}</strong>
+      <br />
+      {{ veranstaltung.Datum | formatDate }} Uhr
+    </p>
+    <p justify="end">
+      <nuxt-link :to="{ name: 'anmelden-id', params: { id: veranstaltung.id } }">
+        <v-btn depressed small color="ichen_red white--text">Anmelden</v-btn>
+      </nuxt-link>
+    </p>
 
-    <br />
-    <v-img
-      class="shortlist_divider"
-      src="/shortlist_divider.svg"
-      alt="Nähnaht"
-      max-width="400px"
-    />
+    <v-img class="shortlist_divider" src="/shortlist_divider.svg" alt="Nähnaht" max-width="400px" />
   </li>
 </template>
 
@@ -40,6 +30,9 @@ export default {
 li.shortlist_item {
   padding: 0.75em 0;
   color: #fff;
+  p:nth-child(2) {
+    text-align: right;
+  }
   &:last-child {
     padding-bottom: 0 !important;
     div.shortlist_divider {
