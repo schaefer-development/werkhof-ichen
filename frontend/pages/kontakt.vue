@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row class="pb-xs-6 pb-md-6">
-      <v-col class="mr-3 ml-3">
+      <v-col>
         <div id="map"></div>
       </v-col>
     </v-row>
@@ -12,7 +12,8 @@
           <v-card-text class="white--text">
             <p>
               werkhof ichen
-              <br />Im alten Breidt 11 <br />53797 Lohmar-Breidt
+              <br />Im alten Breidt 11
+              <br />53797 Lohmar-Breidt
               <br />
             </p>
             <p>

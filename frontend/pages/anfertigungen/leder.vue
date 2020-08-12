@@ -5,7 +5,6 @@
         <v-img
           src="https://res.cloudinary.com/dk6nbbr6c/image/upload/v1597151779/ichen/header_leather_osru49.jpg"
           alt="werkhof ichen: Eine Auswahl von Leder"
-          class="mb-5 mr-3 ml-3"
         />
       </v-col>
     </v-row>
@@ -19,9 +18,7 @@
                 <nuxt-link to="/anfertigungen/leder">Leder</nuxt-link>
               </li>
               <li>
-                <nuxt-link to="/anfertigungen/weitere_textilien"
-                  >Weitere Textilien</nuxt-link
-                >
+                <nuxt-link to="/anfertigungen/weitere_textilien">Weitere Textilien</nuxt-link>
               </li>
             </ul>
           </v-card-text>

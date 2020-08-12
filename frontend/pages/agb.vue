@@ -2,11 +2,7 @@
   <v-container>
     <v-row class="pb-xs-6">
       <v-col cols="12">
-        <v-img
-          src="/header_images/header_leather.jpg"
-          alt="werkhof ichen: Auswahl von Leder"
-          class="mb-5 mr-3 ml-3"
-        />
+        <v-img src="/header_images/header_leather.jpg" alt="werkhof ichen: Auswahl von Leder" />
       </v-col>
     </v-row>
     <v-row>

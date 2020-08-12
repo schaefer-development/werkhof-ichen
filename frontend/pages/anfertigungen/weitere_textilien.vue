@@ -5,7 +5,6 @@
         <v-img
           src="/header_images/header_other_materials.jpg"
           alt="werkhof ichen: Andere Textilien"
-          class="mb-5 mr-3 ml-3"
         />
       </v-col>
     </v-row>
@@ -19,9 +18,7 @@
                 <nuxt-link to="/anfertigungen/leder">Leder</nuxt-link>
               </li>
               <li>
-                <nuxt-link to="/anfertigungen/weitere_textilien"
-                  >Weitere Textilien</nuxt-link
-                >
+                <nuxt-link to="/anfertigungen/weitere_textilien">Weitere Textilien</nuxt-link>
               </li>
             </ul>
           </v-card-text>
