@@ -2,7 +2,10 @@
   <v-container>
     <v-row class="pb-xs-6">
       <v-col cols="12">
-        <v-img src="/header_images/header_leather.jpg" alt="werkhof ichen: Eine Auswahl von Leder" />
+        <v-img
+          src="/header_images/header_leather.jpg"
+          alt="werkhof ichen: Eine Auswahl von Leder"
+        />
       </v-col>
     </v-row>
     <v-row class="align-baseline">
@@ -21,7 +24,11 @@
           <v-card-title>Media</v-card-title>
           <v-card-text>
             <v-carousel hide-delimiters>
-              <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src"></v-carousel-item>
+              <v-carousel-item
+                v-for="(item, i) in items"
+                :key="i"
+                :src="item.src"
+              ></v-carousel-item>
             </v-carousel>
           </v-card-text>
         </v-card>

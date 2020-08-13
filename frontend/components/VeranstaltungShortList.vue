@@ -6,12 +6,19 @@
       {{ veranstaltung.Datum | formatDate }} Uhr
     </p>
     <p justify="end">
-      <nuxt-link :to="{ name: 'anmelden-id', params: { id: veranstaltung.id } }">
+      <nuxt-link
+        :to="{ name: 'anmelden-id', params: { id: veranstaltung.id } }"
+      >
         <v-btn depressed small color="ichen_red white--text">Anmelden</v-btn>
       </nuxt-link>
     </p>
 
-    <v-img class="shortlist_divider" src="/shortlist_divider.svg" alt="Nähnaht" max-width="400px" />
+    <v-img
+      class="shortlist_divider"
+      src="/shortlist_divider.svg"
+      alt="Nähnaht"
+      max-width="400px"
+    />
   </li>
 </template>
 
