@@ -2,7 +2,10 @@
   <v-container>
     <v-row class="pb-xs-6">
       <v-col cols="12">
-        <v-img src="/header_images/header_leather.jpg" alt="werkhof ichen: Auswahl von Leder" />
+        <v-img
+          src="/header_images/header_leather.jpg"
+          alt="werkhof ichen: Auswahl von Leder"
+        />
       </v-col>
     </v-row>
     <v-row>
@@ -16,15 +19,13 @@
             </p>
             <p>
               werkhof ichen
-              <br />Dipl.-Ing. Irmina Maria Schmitz
-              <br />Im alten Breidt 11
+              <br />Dipl.-Ing. Irmina Maria Schmitz <br />Im alten Breidt 11
               <br />53797 Lohmar-Breidt
               <br />
             </p>
             <p>
               Telefon: 02246 . 31 97
-              <br />Fax: 02246 . 94 94 090
-              <br />E-Mail:
+              <br />Fax: 02246 . 94 94 090 <br />E-Mail:
               <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>
             </p>
           </v-card-text>
@@ -61,9 +62,30 @@
               Links.
             </p>
             <h3>Keine Abmahnung ohne vorherigen Kontakt</h3>
-            <p>Sollten irgendwelche Inhalte oder die designtechnische Gestaltung einzelner Seiten oder Teile dieser Internetseite fremde Rechte Dritter oder gesetzliche Bestimmungen verletzen oder anderweitig in irgendeiner Form wettbewerbsrechtliche Probleme hervorbringen, so bitte ich unter Berufung auf §8 Abs.4 UWG um eine angemessene, ausreichend erläuternde und schnelle Nachricht ohne Kostennote.</p>
-            <p>Ich garantiere, dass die zu Recht beanstandeten Passagen oder Teile dieser Webseiten in angemessener Frist entfernt bzw. den rechtlichen Vorgaben entsprechend umfänglich angepasst werden, ohne dass von Ihrer Seite die Einschaltung eines Rechtsbeistandes erforderlich ist.</p>
-            <p>Die Einschaltung eines Anwaltes zur für den Diensteanbieter kostenpflichtigen Abmahnung entspricht nicht dessen wirklichen oder mutmaßlichen Willen und würde damit einen Verstoß gegen §13 Abs.5 UWG wegen der Verfolgung sachfremder Ziele als beherrschendes Motiv der Verfahrenseinleitung, insbesondere einer Kostenerzielungsabsicht als eigentliche Triebfeder sowie einen Verstoß gegen die Schadensminderungspflicht darstellen.</p>
+            <p>
+              Sollten irgendwelche Inhalte oder die designtechnische Gestaltung
+              einzelner Seiten oder Teile dieser Internetseite fremde Rechte
+              Dritter oder gesetzliche Bestimmungen verletzen oder anderweitig
+              in irgendeiner Form wettbewerbsrechtliche Probleme hervorbringen,
+              so bitte ich unter Berufung auf §8 Abs.4 UWG um eine angemessene,
+              ausreichend erläuternde und schnelle Nachricht ohne Kostennote.
+            </p>
+            <p>
+              Ich garantiere, dass die zu Recht beanstandeten Passagen oder
+              Teile dieser Webseiten in angemessener Frist entfernt bzw. den
+              rechtlichen Vorgaben entsprechend umfänglich angepasst werden,
+              ohne dass von Ihrer Seite die Einschaltung eines Rechtsbeistandes
+              erforderlich ist.
+            </p>
+            <p>
+              Die Einschaltung eines Anwaltes zur für den Diensteanbieter
+              kostenpflichtigen Abmahnung entspricht nicht dessen wirklichen
+              oder mutmaßlichen Willen und würde damit einen Verstoß gegen §13
+              Abs.5 UWG wegen der Verfolgung sachfremder Ziele als
+              beherrschendes Motiv der Verfahrenseinleitung, insbesondere einer
+              Kostenerzielungsabsicht als eigentliche Triebfeder sowie einen
+              Verstoß gegen die Schadensminderungspflicht darstellen.
+            </p>
             <hr />
             <br />
             <h3>Gestaltung und technische Umsetzung:</h3>

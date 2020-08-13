@@ -109,7 +109,7 @@
       </v-app-bar-nav-icon>
     </v-app-bar>
 
-    <v-main>
+    <v-main class="pb-16">
       <nuxt />
     </v-main>
 
