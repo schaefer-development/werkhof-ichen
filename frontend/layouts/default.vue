@@ -41,7 +41,7 @@
         >
           <v-icon color="#2a434c" medium>mdi-facebook</v-icon>
         </v-btn>
-        <v-btn text link target="_blank" class="pl-0 pr-0 sm_link" href="#">
+        <v-btn text link target="_blank" class="pl-0 pr-0 sm_link" href="https://www.instagram.com/irmina_schmitz/?hl=de">
           <v-icon color="#2a434c" medium>mdi-instagram</v-icon>
         </v-btn>
       </v-row>
