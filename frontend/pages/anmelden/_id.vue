@@ -9,18 +9,18 @@
         ></v-img>
       </v-col>
       <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">
-        <booking-form :veranstaltung="veranstaltung"></booking-form>
+        <registration-form :veranstaltung="veranstaltung"></registration-form>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
-import BookingForm from '~/components/BookingForm'
+import RegistrationForm from '~/components/RegistrationForm'
 
 export default {
   components: {
-    BookingForm,
+    RegistrationForm,
   },
   async asyncData(context) {
     const veranstaltung = await context.$axios.$get(

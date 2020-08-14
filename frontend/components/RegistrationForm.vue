@@ -40,7 +40,7 @@
       <p>{{ veranstaltung.Preis }} Euro</p>
       <v-form ref="form" v-model="valid">
         <v-text-field
-          v-model="booking.name"
+          v-model="anmeldung.name"
           outlined
           :rules="requiredRules"
           required
@@ -51,7 +51,7 @@
         </v-text-field>
 
         <v-text-field
-          v-model="booking.email_adresse"
+          v-model="anmeldung.email"
           outlined
           :rules="emailRules"
           required
@@ -61,7 +61,7 @@
           </template>
         </v-text-field>
         <v-text-field
-          v-model="booking.telefon_nummer"
+          v-model="anmeldung.telefonNummer"
           outlined
           :rules="phoneNumberRules"
         >
@@ -71,7 +71,7 @@
             <div>Telefonnummer</div>
           </template>
         </v-text-field>
-        <v-text-field v-model="booking.strasse_hausnummer" outlined>
+        <v-text-field v-model="anmeldung.strasseHausnummer" outlined>
           <template v-slot:label>
             <div>
               <div class="jos_label">Straße und Hausnummer</div>
@@ -79,7 +79,7 @@
             </div>
           </template>
         </v-text-field>
-        <v-text-field v-model="booking.plz_ort" outlined>
+        <v-text-field v-model="anmeldung.plzOrt" outlined>
           <template v-slot:label>
             <div>
               <div class="jos_label">Postleitzahl und Ort</div>
@@ -132,12 +132,12 @@ export default {
   },
   data: () => ({
     valid: true,
-    booking: {
+    anmeldung: {
       name: '',
-      email_adresse: '',
-      telefon_nummer: '',
-      plz_ort: '',
-      strasse_hausnummer: '',
+      email: '',
+      telefonNummer: '',
+      plzOrt: '',
+      strasseHausnummer: '',
     },
     agb: false,
     requiredRules: [(v) => !!v || 'muss ausgefüllt werden'],
@@ -161,10 +161,10 @@ export default {
     },
     async submit() {
       this.loading = true
-      const { booking } = this
-      booking.veranstaltung = this.veranstaltung
-      await this.$axios.$post('/buchungs/', {
-        ...booking,
+      const { anmeldung } = this
+      anmeldung.veranstaltung = this.veranstaltung
+      await this.$axios.$post('/anmeldungs/', {
+        ...anmeldung,
       })
       this.loading = false
       this.success = true

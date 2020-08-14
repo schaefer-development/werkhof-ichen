@@ -21,10 +21,6 @@
     "Preis": {
       "type": "decimal"
     },
-    "buchungen": {
-      "collection": "buchung",
-      "via": "veranstaltung"
-    },
     "Vorschaubild": {
       "model": "file",
       "via": "related",
@@ -43,6 +39,10 @@
         "unkategorisiert"
       ],
       "required": true
+    },
+    "anmeldungen": {
+      "via": "veranstaltung",
+      "collection": "anmeldung"
     }
   }
 }

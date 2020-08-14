@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/buchungs",
-      "handler": "buchung.find",
+      "path": "/anmeldungs",
+      "handler": "anmeldung.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/buchungs/count",
-      "handler": "buchung.count",
+      "path": "/anmeldungs/count",
+      "handler": "anmeldung.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/buchungs/:id",
-      "handler": "buchung.findOne",
+      "path": "/anmeldungs/:id",
+      "handler": "anmeldung.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/buchungs",
-      "handler": "buchung.create",
+      "path": "/anmeldungs",
+      "handler": "anmeldung.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/buchungs/:id",
-      "handler": "buchung.update",
+      "path": "/anmeldungs/:id",
+      "handler": "anmeldung.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/buchungs/:id",
-      "handler": "buchung.delete",
+      "path": "/anmeldungs/:id",
+      "handler": "anmeldung.delete",
       "config": {
         "policies": []
       }
