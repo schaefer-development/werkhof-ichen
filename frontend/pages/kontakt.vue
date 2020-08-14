@@ -51,6 +51,8 @@
 
 <script>
 import mapboxgl from 'mapbox-gl'
+import StylesControl from 'mapbox-gl-controls/lib/styles'
+
 export default {
   data() {
     return {
@@ -74,6 +76,8 @@ export default {
         maxZoom: 20,
       })
       this.map.addControl(new mapboxgl.NavigationControl())
+      this.map.addControl(new StylesControl(), 'top-left')
+
       new mapboxgl.Marker({
         color: '#e0124d',
       })
@@ -84,10 +88,10 @@ export default {
       ichen Schmitz<br>
       Im alten Breidt 11a<br>
       53797 Lohmar-Breidt<br>
-      
+
       Telefon: 02246 . 31 97<br>
       E-Mail: <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a><br>
-      
+
       </p>`)
         )
         .setLngLat([7.2719627, 50.8557119])
