@@ -37,7 +37,7 @@
             <h3>Verantwortlicher</h3>
             <p>
               werkhof ichen
-              <br />Dipl.-Ing. Irmina Maria Schmitz <br />Im alten Breidt 11
+              <br />Dipl.-Ing. Irmina Maria Schmitz <br />Im alten Breidt 11a
               <br />53797 Lohmar-Breidt
             </p>
             <p>

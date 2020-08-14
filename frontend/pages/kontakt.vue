@@ -12,7 +12,8 @@
           <v-card-text class="white--text">
             <p>
               werkhof ichen
-              <br />Im alten Breidt 11 <br />53797 Lohmar-Breidt
+              <br />Im alten Breidt 11a
+              <br />53797 Lohmar-Breidt
               <br />
             </p>
             <p>
