@@ -13,14 +13,18 @@
         <v-card rounded="0" flat class="ichen_green">
           <v-card-text class="white--text">
             <ul class="aside_navi">
-              <li>Anfertigungen</li>
               <li>
-                <nuxt-link to="/anfertigungen/leder">Leder</nuxt-link>
+                <h2 class="white--text">Anfertigungen</h2>
               </li>
               <li>
-                <nuxt-link to="/anfertigungen/weitere_textilien"
-                  >Weitere Textilien</nuxt-link
-                >
+                <h3>
+                  <nuxt-link to="/anfertigungen/leder">Leder</nuxt-link>
+                </h3>
+              </li>
+              <li>
+                <h3>
+                  <nuxt-link to="/anfertigungen/weitere_textilien">Weitere Textilien</nuxt-link>
+                </h3>
               </li>
             </ul>
           </v-card-text>
