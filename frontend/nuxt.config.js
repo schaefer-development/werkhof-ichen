@@ -113,7 +113,7 @@ export default {
           success: '#4CAF50',
           warning: '#FFC107',
 
-          ichen_beige: '#ecdfd1',
+          ichen_beige: '#ece1cb',
           ichen_yellow: '#e5bc80',
           ichen_green: '#709726',
           ichen_blue: '#2a434c',

@@ -82,9 +82,13 @@ export default {
           new mapboxgl.Popup().setHTML(`
       <p>
       <strong>werkhof ichen</strong><br>
-      Dipl.-Ing. Irmina Maria Schmitz<br>
-      Im alten Breidt 11<br>
+      ichen Schmitz<br>
+      Im alten Breidt 11a<br>
       53797 Lohmar-Breidt<br>
+      
+      Telefon: 02246 . 31 97<br>
+      E-Mail: <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a><br>
+      
       </p>`)
         )
         .setLngLat([7.2719627, 50.8557119])
@@ -94,10 +98,48 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 #map {
   width: 100%;
   height: 40vh;
   max-height: 450px;
+}
+
+.mapboxgl-popup-content {
+  button.mapboxgl-popup-close-button {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2a434c;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      background-color: transparent !important;
+      border: none !important;
+    }
+    &:active,
+    &:focus {
+      background-color: transparent !important;
+      border: none !important;
+    }
+  }
+  p {
+    font-size: 14px;
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 400;
+    strong {
+      font-family: 'Overlock';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 16px;
+      color: #2a434c;
+    }
+  }
 }
 </style>
