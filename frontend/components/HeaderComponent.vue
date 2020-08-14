@@ -19,26 +19,7 @@
         </nuxt-link>
         <v-spacer></v-spacer>
         <v-btn text nuxt link to="/">Start</v-btn>
-        <v-menu offset-y transition="slide-y-transition" bottom>
-          <template v-slot:activator="{ on, attrs }">
-            <v-btn text v-bind="attrs" v-on="on">
-              Veranstaltungen
-              <v-icon>mdi-chevron-down</v-icon>
-            </v-btn>
-          </template>
-          <v-list>
-            <nuxt-link to="/veranstaltungen/kurse_fuer_kinder_und_jugendliche"
-              >Kurse für Kinder und Jugendliche</nuxt-link
-            >
-            <nuxt-link to="/veranstaltungen/kurse_fuer_erwachsene"
-              >Kurse für Erwachsene</nuxt-link
-            >
-            <nuxt-link to="/veranstaltungen/geburtstagsevents"
-              >Geburtstagsevents</nuxt-link
-            >
-          </v-list>
-        </v-menu>
-
+        <v-btn text nuxt link to="/veranstaltungen">Veranstaltungen</v-btn>
         <v-menu offset-y transition="slide-y-transition" bottom>
           <template v-slot:activator="{ on, attrs }">
             <v-btn text v-bind="attrs" v-on="on">

@@ -30,7 +30,7 @@
         </div>
       </v-toolbar-title>
       <v-spacer />
-      <v-btn nuxt :to="'/veranstaltungen/' + veranstaltung.Kategorie" icon>
+      <v-btn icon @click="cancel">
         <v-icon>mdi-close</v-icon>
       </v-btn>
     </v-toolbar>
@@ -92,8 +92,8 @@
             <div>
               <div class="jos_label">
                 Ich habe die
-                <nuxt-link to="/anfertigungen/leder">AGB</nuxt-link
-                >&nbsp;gelesen und akzeptiere sie
+                <nuxt-link to="/agb">AGB</nuxt-link>&nbsp;gelesen und akzeptiere
+                sie
               </div>
             </div>
           </template>
@@ -114,11 +114,9 @@
           @click="submit"
           >Anmelden</v-btn
         >
-        <nuxt-link :to="'/veranstaltungen/' + veranstaltung.Kategorie">
-          <v-btn depressed small color="ichen_blue white--text"
-            >Abbrechen</v-btn
-          >
-        </nuxt-link>
+        <v-btn depressed small color="ichen_blue white--text" @click="cancel">
+          Abbrechen
+        </v-btn>
       </v-form>
     </v-card-text>
   </v-card>
@@ -158,6 +156,9 @@ export default {
     loading: false,
   }),
   methods: {
+    cancel() {
+      this.$router.back()
+    },
     async submit() {
       this.loading = true
       const { booking } = this

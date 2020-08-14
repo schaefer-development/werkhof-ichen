@@ -22,8 +22,8 @@
       "type": "decimal"
     },
     "buchungen": {
-      "via": "veranstaltung",
-      "collection": "buchung"
+      "collection": "buchung",
+      "via": "veranstaltung"
     },
     "Vorschaubild": {
       "model": "file",
@@ -39,7 +39,8 @@
       "enum": [
         "kurse_fuer_kinder_und_jugendliche",
         "kurse_fuer_erwachsene",
-        "geburtstagsevents"
+        "geburtstagsevents",
+        "unkategorisiert"
       ],
       "required": true
     }

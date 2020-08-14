@@ -19,8 +19,8 @@
       "type": "string"
     },
     "veranstaltung": {
-      "model": "veranstaltung",
-      "via": "buchungen"
+      "via": "buchungen",
+      "model": "veranstaltung"
     },
     "telefon_nummer": {
       "type": "string",

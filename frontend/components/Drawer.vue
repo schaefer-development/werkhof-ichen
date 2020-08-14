@@ -19,26 +19,9 @@
       </v-toolbar>
       <v-list nav>
         <v-list-item nuxt link to="/">Start</v-list-item>
-        <v-list-group no-action>
-          <template v-slot:activator>
-            <v-list-item>
-              Veranstaltungen
-            </v-list-item>
-          </template>
-          <v-list-item
-            nuxt
-            link
-            to="/veranstaltungen/kurse_fuer_kinder_und_jugendliche"
-          >
-            Kurse für Kinder und Jugendliche
-          </v-list-item>
-          <v-list-item nuxt link to="/veranstaltungen/kurse_fuer_erwachsene"
-            >Kurse für Erwachsene</v-list-item
-          >
-          <v-list-item nuxt link to="/veranstaltungen/geburtstagsevents"
-            >Geburtstagsevents</v-list-item
-          >
-        </v-list-group>
+        <v-list-item nuxt link to="/veranstaltungen">
+          Veranstaltungen
+        </v-list-item>
         <v-list-group no-action>
           <template v-slot:activator>
             <v-list-item>
