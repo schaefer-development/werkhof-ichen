@@ -11,11 +11,7 @@
     <v-container>
       <v-toolbar color="transparent" flat class="d-none d-md-block">
         <nuxt-link to="/">
-          <v-img
-            src="/logo_ichen.svg"
-            alt="Logo Werkhof ichen"
-            max-width="110px"
-          />
+          <v-img src="/logo_ichen.svg" alt="Logo Werkhof ichen" max-width="110px" />
         </nuxt-link>
         <v-spacer></v-spacer>
         <v-btn text nuxt link to="/">Start</v-btn>
@@ -27,15 +23,11 @@
             </v-btn>
           </template>
           <v-list>
-            <nuxt-link to="/veranstaltungen/kurse_fuer_kinder_und_jugendliche"
-              >Kurse für Kinder und Jugendliche</nuxt-link
-            >
-            <nuxt-link to="/veranstaltungen/kurse_fuer_erwachsene"
-              >Kurse für Erwachsene</nuxt-link
-            >
-            <nuxt-link to="/veranstaltungen/geburtstagsevents"
-              >Geburtstagsevents</nuxt-link
-            >
+            <nuxt-link
+              to="/veranstaltungen/kurse_fuer_kinder_und_jugendliche"
+            >Kurse für Kinder und Jugendliche</nuxt-link>
+            <nuxt-link to="/veranstaltungen/kurse_fuer_erwachsene">Kurse für Erwachsene</nuxt-link>
+            <nuxt-link to="/veranstaltungen/geburtstagsevents">Geburtstagsevents</nuxt-link>
           </v-list>
         </v-menu>
 
@@ -48,9 +40,7 @@
           </template>
           <v-list>
             <nuxt-link to="/anfertigungen/leder">Leder</nuxt-link>
-            <nuxt-link to="/anfertigungen/weitere_textilien"
-              >Weitere Textilien</nuxt-link
-            >
+            <nuxt-link to="/anfertigungen/weitere_textilien">Weitere Textilien</nuxt-link>
           </v-list>
         </v-menu>
         <v-btn text nuxt link to="/media">Media</v-btn>
@@ -65,17 +55,19 @@
         >
           <v-icon color="ichen_blue" medium>mdi-facebook</v-icon>
         </v-btn>
-        <v-btn text link target="_blank" class="sm_link" href="#">
+        <v-btn
+          text
+          link
+          target="_blank"
+          class="sm_link"
+          href="https://www.instagram.com/irmina_schmitz/?hl=de"
+        >
           <v-icon color="ichen_blue" medium>mdi-instagram</v-icon>
         </v-btn>
       </v-toolbar>
       <v-toolbar color="transparent" flat class="d-md-none">
         <nuxt-link to="/">
-          <v-img
-            src="/logo_ichen.svg"
-            alt="Logo Werkhof ichen"
-            max-width="110px"
-          />
+          <v-img src="/logo_ichen.svg" alt="Logo Werkhof ichen" max-width="110px" />
         </nuxt-link>
         <v-spacer></v-spacer>
         <v-app-bar-nav-icon @click.stop="toggleDrawer">

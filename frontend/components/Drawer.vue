@@ -38,7 +38,13 @@
       >
         <v-icon color="ichen_blue" medium>mdi-facebook</v-icon>
       </v-btn>
-      <v-btn text link target="_blank" class="pl-0 pr-0 sm_link" href="#">
+      <v-btn
+        text
+        link
+        target="_blank"
+        class="pl-0 pr-0 sm_link"
+        href="https://www.instagram.com/irmina_schmitz/?hl=de"
+      >
         <v-icon color="ichen_blue" medium>mdi-instagram</v-icon>
       </v-btn>
     </v-row>
@@ -96,12 +102,6 @@ export default {
           width: auto;
         }
         .v-expansion-panel-content {
-          .v-expansion-panel-content__wrap {
-            border: 1px solid red;
-
-            display: flex;
-            flex-direction: column;
-          }
         }
       }
     }
