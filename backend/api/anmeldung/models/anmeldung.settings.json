@@ -28,8 +28,8 @@
       "private": true
     },
     "veranstaltung": {
-      "model": "veranstaltung",
-      "via": "anmeldungen"
+      "via": "anmeldungen",
+      "model": "veranstaltung"
     },
     "telefonNummer": {
       "type": "string",

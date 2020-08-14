@@ -19,7 +19,7 @@
             <li>{{ veranstaltung.Preis }} Euro</li>
           </ul>
           <p>
-            <strong>still free places</strong>
+          <availability :veranstaltung="veranstaltung"></availability>
           </p>
         </div>
       </v-card-text>
@@ -55,7 +55,12 @@
 </template>
 
 <script>
+import Availability from '~/components/Availability'
+
 export default {
+  components: {
+    Availability,
+  },
   props: {
     veranstaltung: {
       type: Object,

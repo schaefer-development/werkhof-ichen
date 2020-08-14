@@ -41,8 +41,12 @@
       "required": true
     },
     "anmeldungen": {
-      "via": "veranstaltung",
-      "collection": "anmeldung"
+      "collection": "anmeldung",
+      "via": "veranstaltung"
+    },
+    "maximaleAnzahlTeilnehmer": {
+      "type": "integer",
+      "min": 1
     }
   }
 }

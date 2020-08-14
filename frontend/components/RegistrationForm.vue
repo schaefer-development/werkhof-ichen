@@ -36,6 +36,7 @@
     </v-toolbar>
     <v-divider></v-divider>
     <v-card-text>
+      <availability :veranstaltung="veranstaltung"></availability>
       <p>{{ veranstaltung.Beschreibung }}</p>
       <p>{{ veranstaltung.Preis }} Euro</p>
       <v-form ref="form" v-model="valid">
@@ -123,7 +124,12 @@
 </template>
 
 <script>
+import Availability from '~/components/Availability'
+
 export default {
+  components: {
+    Availability,
+  },
   props: {
     veranstaltung: {
       type: Object,
