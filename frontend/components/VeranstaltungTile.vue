@@ -1,7 +1,11 @@
 <template>
   <v-col id="veranstaltung" xs="12" sm="6" md="4">
     <v-card rounded="0" flat class="ichen_beige">
-      <v-img class="white--text align-end" height="200px" :src="veranstaltung.Vorschaubild.url"></v-img>
+      <v-img
+        class="white--text align-end"
+        height="200px"
+        :src="veranstaltung.Vorschaubild.url"
+      ></v-img>
       <v-card-title>{{ veranstaltung.Titel }}</v-card-title>
       <v-card-text class="text--primary pb-0">
         <div class="veranstaltungen_details">
@@ -37,8 +41,12 @@
 
       <div>
         <v-card-actions class="pt-6 pb-8 pr-4">
-          <nuxt-link :to="{ name: 'anmelden-id', params: { id: veranstaltung.id } }">
-            <v-btn depressed small color="ichen_red white--text">Anmelden</v-btn>
+          <nuxt-link
+            :to="{ name: 'anmelden-id', params: { id: veranstaltung.id } }"
+          >
+            <v-btn depressed small color="ichen_red white--text"
+              >Anmelden</v-btn
+            >
           </nuxt-link>
         </v-card-actions>
       </div>

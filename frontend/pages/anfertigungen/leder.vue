@@ -21,7 +21,9 @@
               </li>
               <li>
                 <h3>
-                  <nuxt-link to="/anfertigungen/weitere_textilien">Weitere Textilien</nuxt-link>
+                  <nuxt-link to="/anfertigungen/weitere_textilien"
+                    >Weitere Textilien</nuxt-link
+                  >
                 </h3>
               </li>
             </ul>
