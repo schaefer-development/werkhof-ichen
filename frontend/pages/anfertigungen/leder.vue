@@ -8,14 +8,12 @@
         />
       </v-col>
     </v-row>
-    <v-row>
+    <v-row align="baseline">
       <v-col cols="12" xs="12" sm="12" md="4" lg="4" xl="4">
-        <v-card rounded="0" flat class="ichen_green">
+        <v-card rounded="0" flat class="ichen_green px-3">
+          <v-card-title class="white--text">Anfertigungen</v-card-title>
           <v-card-text class="white--text">
             <ul class="aside_navi">
-              <li>
-                <h2 class="white--text">Anfertigungen</h2>
-              </li>
               <li>
                 <h3>
                   <nuxt-link to="/anfertigungen/leder">Leder</nuxt-link>

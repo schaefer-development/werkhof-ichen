@@ -94,19 +94,11 @@ $font-size-root: 20px !default;
   ul.aside_navi {
     list-style: none;
     padding: 0em;
+    border-top: 1px dashed #fff;
     li {
-      padding: 0.5em 1.5em;
-      margin: 0.5em 0.5em 0.5em 1em;
-      &:first-child {
-        border-bottom: 1px dashed #fff;
-        text-transform: uppercase;
-        letter-spacing: 0.03em;
-        font-size: 1.1em;
-        margin: 0.5em;
-        font-family: 'Overlock';
-        font-style: normal;
-        font-weight: 900;
-      }
+      padding: 0.5em 0em;
+      margin: 0.5em 0.5em 0.5em 0em;
+
       a{
        &:hover{
          color:$ichen_red;
