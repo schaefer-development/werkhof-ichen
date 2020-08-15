@@ -10,6 +10,7 @@
           item-value="key"
           multiple
           chips
+          item-color="ichen_beige"
           hint="Nur Veranstaltung dieser Kategorien anzeigen"
           persistent-hint
           @change="change"
