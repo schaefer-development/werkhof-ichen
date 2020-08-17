@@ -105,13 +105,13 @@ export default {
       dark: false,
       themes: {
         light: {
-          primary: '#000000',
-          secondary: '#424242',
-          accent: '#82B1FF',
+          primary: '#ece1cb',
+          secondary: '#000000',
+          accent: '#e0124d',
           error: '#e0124d',
-          info: '#2196F3',
-          success: '#4CAF50',
-          warning: '#FFC107',
+          info: '#2a434c',
+          success: '#709726',
+          warning: '#e0124d',
 
           ichen_beige: '#ece1cb',
           ichen_yellow: '#e5bc80',
