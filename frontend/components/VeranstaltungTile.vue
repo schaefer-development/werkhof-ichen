@@ -19,7 +19,7 @@
             <li>{{ veranstaltung.Preis }} Euro</li>
           </ul>
           <p>
-          <availability :veranstaltung="veranstaltung"></availability>
+            <availability :veranstaltung="veranstaltung"></availability>
           </p>
         </div>
       </v-card-text>

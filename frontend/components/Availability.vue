@@ -1,24 +1,24 @@
 <template>
-  <v-chip v-if="available" dark color="ichen_green"><strong>noch Plätze frei</strong></v-chip>
+  <v-chip v-if="available" dark color="ichen_green"
+    ><strong>noch Plätze frei</strong></v-chip
+  >
   <v-chip v-else dark color="ichen_red"><strong>Warteliste</strong></v-chip>
 </template>
-
 
 <script>
 export default {
   props: {
     veranstaltung: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   computed: {
     available() {
       const { maximaleAnzahlTeilnehmer } = this.veranstaltung
-      if(!maximaleAnzahlTeilnehmer) return true
+      if (!maximaleAnzahlTeilnehmer) return true
       return this.veranstaltung.anmeldungen.length < maximaleAnzahlTeilnehmer
-    }
-  }
-
+    },
+  },
 }
 </script>

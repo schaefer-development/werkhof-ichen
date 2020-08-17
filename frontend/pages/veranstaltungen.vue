@@ -1,29 +1,31 @@
 <template>
   <v-container>
-    <v-row>
-      <v-col>
-        <v-select
-          v-model="selected"
-          deletable-chips
-          :items="items"
-          item-text="name"
-          item-value="key"
-          multiple
-          chips
-          item-color="ichen_beige"
-          hint="Nur Veranstaltung dieser Kategorien anzeigen"
-          persistent-hint
-          @change="change"
-        ></v-select>
-      </v-col>
-    </v-row>
-    <v-row>
-      <veranstaltung-tile
-        v-for="veranstaltung in gefilterteVeranstaltungen"
-        :key="veranstaltung.id"
-        :veranstaltung="veranstaltung"
-      ></veranstaltung-tile>
-    </v-row>
+    <client-only placeholder="Wird geladen...">
+      <v-row>
+        <v-col>
+          <v-select
+            v-model="selected"
+            deletable-chips
+            :items="items"
+            item-text="name"
+            item-value="key"
+            multiple
+            chips
+            item-color="ichen_beige"
+            hint="Nur Veranstaltung dieser Kategorien anzeigen"
+            persistent-hint
+            @change="change"
+          ></v-select>
+        </v-col>
+      </v-row>
+      <v-row>
+        <veranstaltung-tile
+          v-for="veranstaltung in gefilterteVeranstaltungen"
+          :key="veranstaltung.id"
+          :veranstaltung="veranstaltung"
+        ></veranstaltung-tile>
+      </v-row>
+    </client-only>
   </v-container>
 </template>
 
@@ -44,6 +46,7 @@ export default {
     return { veranstaltungen }
   },
   data() {
+    const selectedCategories = this.$route.query.Kategorie_in || []
     const items = [
       { key: 'kurse_fuer_erwachsene', name: 'Kurse für Erwachsene' },
       {
@@ -54,7 +57,7 @@ export default {
       { key: 'unkategorisiert', name: 'Unkategorisiert' },
     ]
     return {
-      selected: items,
+      selected: items.filter((i) => selectedCategories.includes(i.key)),
       items,
     }
   },
