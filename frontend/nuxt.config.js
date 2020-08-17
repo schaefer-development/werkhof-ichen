@@ -42,7 +42,10 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['mapbox-gl-controls/theme.css'],
+  css: [
+    'mapbox-gl-controls/theme.css',
+    '@mdi/font/css/materialdesignicons.css',
+  ],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -101,6 +104,7 @@ export default {
   vuetify: {
     treeShake: true,
     customVariables: ['~/assets/variables.scss'],
+    defaultAssets: false,
     theme: {
       dark: false,
       themes: {
