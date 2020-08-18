@@ -4,6 +4,7 @@
       <v-row>
         <v-col>
           <v-select
+            outlined
             v-model="selected"
             deletable-chips
             :items="items"
