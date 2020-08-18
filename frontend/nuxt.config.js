@@ -1,8 +1,12 @@
-const axios = {}
+import axios from 'axios'
+
+const axiosConfig = {}
 if (process.env.NODE_ENV === 'development') {
-  axios.proxy = true
-  axios.prefix = '/api'
+  axiosConfig.proxy = true
+  axiosConfig.prefix = '/api'
 }
+
+const apiUrl = process.env.API_URL || 'http://localhost:1337'
 
 export default {
   /*
@@ -83,14 +87,14 @@ export default {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios,
+  axios: axiosConfig,
 
   proxy: {
     '/uploads/': {
-      target: process.env.BACKEND_URL || 'http://localhost:1337',
+      target: apiUrl,
     },
     '/api/': {
-      target: process.env.BACKEND_URL || 'http://localhost:1337',
+      target: apiUrl,
       pathRewrite: { '^/api/': '' },
     },
   },
@@ -133,4 +137,19 @@ export default {
   build: {
     transpile: ['mapbox-gl-controls/lib/styles'],
   },
+
+  generate: {
+    routes() {
+      return axios.get(`${apiUrl}/veranstaltungs`, {
+        params: {
+          _sort: 'Datum:ASC',
+          Datum_gte: new Date(),
+        },
+      }).then(res => {
+        return res.data.map(veranstaltung => {
+          return '/anmelden/' + veranstaltung.id
+        })
+      })
+    }
+  }
 }
