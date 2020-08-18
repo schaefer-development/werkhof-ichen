@@ -1,31 +1,36 @@
 <template>
-  <ul class="shortlist">
-    <li
+  <div class="shortlist white--text">
+    <div
       v-for="veranstaltung in veranstaltungen"
       :key="veranstaltung.id"
-      class="shortlist_item"
+      class="shortlist_item pt-2"
     >
       <p>
         <strong>{{ veranstaltung.Titel }}</strong>
         <br />
         {{ veranstaltung.Datum | formatDate }} Uhr
       </p>
-      <p justify="end">
-        <nuxt-link
-          :to="{ name: 'anmelden-id', params: { id: veranstaltung.id } }"
-        >
-          <v-btn depressed small color="ichen_red white--text">Anmelden</v-btn>
-        </nuxt-link>
-      </p>
+      <client-only placeholder="Anmelden">
+        <div class="text-right">
+          <v-btn
+            nuxt
+            :to="{ name: 'anmelden-id', params: { id: veranstaltung.id } }"
+            depressed
+            small
+            color="ichen_red white--text"
+            >Anmelden</v-btn
+          >
+        </div>
+      </client-only>
 
       <v-img
-        class="shortlist_divider"
+        class="shortlist_divider my-6"
         src="/shortlist_divider.svg"
         alt="Nähnaht"
         max-width="400px"
       />
-    </li>
-  </ul>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -40,26 +45,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-ul.shortlist {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  li.shortlist_item {
-    padding: 0.75em 0;
-    color: #fff;
-    p:nth-child(2) {
-      text-align: right;
-    }
+.shortlist {
+  .shortlist_item {
     &:last-child {
-      padding-bottom: 0 !important;
-      div.shortlist_divider {
+      padding-bottom: 1em;
+      .shortlist_divider {
         display: none;
       }
-    }
-    div {
-      // image
-      padding: 0;
-      margin: 0 0 0 0;
     }
   }
 }
