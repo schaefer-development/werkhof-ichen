@@ -44,6 +44,7 @@
             </v-btn>
           </template>
           <v-list>
+            <nuxt-link to="/ueber_mich/werkhof">Werkhof</nuxt-link>
             <nuxt-link to="/ueber_mich/vita">Vita</nuxt-link>
             <nuxt-link to="/ueber_mich/presse">Presse</nuxt-link>
           </v-list>

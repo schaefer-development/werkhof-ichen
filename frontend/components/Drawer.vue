@@ -34,6 +34,7 @@
           <template v-slot:activator>
             <v-list-item class="pa-0">Über mich</v-list-item>
           </template>
+          <v-list-item nuxt link to="/ueber_mich/werkhof">Werkhof</v-list-item>
           <v-list-item nuxt link to="/ueber_mich/vita">Vita</v-list-item>
           <v-list-item nuxt link to="/ueber_mich/presse">Presse</v-list-item>
         </v-list-group>
