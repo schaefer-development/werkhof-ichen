@@ -1,11 +1,16 @@
 <template>
   <v-container>
-    <client-only placeholder="Wird geladen...">
+    <v-row v-if="!veranstaltungen.length" justify="center">
+      <v-alert outlined type="info" class="font-weight-bold">
+        Es stehen momentan keine Veranstaltungen an
+      </v-alert>
+    </v-row>
+    <client-only v-else placeholder="Wird geladen...">
       <v-row>
         <v-col>
           <v-select
-            outlined
             v-model="selected"
+            outlined
             deletable-chips
             :items="items"
             item-text="name"
@@ -18,7 +23,12 @@
           ></v-select>
         </v-col>
       </v-row>
-      <v-row>
+      <v-row v-if="!gefilterteVeranstaltungen.length" justify="center">
+        <v-alert outlined type="info" class="font-weight-bold">
+          Zu diesen Kategorien gibt es gerade keine anstehenden Veranstaltungen
+        </v-alert>
+      </v-row>
+      <v-row v-else>
         <veranstaltung-tile
           v-for="veranstaltung in gefilterteVeranstaltungen"
           :key="veranstaltung.id"
@@ -40,7 +50,7 @@ export default {
     const veranstaltungen = await context.$axios.$get('/veranstaltungs', {
       params: {
         _sort: 'Datum:ASC',
-        // Datum_gte: new Date(), TODO: sollen wir nur buchbare Veranstaltungen anzeigen?
+        Datum_gte: new Date(),
       },
     })
     return { veranstaltungen }

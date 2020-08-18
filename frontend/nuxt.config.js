@@ -112,7 +112,7 @@ export default {
           accent: '#709726',
           secondary: '#ECE1CB',
           success: '#4CAF50',
-          info: '#000000',
+          info: '#2a434c',
           warning: '#E0124D',
           error: '#E0124D',
 

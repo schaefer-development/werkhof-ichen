@@ -99,12 +99,9 @@
             </div>
           </template>
         </v-checkbox>
-        <p>
-          <strong class="ichen_blue--text">
-            <v-icon color="ichen_blue">mdi-alert-circle</v-icon>&nbsp;Ihr Platz
-            ist erst mit Zahlungseingang reserviert.
-          </strong>
-        </p>
+        <v-alert text type="info" class="font-weight-bold">
+          Ihr Platz ist erst mit Zahlungseingang reserviert.
+        </v-alert>
         <v-btn
           class="mr-4"
           depressed
