@@ -56,9 +56,18 @@
 
 <script>
 import mapboxgl from 'mapbox-gl'
-import StylesControl from 'mapbox-gl-controls/lib/styles'
 
 export default {
+  head() {
+    return {
+      link: [
+        {
+          rel: 'stylesheet',
+          href: 'https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css',
+        },
+      ],
+    }
+  },
   data() {
     return {
       access_token:
@@ -81,7 +90,6 @@ export default {
         maxZoom: 20,
       })
       this.map.addControl(new mapboxgl.NavigationControl())
-      this.map.addControl(new StylesControl(), 'top-left')
 
       new mapboxgl.Marker({
         color: '#e0124d',
