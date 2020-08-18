@@ -11,11 +11,7 @@
     <v-container>
       <v-toolbar color="transparent" flat class="d-none d-md-block">
         <nuxt-link to="/">
-          <v-img
-            src="/logo_ichen.svg"
-            alt="Logo Werkhof ichen"
-            max-width="110px"
-          />
+          <v-img src="/logo_ichen.svg" alt="Logo Werkhof ichen" max-width="110px" />
         </nuxt-link>
         <v-spacer></v-spacer>
         <v-btn text nuxt link to="/">Start</v-btn>
@@ -29,14 +25,23 @@
           </template>
           <v-list>
             <nuxt-link to="/anfertigungen/leder">Leder</nuxt-link>
-            <nuxt-link to="/anfertigungen/weitere_textilien"
-              >Weitere Textilien</nuxt-link
-            >
+            <nuxt-link to="/anfertigungen/weitere_textilien">Weitere Textilien</nuxt-link>
           </v-list>
         </v-menu>
         <v-btn text nuxt link to="/media">Media</v-btn>
         <v-btn text nuxt link to="/kontakt">Kontakt</v-btn>
-        <v-btn text nuxt link to="/ueber_mich">Über mich</v-btn>
+        <v-menu offset-y transition="slide-y-transition" bottom>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn text v-bind="attrs" v-on="on">
+              Über mich
+              <v-icon>mdi-chevron-down</v-icon>
+            </v-btn>
+          </template>
+          <v-list>
+            <nuxt-link to="/ueber_mich/vita">Vita</nuxt-link>
+            <nuxt-link to="/ueber_mich/presse">Presse</nuxt-link>
+          </v-list>
+        </v-menu>
         <v-btn
           text
           link
@@ -58,11 +63,7 @@
       </v-toolbar>
       <v-toolbar color="transparent" flat class="d-md-none">
         <nuxt-link to="/">
-          <v-img
-            src="/logo_ichen.svg"
-            alt="Logo Werkhof ichen"
-            max-width="110px"
-          />
+          <v-img src="/logo_ichen.svg" alt="Logo Werkhof ichen" max-width="110px" />
         </nuxt-link>
         <v-spacer></v-spacer>
         <v-app-bar-nav-icon @click.stop="toggleDrawer">

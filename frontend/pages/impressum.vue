@@ -2,10 +2,7 @@
   <v-container>
     <v-row class="pb-xs-6">
       <v-col cols="12">
-        <v-img
-          src="/header_images/header_leather.jpg"
-          alt="werkhof ichen: Auswahl von Leder"
-        />
+        <v-img src="/header_images/header_leather.jpg" alt="werkhof ichen: Auswahl von Leder" />
       </v-col>
     </v-row>
     <v-row>
@@ -19,20 +16,22 @@
             </p>
             <p>
               werkhof ichen
-              <br />Dipl.-Ing. Irmina Maria Schmitz <br />Im alten Breidt 11a
+              <br />Dipl.-Ing. Irmina Maria Schmitz
+              <br />Im alten Breidt 11a
               <br />53797 Lohmar-Breidt
               <br />
             </p>
             <p>
               Telefon: 02246 . 31 97
-              <br />Fax: 02246 . 94 94 090 <br />E-Mail:
+              <br />Fax: 02246 . 94 94 090
+              <br />E-Mail:
               <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>
             </p>
           </v-card-text>
         </v-card>
       </v-col>
       <v-col cols="12" xs="12" sm="6" md="8" lg="8" xl="8">
-        <v-card rounded="0" flat class="ichen_beige">
+        <v-card rounded="0" flat color="secondary">
           <v-card-text>
             <h3>Haftungsausschluss</h3>
             <p>
@@ -90,8 +89,9 @@
             <br />
             <h3>Gestaltung und technische Umsetzung:</h3>
             <p>
-              Robert und Jo Schäfer (E-Mail:
-              <a href="mailto:mail@joschaefer.com">mail@joschaefer.com</a>)
+              Robert und Jo Schäfer
+              <br />E-Mail:
+              <a href="mailto:mail@joschaefer.com">mail@joschaefer.com</a>
             </p>
           </v-card-text>
         </v-card>
