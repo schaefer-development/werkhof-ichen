@@ -31,7 +31,7 @@
         </v-card>
       </v-col>
       <v-col cols="12" xs="12" sm="12" md="8" lg="8" xl="8">
-        <v-card rounded="0" flat class="ichen_beige">
+        <v-card rounded="0" flat>
           <v-card-title>Weitere Textilien</v-card-title>
           <v-card-text></v-card-text>
         </v-card>

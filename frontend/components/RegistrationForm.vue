@@ -1,5 +1,5 @@
 <template>
-  <v-card v-if="success" rounded="0" flat class="px-6 pt-8 ichen_beige">
+  <v-card v-if="success" rounded="0" flat class="px-6 pt-8">
     <v-card-title>Vielen Dank für Ihre Anmeldung</v-card-title>
     <v-card-text>
       <p>
@@ -21,8 +21,8 @@
       </p>
     </v-card-text>
   </v-card>
-  <v-card v-else rounded="0" flat class="px-6 pt-8 ichen_beige">
-    <v-toolbar flat extended color="ichen_beige">
+  <v-card v-else rounded="0" flat class="px-6 pt-8">
+    <v-toolbar flat color="transparent" extended>
       <v-toolbar-title>
         {{ veranstaltung.Titel }}
         <div class="subheading">

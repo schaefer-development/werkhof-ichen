@@ -1,8 +1,8 @@
 <template>
-  <v-chip v-if="available" dark color="ichen_green"
+  <v-chip v-if="available" dark color="success"
     ><strong>noch Plätze frei</strong></v-chip
   >
-  <v-chip v-else dark color="ichen_red"><strong>Warteliste</strong></v-chip>
+  <v-chip v-else dark color="warning"><strong>Warteliste</strong></v-chip>
 </template>
 
 <script>

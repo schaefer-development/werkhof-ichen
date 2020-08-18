@@ -9,7 +9,15 @@
       </v-col>
     </v-row>
     <v-row align="baseline">
-      <v-col cols="12" xs="12" sm="12" md="4" lg="4" xl="4" class="subnavi_left">
+      <v-col
+        cols="12"
+        xs="12"
+        sm="12"
+        md="4"
+        lg="4"
+        xl="4"
+        class="subnavi_left"
+      >
         <v-card rounded="0" flat class="ichen_green px-3">
           <v-card-title class="white--text">Anfertigungen</v-card-title>
           <v-card-text class="white--text">
@@ -21,7 +29,9 @@
               </li>
               <li>
                 <h3>
-                  <nuxt-link to="/anfertigungen/weitere_textilien">Weitere Textilien</nuxt-link>
+                  <nuxt-link to="/anfertigungen/weitere_textilien"
+                    >Weitere Textilien</nuxt-link
+                  >
                 </h3>
               </li>
             </ul>
@@ -29,7 +39,7 @@
         </v-card>
       </v-col>
       <v-col cols="12" xs="12" sm="12" md="8" lg="8" xl="8">
-        <v-card rounded="0" flat class="ichen_beige">
+        <v-card rounded="0" flat>
           <v-card-title>Leder</v-card-title>
           <v-card-text>
             <p>Ich verarbeite nur:</p>
@@ -62,12 +72,12 @@
             </p>
 
             <strong>Kinderlederhose</strong>
-            <v-simple-table class="primary pb-8">
+            <v-simple-table class="b-8">
               <thead>
                 <tr>
-                  <th class="text-left secondary--text">Größe</th>
-                  <th class="text-left secondary--text">Preis in Euro</th>
-                  <th class="text-left secondary--text">Seitenlänge in cm</th>
+                  <th class="text-left">Größe</th>
+                  <th class="text-left">Preis in Euro</th>
+                  <th class="text-left">Seitenlänge in cm</th>
                 </tr>
               </thead>
               <tbody>
@@ -80,8 +90,7 @@
             </v-simple-table>
             <p>
               Mit Strickbündchen am Hosensaum: 10 Euro Aufpreis
-              <br />Verlängerung bis 8 cm: 15 Euro
-              <br />Schmutzfang: 15 Euro
+              <br />Verlängerung bis 8 cm: 15 Euro <br />Schmutzfang: 15 Euro
               <br />Ledermix: 10 Euro
             </p>
             <p>
@@ -93,16 +102,20 @@
               Bewegungsfreiheit und eine vernünftige Passform über mehrere Jahre
               mit entsprechender Hosenverlängerung.
             </p>
-            <p class="pb-12">Alle Produkte aus meiner Werkstatt sind Unikate!</p>
+            <p class="pb-12">
+              Alle Produkte aus meiner Werkstatt sind Unikate!
+            </p>
 
-            <h3>Lederhosen für Erwachsene – Damengröße 38 oder Herrengröße 48</h3>
+            <h3>
+              Lederhosen für Erwachsene – Damengröße 38 oder Herrengröße 48
+            </h3>
 
-            <v-simple-table class="primary pb-12">
+            <v-simple-table class="pb-12">
               <thead>
                 <tr>
-                  <th class="text-left secondary--text">Material</th>
-                  <th class="text-left secondary--text">Preis in Euro</th>
-                  <th class="text-left secondary--text">Pro Größe aufwärts</th>
+                  <th class="text-left">Material</th>
+                  <th class="text-left">Preis in Euro</th>
+                  <th class="text-left">Pro Größe aufwärts</th>
                 </tr>
               </thead>
               <tbody>
@@ -113,13 +126,15 @@
                 </tr>
               </tbody>
             </v-simple-table>
-            <h3>Lederjacke für Erwachsene – Damengröße 38 oder Herrengröße 48</h3>
-            <v-simple-table class="primary pb-8">
+            <h3>
+              Lederjacke für Erwachsene – Damengröße 38 oder Herrengröße 48
+            </h3>
+            <v-simple-table class="pb-8">
               <thead>
                 <tr>
-                  <th class="text-left secondary--text">Material</th>
-                  <th class="text-left secondary--text">Preis in Euro</th>
-                  <th class="text-left secondary--text">Pro Größe aufwärts</th>
+                  <th class="text-left">Material</th>
+                  <th class="text-left">Preis in Euro</th>
+                  <th class="text-left">Pro Größe aufwärts</th>
                 </tr>
               </thead>
               <tbody>
@@ -148,99 +163,96 @@
 </template>
 
 <script>
-  export default {
-    data () {
-      return {
-        kinderlederhosen: [
-          {
-            groesse: '86',
-            preis: 106,
-            seitenlaenge: 49,
-          },
-          {
-            groesse: '92',
-            preis: 112,
-            seitenlaenge: 54,
-          },
-            {
-            groesse: '98',
-            preis: 118,
-            seitenlaenge: 59,
-          },     
-                    {
-            groesse: '104',
-            preis: 124,
-            seitenlaenge: 64,
-          },
-          {
-            groesse: '110',
-            preis: 130,
-            seitenlaenge: 69,
-          },
-            {
-            groesse: '116',
-            preis: 136,
-            seitenlaenge: 74,
-          },      
-                    {
-            groesse: '122',
-            preis: 142,
-            seitenlaenge: 79,
-          },
-        ],
+export default {
+  data() {
+    return {
+      kinderlederhosen: [
+        {
+          groesse: '86',
+          preis: 106,
+          seitenlaenge: 49,
+        },
+        {
+          groesse: '92',
+          preis: 112,
+          seitenlaenge: 54,
+        },
+        {
+          groesse: '98',
+          preis: 118,
+          seitenlaenge: 59,
+        },
+        {
+          groesse: '104',
+          preis: 124,
+          seitenlaenge: 64,
+        },
+        {
+          groesse: '110',
+          preis: 130,
+          seitenlaenge: 69,
+        },
+        {
+          groesse: '116',
+          preis: 136,
+          seitenlaenge: 74,
+        },
+        {
+          groesse: '122',
+          preis: 142,
+          seitenlaenge: 79,
+        },
+      ],
 
-        erwachsenenlederhosen: [
-          {
-            material: 'Rindleder (Glatt/ Nubuk)',
-            preis: 'ca. 600',
-            preis_plus_pro_groesse: '+ 25 Euro',
-          },
-          {
-            material: 'Rehbock',
-            preis: 'ca. 800',
-            preis_plus_pro_groesse: '+ 40 Euro',
-          },
-          {
-            material: 'Hirsch',
-            preis: 'ca. 950',
-            preis_plus_pro_groesse: '+ 45 Euro',
-          },
-          {
-            material: 'Elch',
-            preis: 'ca. 1050',
-            preis_plus_pro_groesse: '+ 50 Euro',
-          },
+      erwachsenenlederhosen: [
+        {
+          material: 'Rindleder (Glatt/ Nubuk)',
+          preis: 'ca. 600',
+          preis_plus_pro_groesse: '+ 25 Euro',
+        },
+        {
+          material: 'Rehbock',
+          preis: 'ca. 800',
+          preis_plus_pro_groesse: '+ 40 Euro',
+        },
+        {
+          material: 'Hirsch',
+          preis: 'ca. 950',
+          preis_plus_pro_groesse: '+ 45 Euro',
+        },
+        {
+          material: 'Elch',
+          preis: 'ca. 1050',
+          preis_plus_pro_groesse: '+ 50 Euro',
+        },
+      ],
 
-        ],
-
-                erwachsenenlederjacke: [
-          {
-            material: 'Rindleder (Glatt/ Nubuk)',
-            preis: 'ca. 850',
-            preis_plus_pro_groesse: '+ 35 Euro',
-          },
-          {
-            material: 'Rehbock',
-            preis: 'ca. 1100',
-            preis_plus_pro_groesse: '+ 45 Euro',
-          },
-          {
-            material: 'Hirsch',
-            preis: 'ca. 1300',
-            preis_plus_pro_groesse: '+ 55 Euro',
-          },
-          {
-            material: 'Elch',
-            preis: 'ca. 1400',
-            preis_plus_pro_groesse: '+ 60 Euro',
-          },
-
-        ],
-      }
-    },
-  }
+      erwachsenenlederjacke: [
+        {
+          material: 'Rindleder (Glatt/ Nubuk)',
+          preis: 'ca. 850',
+          preis_plus_pro_groesse: '+ 35 Euro',
+        },
+        {
+          material: 'Rehbock',
+          preis: 'ca. 1100',
+          preis_plus_pro_groesse: '+ 45 Euro',
+        },
+        {
+          material: 'Hirsch',
+          preis: 'ca. 1300',
+          preis_plus_pro_groesse: '+ 55 Euro',
+        },
+        {
+          material: 'Elch',
+          preis: 'ca. 1400',
+          preis_plus_pro_groesse: '+ 60 Euro',
+        },
+      ],
+    }
+  },
+}
 </script>
-
 
 <style lang="scss">
 table {

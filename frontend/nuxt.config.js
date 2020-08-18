@@ -106,16 +106,15 @@ export default {
     customVariables: ['~/assets/variables.scss'],
     defaultAssets: false,
     theme: {
-      dark: false,
       themes: {
         light: {
-          primary: '#ece1cb',
-          secondary: '#000000',
-          accent: '#e0124d',
-          error: '#e0124d',
-          info: '#2a434c',
-          success: '#709726',
-          warning: '#e0124d',
+          primary: '#000000',
+          accent: '#709726',
+          secondary: '#ECE1CB',
+          success: '#4CAF50',
+          info: '#000000',
+          warning: '#E0124D',
+          error: '#E0124D',
 
           ichen_beige: '#ece1cb',
           ichen_yellow: '#e5bc80',

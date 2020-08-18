@@ -1,6 +1,6 @@
 <template>
-  <v-footer color="ichen_brown" padless>
-    <v-container fluid pt-0 pb-3>
+  <v-footer color="ichen_brown" dark padless>
+    <v-container fluid class="pt-0 pb-3">
       <v-row class="d-none d-md-block">
         <div id="footer-component-footer-gallery">
           <v-img src="/footer_images/house.jpg" alt="Werkhof ichen"></v-img>
@@ -32,7 +32,8 @@
         </v-col>
         <v-col cols="12" sm="4" md="3" lg="2" xl="2">
           <strong>werkhof ichen</strong>
-          <br />02246 . 31 97
+          <br />
+          <a href="tel:+4922463197">02246 . 31 97</a>
           <br />
           <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>
         </v-col>
@@ -62,27 +63,24 @@
 }
 
 .footer-component-bottom-row {
-  color: #fff;
-  div {
-    font-size: 0.9em;
+  font-size: 0.9em;
 
-    strong {
-      font-family: 'Overlock';
-      font-style: normal;
-      font-weight: 900;
-      font-size: 1.1em;
+  a {
+    color: #fff;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: #191716;
     }
-    a {
-      color: #fff;
-      text-decoration: none;
-      -webkit-transition: all 0.3s ease-in-out;
-      -moz-transition: all 0.3s ease-in-out;
-      -o-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out;
-      &:hover {
-        color: #191716;
-      }
-    }
+  }
+  strong {
+    font-family: 'Overlock';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.1em;
   }
 }
 </style>

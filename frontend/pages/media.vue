@@ -20,7 +20,7 @@
         offset-xl="4"
         xl="8"
       >
-        <v-card rounded="0" flat class="ichen_beige">
+        <v-card rounded="0" flat>
           <v-card-title>Media</v-card-title>
           <v-card-text>
             <v-carousel hide-delimiters>

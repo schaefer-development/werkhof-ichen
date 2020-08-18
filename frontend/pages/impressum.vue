@@ -31,7 +31,7 @@
         </v-card>
       </v-col>
       <v-col cols="12" xs="12" sm="6" md="8" lg="8" xl="8">
-        <v-card rounded="0" flat color="secondary">
+        <v-card rounded="0" flat>
           <v-card-text>
             <h3>Haftungsausschluss</h3>
             <p>

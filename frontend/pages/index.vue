@@ -2,7 +2,7 @@
   <v-container>
     <v-row>
       <v-col xs="12" sm="6" md="4">
-        <v-card rounded="0" flat class="ichen_beige">
+        <v-card rounded="0" flat>
           <v-img
             class="white--text align-end"
             height="250px"

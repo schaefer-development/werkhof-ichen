@@ -10,7 +10,7 @@
         <v-img src="/anfertigungen.jpg" alt="werkhof ichen" />
       </v-col>
       <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">
-        <v-card rounded="0" flat color="secondary">
+        <v-card rounded="0" flat>
           <v-card-title>Allgemeine Geschäftsbedingungen (AGB)</v-card-title>
           <v-card-text>
             <h3>Zu jedem fairen Angebot gehören ein paar Spielregeln:</h3>
