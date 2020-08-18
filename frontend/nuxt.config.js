@@ -54,7 +54,6 @@ export default {
    ** https://nuxtjs.org/guide/plugins
    */
   plugins: [
-    { src: '~/plugins/mapbox', mode: 'client' },
     '~plugins/formatDate.js',
   ],
   /*
