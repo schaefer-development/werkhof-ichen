@@ -12,6 +12,8 @@
           <v-card-text class="white--text">
             <p>
               werkhof ichen
+              <br />ichen Schmitz <br />Diplom-Bekleidungs In­ge­ni­eu­rin
+              <br />
               <br />Im alten Breidt 11a <br />53797 Lohmar-Breidt
               <br />
             </p>

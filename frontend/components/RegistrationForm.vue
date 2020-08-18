@@ -1,12 +1,12 @@
 <template>
-  <v-card v-if="success" rounded="0" flat class="px-6 pt-8">
+  <v-card v-if="success" rounded="0" light flat class="px-6 pt-8">
     <v-card-title>Vielen Dank für Ihre Anmeldung</v-card-title>
     <v-card-text>
       <p>
-        <strong
-          >{{ veranstaltung.Titel }} am
-          {{ veranstaltung.Datum | formatDate }} Uhr</strong
-        >
+        <strong>
+          {{ veranstaltung.Titel }} am
+          {{ veranstaltung.Datum | formatDate }} Uhr
+        </strong>
       </p>
       <p>
         Sie erhalten in den nächsten Minuten eine Bestätigung Ihrer Anmeldung
@@ -22,7 +22,7 @@
     </v-card-text>
   </v-card>
   <v-card v-else rounded="0" flat class="px-6 pt-8">
-    <v-toolbar flat color="transparent" extended>
+    <v-toolbar flat extended>
       <v-toolbar-title>
         {{ veranstaltung.Titel }}
         <div class="subheading">
@@ -115,9 +115,9 @@
           @click="submit"
           >Anmelden</v-btn
         >
-        <v-btn depressed small color="ichen_blue white--text" @click="cancel">
-          Abbrechen
-        </v-btn>
+        <v-btn depressed small color="ichen_blue white--text" @click="cancel"
+          >Abbrechen</v-btn
+        >
       </v-form>
     </v-card-text>
   </v-card>

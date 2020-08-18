@@ -20,16 +20,16 @@
         xl="8"
         offset-xl="4"
       >
-        <v-card rounded="0" flat>
-          <v-card-title v-if="error.statusCode === 404">{{
-            pageNotFound
-          }}</v-card-title>
+        <v-card rounded="0" flat color="secondary">
+          <v-card-title v-if="error.statusCode === 404">
+            {{ pageNotFound }}
+          </v-card-title>
           <v-card-title v-else>{{ otherError }}</v-card-title>
           <v-card-text>
             <p>Ups ... Da ist was schiefgelaufen.</p>
             <p>
               Möchten Sie zurück zur
-              <NuxtLink to="/">Startseite</NuxtLink>?
+              <nuxt-link to="/">Startseite</nuxt-link>?
             </p>
           </v-card-text>
         </v-card>
