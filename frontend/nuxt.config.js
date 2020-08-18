@@ -36,7 +36,6 @@ export default {
       },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
         href: 'https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css',
@@ -76,6 +75,12 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
   ],
+
+  pwa: {
+    meta: {
+      lang: 'de',
+    }
+  },
 
   /* sitemap */
   sitemap: {
