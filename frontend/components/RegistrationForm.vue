@@ -22,7 +22,7 @@
     </v-card-text>
   </v-card>
   <v-card v-else rounded="0" flat class="px-6 pt-8">
-    <v-toolbar flat extended>
+    <v-toolbar flat extended color="transparent">
       <v-toolbar-title>
         {{ veranstaltung.Titel }}
         <div class="subheading">
@@ -99,9 +99,9 @@
             </div>
           </template>
         </v-checkbox>
-        <v-alert text type="info" class="font-weight-bold">
-          Ihr Platz ist erst mit Zahlungseingang reserviert.
-        </v-alert>
+        <v-alert text type="info" class="font-weight-bold"
+          >Ihr Platz ist erst mit Zahlungseingang reserviert.</v-alert
+        >
         <v-btn
           class="mr-4"
           depressed
