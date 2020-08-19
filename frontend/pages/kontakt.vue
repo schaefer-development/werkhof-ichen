@@ -12,11 +12,9 @@
           <v-card-text class="white--text">
             <p>
               werkhof ichen
-              <br />ichen Schmitz
-              <br />Diplom-Bekleidungs In­ge­ni­eu­rin
+              <br />ichen Schmitz <br />Diplom-Bekleidungs In­ge­ni­eu­rin
               <br />
-              <br />Im alten Breidt 11a
-              <br />53797 Lohmar-Breidt
+              <br />Im alten Breidt 11a <br />53797 Lohmar-Breidt
               <br />
             </p>
             <p>
@@ -58,16 +56,6 @@
 import mapboxgl from 'mapbox-gl'
 
 export default {
-  head() {
-    return {
-      link: [
-        {
-          rel: 'stylesheet',
-          href: 'https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css',
-        },
-      ],
-    }
-  },
   data() {
     return {
       access_token:
@@ -110,6 +98,16 @@ export default {
         .setLngLat([7.2719627, 50.8557119])
         .addTo(this.map)
     },
+  },
+  head() {
+    return {
+      link: [
+        {
+          rel: 'stylesheet',
+          href: 'https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css',
+        },
+      ],
+    }
   },
 }
 </script>

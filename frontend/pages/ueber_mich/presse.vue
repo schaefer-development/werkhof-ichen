@@ -3,24 +3,25 @@
     <v-row class="pb-xs-6">
       <v-col cols="12">
         <v-img
-          src="/header_images/header_etui.jpg"
-          alt="werkhof ichen: Andere Textilien"
+          src="/header_images/header_unikat.jpg"
+          alt="werkhof ichen: Lebenslauf"
         />
       </v-col>
     </v-row>
     <v-row>
       <v-col cols="12" xs="12" sm="4" md="4" lg="4" xl="4">
-        <v-img src="/ichen_portrait.jpg" alt="ichen" class />
+        <v-img src="/old_sewing_machine.jpg" alt="ichen" />
       </v-col>
+
       <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">
         <v-card rounded="0" flat class="ichen_beige">
           <v-card-title>Der Werkhof ichen in der Presse</v-card-title>
           <v-card-text>
             <p>
-              <strong
-                >Der Kölner Stadtanzeiger berichtete am 23.08.2010 über in
-                seiner Reihe "Märkte und Macher" über Irmina Schmitz:</strong
-              >
+              <strong>
+                Der Kölner Stadtanzeiger berichtete am 23.08.2010 über in seiner
+                Reihe "Märkte und Macher" über Irmina Schmitz:
+              </strong>
             </p>
             <h3>Ein Faible für die Lederhose</h3>
             <p>
@@ -93,10 +94,10 @@
 
             <hr />
             <p class="pt-12">
-              <strong
-                >Die Kölnische Rundschau berichtete am 15.11.2006 über die
-                Ausstellung auf dem werkhof ichen:</strong
-              >
+              <strong>
+                Die Kölnische Rundschau berichtete am 15.11.2006 über die
+                Ausstellung auf dem werkhof ichen:
+              </strong>
             </p>
             <h3>Mode und mehr aus dem werkhof</h3>
             <p>
