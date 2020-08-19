@@ -14,7 +14,7 @@
         <div class="text-right">
           <v-btn
             nuxt
-            :to="{ name: 'anmelden-id', params: { id: veranstaltung.id } }"
+            :to="{ name: 'veranstaltung-id', params: { id: veranstaltung.id } }"
             depressed
             color="ichen_red white--text"
             >Anmelden</v-btn

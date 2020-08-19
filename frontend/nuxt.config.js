@@ -143,7 +143,7 @@ export default {
         })
         .then((res) => {
           return res.data.map((veranstaltung) => {
-            return '/anmelden/' + veranstaltung.id
+            return '/veranstaltung/' + veranstaltung.id
           })
         })
     },

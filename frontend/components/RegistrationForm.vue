@@ -1,132 +1,112 @@
 <template>
-  <v-card v-if="success" rounded="0" light flat class="px-6 pt-8">
-    <v-card-title>Vielen Dank für Ihre Anmeldung</v-card-title>
-    <v-card-text>
-      <p>
-        <strong>
-          {{ veranstaltung.Titel }} am
-          {{ veranstaltung.Datum | formatDate }} Uhr
-        </strong>
-      </p>
-      <p>
-        Sie erhalten in den nächsten Minuten eine Bestätigung Ihrer Anmeldung
-        mit allen weiteren Details per E-Mail. Wenn Sie keine Nachricht erhalten
-        haben, schauen Sie auch bitte einmal in Ihrem Spamordner nach.
-      </p>
-      <p>
-        Falls Sie keine Bestätigung erhalten haben, nehmen Sie bitte Kontakt mit
-        mir auf:
-        <br />Telefon: 02246 . 31 97 oder per E-Mail:
-        <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>
-      </p>
-    </v-card-text>
-  </v-card>
-  <v-card v-else rounded="0" flat class="px-6 pt-8">
-    <v-toolbar flat extended color="transparent">
-      <v-toolbar-title>
-        {{ veranstaltung.Titel }}
-        <div class="subheading">
-          <small>{{ veranstaltung.Datum | formatDate }} Uhr</small>
+  <div v-if="success">
+    <p>
+      Sie erhalten in den nächsten Minuten eine Bestätigung Ihrer Anmeldung mit
+      allen weiteren Details per E-Mail. Wenn Sie keine Nachricht erhalten
+      haben, schauen Sie auch bitte einmal in Ihrem Spamordner nach.
+    </p>
+    <p>
+      Falls Sie keine Bestätigung erhalten haben, nehmen Sie bitte Kontakt mit
+      mir auf:
+      <br />Telefon: 02246 . 31 97 oder per E-Mail:
+      <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>
+    </p>
+    <p>
+      <v-btn depressed color="ichen_blue white--text" @click="confirm"
+        >Verstanden</v-btn
+      >
+    </p>
+  </div>
+  <v-form v-else ref="form" v-model="valid">
+    <v-text-field
+      v-model="anmeldung.name"
+      outlined
+      :rules="requiredRules"
+      required
+    >
+      <template v-slot:label>
+        <div class="jos_label">Vor- und Nachname</div>
+      </template>
+    </v-text-field>
+
+    <v-text-field
+      v-model="anmeldung.email"
+      outlined
+      :rules="emailRules"
+      required
+    >
+      <template v-slot:label>
+        <div class="jos_label">E-Mailadresse</div>
+      </template>
+    </v-text-field>
+    <v-text-field
+      v-model="anmeldung.telefonNummer"
+      outlined
+      :rules="phoneNumberRules"
+    >
+      <template v-slot:label>
+        <div class="jos_label">Telefonnummer</div>
+
+        <div>Telefonnummer</div>
+      </template>
+    </v-text-field>
+    <v-text-field v-model="anmeldung.strasseHausnummer" outlined>
+      <template v-slot:label>
+        <div>
+          <div class="jos_label">Straße und Hausnummer</div>
+          <small>(optional)</small>
         </div>
-      </v-toolbar-title>
-      <v-spacer />
-      <v-btn icon @click="cancel">
-        <v-icon>mdi-close</v-icon>
-      </v-btn>
-    </v-toolbar>
-    <v-divider></v-divider>
-    <v-card-text>
-      <availability :veranstaltung="veranstaltung"></availability>
-      <p>{{ veranstaltung.Beschreibung }}</p>
-      <p>{{ veranstaltung.Preis }} Euro</p>
-      <v-form ref="form" v-model="valid">
-        <v-text-field
-          v-model="anmeldung.name"
-          outlined
-          :rules="requiredRules"
-          required
-        >
-          <template v-slot:label>
-            <div class="jos_label">Vor- und Nachname</div>
-          </template>
-        </v-text-field>
-
-        <v-text-field
-          v-model="anmeldung.email"
-          outlined
-          :rules="emailRules"
-          required
-        >
-          <template v-slot:label>
-            <div class="jos_label">E-Mailadresse</div>
-          </template>
-        </v-text-field>
-        <v-text-field
-          v-model="anmeldung.telefonNummer"
-          outlined
-          :rules="phoneNumberRules"
-        >
-          <template v-slot:label>
-            <div class="jos_label">Telefonnummer</div>
-
-            <div>Telefonnummer</div>
-          </template>
-        </v-text-field>
-        <v-text-field v-model="anmeldung.strasseHausnummer" outlined>
-          <template v-slot:label>
-            <div>
-              <div class="jos_label">Straße und Hausnummer</div>
-              <small>(optional)</small>
-            </div>
-          </template>
-        </v-text-field>
-        <v-text-field v-model="anmeldung.plzOrt" outlined>
-          <template v-slot:label>
-            <div>
-              <div class="jos_label">Postleitzahl und Ort</div>
-              <small>(optional)</small>
-            </div>
-          </template>
-        </v-text-field>
-        <v-checkbox v-model="agb" :rules="agbRules" required>
-          <template v-slot:label>
-            <div>
-              <div class="jos_label">
-                Ich habe die
-                <nuxt-link to="/agb">AGB</nuxt-link>&nbsp;gelesen und akzeptiere
-                sie
-              </div>
-            </div>
-          </template>
-        </v-checkbox>
-        <v-alert text type="info" class="font-weight-bold"
-          >Ihr Platz ist erst mit Zahlungseingang reserviert.</v-alert
-        >
-        <v-btn
-          class="mr-4"
-          depressed
-          small
-          color="ichen_red white--text"
-          :disabled="!valid"
-          :loading="loading"
-          @click="submit"
-          >Anmelden</v-btn
-        >
-        <v-btn depressed small color="ichen_blue white--text" @click="cancel"
-          >Abbrechen</v-btn
-        >
-      </v-form>
-    </v-card-text>
-  </v-card>
+      </template>
+    </v-text-field>
+    <v-text-field v-model="anmeldung.plzOrt" outlined>
+      <template v-slot:label>
+        <div>
+          <div class="jos_label">Postleitzahl und Ort</div>
+          <small>(optional)</small>
+        </div>
+      </template>
+    </v-text-field>
+    <v-checkbox v-model="agb" :rules="agbRules" required>
+      <template v-slot:label>
+        <div>
+          <div class="jos_label">
+            Ich habe die
+            <nuxt-link to="/agb">AGB</nuxt-link> und die Informationen zum
+            <nuxt-link to="/datenschutz">Datenschutz</nuxt-link>&nbsp;gelesen
+            und stimme beiden zu.
+          </div>
+        </div>
+      </template>
+    </v-checkbox>
+    <v-alert text type="info" class="font-weight-bold">
+      <template v-if="available">
+        Ihr Platz ist erst mit Zahlungseingang reserviert.
+      </template>
+      <template v-else>
+        Sobald ein Platz frei wird, melde ich mich bei Ihnen telefonisch oder
+        per E-Mail.
+      </template>
+    </v-alert>
+    <v-btn
+      class="mr-4"
+      depressed
+      color="ichen_red white--text"
+      :disabled="!valid"
+      :loading="loading"
+      @click="submit"
+    >
+      {{ available ? 'Anmelden' : 'Auf Warteliste setzen' }}
+    </v-btn>
+    <v-btn depressed color="ichen_blue white--text" @click="cancel"
+      >Abbrechen</v-btn
+    >
+  </v-form>
 </template>
 
 <script>
-import Availability from '~/components/Availability'
+import isAvailable from '~/helpers/isAvailable.js'
 
 export default {
-  components: {
-    Availability,
-  },
   props: {
     veranstaltung: {
       type: Object,
@@ -158,9 +138,17 @@ export default {
     success: false,
     loading: false,
   }),
+  computed: {
+    available() {
+      return isAvailable(this.veranstaltung)
+    },
+  },
   methods: {
+    confirm() {
+      this.$emit('confirm')
+    },
     cancel() {
-      this.$router.back()
+      this.$emit('cancel')
     },
     async submit() {
       this.loading = true

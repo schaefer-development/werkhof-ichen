@@ -9,60 +9,55 @@
       <v-card-title>{{ veranstaltung.Titel }}</v-card-title>
       <v-card-text class="text--primary pb-0">
         <div class="veranstaltungen_details">
-          <ul>
-            <li>
-              <strong>{{ veranstaltung.Datum | formatDate }} Uhr</strong>
-            </li>
-
-            <li>{{ veranstaltung.Beschreibung }}</li>
-
-            <li>{{ veranstaltung.Preis }} Euro</li>
-          </ul>
           <p>
-            <availability :veranstaltung="veranstaltung"></availability>
+            <strong>{{ veranstaltung.Datum | formatDate }} Uhr</strong>
           </p>
+          <p>
+            {{ veranstaltung.Beschreibung }}
+          </p>
+          <p>{{ veranstaltung.Preis }} Euro</p>
         </div>
+        <template v-if="available">
+          <strong class="success--text">
+            <v-icon color="success">mdi-check-circle</v-icon>
+            noch Plätze frei</strong
+          >
+        </template>
+        <template v-else>
+          <strong>
+            <v-icon color="ichen_blue">mdi-alert-circle</v-icon>
+            ausgebucht</strong
+          >
+        </template>
       </v-card-text>
 
-      <!-- condition if there are free places or not => either show button "anmelden" or show botton "warteliste" 
-      <div class="goToBooking">
-        <div v-if="freePlaces > 1">
-          <v-card-actions>
-            <v-btn color="orange" text>Anmelden</v-btn>
-          </v-card-actions>
-        </div>
-        <div v-else>
-          <v-card-actions>
-            <v-btn color="orange" text>Auf Warteliste setzten</v-btn>
-          </v-card-actions>
-        </div>
-      </div>
-      -->
-
-      <div>
-        <v-card-actions class="pt-6 pb-8 pr-4">
-          <nuxt-link
-            :to="{ name: 'anmelden-id', params: { id: veranstaltung.id } }"
-          >
-            <v-btn depressed color="ichen_red white--text">Anmelden</v-btn>
-          </nuxt-link>
-        </v-card-actions>
-      </div>
+      <v-card-actions class="pt-6 pb-8 pr-4">
+        <v-btn
+          nuxt
+          depressed
+          color="ichen_red white--text"
+          :to="{ name: 'veranstaltung-id', params: { id: veranstaltung.id } }"
+        >
+          {{ available ? 'Anmelden' : 'Warteliste' }}
+        </v-btn>
+      </v-card-actions>
     </v-card>
   </v-col>
 </template>
 
 <script>
-import Availability from '~/components/Availability'
+import isAvailable from '~/helpers/isAvailable'
 
 export default {
-  components: {
-    Availability,
-  },
   props: {
     veranstaltung: {
       type: Object,
       required: true,
+    },
+  },
+  computed: {
+    available() {
+      return isAvailable(this.veranstaltung)
     },
   },
 }
