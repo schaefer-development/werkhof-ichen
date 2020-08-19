@@ -5,68 +5,31 @@
  * to customize this model
  */
 
-const { format } = require('date-fns')
-const { addDays } = require('date-fns')
+const templateAnmeldung = require('../../../emailTemplates/anmeldung.js')
+const templateWarteliste = require('../../../emailTemplates/warteliste.js')
+
+const isAvailable = async (veranstaltung) => {
+  const { maximaleAnzahlTeilnehmer } = veranstaltung
+  if (!maximaleAnzahlTeilnehmer) return true
+  const countAnmeldungen = await strapi.query('Anmeldung').count({veranstaltung: veranstaltung.id});
+  return countAnmeldungen <= maximaleAnzahlTeilnehmer
+}
+
 
 module.exports = {
   lifecycles: {
 
     async afterCreate(anmeldung, data) {
-      const veranstaltungs_datum = Date.parse (anmeldung.veranstaltung.Datum)
-      const date_ahead = addDays(veranstaltungs_datum, 14)
-      const date_payment = new Date(Math.min ( veranstaltungs_datum, date_ahead ))
       strapi.log.debug('Anmeldung created!', anmeldung, data)
+      const { veranstaltung } = anmeldung
+      const emailTemplate = (await isAvailable(veranstaltung)) ? templateAnmeldung : templateWarteliste
+      const { text, html } = emailTemplate(anmeldung)
+
       await strapi.plugins['email'].services.email.send({
         to: anmeldung.email,
         subject: 'Ihre Anmeldung auf werkhof-ichen.de',
-        text: `
-Hallo  ${ anmeldung.name },
-
-vielen Dank für Ihre Anmeldung für die Veranstaltung "${ anmeldung.veranstaltung.Titel }" am ${ format(veranstaltungs_datum, 'dd.MM.yyyy') }.
-
-Damit der Teilnehmerplatz verbindlich reserviert wird, überweisen Sie bitte bis zum ${ format(date_payment, 'dd.MM.yyyy') } den Betrag in Höhe von ${ anmeldung.veranstaltung.Preis } Euro auf folgendes Konto:
-
-IBAN: DE24370502990163007123
-BIC: COKSDE33
-Bank: Kreissparkasse Köln
-
-Viele Grüße und bis bald!
-ichen
-
-Rechtliche Hinweise:
-Der Teilnehmerplatz wird für mich nach Vorauszahlung der Kursgebühr verbindlich reserviert. Ich habe die Möglichkeit, bis 14 Tage vor Beginn des Kurses von dieser Anmeldung zurück zu treten und die vorausgezahlte Kursgebühr wird
-zurück erstattet. Mir ist bekannt, dass ich keinen Anspruch auf Rückerstattung der Gebühr bei einem Rücktritt außerhalb dieser Frist habe.
-Die Kursgebühr Erstattung erfolgt nur mit Attest oder wenn der Platz weitervergeben werden kann.
-        `,
-        html: `
-<p>Hallo  ${ anmeldung.name },</p>
-<p>
-vielen Dank für Ihre Anmeldung für die Veranstaltung "${ anmeldung.veranstaltung.Titel }" am ${ format(veranstaltungs_datum, 'dd.MM.yyyy') }.</p>
-<p>
-Damit der Teilnehmerplatz verbindlich reserviert wird, überweisen Sie bitte bis zum ${ format(date_payment, 'dd.MM.yyyy') } den Betrag in Höhe von ${ anmeldung.veranstaltung.Preis } Euro auf folgendes Konto:
-</p>
-<p>
-IBAN: DE24370502990163007123 <br />
-BIC: COKSDE33<br />
-Bank: Kreissparkasse Köln
-</p>
-<p>Viele Grüße und bis bald!<br>
-ichen
-<br />
-<br />
-</p>
-<p>
-<hr>
-<br />
-Rechtliche Hinweise:<br />
-Der Teilnehmerplatz wird für mich nach
-Vorauszahlung der Kursgebühr verbindlich reserviert. Ich habe die Möglichkeit, bis 14 Tage vor
-Beginn des Kurses von dieser Anmeldung zurück zu treten und die vorausgezahlte Kursgebühr wird
-zurück erstattet. Mir ist bekannt, dass ich keinen Anspruch auf Rückerstattung der
-Gebühr bei einem Rücktritt außerhalb dieser Frist habe.
-Die Kursgebühr Erstattung erfolgt nur mit Attest oder wenn der Platz weitervergeben werden kann.
-</p>
-       `,
+        text,
+        html
       });
     }
   }
