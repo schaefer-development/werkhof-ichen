@@ -53,6 +53,7 @@
           text
           link
           target="_blank"
+          rel="noopener"
           class="sm_link"
           href="https://de-de.facebook.com/pages/category/Education/Werkhof-ichen-130771390426775/"
         >
@@ -62,6 +63,7 @@
           text
           link
           target="_blank"
+          rel="noopener"
           class="sm_link"
           href="https://www.instagram.com/irmina_schmitz/?hl=de"
         >
