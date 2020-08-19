@@ -18,6 +18,16 @@
                 color="ichen_red white--text"
               >Mehr</v-btn>
             </div>
+            <p class="py-1"></p>
+            <hr />
+            <p class="py-1"></p>
+            <v-alert rounded="0" type="info">
+              <h3>Veranstaltungen können wieder stattfinden.</h3>
+            </v-alert>
+            <p>
+              Bitte beachten Sie die Hinweise bezüglich der Hygienevorschriften etc. im Rahmen der Corona Pandemie.
+              <br />Bei grippeähnlichen Symptomen oder wenn es in Ihrem persönlichen Umfeld einen bestätigten Infektionsfall mit Covid 19 (Coronavirus-Sars-Cov2) gibt, bitte ich Sie von einer Kursteilnahme abzusehen.
+            </p>
           </v-card-text>
         </v-card>
       </v-col>
