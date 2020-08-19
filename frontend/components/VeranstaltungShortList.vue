@@ -17,7 +17,8 @@
             :to="{ name: 'anmelden-id', params: { id: veranstaltung.id } }"
             depressed
             color="ichen_red white--text"
-          >Anmelden</v-btn>
+            >Anmelden</v-btn
+          >
         </div>
       </client-only>
 

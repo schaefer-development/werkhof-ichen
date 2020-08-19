@@ -6,7 +6,15 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="12" xs="12" sm="12" md="4" lg="4" xl="4" class="subnavi_left">
+      <v-col
+        cols="12"
+        xs="12"
+        sm="12"
+        md="4"
+        lg="4"
+        xl="4"
+        class="subnavi_left"
+      >
         <v-card rounded="0" flat class="ichen_green pa-3">
           <v-card-title class="white--text">Anfertigungen</v-card-title>
           <div class="submenu_divider"></div>

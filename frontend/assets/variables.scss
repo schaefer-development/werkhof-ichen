@@ -16,7 +16,14 @@ $ichen_brown: #48413d;
 $material-light: (
 cards: $ichen_beige,
 chips: $ichen_beige,
+text:(
+    secondary:rgba(0,0,0,0.8)
+),
 );
+
+$btn-font-weight:(bold);
+
+
 
 @import '~vuetify/src/styles/styles.sass';
 @import '~assets/ichen.scss';
