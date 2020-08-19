@@ -54,9 +54,7 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [
-    '~plugins/formatDate.js',
-  ],
+  plugins: ['~plugins/formatDate.js'],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -79,7 +77,7 @@ export default {
   pwa: {
     meta: {
       lang: 'de',
-    }
+    },
   },
 
   /* sitemap */
@@ -145,16 +143,18 @@ export default {
 
   generate: {
     routes() {
-      return axios.get(`${apiUrl}/veranstaltungs`, {
-        params: {
-          _sort: 'Datum:ASC',
-          Datum_gte: new Date(),
-        },
-      }).then(res => {
-        return res.data.map(veranstaltung => {
-          return '/anmelden/' + veranstaltung.id
+      return axios
+        .get(`${apiUrl}/veranstaltungs`, {
+          params: {
+            _sort: 'Datum:ASC',
+            Datum_gte: new Date(),
+          },
         })
-      })
-    }
-  }
+        .then((res) => {
+          return res.data.map((veranstaltung) => {
+            return '/anmelden/' + veranstaltung.id
+          })
+        })
+    },
+  },
 }
