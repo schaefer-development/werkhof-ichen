@@ -7,6 +7,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 const apiUrl = process.env.API_URL || 'http://localhost:1337'
+const clientUrl = process.env.URL || 'http://localhost:3000'
 
 export default {
   /*
@@ -83,7 +84,7 @@ export default {
 
   /* sitemap */
   sitemap: {
-    hostname: 'http://localhost:3000',
+    hostname: clientUrl,
     gzip: true,
   },
 
