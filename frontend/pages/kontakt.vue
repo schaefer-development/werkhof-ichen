@@ -12,13 +12,16 @@
           <v-card-text class="white--text">
             <p>
               werkhof ichen
-              <br />ichen Schmitz <br />Diplom-Bekleidungs In­ge­ni­eu­rin
+              <br />ichen Schmitz
+              <br />Diplom-Bekleidungs In­ge­ni­eu­rin
               <br />
-              <br />Im alten Breidt 11a <br />53797 Lohmar-Breidt
+              <br />Im alten Breidt 11a
+              <br />53797 Lohmar-Breidt
               <br />
             </p>
             <p>
-              Telefon: 02246 . 31 97
+              Telefon:
+              <a href="tel:+4922463197">02246 . 31 97</a>
               <br />E-Mail:
               <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>
             </p>

@@ -3,32 +3,27 @@
     <v-row>
       <v-col xs="12" sm="6" md="4">
         <v-card rounded="0" flat>
-          <v-img
-            class="white--text align-end"
-            height="250px"
-            src="/werkhof.jpg"
-          ></v-img>
+          <v-img class="white--text align-end" height="250px" src="/werkhof.jpg"></v-img>
           <v-card-title>werkhof ichen</v-card-title>
           <v-card-text>
-            <p>
-              Im werkhof ichen werden Kurse im künstlerischen Handwerk
-              veranstaltet.
-            </p>
-            <p>
-              Außerdem finden Sie hier die ichen Kollektion, maßgefertigte
-              Kleidung und eine erlesene Auswahl an Stoffen und Nähutensilien.
-            </p>
-            <p>Ich freue mich auf Ihren Kontakt.</p>
+            <p>Der „werkhof ichen“ ist ein stilvoll ausgebautes Fachwerkgehöft am Rande des bergischen Landes.</p>
+            <p>Ein großzügiges Platzangebot bietet der Kursraum für verschiedene Kurse und Veranstaltungen in einer anregenden Atmosphäre.</p>
+
+            <div class="text-right pb-4">
+              <v-btn
+                nuxt
+                to="/ueber_mich/werkhof"
+                depressed
+                small
+                color="ichen_red white--text"
+              >Mehr</v-btn>
+            </div>
           </v-card-text>
         </v-card>
       </v-col>
       <v-col xs="12" sm="6" md="4">
         <v-card rounded="0" flat class="ichen_green">
-          <v-img
-            class="white--text align-end"
-            height="250px"
-            src="/leather_trouser.jpg"
-          ></v-img>
+          <v-img class="white--text align-end" height="250px" src="/leather_trouser.jpg"></v-img>
           <v-card-title>Anfertigungen</v-card-title>
           <v-card-text class="white--text">
             Meine Kollektionen sind zeitlose, individuelle Entwicklungen, die
@@ -38,18 +33,10 @@
       </v-col>
       <v-col xs="12" sm="6" md="4">
         <v-card nuxt to="/veranstaltungen" rounded="0" flat class="ichen_blue">
-          <v-img
-            class="white--text align-end"
-            height="250px"
-            src="/kid_sewing.jpg"
-          ></v-img>
-          <v-card-title class="ichen_yellow--text"
-            >Veranstaltungen</v-card-title
-          >
+          <v-img class="white--text align-end" height="250px" src="/kid_sewing.jpg"></v-img>
+          <v-card-title class="ichen_yellow--text">Veranstaltungen</v-card-title>
           <v-card-text v-if="veranstaltungen" class="text--primary">
-            <veranstaltung-short-list
-              :veranstaltungen="veranstaltungen"
-            ></veranstaltung-short-list>
+            <veranstaltung-short-list :veranstaltungen="veranstaltungen"></veranstaltung-short-list>
           </v-card-text>
         </v-card>
       </v-col>
