@@ -9,7 +9,7 @@
             <p>Der „werkhof ichen“ ist ein stilvoll ausgebautes Fachwerkgehöft am Rande des bergischen Landes.</p>
             <p>Ein großzügiges Platzangebot bietet der Kursraum für verschiedene Kurse und Veranstaltungen in einer anregenden Atmosphäre.</p>
 
-            <div class="text-right pb-4">
+            <div class="text-right pb-10">
               <v-btn
                 nuxt
                 to="/ueber_mich/werkhof"
@@ -18,10 +18,8 @@
                 color="ichen_red white--text"
               >Mehr</v-btn>
             </div>
-            <p class="py-1"></p>
-            <hr />
-            <p class="py-1"></p>
-            <v-alert rounded="0" type="info">
+
+            <v-alert rounded="0" outlined type="info">
               <h3>Veranstaltungen können wieder stattfinden.</h3>
             </v-alert>
             <p>
