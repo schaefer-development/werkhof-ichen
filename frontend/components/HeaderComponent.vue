@@ -55,6 +55,7 @@
           target="_blank"
           rel="noopener"
           class="sm_link"
+          aria-label="Facebook"
           href="https://de-de.facebook.com/pages/category/Education/Werkhof-ichen-130771390426775/"
         >
           <v-icon color="ichen_blue" medium>mdi-facebook</v-icon>
@@ -65,6 +66,7 @@
           target="_blank"
           rel="noopener"
           class="sm_link"
+          aria-label="Instagram"
           href="https://www.instagram.com/irmina_schmitz/?hl=de"
         >
           <v-icon color="ichen_blue" medium>mdi-instagram</v-icon>
@@ -79,7 +81,7 @@
           />
         </nuxt-link>
         <v-spacer></v-spacer>
-        <v-app-bar-nav-icon @click.stop="toggleDrawer">
+        <v-app-bar-nav-icon aria-label="Open Drawer" @click.stop="toggleDrawer">
           <v-icon color="ichen_blue" large>mdi-menu</v-icon>
         </v-app-bar-nav-icon>
       </v-toolbar>

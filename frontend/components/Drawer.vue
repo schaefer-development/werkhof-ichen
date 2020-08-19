@@ -44,6 +44,7 @@
             link
             target="_blank"
             rel="noopener"
+            aria-label="Facebook"
             href="https://de-de.facebook.com/pages/category/Education/Werkhof-ichen-130771390426775/"
           >
             <v-icon medium>mdi-facebook</v-icon>
@@ -52,6 +53,7 @@
             link
             target="_blank"
             rel="noopener"
+            aria-label="Instagram"
             href="https://www.instagram.com/irmina_schmitz/"
             icon
           >
