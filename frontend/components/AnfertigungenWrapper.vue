@@ -15,23 +15,18 @@
         xl="4"
         class="subnavi_left"
       >
-        <v-card rounded="0" flat class="ichen_green px-3">
+        <v-card rounded="0" flat class="ichen_green pa-3">
           <v-card-title class="white--text">Anfertigungen</v-card-title>
-          <v-card-text class="white--text">
-            <ul class="aside_navi">
-              <li>
-                <h3>
-                  <nuxt-link to="/anfertigungen/leder">Leder</nuxt-link>
-                </h3>
-              </li>
-              <li>
-                <h3>
-                  <nuxt-link to="/anfertigungen/weitere_textilien"
-                    >Weitere Textilien</nuxt-link
-                  >
-                </h3>
-              </li>
-            </ul>
+          <v-divider class="white"></v-divider>
+          <v-card-text>
+            <v-list class="white--text" nav color="transparent">
+              <v-list-item nuxt link to="/anfertigungen/leder"
+                ><strong>Leder</strong></v-list-item
+              >
+              <v-list-item nuxt link to="/anfertigungen/weitere_textilien"
+                ><strong>Weitere Textilien</strong></v-list-item
+              >
+            </v-list>
           </v-card-text>
         </v-card>
       </v-col>

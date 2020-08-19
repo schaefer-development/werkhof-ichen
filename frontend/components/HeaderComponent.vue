@@ -18,7 +18,7 @@
           />
         </nuxt-link>
         <v-spacer></v-spacer>
-        <v-btn text nuxt link to="/">Start</v-btn>
+        <v-btn text nuxt link to="/">Startseite</v-btn>
         <v-btn text nuxt link to="/veranstaltungen">Veranstaltungen</v-btn>
         <v-menu offset-y transition="slide-y-transition" bottom>
           <template v-slot:activator="{ on, attrs }">

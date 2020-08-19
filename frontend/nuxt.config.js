@@ -36,18 +36,11 @@ export default {
         content: process.env.npm_package_description || '',
       },
     ],
-    link: [
-      {
-        rel: 'stylesheet',
-        href: 'https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css',
-      },
-    ],
   },
   /*
    ** Global CSS
    */
   css: [
-    'mapbox-gl-controls/theme.css',
     '@mdi/font/css/materialdesignicons.css',
   ],
   /*

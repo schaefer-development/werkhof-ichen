@@ -15,7 +15,7 @@
         </v-btn>
       </v-toolbar>
       <v-list flat dense nav justify="center" align="center">
-        <v-list-item nuxt link to="/">Start</v-list-item>
+        <v-list-item nuxt link to="/">Startseite</v-list-item>
         <v-list-item nuxt link to="/veranstaltungen"
           >Veranstaltungen</v-list-item
         >
