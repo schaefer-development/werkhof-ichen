@@ -34,8 +34,20 @@
           <v-img class="white--text align-end" height="250px" src="/leather_trouser.jpg"></v-img>
           <v-card-title>Anfertigungen</v-card-title>
           <v-card-text class="white--text">
-            Meine Kollektionen sind zeitlose, individuelle Entwicklungen, die
-            nur bedingt den Trends des Modemarktes unterworfen sind.
+            <p>
+              Meine Kollektionen sind zeitlose, individuelle Entwicklungen, die
+              nur bedingt den Trends des Modemarktes unterworfen sind.
+            </p>
+            <p>Neben verschiedenen Textilien verarbeite ich gerne Leder – beispielsweise Lederhosen und -jacken.</p>
+            <div class="text-right pb-3">
+              <v-btn
+                nuxt
+                to="/anfertigungen/leder"
+                depressed
+                small
+                color="ichen_red white--text"
+              >Mehr</v-btn>
+            </div>
           </v-card-text>
         </v-card>
       </v-col>
