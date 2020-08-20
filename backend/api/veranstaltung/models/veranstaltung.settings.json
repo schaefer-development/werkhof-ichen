@@ -10,13 +10,16 @@
   },
   "attributes": {
     "Titel": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Datum": {
-      "type": "datetime"
+      "type": "datetime",
+      "required": true
     },
     "Preis": {
-      "type": "decimal"
+      "type": "decimal",
+      "required": true
     },
     "Vorschaubild": {
       "model": "file",
@@ -25,7 +28,7 @@
         "images"
       ],
       "plugin": "upload",
-      "required": false
+      "required": true
     },
     "Kategorie": {
       "type": "enumeration",
