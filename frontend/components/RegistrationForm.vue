@@ -23,10 +23,8 @@
       outlined
       :rules="requiredRules"
       required
+      label="Vor- und Nachname"
     >
-      <template v-slot:label>
-        <div class="jos_label">Vor- und Nachname</div>
-      </template>
     </v-text-field>
 
     <v-text-field
@@ -34,26 +32,20 @@
       outlined
       :rules="emailRules"
       required
+      label="E-Mailadresse"
     >
-      <template v-slot:label>
-        <div class="jos_label">E-Mailadresse</div>
-      </template>
     </v-text-field>
     <v-text-field
       v-model="anmeldung.telefonNummer"
       outlined
       :rules="phoneNumberRules"
+      label="Telefonnummer"
     >
-      <template v-slot:label>
-        <div class="jos_label">Telefonnummer</div>
-
-        <div>Telefonnummer</div>
-      </template>
     </v-text-field>
     <v-text-field v-model="anmeldung.strasseHausnummer" outlined>
       <template v-slot:label>
         <div>
-          <div class="jos_label">Straße und Hausnummer</div>
+          <div>Straße und Hausnummer</div>
           <small>(optional)</small>
         </div>
       </template>
@@ -61,7 +53,7 @@
     <v-text-field v-model="anmeldung.plzOrt" outlined>
       <template v-slot:label>
         <div>
-          <div class="jos_label">Postleitzahl und Ort</div>
+          <div>Postleitzahl und Ort</div>
           <small>(optional)</small>
         </div>
       </template>
@@ -69,7 +61,7 @@
     <v-checkbox v-model="agb" :rules="agbRules" required>
       <template v-slot:label>
         <div>
-          <div class="jos_label">
+          <div>
             Ich habe die
             <nuxt-link to="/agb">AGB</nuxt-link>&nbsp;und die Informationen zum
             <nuxt-link to="/datenschutz">Datenschutz</nuxt-link>&nbsp;gelesen
@@ -162,21 +154,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped>
-.v-text-field--outlined {
-  border-radius: 0px !important;
-}
-
-.v-text-field__slot > label {
-  color: red !important;
-}
-
-.jos_label {
-  font-size: 14px;
-}
-
-.v-text-field input {
-  font-size: 2em !important;
-}
-</style>

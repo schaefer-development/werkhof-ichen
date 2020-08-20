@@ -28,6 +28,11 @@ $btn-font-weight:(bold);
 $btn-border-radius:0;
 $btn-hover-opacity: 0.1;
 
+// INPUTS
+$label-font-size: 14px !default;
+$text-field-border-radius: 0px;
+
+
 
 
 @import '~vuetify/src/styles/styles.sass';
