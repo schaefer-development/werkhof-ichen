@@ -7,7 +7,7 @@
         src="/logo_ichen.svg"
       ></v-img>
     </template>
-    <v-card flat dark color="transparent" class="pa-4">
+    <v-card flat dark color="transparent" class="px-1 py-2">
       <v-toolbar flat color="transparent">
         <v-spacer></v-spacer>
         <v-btn icon @click.stop="toggleDrawer">
@@ -28,7 +28,7 @@
             >Weitere Textilien</v-list-item
           >
         </v-list-group>
-        <v-list-item nuxt link to="/media">Media</v-list-item>
+        <v-list-item nuxt link to="/bilder">Bilder</v-list-item>
         <v-list-item nuxt link to="/kontakt">Kontakt</v-list-item>
         <v-list-group flat no-action>
           <template v-slot:activator>
@@ -82,12 +82,6 @@ export default {
 
 <style lang="scss">
 .v-navigation-drawer {
-  * {
-    font-family: 'Overlock';
-    font-style: normal;
-    font-weight: 900;
-  }
-
   .drawer-background-image {
     opacity: 0.04;
     left: -20%;
@@ -96,11 +90,14 @@ export default {
     height: 100%;
   }
 
+  *,
   a {
+    font-family: 'Overlock';
+    font-style: normal;
+    font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.1em;
   }
-
   .v-list-group {
     .v-list-group__header {
       div {

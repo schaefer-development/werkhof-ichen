@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bilderstreckes",
+  "info": {
+    "name": "Bilderstrecke"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Titel": {
+      "type": "string"
+    },
+    "Bilder": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

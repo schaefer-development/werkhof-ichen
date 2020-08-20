@@ -12,22 +12,18 @@
           <p>
             <strong>{{ veranstaltung.Datum | formatDate }} Uhr</strong>
           </p>
-          <p>
-            {{ veranstaltung.Beschreibung }}
-          </p>
+          <p>{{ veranstaltung.Beschreibung }}</p>
           <p>{{ veranstaltung.Preis }} Euro</p>
         </div>
         <template v-if="available">
           <strong class="success--text">
-            <v-icon color="success">mdi-check-circle</v-icon>
-            noch Plätze frei</strong
-          >
+            <v-icon color="success">mdi-check-circle</v-icon>noch Plätze frei
+          </strong>
         </template>
         <template v-else>
           <strong>
-            <v-icon color="ichen_blue">mdi-alert-circle</v-icon>
-            ausgebucht</strong
-          >
+            <v-icon color="ichen_blue">mdi-alert-circle</v-icon>ausgebucht
+          </strong>
         </template>
       </v-card-text>
 
@@ -37,9 +33,8 @@
           depressed
           color="ichen_red white--text"
           :to="{ name: 'veranstaltung-id', params: { id: veranstaltung.id } }"
+          >{{ available ? 'Anmelden' : 'Warteliste' }}</v-btn
         >
-          {{ available ? 'Anmelden' : 'Warteliste' }}
-        </v-btn>
       </v-card-actions>
     </v-card>
   </v-col>

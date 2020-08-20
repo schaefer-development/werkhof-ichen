@@ -61,10 +61,8 @@
     width: 10vw;
   }
 }
-
 .footer-component-bottom-row {
   font-size: 0.9em;
-
   a {
     color: #fff;
     text-decoration: none;

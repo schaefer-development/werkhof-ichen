@@ -67,13 +67,9 @@
           Bewegungsfreiheit und eine vernünftige Passform über mehrere Jahre mit
           entsprechender Hosenverlängerung.
         </p>
-        <p class="pb-12">
-          Alle Produkte aus meiner Werkstatt sind Unikate!
-        </p>
+        <p class="pb-12">Alle Produkte aus meiner Werkstatt sind Unikate!</p>
 
-        <h3>
-          Lederhosen für Erwachsene – Damengröße 38 oder Herrengröße 48
-        </h3>
+        <h3>Lederhosen für Erwachsene – Damengröße 38 oder Herrengröße 48</h3>
 
         <v-simple-table class="pb-12">
           <thead>
@@ -91,9 +87,7 @@
             </tr>
           </tbody>
         </v-simple-table>
-        <h3>
-          Lederjacke für Erwachsene – Damengröße 38 oder Herrengröße 48
-        </h3>
+        <h3>Lederjacke für Erwachsene – Damengröße 38 oder Herrengröße 48</h3>
         <v-simple-table class="pb-8">
           <thead>
             <tr>
@@ -222,7 +216,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 table {
   thead tr th {
     border-bottom: 2px solid $ichen_brown !important;

@@ -42,16 +42,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped>
-.shortlist {
-  .shortlist_item {
-    &:last-child {
-      padding-bottom: 1em;
-      .shortlist_divider {
-        display: none;
-      }
-    }
-  }
-}
-</style>

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/bilderstreckes",
+      "handler": "bilderstrecke.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bilderstreckes/count",
+      "handler": "bilderstrecke.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bilderstreckes/:id",
+      "handler": "bilderstrecke.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/bilderstreckes",
+      "handler": "bilderstrecke.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/bilderstreckes/:id",
+      "handler": "bilderstrecke.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/bilderstreckes/:id",
+      "handler": "bilderstrecke.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

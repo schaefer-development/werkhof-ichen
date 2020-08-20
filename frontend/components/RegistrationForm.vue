@@ -71,7 +71,7 @@
         <div>
           <div class="jos_label">
             Ich habe die
-            <nuxt-link to="/agb">AGB</nuxt-link> und die Informationen zum
+            <nuxt-link to="/agb">AGB</nuxt-link>&nbsp;und die Informationen zum
             <nuxt-link to="/datenschutz">Datenschutz</nuxt-link>&nbsp;gelesen
             und stimme beiden zu.
           </div>
@@ -79,9 +79,9 @@
       </template>
     </v-checkbox>
     <v-alert text type="info" class="font-weight-bold">
-      <template v-if="available">
-        Ihr Platz ist erst mit Zahlungseingang reserviert.
-      </template>
+      <template v-if="available"
+        >Ihr Platz ist erst mit Zahlungseingang reserviert.</template
+      >
       <template v-else>
         Sobald ein Platz frei wird, melde ich mich bei Ihnen telefonisch oder
         per E-Mail.
@@ -94,9 +94,8 @@
       :disabled="!valid"
       :loading="loading"
       @click="submit"
+      >{{ available ? 'Anmelden' : 'Auf Warteliste setzen' }}</v-btn
     >
-      {{ available ? 'Anmelden' : 'Auf Warteliste setzen' }}
-    </v-btn>
     <v-btn depressed color="ichen_blue white--text" @click="cancel"
       >Abbrechen</v-btn
     >

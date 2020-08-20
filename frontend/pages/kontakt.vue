@@ -118,7 +118,6 @@ export default {
   height: 40vh;
   max-height: 450px;
 }
-
 .mapboxgl-popup-content {
   button.mapboxgl-popup-close-button {
     font-size: 24px;

@@ -17,7 +17,6 @@
           <v-card-title>Allgemeine Geschäftsbedingungen (AGB)</v-card-title>
           <v-card-text>
             <h3>Zu jedem fairen Angebot gehören ein paar Spielregeln:</h3>
-
             <ol class="pt-6">
               <li>
                 <strong>Anmeldung:</strong> Ihre Anmeldung wird gültig mit der

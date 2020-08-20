@@ -12,9 +12,6 @@
     "Titel": {
       "type": "string"
     },
-    "Beschreibung": {
-      "type": "richtext"
-    },
     "Datum": {
       "type": "datetime"
     },
@@ -47,6 +44,9 @@
     "maximaleAnzahlTeilnehmer": {
       "type": "integer",
       "min": 1
+    },
+    "Beschreibung": {
+      "type": "text"
     }
   }
 }
