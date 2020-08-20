@@ -14,7 +14,7 @@
       </v-col>
       <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">
         <v-card rounded="0" flat>
-          <v-card-title text="text-h2"
+          <v-card-title class="text-h2"
             >Allgemeine Geschäftsbedingungen (AGB)</v-card-title
           >
           <v-card-text>
