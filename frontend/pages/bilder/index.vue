@@ -4,9 +4,9 @@
       <v-col
         v-for="bilderstrecke in bilderstrecken"
         :key="bilderstrecke.id"
-        xs="6"
-        sm="4"
-        md="3"
+        cols="12"
+        sm="6"
+        md="4"
       >
         <v-card
           nuxt
