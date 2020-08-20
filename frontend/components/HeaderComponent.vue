@@ -27,10 +27,10 @@
               <v-icon>mdi-chevron-down</v-icon>
             </v-btn>
           </template>
-          <v-list>
-            <nuxt-link to="/anfertigungen/leder">Leder</nuxt-link>
-            <nuxt-link to="/anfertigungen/weitere_textilien"
-              >Weitere Textilien</nuxt-link
+          <v-list dark color="ichen_blue">
+            <v-list-item nuxt to="/anfertigungen/leder">Leder</v-list-item>
+            <v-list-item nuxt to="/anfertigungen/weitere_textilien"
+              >Weitere Textilien</v-list-item
             >
           </v-list>
         </v-menu>
@@ -43,10 +43,10 @@
               <v-icon>mdi-chevron-down</v-icon>
             </v-btn>
           </template>
-          <v-list>
-            <nuxt-link to="/ueber_mich/werkhof">Werkhof</nuxt-link>
-            <nuxt-link to="/ueber_mich/vita">Vita</nuxt-link>
-            <nuxt-link to="/ueber_mich/presse">Presse</nuxt-link>
+          <v-list dark color="ichen_blue">
+            <v-list-item nuxt to="/ueber_mich/werkhof">Werkhof</v-list-item>
+            <v-list-item nuxt to="/ueber_mich/vita">Vita</v-list-item>
+            <v-list-item nuxt to="/ueber_mich/presse">Presse</v-list-item>
           </v-list>
         </v-menu>
         <v-btn
