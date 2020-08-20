@@ -3,7 +3,7 @@
     <v-row>
       <v-col cols="12" xs="12" sm="12" md="12" lg="12" xl="12">
         <v-card rounded="0" flat>
-          <v-card-title class="pb-1">
+          <v-card-title class="pb-3">
             {{ bilderstrecke.Titel }}
             <v-spacer></v-spacer>
             <v-btn

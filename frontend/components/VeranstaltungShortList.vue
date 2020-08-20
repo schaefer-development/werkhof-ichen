@@ -42,3 +42,9 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+.shortlist .shortlist_item:last-child .v-image {
+  display: none;
+}
+</style>

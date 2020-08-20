@@ -1,29 +1,29 @@
 <template>
   <v-container>
-    <v-row class="align-baseline">
+    <v-row>
       <v-col
-        cols="12"
-        xs="12"
-        sm="12"
-        offset-md="4"
-        md="8"
-        offset-lg="4"
-        lg="8"
-        offset-xl="4"
-        xl="8"
+        v-for="bilderstrecke in bilderstrecken"
+        :key="bilderstrecke.id"
+        xs="6"
+        sm="4"
+        md="3"
       >
         <v-card
-          v-for="bilderstrecke in bilderstrecken"
-          :key="bilderstrecke.id"
           nuxt
           :to="{ name: 'bilder-id', params: { id: bilderstrecke.id } }"
+          class="no_sloping_edge"
+          rounded="0"
+          flat
         >
           <v-img
+            aspect-ratio="1"
             class="white--text align-end"
-            height="200px"
             :src="bilderstrecke.Bilder[0].url"
-          ></v-img>
-          <v-card-title>{{ bilderstrecke.Titel }}</v-card-title>
+            gradient="to top, rgba(0,0,0,.3), rgba(0,0,0,0)"
+          >
+            <div class="fill-height bottom-gradient"></div>
+            <v-card-title>{{ bilderstrecke.Titel }}</v-card-title>
+          </v-img>
         </v-card>
       </v-col>
     </v-row>
@@ -38,3 +38,16 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.no_sloping_edge {
+  margin-bottom: 0em !important;
+  &:after {
+    display: none !important;
+  }
+  div div .v-card__title {
+    color: #fff !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+}
+</style>
