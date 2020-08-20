@@ -22,7 +22,9 @@
             gradient="to top, rgba(0,0,0,.3), rgba(0,0,0,0)"
           >
             <div class="fill-height bottom-gradient"></div>
-            <v-card-title>{{ bilderstrecke.Titel }}</v-card-title>
+            <v-card-title class="text-h2">{{
+              bilderstrecke.Titel
+            }}</v-card-title>
           </v-img>
         </v-card>
       </v-col>

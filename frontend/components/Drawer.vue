@@ -97,6 +97,7 @@ export default {
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    font-size: 0.75rem;
   }
   .v-list-group {
     .v-list-group__header {

@@ -11,8 +11,8 @@
       <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">
         <v-card rounded="0" flat class="px-6 pt-8">
           <v-toolbar flat extended color="transparent">
-            <v-toolbar-title>
-              <h1>{{ veranstaltung.Titel }}</h1>
+            <v-toolbar-title class="text-h2">
+              {{ veranstaltung.Titel }}
               <div class="subheading">
                 <small>{{ veranstaltung.Datum | formatDate }} Uhr</small>
               </div>

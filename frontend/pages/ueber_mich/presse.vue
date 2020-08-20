@@ -15,7 +15,9 @@
 
       <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">
         <v-card rounded="0" flat class="ichen_beige">
-          <v-card-title>Der Werkhof ichen in der Presse</v-card-title>
+          <v-card-title class="text-h2"
+            >Der Werkhof ichen in der Presse</v-card-title
+          >
           <v-card-text>
             <p>
               <strong>

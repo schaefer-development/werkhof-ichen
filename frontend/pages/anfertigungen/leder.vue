@@ -7,7 +7,7 @@
       />
     </template>
     <v-card rounded="0" flat>
-      <v-card-title>Leder</v-card-title>
+      <v-card-title class="text-h2">Leder</v-card-title>
       <v-card-text>
         <p>Ich verarbeite nur:</p>
         <ul>

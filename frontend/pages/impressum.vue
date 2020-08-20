@@ -11,7 +11,7 @@
     <v-row>
       <v-col cols="12" xs="12" sm="6" md="4" lg="4" xl="4">
         <v-card rounded="0" flat class="ichen_green">
-          <v-card-title>Impressum</v-card-title>
+          <v-card-title class="text-h2">Impressum</v-card-title>
           <v-card-text class="white--text">
             <p>
               Verantwortlich für die Webseite werkhof-ichen.de nach § 5

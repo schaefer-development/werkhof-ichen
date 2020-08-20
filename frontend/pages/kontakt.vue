@@ -8,7 +8,7 @@
     <v-row class="align-baseline">
       <v-col cols="12" xs="12" sm="6" md="4" lg="4" xl="4">
         <v-card rounded="0" flat class="ichen_green">
-          <v-card-title>Anschrift</v-card-title>
+          <v-card-title class="text-h2">Anschrift</v-card-title>
           <v-card-text class="white--text">
             <p>
               werkhof ichen
@@ -28,7 +28,7 @@
       </v-col>
       <v-col cols="12" xs="12" sm="6" md="8" lg="8" xl="8">
         <v-card rounded="0" flat>
-          <v-card-title>Anfahrt</v-card-title>
+          <v-card-title class="text-h2">Anfahrt</v-card-title>
           <v-card-text>
             <strong>Von Köln kommend:</strong>
             <p>

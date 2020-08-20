@@ -8,7 +8,9 @@
             height="250px"
             src="/werkhof_01.jpg"
           ></v-img>
-          <v-card-title>werkhof ichen</v-card-title>
+          <v-card-title class="ichen_blue--text text-h2"
+            >werkhof ichen</v-card-title
+          >
           <v-card-text>
             <p>
               Der „werkhof ichen“ ist ein stilvoll ausgebautes Fachwerkgehöft am
@@ -50,7 +52,9 @@
             height="250px"
             src="/leather_trouser.jpg"
           ></v-img>
-          <v-card-title>Anfertigungen</v-card-title>
+          <v-card-title class="ichen_blue--text text-h2"
+            >Anfertigungen</v-card-title
+          >
           <v-card-text class="white--text">
             <p>
               Meine Kollektionen sind zeitlose, individuelle Entwicklungen, die
@@ -79,7 +83,7 @@
             height="250px"
             src="/kid_sewing.jpg"
           ></v-img>
-          <v-card-title class="ichen_yellow--text"
+          <v-card-title class="ichen_yellow--text text-h2"
             >Veranstaltungen</v-card-title
           >
           <v-card-text v-if="veranstaltungen" class="text--primary">

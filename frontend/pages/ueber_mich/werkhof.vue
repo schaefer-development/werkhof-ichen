@@ -15,7 +15,7 @@
       </v-col>
       <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">
         <v-card rounded="0" flat class="ichen_beige">
-          <v-card-title>Werkhof ichen</v-card-title>
+          <v-card-title class="text-h2">Werkhof ichen</v-card-title>
           <v-card-text>
             <p>
               Der „werkhof ichen“, ein zum Teil denkmalgeschütztes, stilvoll

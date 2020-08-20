@@ -6,7 +6,7 @@
         height="200px"
         :src="veranstaltung.Vorschaubild.url"
       ></v-img>
-      <v-card-title>{{ veranstaltung.Titel }}</v-card-title>
+      <v-card-title class="text-h2">{{ veranstaltung.Titel }}</v-card-title>
       <v-card-text class="text--primary pb-0">
         <div class="veranstaltungen_details">
           <p>

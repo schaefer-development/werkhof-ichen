@@ -21,10 +21,10 @@
         offset-xl="4"
       >
         <v-card rounded="0" flat color="secondary">
-          <v-card-title v-if="error.statusCode === 404">
+          <v-card-title v-if="error.statusCode === 404" class="text-h2">
             {{ pageNotFound }}
           </v-card-title>
-          <v-card-title v-else>{{ otherError }}</v-card-title>
+          <v-card-title v-else class="text-h2">{{ otherError }}</v-card-title>
           <v-card-text>
             <p>Ups ... Da ist was schiefgelaufen.</p>
             <p>
