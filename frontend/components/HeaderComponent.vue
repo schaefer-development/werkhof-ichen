@@ -100,12 +100,43 @@ export default {
 </script>
 
 <style lang="scss">
-.navigation-items {
+header div {
   .v-btn {
-    font-family: 'Overlock';
+    font-family: 'Overlock'; // default heder navigation item layout
     font-style: normal;
     font-weight: 900;
     color: $ichen_blue !important;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    &:hover,
+    &:focus,
+    &[aria-expanded='true'] {
+      &:before {
+        opacity: 0 !important; // removes background-color
+      }
+    }
+    &:hover {
+      color: #376c80 !important;
+    }
+  }
+  .v-btn--active {
+    color: $ichen_red !important;
+    &:before {
+      opacity: 0 !important; // removes background-colo
+    }
+  }
+  a {
+    &:nth-last-child(2),
+    &:last-child {
+      padding: 0 8px !important; // reduces padding of the social media icons
+      min-width: 32px !important;
+    }
+  }
+
+  .v-list {
+    padding: 0 !important;
   }
 }
 </style>
