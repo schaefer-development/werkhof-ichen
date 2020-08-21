@@ -4,7 +4,7 @@
       <v-col xs="12" sm="6" md="4">
         <v-card rounded="0" flat>
           <v-img
-            class="white--text align-end"
+            class="align-end"
             height="250px"
             src="/werkhof_01.jpg"
           ></v-img>
@@ -23,10 +23,11 @@
 
             <div class="text-right pb-10">
               <v-btn
+                dark
                 nuxt
                 to="/ueber_mich/werkhof"
                 depressed
-                color="ichen_red white--text"
+                color="ichen_red"
                 >Mehr</v-btn
               >
             </div>
@@ -46,16 +47,12 @@
         </v-card>
       </v-col>
       <v-col xs="12" sm="6" md="4">
-        <v-card rounded="0" flat class="ichen_green">
-          <v-img
-            class="white--text align-end"
-            height="250px"
-            src="/leather_trouser.jpg"
-          ></v-img>
+        <v-card rounded="0" flat dark class="ichen_green">
+          <v-img height="250px" src="/leather_trouser.jpg"></v-img>
           <v-card-title class="ichen_blue--text text-h2"
             >Anfertigungen</v-card-title
           >
-          <v-card-text class="white--text">
+          <v-card-text>
             <p>
               Meine Kollektionen sind zeitlose, individuelle Entwicklungen, die
               nur bedingt den Trends des Modemarktes unterworfen sind.
@@ -69,7 +66,7 @@
                 nuxt
                 to="/anfertigungen/leder"
                 depressed
-                color="ichen_red white--text"
+                color="ichen_red"
                 >Mehr</v-btn
               >
             </div>
@@ -77,16 +74,16 @@
         </v-card>
       </v-col>
       <v-col xs="12" sm="6" md="4">
-        <v-card rounded="0" flat class="ichen_blue">
+        <v-card rounded="0" flat dark class="ichen_blue">
           <v-img
-            class="white--text align-end"
+            class="align-end"
             height="250px"
             src="/kid_sewing.jpg"
           ></v-img>
           <v-card-title class="ichen_yellow--text text-h2"
             >Veranstaltungen</v-card-title
           >
-          <v-card-text v-if="veranstaltungen" class="text--primary">
+          <v-card-text v-if="veranstaltungen">
             <veranstaltung-short-list
               :veranstaltungen="veranstaltungen"
             ></veranstaltung-short-list>

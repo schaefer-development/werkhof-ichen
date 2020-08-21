@@ -6,15 +6,17 @@
         height="200px"
         :src="veranstaltung.Vorschaubild.url"
       ></v-img>
-      <v-card-title class="text-h2">{{ veranstaltung.Titel }}</v-card-title>
-      <v-card-text class="text--primary pb-0">
-        <div class="veranstaltungen_details">
-          <p>
-            <strong>{{ veranstaltung.Datum | formatDate }} Uhr</strong>
-          </p>
-          <p>{{ veranstaltung.Beschreibung }}</p>
-          <p>{{ veranstaltung.Preis }} Euro</p>
-        </div>
+      <v-card-title class="ichen_blue--text text-h2">{{
+        veranstaltung.Titel
+      }}</v-card-title>
+      <v-card-text>
+        <p>
+          <strong>{{ veranstaltung.Datum | formatDate }} Uhr</strong>
+        </p>
+        <p>{{ veranstaltung.Beschreibung }}</p>
+        <p>{{ veranstaltung.Preis }} Euro</p>
+      </v-card-text>
+      <v-card-text>
         <template v-if="available">
           <strong class="success--text">
             <v-icon color="success">mdi-check-circle</v-icon>noch Plätze frei

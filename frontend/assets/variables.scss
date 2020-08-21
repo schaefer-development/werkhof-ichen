@@ -66,6 +66,12 @@ $material-light: (
   ),
 );
 
+$material-dark: (
+  text:(
+    secondary: #fff
+  ),
+);
+
 $headings: (
   h1: (
     'size': 1.5em,
@@ -126,4 +132,3 @@ $color-pack: false;
     clip-path: polygon(0 1%, 0% 100%, 100% 0);
   }
 }
-

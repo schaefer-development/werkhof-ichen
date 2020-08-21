@@ -12,12 +12,9 @@
         <v-card rounded="0" flat class="px-6 pt-8">
           <v-list-item>
             <v-list-item-content>
-              <v-list-item-title class="text-h2">
+              <v-list-item-title class="ichen_blue--text text-h2">
                 {{ veranstaltung.Titel }}
               </v-list-item-title>
-              <v-list-item-subtitle>
-                {{ veranstaltung.Datum | formatDate }} Uhr
-              </v-list-item-subtitle>
             </v-list-item-content>
             <v-list-item-action>
               <v-btn
@@ -34,6 +31,9 @@
             </v-list-item-action>
           </v-list-item>
           <v-card-text>
+            <strong> {{ veranstaltung.Datum | formatDate }} Uhr </strong>
+          </v-card-text>
+          <v-card-text>
             <registration-form
               v-if="displayForm"
               :veranstaltung="veranstaltung"
@@ -43,7 +43,9 @@
             </registration-form>
             <template v-else>
               <p>{{ veranstaltung.Beschreibung }}</p>
-              <p>{{ veranstaltung.Preis }} Euro</p>
+              <p>
+                <strong>{{ veranstaltung.Preis }} Euro</strong>
+              </p>
               <v-alert
                 v-if="available"
                 text
