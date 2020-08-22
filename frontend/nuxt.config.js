@@ -1,5 +1,17 @@
 import axios from 'axios'
 
+const colors = {
+  primary: '#000000',
+  error: '#E0124D',
+  secondary: '#ECE1CB',
+  ichen_beige: '#ece1cb',
+  ichen_yellow: '#e5bc80',
+  ichen_green: '#709726',
+  ichen_blue: '#2a434c',
+  ichen_red: '#e0124d',
+  ichen_brown: '#48413d',
+}
+
 const axiosConfig = {}
 if (process.env.NODE_ENV === 'development') {
   axiosConfig.proxy = true
@@ -71,6 +83,14 @@ export default {
     },
   },
 
+  manifest: {
+    name: 'Werkhof ichen',
+    short_name: 'ichen',
+    theme_color: colors.ichen_blue,
+    background_color: colors.ichen_beige,
+    lang: 'de',
+  },
+
   /* sitemap */
   sitemap: {
     hostname: clientUrl,
@@ -106,20 +126,11 @@ export default {
     theme: {
       themes: {
         light: {
-          primary: '#000000',
-          accent: '#709726',
-          secondary: '#ECE1CB',
-          success: '#709726',
-          info: '#2a434c',
-          warning: '#E0124D',
-          error: '#E0124D',
-
-          ichen_beige: '#ece1cb',
-          ichen_yellow: '#e5bc80',
-          ichen_green: '#709726',
-          ichen_blue: '#2a434c',
-          ichen_red: '#e0124d',
-          ichen_brown: '#48413d',
+          accent: colors.ichen_green,
+          success: colors.ichen_green,
+          warning: colors.error,
+          info: colors.ichen_blue,
+          ...colors,
         },
       },
     },
