@@ -3,11 +3,7 @@
     <v-container>
       <v-toolbar color="transparent" flat class="d-none d-md-block">
         <nuxt-link to="/">
-          <v-img
-            src="/logo_ichen.svg"
-            alt="Logo Werkhof ichen"
-            max-width="110px"
-          />
+          <v-img src="/logo_ichen.svg" alt="Logo Werkhof ichen" max-width="110px" />
         </nuxt-link>
         <v-spacer></v-spacer>
         <v-btn text nuxt link to="/">Startseite</v-btn>
@@ -21,9 +17,7 @@
           </template>
           <v-list dark color="ichen_blue">
             <v-list-item nuxt to="/anfertigungen/leder">Leder</v-list-item>
-            <v-list-item nuxt to="/anfertigungen/weitere_textilien"
-              >Weitere Textilien</v-list-item
-            >
+            <v-list-item nuxt to="/anfertigungen/weitere_textilien">Weitere Textilien</v-list-item>
           </v-list>
         </v-menu>
         <v-btn text nuxt link to="/bilder">Bilder</v-btn>
@@ -66,11 +60,7 @@
       </v-toolbar>
       <v-toolbar color="transparent" flat class="d-md-none">
         <nuxt-link to="/">
-          <v-img
-            src="/logo_ichen.svg"
-            alt="Logo Werkhof ichen"
-            max-width="110px"
-          />
+          <v-img src="/logo_ichen.svg" alt="Logo Werkhof ichen" max-width="110px" />
         </nuxt-link>
         <v-spacer></v-spacer>
         <v-app-bar-nav-icon aria-label="Open Drawer" @click.stop="toggleDrawer">
@@ -91,11 +81,10 @@ export default {
 }
 </script>
 
-<<<<<<< HEAD
 <style lang="scss">
 header div {
   .v-btn {
-    font-family: 'Overlock'; // default heder navigation item layout
+    font-family: 'Overlock'; // default header navigation item layout
     font-style: normal;
     font-weight: 900;
     color: $ichen_blue !important;
@@ -131,14 +120,5 @@ header div {
   .v-list {
     padding: 0 !important;
   }
-=======
-<style lang="scss" scoped>
-.v-btn {
-  font-style: normal;
-  font-weight: 900;
-  font-family: 'Overlock';
-  font-size: 0.75rem;
-  color: $ichen_blue !important;
->>>>>>> b0a79a17e63b659913b2c039b71ba061a6e9f8b0
 }
 </style>
