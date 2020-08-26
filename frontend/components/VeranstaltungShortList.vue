@@ -1,5 +1,5 @@
 <template>
-  <div class="shortlist white--text">
+  <div class="shortlist">
     <div
       v-for="veranstaltung in veranstaltungen"
       :key="veranstaltung.id"

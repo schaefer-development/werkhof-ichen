@@ -16,7 +16,7 @@
         class="subnavi_left"
       >
         <v-card rounded="0" flat class="ichen_green pa-3">
-          <v-card-title class="white--text">Anfertigungen</v-card-title>
+          <v-card-title class="white--text text-h2">Anfertigungen</v-card-title>
           <div class="submenu_divider"></div>
           <v-card-text>
             <v-list class="white--text" flat nav color="transparent">

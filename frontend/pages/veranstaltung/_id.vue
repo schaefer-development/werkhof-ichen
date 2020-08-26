@@ -10,26 +10,29 @@
       </v-col>
       <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">
         <v-card rounded="0" flat class="px-6 pt-8">
-          <v-toolbar flat extended color="transparent">
-            <v-toolbar-title>
-              <h1>{{ veranstaltung.Titel }}</h1>
-              <div class="subheading">
-                <small>{{ veranstaltung.Datum | formatDate }} Uhr</small>
-              </div>
-            </v-toolbar-title>
-            <v-spacer />
-            <v-btn
-              fab
-              depressed
-              small
-              dark
-              aria-label="Abbrechen"
-              color="ichen_blue"
-              @click="cancel"
-            >
-              <v-icon dark>mdi-close</v-icon>
-            </v-btn>
-          </v-toolbar>
+          <v-list-item>
+            <v-list-item-content>
+              <v-list-item-title class="ichen_blue--text text-h2">
+                {{ veranstaltung.Titel }}
+              </v-list-item-title>
+            </v-list-item-content>
+            <v-list-item-action>
+              <v-btn
+                fab
+                depressed
+                small
+                dark
+                aria-label="Abbrechen"
+                color="ichen_blue"
+                @click="cancel"
+              >
+                <v-icon dark>mdi-close</v-icon>
+              </v-btn>
+            </v-list-item-action>
+          </v-list-item>
+          <v-card-text>
+            <strong> {{ veranstaltung.Datum | formatDate }} Uhr </strong>
+          </v-card-text>
           <v-card-text>
             <registration-form
               v-if="displayForm"
@@ -40,7 +43,9 @@
             </registration-form>
             <template v-else>
               <p>{{ veranstaltung.Beschreibung }}</p>
-              <p>{{ veranstaltung.Preis }} Euro</p>
+              <p>
+                <strong>{{ veranstaltung.Preis }} Euro</strong>
+              </p>
               <v-alert
                 v-if="available"
                 text

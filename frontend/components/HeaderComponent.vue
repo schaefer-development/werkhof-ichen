@@ -1,13 +1,5 @@
 <template>
-  <v-app-bar
-    height="160px"
-    flat
-    color="transparent"
-    absolute
-    app
-    clipped-left
-    class="navigation-items"
-  >
+  <v-app-bar height="160px" flat color="transparent" absolute app clipped-left>
     <v-container>
       <v-toolbar color="transparent" flat class="d-none d-md-block">
         <nuxt-link to="/">
@@ -34,7 +26,7 @@
             >
           </v-list>
         </v-menu>
-        <v-btn dark transparent text nuxt link to="/bilder">Bilder</v-btn>
+        <v-btn text nuxt link to="/bilder">Bilder</v-btn>
         <v-btn text nuxt link to="/kontakt">Kontakt</v-btn>
         <v-menu offset-y transition="slide-y-transition" bottom>
           <template v-slot:activator="{ on, attrs }">
@@ -99,6 +91,7 @@ export default {
 }
 </script>
 
+<<<<<<< HEAD
 <style lang="scss">
 header div {
   .v-btn {
@@ -138,5 +131,14 @@ header div {
   .v-list {
     padding: 0 !important;
   }
+=======
+<style lang="scss" scoped>
+.v-btn {
+  font-style: normal;
+  font-weight: 900;
+  font-family: 'Overlock';
+  font-size: 0.75rem;
+  color: $ichen_blue !important;
+>>>>>>> b0a79a17e63b659913b2c039b71ba061a6e9f8b0
 }
 </style>

@@ -14,7 +14,9 @@
       </v-col>
       <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">
         <v-card rounded="0" flat>
-          <v-card-title>Allgemeine Geschäftsbedingungen (AGB)</v-card-title>
+          <v-card-title class="text-h2"
+            >Allgemeine Geschäftsbedingungen (AGB)</v-card-title
+          >
           <v-card-text>
             <h3>Zu jedem fairen Angebot gehören ein paar Spielregeln:</h3>
             <ol class="pt-6">

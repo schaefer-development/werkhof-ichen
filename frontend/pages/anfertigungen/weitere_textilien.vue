@@ -7,7 +7,7 @@
       />
     </template>
     <v-card rounded="0" flat>
-      <v-card-title>Weitere Textilien</v-card-title>
+      <v-card-title class="text-h2">Weitere Textilien</v-card-title>
       <v-card-text></v-card-text>
     </v-card>
   </anfertigungen-wrapper>
