@@ -3,11 +3,7 @@
     <v-row>
       <v-col xs="12" sm="6" md="4">
         <v-card rounded="0" flat>
-          <v-img
-            class="align-end"
-            height="250px"
-            src="/werkhof_01.jpg"
-          ></v-img>
+          <v-img class="align-end" height="250px" src="/werkhof_01.jpg"></v-img>
           <v-card-title class="ichen_blue--text text-h2"
             >werkhof ichen</v-card-title
           >
@@ -62,11 +58,7 @@
               beispielsweise Lederhosen und -jacken.
             </p>
             <div class="text-right pb-3">
-              <v-btn
-                nuxt
-                to="/anfertigungen/leder"
-                depressed
-                color="ichen_red"
+              <v-btn nuxt to="/anfertigungen/leder" depressed color="ichen_red"
                 >Mehr</v-btn
               >
             </div>
@@ -75,11 +67,7 @@
       </v-col>
       <v-col xs="12" sm="6" md="4">
         <v-card rounded="0" flat dark class="ichen_blue">
-          <v-img
-            class="align-end"
-            height="250px"
-            src="/kid_sewing.jpg"
-          ></v-img>
+          <v-img class="align-end" height="250px" src="/kid_sewing.jpg"></v-img>
           <v-card-title class="ichen_yellow--text text-h2"
             >Veranstaltungen</v-card-title
           >

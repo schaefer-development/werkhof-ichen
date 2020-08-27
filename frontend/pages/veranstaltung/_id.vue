@@ -42,7 +42,7 @@
             >
             </registration-form>
             <template v-else>
-              <p>{{ veranstaltung.Beschreibung }}</p>
+              <p v-html="$md.render(veranstaltung.Beschreibung)"></p>
               <p>
                 <strong>{{ veranstaltung.Preis }} Euro</strong>
               </p>

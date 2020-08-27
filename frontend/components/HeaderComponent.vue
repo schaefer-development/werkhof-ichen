@@ -3,7 +3,11 @@
     <v-container>
       <v-toolbar color="transparent" flat class="d-none d-md-block">
         <nuxt-link to="/">
-          <v-img src="/logo_ichen.svg" alt="Logo Werkhof ichen" max-width="110px" />
+          <v-img
+            src="/logo_ichen.svg"
+            alt="Logo Werkhof ichen"
+            max-width="110px"
+          />
         </nuxt-link>
         <v-spacer></v-spacer>
         <v-btn text nuxt link to="/">Startseite</v-btn>
@@ -17,7 +21,9 @@
           </template>
           <v-list dark color="ichen_blue">
             <v-list-item nuxt to="/anfertigungen/leder">Leder</v-list-item>
-            <v-list-item nuxt to="/anfertigungen/weitere_textilien">Weitere Textilien</v-list-item>
+            <v-list-item nuxt to="/anfertigungen/weitere_textilien"
+              >Weitere Textilien</v-list-item
+            >
           </v-list>
         </v-menu>
         <v-btn text nuxt link to="/bilder">Bilder</v-btn>
@@ -60,7 +66,11 @@
       </v-toolbar>
       <v-toolbar color="transparent" flat class="d-md-none">
         <nuxt-link to="/">
-          <v-img src="/logo_ichen.svg" alt="Logo Werkhof ichen" max-width="110px" />
+          <v-img
+            src="/logo_ichen.svg"
+            alt="Logo Werkhof ichen"
+            max-width="110px"
+          />
         </nuxt-link>
         <v-spacer></v-spacer>
         <v-app-bar-nav-icon aria-label="Open Drawer" @click.stop="toggleDrawer">

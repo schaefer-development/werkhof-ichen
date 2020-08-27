@@ -13,7 +13,7 @@
         <p>
           <strong>{{ veranstaltung.Datum | formatDate }} Uhr</strong>
         </p>
-        <p>{{ veranstaltung.Beschreibung }}</p>
+        <p v-html="$md.render(veranstaltung.Beschreibung)"></p>
         <p>{{ veranstaltung.Preis }} Euro</p>
       </v-card-text>
       <v-card-text>
