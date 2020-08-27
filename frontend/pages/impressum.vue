@@ -2,10 +2,7 @@
   <v-container>
     <v-row class="pb-xs-6">
       <v-col cols="12">
-        <v-img
-          src="/header_images/header_flowers.jpg"
-          alt="werkhof ichen: Blumen"
-        />
+        <v-img src="/header_images/header_flowers.jpg" alt="werkhof ichen: Blumen" />
       </v-col>
     </v-row>
     <v-row>
@@ -19,14 +16,19 @@
             </p>
             <p>
               werkhof ichen
-              <br />Dipl.-Ing. Irmina Maria Schmitz <br />Im alten Breidt 11a
+              <br />Diplom-Bekleidungs Ingenieurin
+              <br />Irmina Maria Schmitz
+            </p>
+            <p>
+              Im alten Breidt 11a
               <br />53797 Lohmar-Breidt
               <br />
             </p>
             <p>
               Telefon:
               <a href="tel:+4922463197">02246 . 31 97</a>
-              <br />Fax: 02246 . 94 94 090 <br />E-Mail:
+              <br />Fax: 02246 . 94 94 090
+              <br />E-Mail:
               <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>
             </p>
           </v-card-text>
@@ -87,7 +89,7 @@
               Kostenerzielungsabsicht als eigentliche Triebfeder sowie einen
               Verstoß gegen die Schadensminderungspflicht darstellen.
             </p>
-            <hr />
+            <v-divider></v-divider>
             <br />
             <h3>Gestaltung und technische Umsetzung:</h3>
             <p>

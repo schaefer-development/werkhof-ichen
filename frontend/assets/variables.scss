@@ -8,7 +8,9 @@
 $ichen_beige: #ece1cb;
 $ichen_yellow: #e5bc80;
 $ichen_green: #709726;
+$ichen_green_dark: #658a22;
 $ichen_blue: #2a434c;
+$ichen_blue_light: #395b66;
 $ichen_red: #e0124d;
 $ichen_brown: #48413d;
 
@@ -80,12 +82,13 @@ $headings: (
     'font-family': 'Overlock',
   ),
   h2: (
-    'size': 1.5em,
+    'size': 1.8em,
     'weight': 900,
     'line-height': 1.5,
     'font-family': 'Overlock',
   ),
   h3: (
+    'size': 1.2em,
     'weight': 900,
   )
 );
@@ -107,13 +110,16 @@ $menu-content-border-radius: 0px;
 
 
 $body-font-family: 'Fira Sans', Arial, sans-serif;
-$font-size-root: 20px !default;
-
+$font-size-root: 17px !default;
 $color-pack: false;
 
 
 @import '~vuetify/src/styles/styles.sass';
 
+
+.v-application .text-h2 {
+  color: $ichen_blue;
+}
 
 
 .v-ripple__container {
