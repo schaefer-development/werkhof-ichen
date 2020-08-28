@@ -7,14 +7,14 @@
         src="/logo_ichen.svg"
       ></v-img>
     </template>
-    <v-card flat dark color="transparent" class="py-2">
+    <v-card flat dark color="transparent" class="py-4">
       <v-toolbar flat color="transparent">
         <v-spacer></v-spacer>
         <v-btn icon @click.stop="toggleDrawer">
           <v-icon large>mdi-close</v-icon>
         </v-btn>
       </v-toolbar>
-      <v-list flat nav justify="center" align="center" class="px-0">
+      <v-list flat nav class="px-0">
         <v-list-item nuxt link to="/">Startseite</v-list-item>
         <v-list-item nuxt link to="/veranstaltungen"
           >Veranstaltungen</v-list-item
@@ -82,21 +82,31 @@ export default {
 
 <style lang="scss">
 .v-navigation-drawer {
-  padding: 0;
+  min-width: 38% !important;
+  .v-navigation-drawer__content {
+  }
+  .v-toolbar__content {
+    button {
+      &:hover {
+        color: $ichen_red !important;
+        &:before {
+          background-color: rgba(0, 0, 0, 0) !important;
+        }
+      }
+    }
+  }
   .drawer-background-image {
-    opacity: 0.04;
+    opacity: 0.02;
     left: -20%;
     position: absolute;
     width: 100%;
     height: 100%;
   }
-
   // drawer active default
   a.v-list-item--active {
     background-color: $ichen_red !important;
     color: #fff !important;
   }
-
   // drawer level 1
   .v-list-item,
   .v-list-group .v-list-group__header {
@@ -105,22 +115,17 @@ export default {
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    font-size: 1rem;
-    padding: 0 20px !important;
+    font-size: 0.9rem;
+
+    padding: 7px 20px !important;
     border-radius: 0 !important;
     margin-bottom: 0 !important;
+    &:hover {
+      background-color: $ichen_blue_dark !important;
+    }
   }
   .v-list-group {
     .v-list-group__header {
-      &[aria-expanded='true'] {
-        /* level 2 is open (default is closed)
-        .v-list-item {
-          color: $ichen_blue_light !important;
-        }
-        .v-list-group__header__append-icon {
-          color: $ichen_blue_light !important;
-        } */
-      }
       .v-list-item {
         padding: 0 !important;
       }
@@ -136,7 +141,7 @@ export default {
       a {
         font-family: 'Fira Sans';
         font-style: normal;
-        font-weight: 800;
+        font-weight: 400;
         text-transform: none;
         letter-spacing: 0;
         &.v-list-item--active {

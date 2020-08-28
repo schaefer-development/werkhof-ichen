@@ -3,7 +3,8 @@
     <v-card rounded="0" flat>
       <v-img
         class="white--text align-end"
-        height="300px"
+        contain
+        aspect-ratio="1"
         :src="veranstaltung.Vorschaubild.url"
       ></v-img>
       <v-card-title class="ichen_blue--text text-h2">

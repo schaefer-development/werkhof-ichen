@@ -55,7 +55,8 @@
               möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen
               werde ich diese Inhalte umgehend entfernen.
             </p>
-            <h3>Haftung für Links</h3>
+
+            <h3 class="pt-8">Haftung für Links</h3>
             <p>
               Mein Angebot enthält Links zu externen Webseiten Dritter, auf
               deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese
@@ -65,7 +66,7 @@
               Diese Erklärung gilt für alle auf meine Webseite angebrachten
               Links.
             </p>
-            <h3>Keine Abmahnung ohne vorherigen Kontakt</h3>
+            <h3 class="pt-8">Keine Abmahnung ohne vorherigen Kontakt</h3>
             <p>
               Sollten irgendwelche Inhalte oder die designtechnische Gestaltung
               einzelner Seiten oder Teile dieser Internetseite fremde Rechte
@@ -90,9 +91,8 @@
               Kostenerzielungsabsicht als eigentliche Triebfeder sowie einen
               Verstoß gegen die Schadensminderungspflicht darstellen.
             </p>
-            <v-divider></v-divider>
-            <br />
-            <h3>Gestaltung und technische Umsetzung:</h3>
+
+            <h3 class="pt-8">Gestaltung und technische Umsetzung:</h3>
             <p>
               Robert und Jo Schäfer
               <br />E-Mail:
