@@ -18,13 +18,15 @@
                   link
                   to="/anfertigungen/leder"
                   class="white--text text-h3 ma-0 px-8"
-                >Leder</v-list-item>
+                  >Leder</v-list-item
+                >
                 <v-list-item
                   nuxt
                   link
                   to="/anfertigungen/weitere_textilien"
                   class="white--text text-h3 ma-0 px-8"
-                >Weitere Textilien</v-list-item>
+                  >Weitere Textilien</v-list-item
+                >
               </v-list>
             </p>
           </v-card-text>
