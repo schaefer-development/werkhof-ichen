@@ -34,7 +34,6 @@
             item-value="key"
             hint="Nach Kategorie filtern"
             persistent-hint
-            @change="change"
           ></v-select>
         </v-col>
       </v-row>
@@ -90,10 +89,6 @@ export default {
       }),
       context.$axios.$get('/veranstaltungsangebots'),
     ])
-    return { veranstaltungen, veranstaltungsangebote }
-  },
-  data() {
-    const selectedCategories = this.$route.query.Kategorie_in || []
     const items = [
       { key: 'kurse_fuer_erwachsene', name: 'Kurse für Erwachsene' },
       {
@@ -103,32 +98,20 @@ export default {
       { key: 'geburtstagsevents', name: 'Geburtstagsevents' },
       { key: 'unkategorisiert', name: 'Unkategorisiert' },
     ]
-    return {
-      selected: items.filter((i) => selectedCategories.includes(i.key)),
-      items,
-    }
+    return { veranstaltungen, veranstaltungsangebote, items, selected: [] }
   },
   computed: {
     filtered() {
-      const { veranstaltungen, veranstaltungsangebote } = this
-      const categories = this.$route.query.Kategorie_in
-      if (!categories) return { veranstaltungen, veranstaltungsangebote }
+      const { selected, veranstaltungen, veranstaltungsangebote } = this
+      if (!selected.length) return { veranstaltungen, veranstaltungsangebote }
       return {
         veranstaltungen: veranstaltungen.filter((v) =>
-          categories.includes(v.Kategorie)
+          selected.includes(v.Kategorie)
         ),
         veranstaltungsangebote: veranstaltungsangebote.filter((v) =>
-          categories.includes(v.Kategorie)
+          selected.includes(v.Kategorie)
         ),
       }
-    },
-  },
-  methods: {
-    change(categories) {
-      this.$router.push({
-        path: this.$route.path,
-        query: { Kategorie_in: categories },
-      })
     },
   },
 }
