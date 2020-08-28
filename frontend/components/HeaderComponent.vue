@@ -99,14 +99,17 @@ header div {
         opacity: 0 !important; // removes background-color
       }
     }
+    &[aria-expanded='true'] {
+      color: $ichen_blue_light !important;
+    }
     &:hover {
-      color: #376c80 !important;
+      color: $ichen_blue_light !important;
     }
   }
   .v-btn--active {
     color: $ichen_red !important;
     &:before {
-      opacity: 0 !important; // removes background-colo
+      opacity: 0 !important; // removes background-color
     }
   }
   a {
@@ -119,6 +122,28 @@ header div {
 
   .v-list {
     padding: 0 !important;
+  }
+}
+
+.v-menu__content {
+  .v-list {
+    padding: 0 !important;
+    a {
+      font-family: 'Fira Sans';
+      font-style: normal;
+      font-weight: 800;
+      text-transform: none;
+      font-size: 0.8em;
+      &:hover {
+        background-color: $ichen_blue_light !important;
+      }
+      &.v-list-item--active {
+        color: $ichen_red !important;
+        &:before {
+          opacity: 0 !important; // removes background-color
+        }
+      }
+    }
   }
 }
 </style>

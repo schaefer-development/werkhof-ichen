@@ -75,7 +75,12 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
+    '@nuxtjs/markdownit',
   ],
+
+  markdownit: {
+    injected: true,
+  },
 
   pwa: {
     meta: {
