@@ -4,7 +4,9 @@
       <v-col xs="12" sm="6" md="4">
         <v-card rounded="0" flat>
           <v-img class="align-end" height="300px" src="/werkhof_01.jpg"></v-img>
-          <v-card-title class="ichen_blue--text text-h2">werkhof ichen</v-card-title>
+          <v-card-title class="ichen_blue--text text-h2"
+            >werkhof ichen</v-card-title
+          >
           <v-card-text>
             <p>
               Der „werkhof ichen“ ist ein stilvoll ausgebautes Fachwerkgehöft am
@@ -16,7 +18,14 @@
             </p>
 
             <div class="text-right pb-10">
-              <v-btn dark nuxt to="/ueber_mich/werkhof" depressed color="ichen_red">Mehr</v-btn>
+              <v-btn
+                dark
+                nuxt
+                to="/ueber_mich/werkhof"
+                depressed
+                color="ichen_red"
+                >Mehr</v-btn
+              >
             </div>
 
             <v-alert rounded="0" outlined type="info">
@@ -36,7 +45,9 @@
       <v-col xs="12" sm="6" md="4">
         <v-card rounded="0" flat dark class="ichen_green">
           <v-img height="300px" src="/leather_trouser.jpg"></v-img>
-          <v-card-title class="ichen_blue--text text-h2">Anfertigungen</v-card-title>
+          <v-card-title class="ichen_blue--text text-h2"
+            >Anfertigungen</v-card-title
+          >
           <v-card-text>
             <p>
               Meine Kollektionen sind zeitlose, individuelle Entwicklungen, die
@@ -47,7 +58,9 @@
               beispielsweise Lederhosen und -jacken.
             </p>
             <div class="text-right pb-3">
-              <v-btn nuxt to="/anfertigungen/leder" depressed color="ichen_red">Mehr</v-btn>
+              <v-btn nuxt to="/anfertigungen/leder" depressed color="ichen_red"
+                >Mehr</v-btn
+              >
             </div>
           </v-card-text>
         </v-card>
@@ -55,9 +68,13 @@
       <v-col xs="12" sm="6" md="4">
         <v-card rounded="0" flat dark class="ichen_blue">
           <v-img class="align-end" height="300px" src="/kid_sewing.jpg"></v-img>
-          <v-card-title class="ichen_yellow--text text-h2">Veranstaltungen</v-card-title>
+          <v-card-title class="ichen_yellow--text text-h2"
+            >Veranstaltungen</v-card-title
+          >
           <v-card-text v-if="veranstaltungen">
-            <veranstaltung-short-list :veranstaltungen="veranstaltungen"></veranstaltung-short-list>
+            <veranstaltung-short-list
+              :veranstaltungen="veranstaltungen"
+            ></veranstaltung-short-list>
           </v-card-text>
         </v-card>
       </v-col>

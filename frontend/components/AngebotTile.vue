@@ -10,27 +10,10 @@
         {{ veranstaltung.Titel }}
       </v-card-title>
       <v-card-text>
-        <p>
-          <strong>{{ veranstaltung.Datum | formatDate }} Uhr</strong>
-        </p>
         <client-only>
           <p v-html="$md.render(veranstaltung.Beschreibung)"></p>
         </client-only>
         <p>{{ veranstaltung.Preis }} Euro</p>
-      </v-card-text>
-      <v-card-text>
-        <template v-if="available">
-          <strong class="success--text">
-            <v-icon color="success" class="pr-1">mdi-check-circle</v-icon>Noch
-            Plätze frei
-          </strong>
-        </template>
-        <template v-else>
-          <strong class="ichen_blue--text">
-            <v-icon color="ichen_blue" class="pr-1">mdi-alert-circle</v-icon
-            >Leider ausgebucht
-          </strong>
-        </template>
       </v-card-text>
 
       <v-card-actions class="pt-1 pb-8 pr-4">
@@ -38,8 +21,8 @@
           nuxt
           depressed
           color="ichen_red white--text"
-          :to="{ name: 'veranstaltung-id', params: { id: veranstaltung.id } }"
-          >{{ available ? 'Anmelden' : 'Warteliste' }}</v-btn
+          :to="{ name: 'angebot-id', params: { id: veranstaltung.id } }"
+          >Buchen</v-btn
         >
       </v-card-actions>
     </v-card>
@@ -47,18 +30,11 @@
 </template>
 
 <script>
-import isAvailable from '~/helpers/isAvailable'
-
 export default {
   props: {
     veranstaltung: {
       type: Object,
       required: true,
-    },
-  },
-  computed: {
-    available() {
-      return isAvailable(this.veranstaltung)
     },
   },
 }

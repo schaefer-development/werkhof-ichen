@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "veranstaltungsangebots",
+  "info": {
+    "name": "Veranstaltungsangebot"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Titel": {
+      "type": "string",
+      "required": true
+    },
+    "Beschreibung": {
+      "type": "richtext",
+      "required": true
+    },
+    "Kategorie": {
+      "type": "enumeration",
+      "enum": [
+        "kurse_fuer_kinder_und_jugendliche",
+        "kurse_fuer_erwachsene",
+        "geburtstagsevents",
+        "unkategorisiert"
+      ],
+      "required": true
+    },
+    "Vorschaubild": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}
