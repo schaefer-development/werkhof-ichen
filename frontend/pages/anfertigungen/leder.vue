@@ -28,7 +28,7 @@
           aus Thailand wird hier in Deutschland ökogerecht weiterbearbeitet.
         </p>
 
-        <h3>Anfertigung einer Lederhose</h3>
+        <h3 class="pt-12">Anfertigung einer Lederhose</h3>
         <p>
           Anhand von Farbkarten und Mustern kann sich der Kunde die Lederart und
           -farbe aussuchen. Nach Modellabsprache und dem Maßnehmen folgt das
@@ -55,7 +55,8 @@
         </v-simple-table>
         <p>
           Mit Strickbündchen am Hosensaum: 10 Euro Aufpreis
-          <br />Verlängerung bis 8 cm: 15 Euro <br />Schmutzfang: 15 Euro
+          <br />Verlängerung bis 8 cm: 15 Euro
+          <br />Schmutzfang: 15 Euro
           <br />Ledermix: 10 Euro
         </p>
         <p>

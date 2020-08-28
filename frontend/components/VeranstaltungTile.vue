@@ -1,9 +1,10 @@
 <template>
-  <v-col xs="12" sm="6" lg="4">
+  <v-col cols="12" xs="12" sm="6" lg="4">
     <v-card rounded="0" flat>
       <v-img
         class="white--text align-end"
-        height="300px"
+        contain
+        aspect-ratio="1"
         :src="veranstaltung.Vorschaubild.url"
       ></v-img>
       <v-card-title class="ichen_blue--text text-h2">

@@ -10,8 +10,9 @@ $ichen_yellow: #e5bc80;
 $ichen_green: #709726;
 $ichen_green_dark: #5b7c1d;
 $ichen_blue: #2a434c;
+$ichen_blue_dark: #1e3036;
 $ichen_blue_light: #395b66;
-$ichen_red: #e0124d;
+$ichen_red: #d10f46;
 $ichen_brown: #504843da;
 
 /* LOCAL FONTS */
@@ -110,11 +111,13 @@ $menu-content-border-radius: 0px;
 
 
 $body-font-family: 'Fira Sans', Arial, sans-serif;
-$font-size-root: 17px !default;
+$font-size-root: 20px !default;
 $color-pack: false;
 
 
 @import '~vuetify/src/styles/styles.sass';
+
+
 
 
 .v-application .text-h2 {
@@ -139,4 +142,9 @@ $color-pack: false;
     background-color:inherit;
     clip-path: polygon(0 1%, 0% 100%, 100% 0);
   }
+}
+
+
+.text-h2 a {
+text-decoration: none !important;
 }

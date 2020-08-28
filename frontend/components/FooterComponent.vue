@@ -9,10 +9,7 @@
           <v-img src="/footer_images/hearts.jpg" alt="Herzen"></v-img>
           <v-img src="/footer_images/sew.jpg" alt="Nähen"></v-img>
           <v-img src="/footer_images/collection2.jpg" alt="Sammlung"></v-img>
-          <v-img
-            src="/footer_images/kater_schroeder.jpg"
-            alt="Kater Schröder"
-          ></v-img>
+          <v-img src="/footer_images/kater_schroeder.jpg" alt="Kater Schröder"></v-img>
           <v-img src="/footer_images/flower.jpg" alt="Blumen"></v-img>
           <v-img src="/footer_images/texture.jpg" alt="Textur"></v-img>
           <v-img src="/footer_images/lamp.jpg" alt="Lampe"></v-img>
@@ -22,31 +19,49 @@
       <v-row
         justify="center"
         align="center"
-        class="footer-component-bottom-row pt-4 pl-12 pb-1 pr-12"
+        class="footer-component-bottom-row pt-8 pl-12 pb-3 pr-12"
       >
-        <v-col cols="12" sm="6" md="4" lg="2" xl="2" align="center">
-          <v-img
-            src="/logo_ichen_outline.svg"
-            alt="Logo Werkhof ichen"
-            max-width="120px"
-          />
+        <v-col cols="12" sm="6" md="4" lg="3" xl="2" align="center">
+          <v-img src="/logo_ichen_outline.svg" alt="Logo Werkhof ichen" max-width="180px" />
         </v-col>
-        <v-col cols="12" sm="6" md="4" lg="2" xl="2">
-          <p>
+        <v-col cols="12" sm="6" md="4" lg="3" xl="2">
+          <p class="pl-2">
             <a href="tel:+4922463197">02246 . 31 97</a>
             <br />
             <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>
           </p>
 
-          <p>
+          <p class="pl-2">
             <nuxt-link to="/datenschutz">Datenschutz</nuxt-link>
             <br />
             <nuxt-link to="/impressum">Impressum</nuxt-link>
-          </p>
-          <p>
+            <br />
             <nuxt-link to="/agb">AGB</nuxt-link>
             <br />
             Copyright {{ new Date().getFullYear() }}
+          </p>
+
+          <p>
+            <v-btn
+              icon
+              link
+              target="_blank"
+              rel="noopener"
+              aria-label="Facebook"
+              href="https://de-de.facebook.com/pages/category/Education/Werkhof-ichen-130771390426775/"
+            >
+              <v-icon medium>mdi-facebook</v-icon>
+            </v-btn>
+            <v-btn
+              link
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+              href="https://www.instagram.com/irmina_schmitz/"
+              icon
+            >
+              <v-icon medium>mdi-instagram</v-icon>
+            </v-btn>
           </p>
         </v-col>
       </v-row>
@@ -67,7 +82,7 @@ footer {
   }
 }
 .footer-component-bottom-row {
-  font-size: 0.8em;
+  font-size: 0.85em;
   a {
     color: #fff;
     text-decoration: none;
@@ -76,7 +91,7 @@ footer {
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     &:hover {
-      color: #191716;
+      color: $ichen_yellow !important;
     }
   }
   strong {

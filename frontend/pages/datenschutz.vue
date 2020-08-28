@@ -2,10 +2,7 @@
   <v-container>
     <v-row class="pb-xs-6">
       <v-col cols="12">
-        <v-img
-          src="/header_images/header_ghosts.jpg"
-          alt="werkhof ichen: Textilgespenster"
-        />
+        <v-img src="/header_images/header_ghosts.jpg" alt="werkhof ichen: Textilgespenster" />
       </v-col>
     </v-row>
     <v-row class="align-baseline">
@@ -34,22 +31,23 @@
               „Verarbeitung“ oder „Verantwortlicher“ verweisen wir auf die
               Definitionen im Art. 4 der Datenschutzgrundverordnung (DSGVO).
             </p>
-            <h3>Verantwortlicher</h3>
+            <h3 class="pt-8">Verantwortlicher</h3>
             <p>
               werkhof ichen
-              <br />Dipl.-Ing. Irmina Maria Schmitz <br />Im alten Breidt 11a
+              <br />Dipl.-Ing. Irmina Maria Schmitz
+              <br />Im alten Breidt 11a
               <br />53797 Lohmar-Breidt
             </p>
             <p>
               Telefon:
               <a href="tel:+4922463197">02246 . 31 97</a>
-              <br />Fax: 02246 . 94 94 090 <br />E-Mail:
+              <br />Fax: 02246 . 94 94 090
+              <br />E-Mail:
               <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>
               <br />Link zum
               <nuxt-link to="/impressum">Impressum</nuxt-link>
             </p>
-
-            <h3>Arten der verarbeiteten Daten:</h3>
+            <h3 class="pt-8">Arten der verarbeiteten Daten:</h3>
             <ul>
               <li>Bestandsdaten (z.B., Namen, Adressen).</li>
               <li>Kontaktdaten (z.B., E-Mail, Telefonnummern).</li>
@@ -64,26 +62,25 @@
               </li>
             </ul>
             <br />
-            <h3>Kategorien betroffener Personen</h3>
+
+            <h3 class="pt-8">Kategorien betroffener Personen</h3>
             <p>
               Besucher und Nutzer des Onlineangebotes (Nachfolgend bezeichnen
               wir die betroffenen Personen zusammenfassend auch als „Nutzer“).
             </p>
-            <h3>Zweck der Verarbeitung</h3>
+            <h3 class="pt-8">Zweck der Verarbeitung</h3>
             <ul>
               <li>
                 Zurverfügungstellung des Onlineangebotes, seiner Funktionen und
                 Inhalte.
               </li>
-              <li>
-                Beantwortung von Kontaktanfragen und Kommunikation mit Nutzern.
-              </li>
+              <li>Beantwortung von Kontaktanfragen und Kommunikation mit Nutzern.</li>
               <li>Sicherheitsmaßnahmen.</li>
               <li>Reichweitenmessung/Marketing</li>
             </ul>
             <br />
 
-            <h3>Verwendete Begrifflichkeiten</h3>
+            <h3 class="pt-8">Verwendete Begrifflichkeiten</h3>
             <p>
               „Personenbezogene Daten“ sind alle Informationen, die sich auf
               eine identifizierte oder identifizierbare natürliche Person (im
@@ -137,7 +134,7 @@
               Daten im Auftrag des Verantwortlichen verarbeitet.
             </p>
 
-            <h3>Maßgebliche Rechtsgrundlagen</h3>
+            <h3 class="pt-8">Maßgebliche Rechtsgrundlagen</h3>
             <p>
               Nach Maßgabe des Art. 13 DSGVO teilen wir Ihnen die
               Rechtsgrundlagen unserer Datenverarbeitungen mit. Sofern die
@@ -157,7 +154,7 @@
               lit. d DSGVO als Rechtsgrundlage.
             </p>
 
-            <h3>Sicherheitsmaßnahmen</h3>
+            <h3 class="pt-8">Sicherheitsmaßnahmen</h3>
             <p>
               Wir treffen nach Maßgabe des Art. 32 DSGVO unter Berücksichtigung
               des Stands der Technik, der Implementierungskosten und der Art,
@@ -181,7 +178,7 @@
               des Datenschutzes durch Technikgestaltung und durch
               datenschutzfreundliche Voreinstellungen (Art. 25 DSGVO).
             </p>
-            <h3>Zusammenarbeit mit Auftragsverarbeitern und Dritten</h3>
+            <h3 class="pt-8">Zusammenarbeit mit Auftragsverarbeitern und Dritten</h3>
             <p>
               Sofern wir im Rahmen unserer Verarbeitung Daten gegenüber anderen
               Personen und Unternehmen (Auftragsverarbeitern oder Dritten)
@@ -199,7 +196,7 @@
               eines sog. „Auftragsverarbeitungsvertrages“ beauftragen, geschieht
               dies auf Grundlage des Art. 28 DSGVO.
             </p>
-            <h3>Übermittlungen in Drittländer</h3>
+            <h3 class="pt-8">Übermittlungen in Drittländer</h3>
             <p>
               Sofern wir Daten in einem Drittland (d.h. außerhalb der
               Europäischen Union (EU) oder des Europäischen Wirtschaftsraums
@@ -219,8 +216,7 @@
               vertraglicher Verpflichtungen (so genannte
               „Standardvertragsklauseln“).
             </p>
-
-            <h3>Rechte der betroffenen Personen</h3>
+            <h3 class="pt-8">Rechte der betroffenen Personen</h3>
             <p>
               Sie haben das Recht, eine Bestätigung darüber zu verlangen, ob
               betreffende Daten verarbeitet werden und auf Auskunft über diese
@@ -248,14 +244,14 @@
               Sie haben ferner gem. Art. 77 DSGVO das Recht, eine Beschwerde bei
               der zuständigen Aufsichtsbehörde einzureichen.
             </p>
-            <h3>Widerspruchsrecht</h3>
+            <h3 class="pt-8">Widerspruchsrecht</h3>
             <p>
               Sie können der künftigen Verarbeitung der Sie betreffenden Daten
               nach Maßgabe des Art. 21 DSGVO jederzeit widersprechen. Der
               Widerspruch kann insbesondere gegen die Verarbeitung für Zwecke
               der Direktwerbung erfolgen.
             </p>
-            <h3>Cookies und Widerspruchsrecht bei Direktwerbung</h3>
+            <h3 class="pt-8">Cookies und Widerspruchsrecht bei Direktwerbung</h3>
             <p>
               Als „Cookies“ werden kleine Dateien bezeichnet, die auf Rechnern
               der Nutzer gespeichert werden. Innerhalb der Cookies können
@@ -296,20 +292,22 @@
               Onlinemarketing eingesetzten Cookies kann bei einer Vielzahl der
               Dienste, vor allem im Fall des Trackings, über die
               US-amerikanische Seite
-              <a href="http://www.aboutads.info/choices/" target="_blanc"
-                >http://www.aboutads.info/choices/</a
-              >
+              <a
+                href="http://www.aboutads.info/choices/"
+                target="_blanc"
+              >http://www.aboutads.info/choices/</a>
               oder die EU-Seite
-              <a href="http://www.youronlinechoices.com/" target="_blanc"
-                >http://www.youronlinechoices.com/</a
-              >
+              <a
+                href="http://www.youronlinechoices.com/"
+                target="_blanc"
+              >http://www.youronlinechoices.com/</a>
               erklärt werden. Des Weiteren kann die Speicherung von Cookies
               mittels deren Abschaltung in den Einstellungen des Browsers
               erreicht werden. Bitte beachten Sie, dass dann gegebenenfalls
               nicht alle Funktionen dieses Onlineangebotes genutzt werden
               können.
             </p>
-            <h3>Löschung von Daten</h3>
+            <h3 class="pt-8">Löschung von Daten</h3>
             <p>
               Die von uns verarbeiteten Daten werden nach Maßgabe der Art. 17
               und 18 DSGVO gelöscht oder in ihrer Verarbeitung eingeschränkt.
@@ -343,8 +341,7 @@
               Nichtunternehmer in EU-Mitgliedstaaten erbracht werden und für die
               der Mini-One-Stop-Shop (MOSS) in Anspruch genommen wird.
             </p>
-
-            <h3>Geschäftsbezogene Verarbeitung</h3>
+            <h3 class="pt-8">Geschäftsbezogene Verarbeitung</h3>
             <p>Zusätzlich verarbeiten wir</p>
             <ul>
               <li>
@@ -359,7 +356,7 @@
               </li>
             </ul>
             <br />
-            <h3>Agenturdienstleistungen</h3>
+            <h3 class="pt-8">Agenturdienstleistungen</h3>
             <p>
               Wir verarbeiten die Daten unserer Kunden im Rahmen unserer
               vertraglichen Leistungen zu denen konzeptionelle und strategische
@@ -406,8 +403,7 @@
               entsprechend den Vorgaben des Auftrags, grundsätzlich nach Ende
               des Auftrags.
             </p>
-
-            <h3>Kontaktaufnahme</h3>
+            <h3 class="pt-8">Kontaktaufnahme</h3>
             <p>
               Bei der Kontaktaufnahme mit uns (z.B. per Kontaktformular, E-Mail,
               Telefon oder via sozialer Medien) werden die Angaben des Nutzers
@@ -421,8 +417,7 @@
               sind. Wir überprüfen die Erforderlichkeit alle zwei Jahre; Ferner
               gelten die gesetzlichen Archivierungspflichten.
             </p>
-
-            <h3>Hosting</h3>
+            <h3 class="pt-8">Hosting</h3>
             <p>
               Die von uns in Anspruch genommenen Hosting-Leistungen dienen der
               Zurverfügungstellung der folgenden Leistungen: Infrastruktur- und
@@ -440,7 +435,7 @@
               dieses Onlineangebotes gem. Art. 6 Abs. 1 lit. f DSGVO i.V.m. Art.
               28 DSGVO (Abschluss Auftragsverarbeitungsvertrag).
             </p>
-            <h3>Erhebung von Zugriffsdaten und Logfiles</h3>
+            <h3 class="pt-8">Erhebung von Zugriffsdaten und Logfiles</h3>
             <p>
               Wir, bzw. unser Hostinganbieter, erhebt auf Grundlage unserer
               berechtigten Interessen im Sinne des Art. 6 Abs. 1 lit. f. DSGVO
@@ -460,8 +455,7 @@
               zur endgültigen Klärung des jeweiligen Vorfalls von der Löschung
               ausgenommen.
             </p>
-
-            <h3>Onlinepräsenzen in sozialen Medien</h3>
+            <h3 class="pt-8">Onlinepräsenzen in sozialen Medien</h3>
             <p>
               Wir unterhalten Onlinepräsenzen innerhalb sozialer Netzwerke und
               Plattformen, um mit den dort aktiven Kunden, Interessenten und
@@ -477,7 +471,7 @@
               kommunizieren, z.B. Beiträge auf unseren Onlinepräsenzen verfassen
               oder uns Nachrichten zusenden.
             </p>
-            <h3>Einbindung von Diensten und Inhalten Dritter</h3>
+            <h3 class="pt-8">Einbindung von Diensten und Inhalten Dritter</h3>
             <p>
               Wir setzen innerhalb unseres Onlineangebotes auf Grundlage unserer
               berechtigten Interessen (d.h. Interesse an der Analyse,
@@ -506,8 +500,7 @@
               enthalten, als auch mit solchen Informationen aus anderen Quellen
               verbunden werden.
             </p>
-
-            <h3>Verwendung von Facebook Social Plugins</h3>
+            <h3 class="pt-8">Verwendung von Facebook Social Plugins</h3>
             <p>
               Wir nutzen auf Grundlage unserer berechtigten Interessen (d.h.
               Interesse an der Analyse, Optimierung und wirtschaftlichem Betrieb
@@ -525,8 +518,7 @@
               <a
                 href="https://developers.facebook.com/docs/plugins/"
                 target="_blanc"
-                >https://developers.facebook.com/docs/plugins/</a
-              >.
+              >https://developers.facebook.com/docs/plugins/</a>.
             </p>
             <p>
               Facebook ist unter dem Privacy-Shield-Abkommen zertifiziert und
@@ -535,8 +527,7 @@
               <a
                 href="https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&status=Active"
                 target="_blanc"
-                >https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&status=Active</a
-              >).
+              >https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&status=Active</a>).
             </p>
             <p>
               Wenn ein Nutzer eine Funktion dieses Onlineangebotes aufruft, die
@@ -568,9 +559,10 @@
               Rechte und Einstellungsmöglichkeiten zum Schutz der Privatsphäre
               der Nutzer, können diese den Datenschutzhinweisen von Facebook
               entnehmen:
-              <a target="_blanc" href="https://www.facebook.com/about/privacy/"
-                >https://www.facebook.com/about/privacy/</a
-              >
+              <a
+                target="_blanc"
+                href="https://www.facebook.com/about/privacy/"
+              >https://www.facebook.com/about/privacy/</a>
               .
             </p>
             <p>
@@ -584,25 +576,27 @@
               <a
                 target="_blanc"
                 href="https://www.facebook.com/settings?tab=ads"
-                >https://www.facebook.com/settings?tab=ads</a
-              >
+              >https://www.facebook.com/settings?tab=ads</a>
               oder über die US-amerikanische Seite
-              <a target="_blanc" href="http://www.aboutads.info/choices/"
-                >http://www.aboutads.info/choices/</a
-              >
+              <a
+                target="_blanc"
+                href="http://www.aboutads.info/choices/"
+              >http://www.aboutads.info/choices/</a>
               oder die EU-Seite
-              <a target="_blanc" href="http://www.youronlinechoices.com/"
-                >http://www.youronlinechoices.com/</a
-              >
+              <a
+                target="_blanc"
+                href="http://www.youronlinechoices.com/"
+              >http://www.youronlinechoices.com/</a>
               . Die Einstellungen erfolgen plattformunabhängig, d.h. sie werden
               für alle Geräte, wie Desktopcomputer oder mobile Geräte
               übernommen.
             </p>
             <p>
               Erstellt mit
-              <a href="https://datenschutz-generator.de/" target="_blanc"
-                >Datenschutz-Generator.de</a
-              >
+              <a
+                href="https://datenschutz-generator.de/"
+                target="_blanc"
+              >Datenschutz-Generator.de</a>
               von RA Dr. Thomas Schwenke
             </p>
           </v-card-text>
