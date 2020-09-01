@@ -1,46 +1,42 @@
 <template>
   <v-container>
-    <v-banner sticky class="ichen_beige pt-6 px-4">
-      <v-row>
-        <v-col>
-          <v-btn
-            nuxt
-            to="#veranstaltungen"
-            large
-            depressed
-            class="white--text"
-            color="ichen_red"
-            >Termine</v-btn
-          >
-          <v-btn
-            nuxt
-            to="#veranstaltungsangebote"
-            large
-            depressed
-            class="white--text"
-            color="ichen_red"
-            >Angebote</v-btn
-          >
-        </v-col>
+    <v-row class="ichen_green px-4" align="center">
+      <v-col>
+        <v-btn
+          nuxt
+          to="#veranstaltungen"
+          large
+          depressed
+          class="white--text"
+          color="ichen_red"
+        >Termine</v-btn>
 
-        <v-col>
-          <v-select
-            v-model="selected"
-            clearable
-            outlined
-            dense
-            :items="items"
-            item-text="name"
-            item-value="key"
-            hint="Nach Kategorie filtern"
-            persistent-hint
-          ></v-select>
-        </v-col>
-      </v-row>
-    </v-banner>
+        <v-btn
+          nuxt
+          to="#veranstaltungsangebote"
+          large
+          depressed
+          class="white--text"
+          color="ichen_red"
+        >Angebote</v-btn>
+      </v-col>
+
+      <v-col class="select_filter">
+        <v-select
+          v-model="selected"
+          outlined
+          :items="items"
+          item-text="name"
+          item-value="key"
+          label="NACH KATEGORIE FILTERN"
+          class="pt-6"
+        ></v-select>
+      </v-col>
+    </v-row>
+
     <v-row id="veranstaltungen">
-      <v-col cols="12">
-        <h1>Veranstaltungstermine</h1>
+      <v-col cols="12" class="mt-12">
+        <h2 class="text-h2">VERANSTALTUNGSTERMINE</h2>
       </v-col>
       <template v-if="filtered.veranstaltungen.length">
         <veranstaltung-tile
@@ -51,15 +47,17 @@
       </template>
       <template v-else>
         <v-col cols="12">
-          <v-alert outlined type="info" class="font-weight-bold">
-            Zu diesen Kategorien gibt es keine anstehenden Veranstaltungen
-          </v-alert>
+          <v-alert
+            outlined
+            type="info"
+            class="font-weight-bold"
+          >Zu diesen Kategorien gibt es keine anstehenden Veranstaltungen</v-alert>
         </v-col>
       </template>
     </v-row>
-    <v-row id="veranstaltungsangebote">
-      <v-col cols="12">
-        <h1>Veranstaltungsangebote</h1>
+    <v-row id="veranstaltungsangebote" class="pt-12">
+      <v-col cols="12" class="pt-12">
+        <h2 class="text-h2">VERANSTALTUNGSTERMINE</h2>
       </v-col>
       <angebot-tile
         v-for="veranstaltung in filtered.veranstaltungsangebote"
@@ -114,5 +112,42 @@ export default {
       }
     },
   },
+
+
+
+
+
+  
 }
 </script>
+
+
+<style lang="scss">
+.select_filter {
+  label {
+    font-weight: bold;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+  }
+}
+
+.menuable__content__active {
+  // dropdown select categories
+  box-shadow: none !important;
+  .v-list {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    background-color: $ichen_blue;
+    .v-list-item {
+      &:hover {
+        background-color: $ichen_blue_dark !important;
+      }
+      .v-list-item__content {
+        color: white !important;
+        padding-top: 1em;
+        padding-bottom: 1em;
+      }
+    }
+  }
+}
+</style>
