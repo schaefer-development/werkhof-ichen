@@ -117,8 +117,10 @@ $color-pack: false;
 
 @import '~vuetify/src/styles/styles.sass';
 
+* {
+  scroll-behavior: smooth;
 
-
+}
 
 .v-application .text-h2 {
   color: $ichen_blue;

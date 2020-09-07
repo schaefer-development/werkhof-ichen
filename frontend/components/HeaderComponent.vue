@@ -7,8 +7,8 @@
         </nuxt-link>
         <v-spacer></v-spacer>
         <v-app-bar-nav-icon aria-label="Open Drawer" @click.stop="toggleDrawer">
-          <v-icon large>mdi-menu</v-icon>
-          <div class="menu_hint">Menu</div>
+          <v-icon size="50">mdi-menu</v-icon>
+          <div class="pl-6 menu_hint">Menu</div>
         </v-app-bar-nav-icon>
       </v-toolbar>
     </v-container>
