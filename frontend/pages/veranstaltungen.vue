@@ -1,7 +1,7 @@
 <template>
   <v-container>
-    <v-row class="ichen_green px-4" align="center">
-      <v-col>
+    <v-row class="ichen_green pa-3" align="center">
+      <v-col cols="12" xs="6" sm="4" md="3" lg="2" xl="2" class="py-3">
         <v-btn
           nuxt
           to="#veranstaltungen"
@@ -10,7 +10,8 @@
           class="white--text"
           color="ichen_red"
         >Termine</v-btn>
-
+      </v-col>
+      <v-col cols="12" xs="6" sm="8" md="3" lg="2" xl="2" class="py-3">
         <v-btn
           nuxt
           to="#veranstaltungsangebote"
@@ -21,15 +22,27 @@
         >Angebote</v-btn>
       </v-col>
 
-      <v-col class="select_filter">
+      <v-col
+        cols="12"
+        xs="12"
+        sm="12"
+        md="4"
+        offset-md="2"
+        lg="5"
+        offset-lg="3"
+        xl="5"
+        class="select_filter"
+      >
         <v-select
           v-model="selected"
-          outlined
+          filled
           :items="items"
           item-text="name"
           item-value="key"
           label="NACH KATEGORIE FILTERN"
-          class="pt-6"
+          hide-details
+          clearable
+          background-color="ichen_beige"
         ></v-select>
       </v-col>
     </v-row>
@@ -101,7 +114,7 @@ export default {
   computed: {
     filtered() {
       const { selected, veranstaltungen, veranstaltungsangebote } = this
-      if (!selected.length) return { veranstaltungen, veranstaltungsangebote }
+      if (!selected || !selected.length) return { veranstaltungen, veranstaltungsangebote }
       return {
         veranstaltungen: veranstaltungen.filter((v) =>
           selected.includes(v.Kategorie)
@@ -123,6 +136,11 @@ export default {
 
 
 <style lang="scss">
+.v-text-field .v-input__control .v-input__slot:after,
+.select_filter .v-input .v-input__control .v-input__slot:before {
+  border: none !important;
+}
+
 .select_filter {
   label {
     font-weight: bold;
