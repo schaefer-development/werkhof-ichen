@@ -30,28 +30,7 @@
           <v-list-item nuxt link to="/ueber_mich/vita">Vita</v-list-item>
           <v-list-item nuxt link to="/ueber_mich/presse">Presse</v-list-item>
         </v-list-group>
-        <v-list-item class="pt-3">
-          <v-btn
-            icon
-            link
-            target="_blank"
-            rel="noopener"
-            aria-label="Facebook"
-            href="https://de-de.facebook.com/pages/category/Education/Werkhof-ichen-130771390426775/"
-          >
-            <v-icon medium>mdi-facebook</v-icon>
-          </v-btn>
-          <v-btn
-            link
-            target="_blank"
-            rel="noopener"
-            aria-label="Instagram"
-            href="https://www.instagram.com/irmina_schmitz/"
-            icon
-          >
-            <v-icon medium>mdi-instagram</v-icon>
-          </v-btn>
-        </v-list-item>
+
       </v-list>
     </v-card>
   </v-navigation-drawer>

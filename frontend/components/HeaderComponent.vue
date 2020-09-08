@@ -6,9 +6,35 @@
           <v-img src="/logo_ichen.svg" alt="Logo Werkhof ichen" max-width="150px" />
         </nuxt-link>
         <v-spacer></v-spacer>
+
+        <v-menu left bottom>
+          <v-list-item>
+            <v-btn
+              icon
+              link
+              target="_blank"
+              rel="noopener"
+              color="ichen_blue"
+              aria-label="Facebook"
+              href="https://de-de.facebook.com/pages/category/Education/Werkhof-ichen-130771390426775/"
+            >
+              <v-icon medium>mdi-facebook</v-icon>
+            </v-btn>
+            <v-btn
+              link
+              target="_blank"
+              rel="noopener"
+              color="ichen_blue"
+              aria-label="Instagram"
+              href="https://www.instagram.com/irmina_schmitz/"
+              icon
+            >
+              <v-icon medium>mdi-instagram</v-icon>
+            </v-btn>
+          </v-list-item>
+        </v-menu>
         <v-app-bar-nav-icon aria-label="Open Drawer" @click.stop="toggleDrawer">
           <v-icon size="50">mdi-menu</v-icon>
-          <div class="pl-6 menu_hint">Menu</div>
         </v-app-bar-nav-icon>
       </v-toolbar>
     </v-container>
@@ -44,14 +70,6 @@ header {
         color: $ichen_red;
       }
     }
-  }
-  .menu_hint {
-    color: $ichen_blue_light;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-size: 0.8em;
-    font-weight: normal;
-    padding: 0 1em;
   }
 }
 </style>
