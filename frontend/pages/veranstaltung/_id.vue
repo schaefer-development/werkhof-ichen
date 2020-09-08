@@ -4,7 +4,8 @@
       <v-col cols="12" xs="12" sm="4" md="4" lg="4" xl="4">
         <v-img
           class="white--text align-end"
-          height="200px"
+          contain
+          aspect-ratio="1"
           :src="veranstaltung.Vorschaubild.url"
         ></v-img>
       </v-col>
@@ -12,9 +13,11 @@
         <v-card rounded="0" flat class="px-6 pt-8">
           <v-list-item>
             <v-list-item-content>
-              <v-list-item-title class="ichen_blue--text text-h2">{{
+              <v-list-item-title class="ichen_blue--text text-h2">
+                {{
                 veranstaltung.Titel
-              }}</v-list-item-title>
+                }}
+              </v-list-item-title>
             </v-list-item-content>
             <v-list-item-action>
               <v-btn
@@ -50,8 +53,7 @@
                 text
                 type="success"
                 class="font-weight-bold"
-                >Es sind noch Plätze frei!</v-alert
-              >
+              >Es sind noch Plätze frei!</v-alert>
               <v-alert
                 v-else
                 text
@@ -59,19 +61,17 @@
                 type="info"
                 icon="mdi-alert-circle"
                 class="font-weight-bold"
-                >Aktuell sind alle Plätze belegt. Aber für den Fall, dass doch
-                noch ein Platz frei wird, können Sie sich hier auf die
-                Warteliste setzen.</v-alert
               >
+                Aktuell sind alle Plätze belegt. Aber für den Fall, dass doch
+                noch ein Platz frei wird, können Sie sich hier auf die
+                Warteliste setzen.
+              </v-alert>
               <v-btn
                 depressed
                 color="ichen_red white--text"
                 @click="toggleRegistration"
-                >{{ available ? 'Zur Anmeldung' : 'Zur Warteliste' }}</v-btn
-              >
-              <v-btn depressed color="ichen_blue white--text" @click="cancel"
-                >Zurück</v-btn
-              >
+              >{{ available ? 'Zur Anmeldung' : 'Zur Warteliste' }}</v-btn>
+              <v-btn depressed color="ichen_blue white--text" @click="cancel">Zurück</v-btn>
             </template>
           </v-card-text>
         </v-card>

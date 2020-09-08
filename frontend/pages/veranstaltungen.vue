@@ -2,24 +2,10 @@
   <v-container>
     <v-row class="ichen_green pa-3" align="center">
       <v-col cols="12" xs="6" sm="4" md="3" lg="2" xl="2" class="py-3">
-        <v-btn
-          nuxt
-          to="#veranstaltungen"
-          large
-          depressed
-          class="white--text"
-          color="ichen_red"
-        >Termine</v-btn>
+        <v-btn nuxt to="#termine" large depressed class="white--text" color="ichen_red">Termine</v-btn>
       </v-col>
       <v-col cols="12" xs="6" sm="8" md="3" lg="2" xl="2" class="py-3">
-        <v-btn
-          nuxt
-          to="#veranstaltungsangebote"
-          large
-          depressed
-          class="white--text"
-          color="ichen_red"
-        >Angebote</v-btn>
+        <v-btn nuxt to="#angebote" large depressed class="white--text" color="ichen_red">Angebote</v-btn>
       </v-col>
 
       <v-col
@@ -47,9 +33,9 @@
       </v-col>
     </v-row>
 
-    <v-row id="veranstaltungen">
+    <v-row id="termine">
       <v-col cols="12" class="mt-12">
-        <h2 class="text-h2">VERANSTALTUNGSTERMINE</h2>
+        <h2 class="text-h2">TERMINE</h2>
       </v-col>
       <template v-if="filtered.veranstaltungen.length">
         <veranstaltung-tile
@@ -68,9 +54,9 @@
         </v-col>
       </template>
     </v-row>
-    <v-row id="veranstaltungsangebote" class="pt-12">
+    <v-row id="angebote" class="pt-12">
       <v-col cols="12" class="pt-12">
-        <h2 class="text-h2">VERANSTALTUNGSTERMINE</h2>
+        <h2 class="text-h2">TERMINE NACH VEREINBARUNG</h2>
       </v-col>
       <angebot-tile
         v-for="veranstaltung in filtered.veranstaltungsangebote"
