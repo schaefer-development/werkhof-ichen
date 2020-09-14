@@ -19,12 +19,15 @@
             aspect-ratio="1"
             class="white--text align-end"
             :src="bilderstrecke.Bilder[0].url"
-            gradient="to top, rgba(0,0,0,.3), rgba(0,0,0,0)"
+            gradient="to top, rgba(54, 47, 43,.6), rgba(54, 47, 43,0)"
           >
             <div class="fill-height bottom-gradient"></div>
-            <v-card-title class="text-h2">{{
-              bilderstrecke.Titel
-            }}</v-card-title>
+            <v-card-title class="text-h2 d-flex justify-space-between px-6">
+              {{ bilderstrecke.Titel }}
+              <v-icon dark size="40" class="white--text"
+                >mdi-arrow-right</v-icon
+              >
+            </v-card-title>
           </v-img>
         </v-card>
       </v-col>
@@ -49,7 +52,6 @@ export default {
   }
   div div .v-card__title {
     color: #fff !important;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   }
 }
 </style>
