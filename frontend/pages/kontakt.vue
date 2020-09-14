@@ -5,10 +5,11 @@
         <div id="map"></div>
       </v-col>
     </v-row>
-    <v-row class="align-baseline">
+    <v-row>
       <v-col cols="12" xs="12" sm="6" md="4" lg="4" xl="4">
         <v-card rounded="0" flat class="ichen_green">
-          <v-card-title class="text-h2">Anschrift</v-card-title>
+          <v-img src="/ichen_portrait.jpg" alt="ichen" />
+          <v-card-title class="text-h2">Kontakt</v-card-title>
           <v-card-text class="white--text">
             <p>
               werkhof ichen
@@ -20,7 +21,6 @@
             <p>
               Telefon:
               <a href="tel:+4922463197">02246 . 31 97</a>
-
               <br />Fax: 02246 . 94 94 090 <br />E-Mail:
               <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>
             </p>
@@ -29,7 +29,7 @@
       </v-col>
       <v-col cols="12" xs="12" sm="6" md="8" lg="8" xl="8">
         <v-card rounded="0" flat>
-          <v-card-title class="text-h2">Anfahrt</v-card-title>
+          <v-card-title class="text-h2">Anfahrt mit dem Auto</v-card-title>
           <v-card-text>
             <strong>Von Köln kommend:</strong>
             <p>
@@ -46,6 +46,7 @@
               rechts abbiegen (J.-Hofer-Weg) die 2. Möglichkeit rechts, dann
               liegt der werkhof ichen nach 50 m auf der linken Seite.
             </p>
+            <p class="pt-6">Ich freue mich auf Ihren Kontakt!</p>
           </v-card-text>
         </v-card>
       </v-col>

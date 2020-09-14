@@ -3,22 +3,25 @@
     <v-row class="pb-xs-6">
       <v-col cols="12">
         <v-img
-          src="/header_images/header_werkhof_innen.jpg"
+          src="/header_images/header_werkhof_inside.jpg"
           alt="Der Werkhof ichen in Breidt"
         />
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="12" xs="12" sm="4" md="4" lg="4" xl="4">
-        <v-img src="/werkhof_02.jpg" alt="ichen" />
-        <v-img src="/flowers_02.jpg" alt="ichen" class="mt-4" />
+      <v-col cols="12" xs="12" sm="6" md="4">
+        <v-img src="/entry_01.jpg" alt="Eingang zum Werkhof ichen" />
+        <br />
+        <v-img src="/tea_time.jpg" alt="Tea time" />
+        <br />
+        <v-img src="/ribbons.jpg" alt="Stoffbänder" />
       </v-col>
-      <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">
+      <v-col cols="12" xs="12" sm="6" md="4">
         <v-card rounded="0" flat class="ichen_beige">
           <v-card-title class="text-h2">Werkhof ichen</v-card-title>
-          <v-card-text>
+          <v-card-text v-if="veranstaltungen">
             <p>
-              Der „werkhof ichen“, ein zum Teil denkmalgeschütztes, stilvoll
+              Der „Werkhof ichen“, ein zum Teil denkmalgeschütztes, stilvoll
               ausgebautes Fachwerkgehöft am Rande des bergischen Landes,
               veranstaltet Kurse im künstlerischen Handwerk.
             </p>
@@ -55,6 +58,55 @@
           </v-card-text>
         </v-card>
       </v-col>
+      <v-col cols="12" xs="12" sm="6" md="4">
+        <v-card rounded="0" flat dark class="ichen_blue">
+          <v-card-title class="text-h2 ichen_yellow--text"
+            >Veranstaltungen</v-card-title
+          >
+          <v-card-text v-if="veranstaltungen">
+            <veranstaltung-short-list
+              :veranstaltungen="veranstaltungen"
+            ></veranstaltung-short-list>
+
+            <v-alert
+              rounded="0"
+              outlined
+              type="info"
+              class="ichen_yellow--text"
+            >
+              <h3>Veranstaltungen können wieder stattfinden.</h3>
+            </v-alert>
+            <p>
+              Bitte beachten Sie die Hinweise bezüglich der Hygienevorschriften
+              etc. im Rahmen der Corona Pandemie.
+              <br />Bei grippeähnlichen Symptomen oder wenn es in Ihrem
+              persönlichen Umfeld einen bestätigten Infektionsfall mit Covid 19
+              (Coronavirus-Sars-Cov2) gibt, bitte ich Sie von einer
+              Kursteilnahme abzusehen.
+            </p>
+          </v-card-text>
+        </v-card>
+      </v-col>
     </v-row>
   </v-container>
 </template>
+
+<script>
+import VeranstaltungShortList from '../../components/VeranstaltungShortList.vue'
+
+export default {
+  components: {
+    VeranstaltungShortList,
+  },
+  async asyncData({ $axios }) {
+    const veranstaltungen = await $axios.$get('/veranstaltungs', {
+      params: {
+        _sort: 'Datum:ASC',
+        _limit: 3,
+        Datum_gte: new Date(),
+      },
+    })
+    return { veranstaltungen }
+  },
+}
+</script>
