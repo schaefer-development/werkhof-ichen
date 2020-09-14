@@ -49,7 +49,7 @@ $ichen_brown: #504843da;
 /* fira-sans-800 - latin */
 @font-face {
   font-family: 'Fira Sans';
-  font-style: normal;
+  font-style: bold;
   font-weight: 800;
   src: url('~assets/fonts/fira-sans-v10-latin-800.eot'); /* IE9 Compat Modes */
   src: local('Fira Sans ExtraBold'), local('FiraSans-ExtraBold'),
@@ -83,7 +83,7 @@ $headings: (
     'font-family': 'Overlock',
   ),
   h2: (
-    'size': 1.8em,
+    'size': 1.4em,
     'weight': 900,
     'line-height': 1.5,
     'font-family': 'Overlock',
@@ -91,7 +91,11 @@ $headings: (
   h3: (
     'size': 1.2em,
     'weight': 900,
-  )
+  ),
+  h4: (
+    'size': 1.7em,
+    'weight': 400,
+  ),
 );
 
 
@@ -117,10 +121,6 @@ $color-pack: false;
 
 @import '~vuetify/src/styles/styles.sass';
 
-* {
-  scroll-behavior: smooth;
-
-}
 
 .v-application .text-h2 {
   color: $ichen_blue;

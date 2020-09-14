@@ -23,20 +23,27 @@
           </li>
         </ul>
         <br />
-        <p>
+        <p class="pb-3">
           Das Rinderleder stammt aus Deutschland oder Österreich. Büffelleder
           aus Thailand wird hier in Deutschland ökogerecht weiterbearbeitet.
         </p>
 
-        <h3 class="pt-12">Anfertigung einer Lederhose</h3>
+        <strong>Anfertigung einer Lederhose</strong>
         <p>
           Anhand von Farbkarten und Mustern kann sich der Kunde die Lederart und
           -farbe aussuchen. Nach Modellabsprache und dem Maßnehmen folgt das
           Nähen eines Probemodells aus Nesselstoff, um die Passform zu
           kontrollieren. Nach bestandener Anprobe wird die Hose in Leder genäht.
         </p>
-
-        <strong>Kinderlederhose</strong>
+        <p align="center" class="py-12 ma-0">
+          <v-img
+            class="shortlist_divider"
+            src="/sewing_needle_brown.svg"
+            alt="Nähnaht"
+            max-width="500px"
+          />
+        </p>
+        <h3 class="pt-6">Kinderlederhose</h3>
         <v-simple-table class="b-8">
           <thead>
             <tr>
@@ -55,8 +62,7 @@
         </v-simple-table>
         <p>
           Mit Strickbündchen am Hosensaum: 10 Euro Aufpreis
-          <br />Verlängerung bis 8 cm: 15 Euro
-          <br />Schmutzfang: 15 Euro
+          <br />Verlängerung bis 8 cm: 15 Euro <br />Schmutzfang: 15 Euro
           <br />Ledermix: 10 Euro
         </p>
         <p>
@@ -68,11 +74,19 @@
           Bewegungsfreiheit und eine vernünftige Passform über mehrere Jahre mit
           entsprechender Hosenverlängerung.
         </p>
-        <p class="pb-12">Alle Produkte aus meiner Werkstatt sind Unikate!</p>
+        <p>Alle Produkte aus meiner Werkstatt sind Unikate!</p>
+        <p align="center" class="py-12 ma-0">
+          <v-img
+            class="shortlist_divider"
+            src="/sewing_needle_brown.svg"
+            alt="Nähnaht"
+            max-width="500px"
+          />
+        </p>
+        <h3 class="pt-6">Lederhosen für Erwachsene</h3>
+        <h4>Damengröße 38 oder Herrengröße 48</h4>
 
-        <h3>Lederhosen für Erwachsene – Damengröße 38 oder Herrengröße 48</h3>
-
-        <v-simple-table class="pb-12">
+        <v-simple-table class="py-12">
           <thead>
             <tr>
               <th class="text-left">Material</th>
@@ -88,8 +102,17 @@
             </tr>
           </tbody>
         </v-simple-table>
-        <h3>Lederjacke für Erwachsene – Damengröße 38 oder Herrengröße 48</h3>
-        <v-simple-table class="pb-8">
+        <p align="center" class="py-12 ma-0">
+          <v-img
+            class="shortlist_divider"
+            src="/sewing_needle_brown.svg"
+            alt="Nähnaht"
+            max-width="500px"
+          />
+        </p>
+        <h3 class="pt-6">Lederjacke für Erwachsene</h3>
+        <h4>Damengröße 38 oder Herrengröße 48</h4>
+        <v-simple-table class="py-8">
           <thead>
             <tr>
               <th class="text-left">Material</th>

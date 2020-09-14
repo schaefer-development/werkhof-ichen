@@ -150,16 +150,21 @@ export default {
 
   generate: {
     async routes() {
-      let { data: veranstaltungen } = await axios.get(`${apiUrl}/veranstaltungs`, {
-        params: {
-          _sort: 'Datum:ASC',
-          Datum_gte: new Date(),
-        },
-      })
+      let { data: veranstaltungen } = await axios.get(
+        `${apiUrl}/veranstaltungs`,
+        {
+          params: {
+            _sort: 'Datum:ASC',
+            Datum_gte: new Date(),
+          },
+        }
+      )
       veranstaltungen = veranstaltungen.map((veranstaltung) => {
         return '/veranstaltung/' + veranstaltung.id
       })
-      let { data: angebote } = await axios.get(`${apiUrl}/veranstaltungsangebots`)
+      let { data: angebote } = await axios.get(
+        `${apiUrl}/veranstaltungsangebots`
+      )
       angebote = angebote.map((angebot) => {
         return '/angebot/' + angebot.id
       })

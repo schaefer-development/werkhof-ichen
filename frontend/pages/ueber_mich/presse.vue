@@ -94,7 +94,14 @@
               nicht individuell gestaltet sind“, bekennt sie.
             </p>
 
-            <v-divider></v-divider>
+            <p align="center" class="py-12 ma-0">
+              <v-img
+                class="shortlist_divider"
+                src="/sewing_needle_brown.svg"
+                alt="Nähnaht"
+                max-width="500px"
+              />
+            </p>
             <p class="pt-12">
               <strong>
                 Die Kölnische Rundschau berichtete am 15.11.2006 über die

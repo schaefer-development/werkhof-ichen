@@ -3,7 +3,11 @@
     <v-container>
       <v-toolbar color="transparent" flat>
         <nuxt-link to="/">
-          <v-img src="/logo_ichen.svg" alt="Logo Werkhof ichen" max-width="150px" />
+          <v-img
+            src="/logo_ichen.svg"
+            alt="Logo Werkhof ichen"
+            max-width="150px"
+          />
         </nuxt-link>
         <v-spacer></v-spacer>
         <v-btn
@@ -15,9 +19,10 @@
           aria-label="Facebook"
           href="https://de-de.facebook.com/pages/category/Education/Werkhof-ichen-130771390426775/"
         >
-          <v-icon medium>mdi-facebook</v-icon>
+          <v-icon size="30" medium>mdi-facebook</v-icon>
         </v-btn>
         <v-btn
+          class="mr-6"
           link
           target="_blank"
           rel="noopener"
@@ -26,7 +31,7 @@
           href="https://www.instagram.com/irmina_schmitz/"
           icon
         >
-          <v-icon medium>mdi-instagram</v-icon>
+          <v-icon size="30">mdi-instagram</v-icon>
         </v-btn>
         <v-app-bar-nav-icon aria-label="Open Drawer" @click.stop="toggleDrawer">
           <v-icon size="50">mdi-menu</v-icon>

@@ -21,13 +21,14 @@
           >
         </div>
       </client-only>
-
-      <v-img
-        class="shortlist_divider my-6"
-        src="/shortlist_divider.svg"
-        alt="Nähnaht"
-        max-width="400px"
-      />
+      <p align="center" class="py-8 ma-0">
+        <v-img
+          class="shortlist_divider"
+          src="/sewing_needle_beige.svg"
+          alt="Nähnaht"
+          max-width="400px"
+        />
+      </p>
     </div>
   </div>
 </template>

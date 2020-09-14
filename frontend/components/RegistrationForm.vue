@@ -24,8 +24,7 @@
       :rules="requiredRules"
       required
       label="Vor- und Nachname"
-    >
-    </v-text-field>
+    ></v-text-field>
 
     <v-text-field
       v-model="anmeldung.email"
@@ -33,15 +32,13 @@
       :rules="emailRules"
       required
       label="E-Mailadresse"
-    >
-    </v-text-field>
+    ></v-text-field>
     <v-text-field
       v-model="anmeldung.telefonNummer"
       outlined
       :rules="phoneNumberRules"
       label="Telefonnummer"
-    >
-    </v-text-field>
+    ></v-text-field>
     <v-text-field v-model="anmeldung.strasseHausnummer" outlined>
       <template v-slot:label>
         <div>

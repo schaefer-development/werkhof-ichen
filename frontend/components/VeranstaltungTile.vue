@@ -14,12 +14,14 @@
         <p>
           <strong>{{ veranstaltung.Datum | formatDate }} Uhr</strong>
         </p>
+        <p>
+          <strong>{{ veranstaltung.Preis }} Euro</strong>
+        </p>
         <client-only>
           <p v-html="$md.render(veranstaltung.Beschreibung)"></p>
         </client-only>
-        <p>{{ veranstaltung.Preis }} Euro</p>
       </v-card-text>
-      <v-card-text>
+      <v-card-text align="right">
         <template v-if="available">
           <strong class="success--text">
             <v-icon color="success" class="pr-1">mdi-check-circle</v-icon>Noch

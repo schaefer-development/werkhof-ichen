@@ -13,11 +13,9 @@
         <v-card rounded="0" flat class="px-6 pt-8">
           <v-list-item>
             <v-list-item-content>
-              <v-list-item-title class="ichen_blue--text text-h2">
-                {{
+              <v-list-item-title class="ichen_blue--text text-h2">{{
                 veranstaltung.Titel
-                }}
-              </v-list-item-title>
+              }}</v-list-item-title>
             </v-list-item-content>
             <v-list-item-action>
               <v-btn
@@ -34,8 +32,24 @@
             </v-list-item-action>
           </v-list-item>
           <v-card-text>
-            <strong>{{ veranstaltung.Datum | formatDate }} Uhr</strong>
+            <p>
+              <strong>{{ veranstaltung.Datum | formatDate }} Uhr</strong>
+            </p>
+            <p>
+              <strong>{{ veranstaltung.Preis }} Euro</strong>
+            </p>
+
+            <p v-html="$md.render(veranstaltung.Beschreibung)"></p>
           </v-card-text>
+
+          <p align="center" class="py-6 ma-0">
+            <v-img
+              class="shortlist_divider"
+              src="/sewing_needle_brown.svg"
+              alt="Nähnaht"
+              max-width="500px"
+            />
+          </p>
           <v-card-text>
             <registration-form
               v-if="displayForm"
@@ -44,16 +58,13 @@
               @confirm="cancel"
             ></registration-form>
             <template v-else>
-              <p v-html="$md.render(veranstaltung.Beschreibung)"></p>
-              <p>
-                <strong>{{ veranstaltung.Preis }} Euro</strong>
-              </p>
               <v-alert
                 v-if="available"
                 text
                 type="success"
                 class="font-weight-bold"
-              >Es sind noch Plätze frei!</v-alert>
+                >Es sind noch Plätze frei!</v-alert
+              >
               <v-alert
                 v-else
                 text
@@ -70,8 +81,11 @@
                 depressed
                 color="ichen_red white--text"
                 @click="toggleRegistration"
-              >{{ available ? 'Zur Anmeldung' : 'Zur Warteliste' }}</v-btn>
-              <v-btn depressed color="ichen_blue white--text" @click="cancel">Zurück</v-btn>
+                >{{ available ? 'Zur Anmeldung' : 'Zur Warteliste' }}</v-btn
+              >
+              <v-btn depressed color="ichen_blue white--text" @click="cancel"
+                >Zurück</v-btn
+              >
             </template>
           </v-card-text>
         </v-card>

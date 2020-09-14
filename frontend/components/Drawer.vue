@@ -1,7 +1,11 @@
 <template>
   <v-navigation-drawer v-model="drawer" temporary app color="ichen_blue">
     <template v-slot:img>
-      <v-img contain class="drawer-background-image" src="/logo_ichen.svg"></v-img>
+      <v-img
+        contain
+        class="drawer-background-image"
+        src="/logo_ichen.svg"
+      ></v-img>
     </template>
     <v-card flat dark color="transparent" class="py-4">
       <v-toolbar flat color="transparent">
@@ -12,13 +16,17 @@
       </v-toolbar>
       <v-list flat nav class="px-0">
         <v-list-item nuxt link to="/">Startseite</v-list-item>
-        <v-list-item nuxt link to="/veranstaltungen">Veranstaltungen</v-list-item>
+        <v-list-item nuxt link to="/veranstaltungen"
+          >Veranstaltungen</v-list-item
+        >
         <v-list-group flat no-action>
           <template v-slot:activator>
             <v-list-item>Anfertigungen</v-list-item>
           </template>
           <v-list-item nuxt link to="/anfertigungen/leder">Leder</v-list-item>
-          <v-list-item nuxt link to="/anfertigungen/weitere_textilien">Weitere Textilien</v-list-item>
+          <v-list-item nuxt link to="/anfertigungen/weitere_textilien"
+            >Weitere Textilien</v-list-item
+          >
         </v-list-group>
         <v-list-item nuxt link to="/bilder">Bilder</v-list-item>
         <v-list-item nuxt link to="/kontakt">Kontakt</v-list-item>
@@ -30,7 +38,6 @@
           <v-list-item nuxt link to="/ueber_mich/vita">Vita</v-list-item>
           <v-list-item nuxt link to="/ueber_mich/presse">Presse</v-list-item>
         </v-list-group>
-
       </v-list>
     </v-card>
   </v-navigation-drawer>
