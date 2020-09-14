@@ -13,12 +13,11 @@
             xl="2"
           >
             <v-btn
-              nuxt
-              to="#termine"
               large
               depressed
               class="white--text"
               color="ichen_red"
+              @click="$vuetify.goTo('#termine')"
               >Termine</v-btn
             >
           </v-col>
@@ -32,12 +31,11 @@
             xl="2"
           >
             <v-btn
-              nuxt
-              to="#angebote"
               large
               depressed
               class="white--text"
               color="ichen_red"
+              @click="$vuetify.goTo('#angebote')"
               >Angebote</v-btn
             >
           </v-col>
