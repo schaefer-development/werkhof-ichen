@@ -13,9 +13,9 @@
         <v-card rounded="0" flat class="px-6 pt-8">
           <v-list-item>
             <v-list-item-content>
-              <v-list-item-title class="ichen_blue--text text-h2">{{
-                veranstaltung.Titel
-              }}</v-list-item-title>
+              <v-list-item-title class="ichen_blue--text text-h2">
+                {{ veranstaltung.Titel }}
+              </v-list-item-title>
             </v-list-item-content>
             <v-list-item-action>
               <v-btn
@@ -38,18 +38,17 @@
             <p>
               <strong>{{ veranstaltung.Preis }} Euro</strong>
             </p>
-
             <p v-html="$md.render(veranstaltung.Beschreibung)"></p>
           </v-card-text>
-
-          <p align="center" class="py-6 ma-0">
-            <v-img
-              class="shortlist_divider"
-              src="/sewing_needle_brown.svg"
-              alt="Nähnaht"
-              max-width="500px"
-            />
-          </p>
+          <v-img
+            class="shortlist_divider py-8 mx-auto"
+            src="/sewing_needle_brown.svg"
+            alt="Nähnaht"
+            contain
+            justify="center"
+            width="100%"
+            max-width="500px"
+          />
           <v-card-text>
             <registration-form
               v-if="displayForm"
@@ -73,9 +72,9 @@
                 icon="mdi-alert-circle"
                 class="font-weight-bold"
               >
-                Aktuell sind alle Plätze belegt. Aber für den Fall, dass doch
-                noch ein Platz frei wird, können Sie sich hier auf die
-                Warteliste setzen.
+                Aktuell sind alle Plätze belegt. Für den Fall, dass doch noch
+                ein Platz frei wird, können Sie sich hier auf die Warteliste
+                setzen.
               </v-alert>
               <v-btn
                 depressed

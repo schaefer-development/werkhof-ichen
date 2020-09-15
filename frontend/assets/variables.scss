@@ -61,6 +61,21 @@ $ichen_brown: #504843da;
 }
 
 
+:active, :focus{
+  outline: none !important;
+}
+
+::selection {
+  background: $ichen_red; /* WebKit/Blink Browsers */
+  color:#fff;
+}
+::-moz-selection {
+  background: $ichen_red; /* Gecko Browsers */
+  color:#fff;
+}
+
+
+
 $material-light: (
   cards: $ichen_beige,
   chips: $ichen_beige,

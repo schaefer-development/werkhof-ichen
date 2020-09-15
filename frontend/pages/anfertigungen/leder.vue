@@ -35,14 +35,17 @@
           Nähen eines Probemodells aus Nesselstoff, um die Passform zu
           kontrollieren. Nach bestandener Anprobe wird die Hose in Leder genäht.
         </p>
-        <p align="center" class="py-12 ma-0">
-          <v-img
-            class="shortlist_divider"
-            src="/sewing_needle_brown.svg"
-            alt="Nähnaht"
-            max-width="500px"
-          />
-        </p>
+      </v-card-text>
+      <v-img
+        class="py-8 mx-auto"
+        src="/leather_trousers_collection_01.jpg"
+        alt="Lederhosen für Kinder"
+        contain
+        justify="center"
+        width="100%"
+        max-width="500px"
+      />
+      <v-card-text>
         <h3 class="pt-6">Kinderlederhose</h3>
         <v-simple-table class="b-8">
           <thead>
@@ -75,14 +78,17 @@
           entsprechender Hosenverlängerung.
         </p>
         <p>Alle Produkte aus meiner Werkstatt sind Unikate!</p>
-        <p align="center" class="py-12 ma-0">
-          <v-img
-            class="shortlist_divider"
-            src="/sewing_needle_brown.svg"
-            alt="Nähnaht"
-            max-width="500px"
-          />
-        </p>
+      </v-card-text>
+      <v-img
+        class="py-8 mx-auto"
+        src="/leather.jpg"
+        alt="Lederhosen für Kinder"
+        contain
+        justify="center"
+        width="100%"
+        max-width="500px"
+      />
+      <v-card-text>
         <h3 class="pt-6">Lederhosen für Erwachsene</h3>
         <h4>Damengröße 38 oder Herrengröße 48</h4>
 
@@ -102,14 +108,17 @@
             </tr>
           </tbody>
         </v-simple-table>
-        <p align="center" class="py-12 ma-0">
-          <v-img
-            class="shortlist_divider"
-            src="/sewing_needle_brown.svg"
-            alt="Nähnaht"
-            max-width="500px"
-          />
-        </p>
+      </v-card-text>
+      <v-img
+        class="shortlist_divider py-8 mx-auto"
+        src="/sewing_needle_brown.svg"
+        alt="Nähnaht"
+        contain
+        justify="center"
+        width="100%"
+        max-width="500px"
+      />
+      <v-card-text>
         <h3 class="pt-6">Lederjacke für Erwachsene</h3>
         <h4>Damengröße 38 oder Herrengröße 48</h4>
         <v-simple-table class="py-8">

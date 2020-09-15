@@ -2,17 +2,28 @@
   <v-container>
     <v-row class="pb-xs-6">
       <v-col cols="12">
-        <v-img src="/header_images/header_book.jpg" alt="werkhof ichen: Lebenslauf" />
+        <v-img
+          src="/header_images/header_book.jpg"
+          alt="werkhof ichen: Lebenslauf"
+        />
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="12" xs="12" sm="4" md="4" lg="4" xl="4">
-        <v-img src="/old_sewing_machine.jpg" alt="ichen" />
-      </v-col>
-
-      <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">
+      <v-col
+        cols="12"
+        xs="12"
+        sm="12"
+        offset-md="4"
+        md="8"
+        offset-lg="4"
+        lg="8"
+        offset-xl="4"
+        xl="8"
+      >
         <v-card rounded="0" flat class="ichen_beige">
-          <v-card-title class="text-h2">Der Werkhof ichen in der Presse</v-card-title>
+          <v-card-title class="text-h2"
+            >Der Werkhof ichen in der Presse</v-card-title
+          >
           <v-card-text>
             <p>
               <strong>
@@ -88,15 +99,16 @@
               verfremdet. „Es würde mir schwer fallen, in Sachen zu leben, die
               nicht individuell gestaltet sind“, bekennt sie.
             </p>
-
-            <p align="center" class="py-12 ma-0">
-              <v-img
-                class="shortlist_divider"
-                src="/sewing_needle_brown.svg"
-                alt="Nähnaht"
-                max-width="500px"
-              />
-            </p>
+          </v-card-text>
+          <v-img
+            class="shortlist_divider pa-8 mx-auto"
+            src="/sewing_needle_brown.svg"
+            alt="Nähnaht"
+            contain
+            justify="center"
+            width="75%"
+          />
+          <v-card-text>
             <p class="pt-12">
               <strong>
                 Die Kölnische Rundschau berichtete am 15.11.2006 über die
@@ -104,7 +116,9 @@
               </strong>
             </p>
             <h3>Mode und mehr aus dem werkhof</h3>
-            <p>Bekleidungsingenieurin lud ihre Kolleginnen zur Ausstellung ein</p>
+            <p>
+              Bekleidungsingenieurin lud ihre Kolleginnen zur Ausstellung ein
+            </p>
             <p>
               LOHMAR. Idyllisch im Grünen gelegen ist der werkhof ichen in
               Lohmar-Breidt, wo die Dipl. Bekleidungsing. Irmina Schmitz unter

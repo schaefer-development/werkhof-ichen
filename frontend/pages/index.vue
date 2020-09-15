@@ -8,13 +8,11 @@
             aspect-ratio="1"
             src="/werkhof_01.jpg"
           ></v-img>
-
           <v-card-title class="text-h2">
             <nuxt-link to="/ueber_mich/werkhof" class="ichen_blue--text"
               >Werkhof ichen</nuxt-link
             >
           </v-card-title>
-
           <v-card-text>
             <p>
               Der „Werkhof ichen“ ist ein stilvoll ausgebautes Fachwerkgehöft am
@@ -24,7 +22,6 @@
               Ein großzügiges Platzangebot bietet der Kursraum für verschiedene
               Kurse und Veranstaltungen in einer anregenden Atmosphäre.
             </p>
-
             <div class="text-right pb-10">
               <v-btn
                 dark
@@ -40,14 +37,13 @@
       </v-col>
       <v-col cols="12" xs="12" sm="6" md="4">
         <v-card rounded="0" flat dark class="ichen_green">
-          <v-img aspect-ratio="1" src="/leather_trouser.jpg"></v-img>
+          <v-img aspect-ratio="1" src="/leather_trouser_02.jpg"></v-img>
 
           <v-card-title class="text-h2">
             <nuxt-link to="/anfertigungen/leder" class="ichen_blue--text"
               >Anfertigungen</nuxt-link
             >
           </v-card-title>
-
           <v-card-text>
             <p>
               Meine Kollektionen sind zeitlose, individuelle Entwicklungen, die
@@ -67,23 +63,16 @@
       </v-col>
       <v-col cols="12" xs="12" sm="6" md="4">
         <v-card rounded="0" flat dark class="ichen_blue">
-          <v-img
-            class="align-end"
-            aspect-ratio="1"
-            src="/kid_sewing.jpg"
-          ></v-img>
-
+          <v-img class="align-end" aspect-ratio="1" src="/events.jpg"></v-img>
           <v-card-title class="text-h2">
             <nuxt-link to="/veranstaltungen" class="ichen_yellow--text"
               >Veranstaltungen</nuxt-link
             >
           </v-card-title>
-
           <v-card-text v-if="veranstaltungen">
             <veranstaltung-short-list
               :veranstaltungen="veranstaltungen"
             ></veranstaltung-short-list>
-
             <v-alert
               rounded="0"
               outlined
@@ -109,7 +98,6 @@
 
 <script>
 import VeranstaltungShortList from '../components/VeranstaltungShortList.vue'
-
 export default {
   components: {
     VeranstaltungShortList,

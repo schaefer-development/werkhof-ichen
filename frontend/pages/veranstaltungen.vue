@@ -8,7 +8,8 @@
           class="white--text"
           color="ichen_red"
           @click="$vuetify.goTo('#termine')"
-        >Termine</v-btn>
+          >Termine</v-btn
+        >
       </v-col>
       <v-col cols="12" xs="6" sm="6" md="3" lg="2" xl="2" class="pa-6">
         <v-btn
@@ -17,7 +18,8 @@
           class="white--text"
           color="ichen_red"
           @click="$vuetify.goTo('#angebote')"
-        >Angebote</v-btn>
+          >Angebote</v-btn
+        >
       </v-col>
       <v-col
         cols="12"
@@ -47,7 +49,9 @@
     <v-row id="termine">
       <v-col cols="12" class="mt-12">
         <h2 class="ichen_blue ichen_beige--text text-h2 pa-6">
-          <v-icon size="40" class="ichen_beige--text pr-3">mdi-calendar-month</v-icon>TERMINE
+          <v-icon size="40" class="ichen_beige--text pr-3"
+            >mdi-calendar-month</v-icon
+          >TERMINE
         </h2>
       </v-col>
       <template v-if="filtered.veranstaltungen.length">
@@ -59,18 +63,19 @@
       </template>
       <template v-else>
         <v-col cols="12">
-          <v-alert
-            outlined
-            type="info"
-            class="font-weight-bold"
-          >Zu diesen Kategorien gibt es keine anstehenden Veranstaltungen</v-alert>
+          <v-alert outlined type="info" class="font-weight-bold"
+            >Zu diesen Kategorien gibt es keine anstehenden
+            Veranstaltungen</v-alert
+          >
         </v-col>
       </template>
     </v-row>
     <v-row id="angebote" class="pt-12">
       <v-col cols="12" class="mt-12">
         <h2 class="ichen_blue ichen_beige--text text-h2 pa-6">
-          <v-icon size="40" class="ichen_beige--text pr-3">mdi-content-cut</v-icon>ANGEBOTE
+          <v-icon size="40" class="ichen_beige--text pr-3"
+            >mdi-content-cut</v-icon
+          >ANGEBOTE
         </h2>
       </v-col>
       <angebot-tile

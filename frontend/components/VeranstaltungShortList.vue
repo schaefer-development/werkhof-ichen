@@ -21,14 +21,15 @@
           >
         </div>
       </client-only>
-      <p align="center" class="py-8 ma-0">
-        <v-img
-          class="shortlist_divider"
-          src="/sewing_needle_beige.svg"
-          alt="Nähnaht"
-          max-width="400px"
-        />
-      </p>
+      <v-img
+        class="shortlist_divider py-8 mx-auto"
+        src="/sewing_needle_beige.svg"
+        alt="Nähnaht"
+        contain
+        justify="center"
+        width="100%"
+        max-width="400px"
+      />
     </div>
   </div>
 </template>

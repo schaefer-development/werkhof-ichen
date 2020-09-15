@@ -9,7 +9,7 @@
       <v-col cols="12" xs="12" sm="4" md="4" lg="4" xl="4">
         <v-img src="/ichen_portrait.jpg" alt="ichen" />
         <br />
-        <v-img src="/anfertigungen.jpg" alt="Werkhof ichen" />
+        <v-img src="/with_you.jpg" alt="Werkhof ichen" />
       </v-col>
       <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">
         <v-card rounded="0" flat class="ichen_beige">

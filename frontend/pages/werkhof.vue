@@ -2,7 +2,10 @@
   <v-container>
     <v-row class="pb-xs-6">
       <v-col cols="12">
-        <v-img src="/header_images/header_werkhof_inside.jpg" alt="Der Werkhof ichen in Breidt" />
+        <v-img
+          src="/header_images/header_werkhof_inside.jpg"
+          alt="Der Werkhof ichen in Breidt"
+        />
       </v-col>
     </v-row>
     <v-row>
@@ -12,6 +15,8 @@
         <v-img src="/tea_time.jpg" alt="Tea time" />
         <br />
         <v-img src="/ribbons.jpg" alt="Stoffbänder" />
+        <br />
+        <v-img src="/anfertigungen.jpg" alt="Werkhof ichen Anfertigungen" />
       </v-col>
       <v-col cols="12" xs="12" sm="6" md="4">
         <v-card rounded="0" flat class="ichen_beige">
@@ -57,11 +62,20 @@
       </v-col>
       <v-col cols="12" xs="12" sm="6" md="4">
         <v-card rounded="0" flat dark class="ichen_blue">
-          <v-card-title class="text-h2 ichen_yellow--text">Veranstaltungen</v-card-title>
+          <v-card-title class="text-h2 ichen_yellow--text"
+            >Veranstaltungen</v-card-title
+          >
           <v-card-text v-if="veranstaltungen">
-            <veranstaltung-short-list :veranstaltungen="veranstaltungen"></veranstaltung-short-list>
+            <veranstaltung-short-list
+              :veranstaltungen="veranstaltungen"
+            ></veranstaltung-short-list>
 
-            <v-alert rounded="0" outlined type="info" class="ichen_yellow--text">
+            <v-alert
+              rounded="0"
+              outlined
+              type="info"
+              class="ichen_yellow--text"
+            >
               <h3>Veranstaltungen können wieder stattfinden.</h3>
             </v-alert>
             <p>
