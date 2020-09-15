@@ -47,7 +47,7 @@
     <v-row id="termine">
       <v-col cols="12" class="mt-12">
         <h2 class="ichen_blue ichen_beige--text text-h2 pa-6">
-          <v-icon size="40" class="ichen_beige--text pr-3">mdi-calendar-month</v-icon>Termine
+          <v-icon size="40" class="ichen_beige--text pr-3">mdi-calendar-month</v-icon>TERMINE
         </h2>
       </v-col>
       <template v-if="filtered.veranstaltungen.length">
@@ -70,7 +70,7 @@
     <v-row id="angebote" class="pt-12">
       <v-col cols="12" class="mt-12">
         <h2 class="ichen_blue ichen_beige--text text-h2 pa-6">
-          <v-icon size="40" class="ichen_beige--text pr-3">mdi-content-cut</v-icon>Angebote
+          <v-icon size="40" class="ichen_beige--text pr-3">mdi-content-cut</v-icon>ANGEBOTE
         </h2>
       </v-col>
       <angebot-tile

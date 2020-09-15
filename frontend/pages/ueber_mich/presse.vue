@@ -2,10 +2,7 @@
   <v-container>
     <v-row class="pb-xs-6">
       <v-col cols="12">
-        <v-img
-          src="/header_images/header_unikat.jpg"
-          alt="werkhof ichen: Lebenslauf"
-        />
+        <v-img src="/header_images/header_book.jpg" alt="werkhof ichen: Lebenslauf" />
       </v-col>
     </v-row>
     <v-row>
@@ -15,9 +12,7 @@
 
       <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">
         <v-card rounded="0" flat class="ichen_beige">
-          <v-card-title class="text-h2"
-            >Der Werkhof ichen in der Presse</v-card-title
-          >
+          <v-card-title class="text-h2">Der Werkhof ichen in der Presse</v-card-title>
           <v-card-text>
             <p>
               <strong>
@@ -109,9 +104,7 @@
               </strong>
             </p>
             <h3>Mode und mehr aus dem werkhof</h3>
-            <p>
-              Bekleidungsingenieurin lud ihre Kolleginnen zur Ausstellung ein
-            </p>
+            <p>Bekleidungsingenieurin lud ihre Kolleginnen zur Ausstellung ein</p>
             <p>
               LOHMAR. Idyllisch im Grünen gelegen ist der werkhof ichen in
               Lohmar-Breidt, wo die Dipl. Bekleidungsing. Irmina Schmitz unter
