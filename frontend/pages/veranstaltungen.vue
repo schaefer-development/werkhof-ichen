@@ -1,72 +1,49 @@
 <template>
   <v-container>
-    <v-row>
-      <v-col>
-        <v-row align="center" class="ichen_green">
-          <v-col
-            class="pl-6 py-6 ichen_green"
-            cols="12"
-            xs="6"
-            sm="4"
-            md="3"
-            lg="2"
-            xl="2"
-          >
-            <v-btn
-              large
-              depressed
-              class="white--text"
-              color="ichen_red"
-              @click="$vuetify.goTo('#termine')"
-              >Termine</v-btn
-            >
-          </v-col>
-          <v-col
-            class="py-6 ichen_green"
-            cols="12"
-            xs="6"
-            sm="8"
-            md="3"
-            lg="2"
-            xl="2"
-          >
-            <v-btn
-              large
-              depressed
-              class="white--text"
-              color="ichen_red"
-              @click="$vuetify.goTo('#angebote')"
-              >Angebote</v-btn
-            >
-          </v-col>
-
-          <v-col
-            cols="12"
-            xs="12"
-            sm="12"
-            md="4"
-            offset-md="2"
-            lg="5"
-            offset-lg="3"
-            xl="5"
-            class="select_filter"
-          >
-            <v-select
-              v-model="selected"
-              filled
-              :items="items"
-              item-text="name"
-              item-value="key"
-              label="NACH KATEGORIE FILTERN"
-              hide-details
-              clearable
-              background-color="ichen_beige"
-            ></v-select>
-          </v-col>
-        </v-row>
+    <v-row no-gutters align="center" class="ichen_green">
+      <v-col cols="12" xs="6" sm="6" md="3" lg="2" xl="2" class="pa-6">
+        <v-btn
+          large
+          depressed
+          class="white--text"
+          color="ichen_red"
+          @click="$vuetify.goTo('#termine')"
+        >Termine</v-btn>
+      </v-col>
+      <v-col cols="12" xs="6" sm="6" md="3" lg="2" xl="2" class="pa-6">
+        <v-btn
+          large
+          depressed
+          class="white--text"
+          color="ichen_red"
+          @click="$vuetify.goTo('#angebote')"
+        >Angebote</v-btn>
+      </v-col>
+      <v-col
+        cols="12"
+        xs="12"
+        sm="12"
+        md="4"
+        offset-md="2"
+        lg="5"
+        offset-lg="3"
+        xl="5"
+        align="center"
+        class="pa-4 select_filter"
+      >
+        <v-select
+          v-model="selected"
+          filled
+          :items="items"
+          item-text="name"
+          item-value="key"
+          label="NACH KATEGORIE FILTERN"
+          hide-details
+          clearable
+          background-color="ichen_beige"
+        ></v-select>
       </v-col>
     </v-row>
-
     <v-row id="termine">
       <v-col cols="12" class="mt-12">
         <h2 class="ichen_blue ichen_beige--text text-h2 pa-6">Termine</h2>
@@ -80,9 +57,11 @@
       </template>
       <template v-else>
         <v-col cols="12">
-          <v-alert outlined type="info" class="font-weight-bold">
-            Zu diesen Kategorien gibt es keine anstehenden Veranstaltungen
-          </v-alert>
+          <v-alert
+            outlined
+            type="info"
+            class="font-weight-bold"
+          >Zu diesen Kategorien gibt es keine anstehenden Veranstaltungen</v-alert>
         </v-col>
       </template>
     </v-row>
