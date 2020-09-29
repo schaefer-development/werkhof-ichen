@@ -11,32 +11,32 @@
       </v-col>
       <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">
         <v-card rounded="0" flat class="px-6 pt-8">
-          <v-list-item>
-            <v-list-item-content>
-              <v-list-item-title class="ichen_blue--text text-h2">
-                {{ veranstaltung.Titel }}
-              </v-list-item-title>
-            </v-list-item-content>
-            <v-list-item-action>
-              <v-btn
-                fab
-                depressed
-                small
-                dark
-                aria-label="Abbrechen"
-                color="ichen_blue"
-                @click="cancel"
-              >
-                <v-icon dark>mdi-close</v-icon>
-              </v-btn>
-            </v-list-item-action>
-          </v-list-item>
-          <v-card-text>
+          <p class="text-right">
+            <v-btn
+              fab
+              depressed
+              small
+              dark
+              aria-label="Abbrechen"
+              color="ichen_blue"
+              @click="cancel"
+            >
+              <v-icon dark>mdi-close</v-icon>
+            </v-btn>
+          </p>
+
+          <v-list-item-title class="ichen_blue--text text-h2">
+            {{ veranstaltung.Titel }}
+          </v-list-item-title>
+
+          <v-card-text class="px-0">
             <p>
               <strong>{{ veranstaltung.Datum | formatDate }} Uhr</strong>
             </p>
             <p>
-              <strong>{{ veranstaltung.Preis }} Euro</strong>
+              <strong
+                >{{ veranstaltung.Preis }} Euro plus Materialkosten</strong
+              >
             </p>
             <p v-html="$md.render(veranstaltung.Beschreibung)"></p>
           </v-card-text>
@@ -49,14 +49,16 @@
             width="100%"
             max-width="500px"
           />
-          <v-card-text>
-            <registration-form
-              v-if="displayForm"
-              :veranstaltung="veranstaltung"
-              @cancel="toggleRegistration"
-              @confirm="cancel"
-            ></registration-form>
-            <template v-else>
+          <v-card-text class="px-0">
+            <v-expand-transition>
+              <registration-form
+                v-show="displayForm"
+                :veranstaltung="veranstaltung"
+                @cancel="toggleRegistration"
+                @confirm="cancel"
+              ></registration-form>
+            </v-expand-transition>
+            <template v-if="!displayForm">
               <v-alert
                 v-if="available"
                 text
@@ -78,11 +80,16 @@
               </v-alert>
               <v-btn
                 depressed
+                class="mr-4 mb-4"
                 color="ichen_red white--text"
                 @click="toggleRegistration"
                 >{{ available ? 'Zur Anmeldung' : 'Zur Warteliste' }}</v-btn
               >
-              <v-btn depressed color="ichen_blue white--text" @click="cancel"
+              <v-btn
+                class="mb-4"
+                depressed
+                color="ichen_blue white--text"
+                @click="cancel"
                 >Zurück</v-btn
               >
             </template>

@@ -23,32 +23,27 @@
           <v-card-title class="text-h2">Werkhof ichen</v-card-title>
           <v-card-text v-if="veranstaltungen">
             <p>
-              Der „Werkhof ichen“, ein zum Teil denkmalgeschütztes, stilvoll
-              ausgebautes Fachwerkgehöft am Rande des bergischen Landes,
-              veranstaltet Kurse im künstlerischen Handwerk.
+              Der „Werkhof ichen“ ist ein zum Teil denkmalgeschütztes, stilvoll
+              ausgebautes Fachwerkgehöft am Rande des bergischen Landes. In
+              diesem einladenden Ambiente werden Kurse im künstlerischen
+              Handwerk angeboten. Der Kursraum bietet ein großzügiges
+              Platzangebot für verschiedene Kurse und Veranstaltungen .
             </p>
             <p>
-              Ein großzügiges Platzangebot bietet der Kursraum für verschiedene
-              Kurse und Veranstaltungen in einer anregenden Atmosphäre. Diese
-              lebt vom Ambiente, dem gemeinsamen Arbeiten, von der Begegnung mit
-              dem Material, der Hilfestellung durch fachkundige Kursleitung, der
-              Zufriedenheit über das eigene Werk und nicht zuletzt vom
-              menschlichen Miteinander.
+              So erfährt der Teilnehmer nicht nur die fachkundige Unterstützung
+              der Kursleiterin, sondern hat auch Gelegenheit zum produktiven
+              Austausch mit Gleichgesinnten.
             </p>
             <p>
-              Hier kann sich jeder einzelne Teilnehmer ausbreiten, selbst in
-              „Coronazeiten“ bleibt mehr als genug Abstand vom benachbarten
-              Arbeitsplatz.
+              Hier kann sich jeder einzelne Teilnehmer so ausbreiten, daß selbst
+              in „Coronazeiten“ mehr als der geforderte Abstand zum benachbarten
+              Arbeitsplatz gewährleistet wird.
             </p>
             <p>
-              In der Werkstatt werden Unikate hergestellt aus hochwertigen
-              Stoffen/Ledern und Papier, aber auch Wünsche der Kunden
-              realisiert.
-            </p>
-            <p>
-              Für Kinder, die den WALDKINDERGARTEN besuchen, entstehen z.B.
+              Für Kinder, die den WALDKINDERGARTEN besuchen, entstehen z.B.
               Kinderlederhosen und vieles andere mehr.
             </p>
+
             <p>Sie sind herzlich eingeladen.</p>
             <p>
               Wenn Sie Fragen haben, kontaktieren Sie mich gerne:
@@ -69,6 +64,24 @@
             <veranstaltung-short-list
               :veranstaltungen="veranstaltungen"
             ></veranstaltung-short-list>
+            <v-img
+              class="shortlist_divider py-8 mx-auto"
+              src="/sewing_needle_beige.svg"
+              alt="Nähnaht"
+              contain
+              justify="center"
+              width="100%"
+              max-width="400px"
+            />
+            <div class="text-right pb-12">
+              <v-btn
+                nuxt
+                to="/veranstaltungen"
+                depressed
+                color="ichen_red white--text"
+                >Alle anzeigen</v-btn
+              >
+            </div>
 
             <v-alert
               rounded="0"
