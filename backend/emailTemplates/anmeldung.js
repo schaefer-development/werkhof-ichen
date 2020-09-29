@@ -21,9 +21,9 @@ Viele Grüße und bis bald!
 ichen
 
 Rechtliche Hinweise:
-Der Teilnehmerplatz wird für mich nach Vorauszahlung der Kursgebühr verbindlich reserviert. Ich habe die Möglichkeit, bis 14 Tage vor Beginn des Kurses von dieser Anmeldung zurück zu treten und die vorausgezahlte Kursgebühr wird
-zurück erstattet. Mir ist bekannt, dass ich keinen Anspruch auf Rückerstattung der Gebühr bei einem Rücktritt außerhalb dieser Frist habe.
-Die Kursgebühr Erstattung erfolgt nur mit Attest oder wenn der Platz weitervergeben werden kann.
+Der Teilnehmerplatz wird für Sie nach Vorauszahlung der Kursgebühr verbindlich reserviert. 
+Sie haben die Möglichkeit, bis 14 Tage vor Beginn des Kurses von dieser Anmeldung zurück zu treten und die vorausgezahlte Kursgebühr wird zurückerstattet. 
+Es besteht kein Anspruch auf Rückerstattung der Gebühr bei einem Rücktritt außerhalb dieser Frist habe. Die Kursgebühr Erstattung erfolgt nur mit Attest oder wenn der Platz weitervergeben werden kann.
 `,
     html: `
 <p>Hallo  ${ anmeldung.name},</p>
@@ -46,12 +46,9 @@ ichen
 <hr>
 <br />
 Rechtliche Hinweise:<br />
-Der Teilnehmerplatz wird für mich nach
-Vorauszahlung der Kursgebühr verbindlich reserviert. Ich habe die Möglichkeit, bis 14 Tage vor
-Beginn des Kurses von dieser Anmeldung zurück zu treten und die vorausgezahlte Kursgebühr wird
-zurück erstattet. Mir ist bekannt, dass ich keinen Anspruch auf Rückerstattung der
-Gebühr bei einem Rücktritt außerhalb dieser Frist habe.
-Die Kursgebühr Erstattung erfolgt nur mit Attest oder wenn der Platz weitervergeben werden kann.
+Der Teilnehmerplatz wird für Sie nach Vorauszahlung der Kursgebühr verbindlich reserviert. 
+Sie haben die Möglichkeit, bis 14 Tage vor Beginn des Kurses von dieser Anmeldung zurück zu treten und die vorausgezahlte Kursgebühr wird zurückerstattet. 
+Es besteht kein Anspruch auf Rückerstattung der Gebühr bei einem Rücktritt außerhalb dieser Frist habe. Die Kursgebühr Erstattung erfolgt nur mit Attest oder wenn der Platz weitervergeben werden kann.
 </p>
        `,
   }
