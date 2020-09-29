@@ -1,14 +1,21 @@
 <template>
   <v-app-bar height="200px" flat color="transparent" absolute app clipped-left>
-    <v-container>
+    <v-container class="pa-0">
       <v-toolbar color="transparent" flat>
         <nuxt-link to="/">
           <v-img
             src="/logo_ichen.svg"
+            class="d-none d-sm-flex"
             alt="Logo Werkhof ichen"
-            max-width="150px"
+          />
+          <v-img
+            src="/logo_ichen.svg"
+            width="80px"
+            class="d-flex d-sm-none"
+            alt="Logo Werkhof ichen"
           />
         </nuxt-link>
+
         <v-spacer></v-spacer>
         <v-btn
           icon
@@ -22,7 +29,7 @@
           <v-icon size="30" medium>mdi-facebook</v-icon>
         </v-btn>
         <v-btn
-          class="mr-6"
+          class="mr-3"
           link
           target="_blank"
           rel="noopener"
