@@ -4,7 +4,8 @@
       <v-col cols="12" xs="12" sm="4" md="4" lg="4" xl="4">
         <v-img
           class="white--text align-end"
-          height="200px"
+          contain
+          aspect-ratio="1"
           :src="angebot.Vorschaubild.url"
         ></v-img>
       </v-col>
@@ -12,9 +13,9 @@
         <v-card rounded="0" flat class="px-6 pt-8">
           <v-list-item>
             <v-list-item-content>
-              <v-list-item-title class="ichen_blue--text text-h2">
-                {{ angebot.Titel }}
-              </v-list-item-title>
+              <v-list-item-title class="ichen_blue--text text-h2">{{
+                angebot.Titel
+              }}</v-list-item-title>
             </v-list-item-content>
             <v-list-item-action>
               <v-btn
@@ -60,7 +61,7 @@
 export default {
   async asyncData(context) {
     const angebot = await context.$axios.$get(
-      '/veranstaltungsangebots/' + context.params.id
+      '/terminabspraches/' + context.params.id
     )
     return { angebot }
   },

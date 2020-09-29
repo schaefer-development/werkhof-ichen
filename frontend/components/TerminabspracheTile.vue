@@ -7,14 +7,16 @@
         aspect-ratio="1"
         :src="veranstaltung.Vorschaubild.url"
       ></v-img>
-      <v-card-title class="ichen_blue--text text-h2">
-        {{ veranstaltung.Titel }}
-      </v-card-title>
+      <v-card-title class="ichen_blue--text text-h2">{{
+        veranstaltung.Titel
+      }}</v-card-title>
       <v-card-text>
         <client-only>
+          <p>
+            <strong>{{ veranstaltung.Preis }} Euro plus Materialkosten</strong>
+          </p>
           <p v-html="$md.render(veranstaltung.Beschreibung)"></p>
         </client-only>
-        <p>{{ veranstaltung.Preis }} Euro</p>
       </v-card-text>
 
       <v-card-actions class="pt-1 pb-8 pr-4">

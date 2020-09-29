@@ -17,29 +17,31 @@
           <v-card-text>
             <p>
               1963 wurde ich in eine Familie geboren, in der Kreativität sehr
-              unterstützt wurde. Mit 10 Jahren nähte ich meine erste Bluse und
+              unterstützt wurde. Mit 10 Jahren nähte ich meine erste Bluse und
               von da an ließ mich die Freude am Nähen nicht mehr los.
             </p>
             <p>
-              Deshalb begann ich schon vor knapp 30 Jahren u.a. Kinder-Nähkurse
-              zu geben.
+              Daher ist es mir seit 30 Jahren ebenfalls ein Anliegen, Kinder in
+              ihrer Kreativität zu unterstützen.
             </p>
             <p>
-              1987 beendete ich erfolgreich mein Studium als
-              Diplom-Bekleidungs-Ingenieurin in Mönchengladbach. Seit fast 1990
-              arbeite ich selbständig und gebe Kurse im kunsthandwerklichen
-              Bereich.
+              Nach Abschluss meines Studiums als
+              Diplom-Bekleidungs-Ingenieurin(1987) und der Geburt meines Kindes,
+              begann ich 1990 in Nähkursen zu unterrichten.
             </p>
             <p>
-              Seit etwa 1993 unterrichte ich hier in meinen eigenen
-              Räumlichkeiten im „werkhof ichen“, in der ehemaligen „Heu-Tenne“
-              des Hofes, nachdem der Fachwerkhof meiner Großeltern restauriert
-              wurde.
+              Seit 1993 finden die Kurse im „ Werkhof ichen“ , der ehemaligen
+              Heu Tenne des Hofes statt.
+            </p>
+            <p>
+              Der Fachwerkhof, in dem einst meine Großeltern lebten, wurde
+              aufwendig restauriert und ist heute ein Ort an dem ich lebe und
+              arbeite.
             </p>
             <p>
               Immer noch liebe ich meinen Beruf und erfreue mich an der
-              Begegnung mit Menschen, die das gleiche Hobby verfolgen wie ich
-              und gebe gerne mein Wissen und meine Erfahrungen weiter.
+              Begegnung mit den Menschen, die das gleiche „Hobby“ verfolgen wie
+              ich und gebe gerne mein Wissen und meine Erfahrungen weiter.
             </p>
           </v-card-text>
         </v-card>

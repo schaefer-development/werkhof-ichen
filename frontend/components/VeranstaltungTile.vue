@@ -8,9 +8,7 @@
         :src="veranstaltung.Vorschaubild.url"
       ></v-img>
       <v-card-title class="ichen_blue--text text-h2">
-        {{
-        veranstaltung.Titel
-        }}
+        {{ veranstaltung.Titel }}
       </v-card-title>
       <v-card-text>
         <p>
@@ -32,7 +30,8 @@
         </template>
         <template v-else>
           <strong class="ichen_blue--text">
-            <v-icon color="ichen_blue" class="pr-1">mdi-alert-circle</v-icon>Leider ausgebucht
+            <v-icon color="ichen_blue" class="pr-1">mdi-alert-circle</v-icon
+            >Leider ausgebucht
           </strong>
         </template>
       </v-card-text>
@@ -43,7 +42,8 @@
           depressed
           color="ichen_red white--text"
           :to="{ name: 'veranstaltung-id', params: { id: veranstaltung.id } }"
-        >{{ available ? 'Anmelden' : 'Warteliste' }}</v-btn>
+          >{{ available ? 'Anmelden' : 'Warteliste' }}</v-btn
+        >
       </v-card-actions>
     </v-card>
   </v-col>
