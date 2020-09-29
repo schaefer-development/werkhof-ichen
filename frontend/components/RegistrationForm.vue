@@ -11,12 +11,12 @@
         Falls Sie keine Bestätigung erhalten haben, nehmen Sie bitte Kontakt mit
         mir auf:
         <br />Telefon: 02246 . 31 97 oder per E-Mail:
-        <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>
+        <a
+          href="mailto:info@werkhof-ichen.de"
+        >info@werkhof-ichen.de</a>
       </p>
       <p>
-        <v-btn depressed color="ichen_blue white--text" @click="confirm"
-          >Verstanden</v-btn
-        >
+        <v-btn depressed color="ichen_blue white--text" @click="confirm">Verstanden</v-btn>
       </p>
     </template>
 
@@ -73,9 +73,7 @@
         </template>
       </v-checkbox>
       <v-alert text type="info" class="font-weight-bold">
-        <template v-if="available"
-          >Ihr Platz ist erst mit Zahlungseingang reserviert.</template
-        >
+        <template v-if="available">Ihr Platz ist erst mit Zahlungseingang reserviert.</template>
         <template v-else>
           Sobald ein Platz frei wird, melde ich mich bei Ihnen telefonisch oder
           per E-Mail.
@@ -89,11 +87,8 @@
         :disabled="!valid"
         :loading="loading"
         @click="submit"
-        >{{ available ? 'Anmelden' : 'Auf Warteliste setzen' }}</v-btn
-      >
-      <v-btn depressed color="ichen_blue white--text" @click="cancel"
-        >Abbrechen</v-btn
-      >
+      >{{ available ? 'Anmelden' : 'Auf Warteliste setzen' }}</v-btn>
+      <v-btn depressed class="mb-4" color="ichen_blue white--text" @click="cancel">Abbrechen</v-btn>
     </v-form>
   </div>
 </template>
