@@ -7,9 +7,11 @@
         aspect-ratio="1"
         :src="veranstaltung.Vorschaubild.url"
       ></v-img>
-      <v-card-title class="ichen_blue--text text-h2">{{
+      <v-card-title class="ichen_blue--text text-h2">
+        {{
         veranstaltung.Titel
-      }}</v-card-title>
+        }}
+      </v-card-title>
       <v-card-text>
         <client-only>
           <p v-html="$md.render(veranstaltung.Beschreibung)"></p>
@@ -22,9 +24,8 @@
           nuxt
           depressed
           color="ichen_red white--text"
-          :to="{ name: 'angebot-id', params: { id: veranstaltung.id } }"
-          >Termin anfragen</v-btn
-        >
+          :to="{ name: 'terminabsprache-id', params: { id: veranstaltung.id } }"
+        >Termin anfragen</v-btn>
       </v-card-actions>
     </v-card>
   </v-col>

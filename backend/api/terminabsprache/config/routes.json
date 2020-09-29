@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/terminabspraches",
+      "handler": "terminabsprache.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/terminabspraches/count",
+      "handler": "terminabsprache.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/terminabspraches/:id",
+      "handler": "terminabsprache.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/terminabspraches",
+      "handler": "terminabsprache.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/terminabspraches/:id",
+      "handler": "terminabsprache.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/terminabspraches/:id",
+      "handler": "terminabsprache.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

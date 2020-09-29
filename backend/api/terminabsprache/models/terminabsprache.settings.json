@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "veranstaltungsangebots",
+  "collectionName": "terminabspraches",
   "info": {
-    "name": "Veranstaltungsangebot"
+    "name": "Terminabsprache"
   },
   "options": {
     "increments": true,
@@ -10,12 +10,10 @@
   },
   "attributes": {
     "Titel": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "Beschreibung": {
-      "type": "richtext",
-      "required": true
+      "type": "richtext"
     },
     "Kategorie": {
       "type": "enumeration",
@@ -24,17 +22,21 @@
         "kurse_fuer_erwachsene",
         "geburtstagsevents",
         "unkategorisiert"
-      ],
-      "required": true
+      ]
     },
     "Vorschaubild": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
-        "images"
+        "images",
+        "files",
+        "videos"
       ],
       "plugin": "upload",
-      "required": true
+      "required": false
+    },
+    "Preis": {
+      "type": "integer"
     }
   }
 }

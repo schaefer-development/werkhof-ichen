@@ -162,13 +162,13 @@ export default {
       veranstaltungen = veranstaltungen.map((veranstaltung) => {
         return '/veranstaltung/' + veranstaltung.id
       })
-      let { data: angebote } = await axios.get(
-        `${apiUrl}/veranstaltungsangebots`
+      let { data: terminabsprachen } = await axios.get(
+        `${apiUrl}/terminabspraches`
       )
-      angebote = angebote.map((angebot) => {
-        return '/angebot/' + angebot.id
+      terminabsprachen = terminabsprachen.map((terminabsprache) => {
+        return '/terminabsprache/' + terminabsprache.id
       })
-      return veranstaltungen.concat(angebote)
+      return veranstaltungen.concat(terminabsprachen)
     },
   },
 }

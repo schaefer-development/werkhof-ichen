@@ -1,25 +1,23 @@
 <template>
   <v-container>
     <v-row no-gutters align="center" class="ichen_green">
-      <v-col cols="12" xs="6" sm="6" md="3" lg="2" xl="2" class="pa-6">
+      <v-col cols="12" xs="12" sm="3" md="3" lg="2" xl="2" class="pa-6">
         <v-btn
           large
           depressed
           class="white--text"
           color="ichen_red"
           @click="$vuetify.goTo('#termine')"
-          >Termine</v-btn
-        >
+        >Termine</v-btn>
       </v-col>
-      <v-col cols="12" xs="6" sm="6" md="3" lg="2" xl="2" class="pa-6">
+      <v-col cols="12" xs="12" sm="9" md="3" lg="2" xl="2" class="pa-6">
         <v-btn
           large
           depressed
           class="white--text"
           color="ichen_red"
-          @click="$vuetify.goTo('#angebote')"
-          >Angebote</v-btn
-        >
+          @click="$vuetify.goTo('#nach_absprache')"
+        >Nach Terminabsprache</v-btn>
       </v-col>
       <v-col
         cols="12"
@@ -63,48 +61,46 @@
       </template>
       <template v-else>
         <v-col cols="12">
-          <v-alert outlined type="info" class="font-weight-bold"
-            >Zu diesen Kategorien gibt es keine anstehenden
-            Veranstaltungen</v-alert
-          >
+          <v-alert outlined type="info" class="font-weight-bold">
+            Zu diesen Kategorien gibt es keine anstehenden
+            Veranstaltungen
+          </v-alert>
         </v-col>
       </template>
     </v-row>
-    <v-row id="angebote" class="pt-12">
+    <v-row id="nach_absprache" class="pt-12">
       <v-col cols="12" class="mt-12">
         <h2 class="ichen_blue ichen_beige--text text-h2 pa-6">
-          <v-icon size="40" class="ichen_beige--text pr-3"
-            >mdi-content-cut</v-icon
-          >ANGEBOTE
+          <v-icon size="40" class="ichen_beige--text pr-3">mdi-content-cut</v-icon>NACH TERMINABSPRACHE
         </h2>
       </v-col>
-      <angebot-tile
-        v-for="veranstaltung in filtered.veranstaltungsangebote"
+      <terminabsprache-tile
+        v-for="veranstaltung in filtered.terminabsprachen"
         :key="veranstaltung.id"
         :veranstaltung="veranstaltung"
-      ></angebot-tile>
+      ></terminabsprache-tile>
     </v-row>
   </v-container>
 </template>
 
 <script>
 import VeranstaltungTile from '~/components/VeranstaltungTile.vue'
-import AngebotTile from '~/components/AngebotTile.vue'
+import TerminabspracheTile from '~/components/TerminabspracheTile.vue'
 
 export default {
   components: {
     VeranstaltungTile,
-    AngebotTile,
+    TerminabspracheTile,
   },
   async asyncData(context) {
-    const [veranstaltungen, veranstaltungsangebote] = await Promise.all([
+    const [veranstaltungen, terminabsprachen] = await Promise.all([
       context.$axios.$get('/veranstaltungs', {
         params: {
           _sort: 'Datum:ASC',
           Datum_gte: new Date(),
         },
       }),
-      context.$axios.$get('/veranstaltungsangebots'),
+      context.$axios.$get('/terminabspraches'),
     ])
     const items = [
       { key: 'kurse_fuer_erwachsene', name: 'Kurse für Erwachsene' },
@@ -115,18 +111,18 @@ export default {
       { key: 'geburtstagsevents', name: 'Geburtstagsevents' },
       { key: 'unkategorisiert', name: 'Unkategorisiert' },
     ]
-    return { veranstaltungen, veranstaltungsangebote, items, selected: [] }
+    return { veranstaltungen, terminabsprachen, items, selected: [] }
   },
   computed: {
     filtered() {
-      const { selected, veranstaltungen, veranstaltungsangebote } = this
+      const { selected, veranstaltungen, terminabsprachen } = this
       if (!selected || !selected.length)
-        return { veranstaltungen, veranstaltungsangebote }
+        return { veranstaltungen, terminabsprachen }
       return {
         veranstaltungen: veranstaltungen.filter((v) =>
           selected.includes(v.Kategorie)
         ),
-        veranstaltungsangebote: veranstaltungsangebote.filter((v) =>
+        terminabsprachen: terminabsprachen.filter((v) =>
           selected.includes(v.Kategorie)
         ),
       }
