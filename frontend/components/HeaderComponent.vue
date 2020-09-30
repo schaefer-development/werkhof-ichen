@@ -7,6 +7,7 @@
             src="/logo_ichen.svg"
             class="d-none d-sm-flex"
             alt="Logo Werkhof ichen"
+            max-width="150px"
           />
           <v-img
             src="/logo_ichen.svg"
