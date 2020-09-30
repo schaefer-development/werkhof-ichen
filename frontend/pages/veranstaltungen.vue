@@ -50,7 +50,7 @@
         <v-row class="ichen_blue pa-6 mx-1 mt-12 mb-12" align="center">
           <v-col cols="12" xs="12" sm="3" md="3" lg="3" xl="3" align="center">
             <v-img
-              src="/kindern_helfen_kindern.jpg"
+              src="/kinder_helfen_kindern.jpg"
               alt="Kindern helfen Kindern | Werkhof ichen"
               aspect-ratio="1"
               max-height="200px"
@@ -69,7 +69,12 @@
             class="ichen_beige--text"
           >
             <h2 class="ichen_beige--text text-h2">Kinder helfen Kinder in Not</h2>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo
+              dolores et ea rebum.
+            </p>
 
             <p>
               <strong>Mehr erfahren:</strong>
@@ -105,11 +110,10 @@
       </template>
       <template v-else>
         <v-col cols="12">
-          <v-alert
-            outlined
-            type="info"
-            class="font-weight-bold"
-          >Zu diesen Kategorien gibt es keine anstehenden Veranstaltungen</v-alert>
+          <v-alert outlined type="info" class="font-weight-bold">
+            Zu diesen Kategorien gibt es keine anstehenden
+            Veranstaltungen
+          </v-alert>
         </v-col>
       </template>
     </v-row>
