@@ -19,17 +19,38 @@
               </v-btn>
             </v-list-item-action>
           </v-list-item>
-          <v-carousel hide-delimiters>
-            <v-carousel-item
-              v-for="Bild in bilderstrecke.Bilder"
-              :key="Bild.id"
-              class="carousel_item"
-              :src="Bild.url"
-            ></v-carousel-item>
-          </v-carousel>
+          <br />
           <h2 class="text-center ichen_blue--text text-h2 py-6">
             {{ bilderstrecke.Titel }}
           </h2>
+          <!--
+          <v-carousel cycle height="400" hide-delimiter-background show-arrows-on-hover>
+            <v-carousel-item v-for="Bild in bilderstrecke.Bilder" :key="Bild.id">
+              <v-sheet>
+                <v-row class="fill-height" align="center" justify="center">
+                  <v-img :src="Bild.url"></v-img>
+                </v-row>
+              </v-sheet>
+            </v-carousel-item>
+          </v-carousel-->
+
+          <v-carousel
+            hide-delimiter-background
+            hide-delimiters="true"
+            height="100%"
+            max-height="500px"
+          >
+            <v-carousel-item
+              v-for="Bild in bilderstrecke.Bilder"
+              :key="Bild.id"
+              height="100%"
+              max-height="500px"
+              reverse-transition="fade-transition"
+              transition="fade-transition"
+              contain
+              :src="Bild.url"
+            ></v-carousel-item>
+          </v-carousel>
         </v-card>
       </v-col>
     </v-row>
