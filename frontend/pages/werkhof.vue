@@ -23,11 +23,16 @@
           <v-card-title class="text-h2">Werkhof ichen</v-card-title>
           <v-card-text v-if="veranstaltungen">
             <p>
-              Der „Werkhof ichen“ ist ein zum Teil denkmalgeschütztes, stilvoll
+              Werkhof ichen ist ein zum Teil denkmalgeschütztes und stilvoll
               ausgebautes Fachwerkgehöft am Rande des bergischen Landes. In
               diesem einladenden Ambiente werden Kurse im künstlerischen
               Handwerk angeboten. Der Kursraum bietet ein großzügiges
               Platzangebot für verschiedene Kurse und Veranstaltungen .
+            </p>
+            <p>
+              Das gemeinsame Arbeiten, die Begegnung mit dem Material und das
+              menschliche Miteinander finden in einer anregenden und entspannten
+              Atmosphäre statt.
             </p>
             <p>
               So erfährt der Teilnehmer nicht nur die fachkundige Unterstützung
@@ -40,10 +45,14 @@
               Arbeitsplatz gewährleistet wird.
             </p>
             <p>
+              In der Werkstatt werden nach den Wünschen der Kunden Unikate aus
+              hochwertigen Stoffen/Ledern und Papier hergestellt und die eigene
+              Kollektion erweitert.
+            </p>
+            <p>
               Für Kinder, die den WALDKINDERGARTEN besuchen, entstehen z.B.
               Kinderlederhosen und vieles andere mehr.
             </p>
-
             <p>Sie sind herzlich eingeladen.</p>
             <p>
               Wenn Sie Fragen haben, kontaktieren Sie mich gerne:

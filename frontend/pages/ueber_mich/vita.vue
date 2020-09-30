@@ -25,13 +25,13 @@
               ihrer Kreativität zu unterstützen.
             </p>
             <p>
-              Nach Abschluss meines Studiums als
-              Diplom-Bekleidungs-Ingenieurin(1987) und der Geburt meines Kindes,
-              begann ich 1990 in Nähkursen zu unterrichten.
+              Nach Abschluss meines Studiums als Diplom-Bekleidungs-Ingenieurin
+              (1987) und der Geburt meines Kindes, begann ich 1990 in Nähkursen
+              zu unterrichten.
             </p>
             <p>
-              Seit 1993 finden die Kurse im „ Werkhof ichen“ , der ehemaligen
-              Heu Tenne des Hofes statt.
+              Seit 1993 finden die Kurse im "Werkhof ichen", der ehemaligen Heu
+              Tenne des Hofes statt.
             </p>
             <p>
               Der Fachwerkhof, in dem einst meine Großeltern lebten, wurde
@@ -40,7 +40,7 @@
             </p>
             <p>
               Immer noch liebe ich meinen Beruf und erfreue mich an der
-              Begegnung mit den Menschen, die das gleiche „Hobby“ verfolgen wie
+              Begegnung mit den Menschen, die das gleiche "Hobby" verfolgen wie
               ich und gebe gerne mein Wissen und meine Erfahrungen weiter.
             </p>
           </v-card-text>
