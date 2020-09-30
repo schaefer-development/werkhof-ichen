@@ -6,10 +6,13 @@
           <v-img src="/footer_images/house.jpg" alt="Werkhof ichen"></v-img>
           <v-img src="/footer_images/etui.jpg" alt="Leder-Etui"></v-img>
           <v-img src="/footer_images/collection3.jpg" alt="Collection"></v-img>
-          <v-img src="/footer_images/book2.jpg" alt="Paperwerkstatt"></v-img>
+          <v-img src="/footer_images/book2.jpg" alt="Papierwerkstatt"></v-img>
           <v-img src="/footer_images/tea_time.jpg" alt="Tea Time"></v-img>
           <v-img src="/footer_images/sew.jpg" alt="Nähen"></v-img>
-          <v-img src="/footer_images/kater_schroeder.jpg" alt="Kater Schröder"></v-img>
+          <v-img
+            src="/footer_images/kater_schroeder.jpg"
+            alt="Kater Schröder"
+          ></v-img>
           <v-img src="/footer_images/flower.jpg" alt="Blumen"></v-img>
           <v-img src="/footer_images/stone.jpg" alt="Textur"></v-img>
           <v-img src="/footer_images/lamp.jpg" alt="Lampe"></v-img>
@@ -22,7 +25,11 @@
         class="footer-component-bottom-row pt-8 pl-12 pb-3 pr-12"
       >
         <v-col cols="12" sm="6" md="4" lg="3" xl="2" align="center">
-          <v-img src="/logo_ichen_outline.svg" alt="Logo Werkhof ichen" max-width="180px" />
+          <v-img
+            src="/logo_ichen_outline.svg"
+            alt="Logo Werkhof ichen"
+            max-width="180px"
+          />
         </v-col>
         <v-col cols="12" sm="6" md="4" lg="3" xl="2">
           <p class="pl-2">

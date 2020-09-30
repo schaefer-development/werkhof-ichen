@@ -3,16 +3,24 @@
     <v-row class="pb-xs-6">
       <v-col cols="12">
         <v-img
-          src="/header_images/header_leather.jpg"
+          src="/header_images/header_spiral.jpg"
           alt="werkhof ichen: Auswahl von Leder"
         />
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="12" xs="12" sm="4" md="4" lg="4" xl="4">
-        <v-img src="/anfertigungen.jpg" alt="werkhof ichen" />
-      </v-col>
-      <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">
+      <v-col cols="12" xs="12" sm="4" md="4" lg="4" xl="4"></v-col>
+      <v-col
+        cols="12"
+        xs="12"
+        sm="12"
+        offset-md="4"
+        md="8"
+        offset-lg="4"
+        lg="8"
+        offset-xl="4"
+        xl="8"
+      >
         <v-card rounded="0" flat>
           <v-card-title class="text-h2"
             >Allgemeine Geschäftsbedingungen (AGB)</v-card-title
