@@ -1,7 +1,7 @@
 <template>
   <v-footer dark padless>
     <v-container fluid class="pt-0 pb-3">
-      <v-row class="d-none d-md-block">
+      <v-row>
         <div id="footer-component-footer-gallery">
           <v-img src="/footer_images/house.jpg" alt="Werkhof ichen"></v-img>
           <v-img src="/footer_images/etui2.jpg" alt="Leder-Etui"></v-img>
