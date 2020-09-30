@@ -7,7 +7,7 @@
       />
     </template>
     <v-card rounded="0" flat>
-      <v-card-title class="text-h2">Weitere Textilien</v-card-title>
+      <v-card-title class="text-h2">Weitere Materialien</v-card-title>
       <v-card-text>
         Naturstoffe, wie Walkware aus reiner Wolle, Baumwolle, Leinen. Auch
         gewachster Canvas für Taschen usw., gewachste Baumwolle für Jacken,

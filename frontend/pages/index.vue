@@ -5,7 +5,7 @@
         <v-card rounded="0" flat>
           <v-img class="align-end" aspect-ratio="1" src="/werkhof_01.jpg"></v-img>
           <v-card-title class="text-h2">
-            <nuxt-link to="/ueber_mich/werkhof" class="ichen_blue--text">Werkhof ichen</nuxt-link>
+            <nuxt-link to="/werkhof" class="ichen_blue--text">Werkhof ichen</nuxt-link>
           </v-card-title>
           <v-card-text>
             <p>
