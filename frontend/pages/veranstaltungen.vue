@@ -50,12 +50,12 @@
         <v-row class="ichen_blue pa-6 mx-1 mt-12 mb-12" align="center">
           <v-col cols="12" xs="12" sm="3" md="3" lg="3" xl="3" align="center">
             <v-img
+              class="rounded-circle"
+              max-height="200px"
+              max-width="200px"
               src="/kinder_helfen_kindern.jpg"
               alt="Kindern helfen Kindern | Werkhof ichen"
               aspect-ratio="1"
-              max-height="200px"
-              max-width="200px"
-              class="round_image"
             />
           </v-col>
           <v-col
@@ -69,12 +69,7 @@
             class="ichen_beige--text"
           >
             <h2 class="ichen_beige--text text-h2">Kinder helfen Kinder in Not</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et justo duo
-              dolores et ea rebum.
-            </p>
+            <p>Neben den eigentlichen Projekten während des Nähkurses, haben die Kinder die Möglichkeit, an einer Patchworkdecke zu arbeiten. Wenn diese fertig gestellt ist, wird sie auf dem Weihnachtsmarkt in Breidt verlost. Bisher kamen die Erlöse Kinder-Projekten von DON BOSKO zugute.</p>
 
             <p>
               <strong>Mehr erfahren:</strong>
@@ -212,9 +207,5 @@ export default {
       }
     }
   }
-}
-
-.round_image {
-  border-radius: 50%;
 }
 </style>
