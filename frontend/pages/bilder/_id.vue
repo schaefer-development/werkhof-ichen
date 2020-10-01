@@ -23,17 +23,6 @@
           <h2 class="text-center ichen_blue--text text-h2 py-3">
             {{ bilderstrecke.Titel }}
           </h2>
-          <!--
-          <v-carousel cycle height="400" hide-delimiter-background show-arrows-on-hover>
-            <v-carousel-item v-for="Bild in bilderstrecke.Bilder" :key="Bild.id">
-              <v-sheet>
-                <v-row class="fill-height" align="center" justify="center">
-                  <v-img :src="Bild.url"></v-img>
-                </v-row>
-              </v-sheet>
-            </v-carousel-item>
-          </v-carousel-->
-
           <v-carousel hide-delimiters>
             <v-carousel-item
               v-for="Bild in bilderstrecke.Bilder"

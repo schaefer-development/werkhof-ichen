@@ -148,6 +148,7 @@ $color-pack: false;
 
 .v-card{
   margin-bottom: 2em;
+  
   &:after{
     content:"";
     position: absolute;
@@ -159,6 +160,15 @@ $color-pack: false;
     background-color:inherit;
     clip-path: polygon(0 1%, 0% 100%, 100% 0);
   }
+}
+
+.v-card__title{
+  -moz-hyphens: none;
+  -o-hyphens: none;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  line-height:1.25em !important;
 }
 
 

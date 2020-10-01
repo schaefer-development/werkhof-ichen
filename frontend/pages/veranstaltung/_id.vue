@@ -25,16 +25,18 @@
             </v-btn>
           </p>
 
-          <v-list-item-title class="ichen_blue--text text-h2">
-            {{ veranstaltung.Titel }}
-          </v-list-item-title>
+          <v-list-item-title class="ichen_blue--text text-h2">{{
+            veranstaltung.Titel
+          }}</v-list-item-title>
 
           <v-card-text class="px-0">
             <p>
               <strong>{{ veranstaltung.Anzeigedatum }}</strong>
             </p>
             <p class="pb-4">
-              <strong>{{ veranstaltung.Preis }} € plus Materialkosten</strong>
+              <strong
+                >{{ veranstaltung.Preis }} Euro plus Materialkosten</strong
+              >
             </p>
 
             <p v-html="$md.render(veranstaltung.Beschreibung)"></p>
