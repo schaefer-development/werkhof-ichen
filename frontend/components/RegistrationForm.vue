@@ -1,7 +1,7 @@
 <template>
   <div id="registration-form">
     <template v-if="success">
-      <h2 class="pb-6">Erfolgreich angemeldet</h2>
+      <h3 class="ichen_blue--text text-h2 pb-6">Erfolgreich angemeldet</h3>
       <p>
         Sie erhalten in den nächsten Minuten eine Bestätigung Ihrer Anmeldung
         mit allen weiteren Details per E-Mail. Wenn Sie keine Nachricht erhalten
@@ -21,7 +21,7 @@
     </template>
 
     <v-form v-else ref="form" v-model="valid">
-      <h2 class="pb-6">Anmeldeformular</h2>
+      <h3 class="ichen_blue--text text-h2 pb-6">Anmeldeformular</h3>
       <v-text-field
         v-model="anmeldung.name"
         outlined
