@@ -36,7 +36,7 @@
               <strong>{{ veranstaltung.Anzeigedatum }}</strong>
             </p>
             <p class="pb-4">
-              <strong>{{ veranstaltung.Preis }} € + Materialkosten</strong>
+              <strong>{{ veranstaltung.Preis }} € plus Materialkosten</strong>
             </p>
 
             <p v-html="$md.render(veranstaltung.Beschreibung)"></p>
