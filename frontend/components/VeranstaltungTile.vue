@@ -11,13 +11,12 @@
         {{ veranstaltung.Titel }}
       </v-card-title>
       <v-card-text>
-        <p>
+        <p class="ichen_brown--text mb-0 pt-2 pb-2">
           <strong>{{ veranstaltung.Anzeigedatum }}</strong>
         </p>
-        <p class="pb-4">
+        <p class="ichen_brown--text pb-3">
           <strong>{{ veranstaltung.Preis }} Euro plus Materialkosten</strong>
         </p>
-
         <client-only>
           <p v-html="$md.render(veranstaltung.Beschreibung)"></p>
         </client-only>
