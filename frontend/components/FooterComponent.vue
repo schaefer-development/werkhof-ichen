@@ -6,9 +6,8 @@
           <v-img src="/footer_images/house.jpg" alt="Werkhof ichen"></v-img>
           <v-img src="/footer_images/etui2.jpg" alt="Leder-Etui"></v-img>
           <v-img src="/footer_images/collection3.jpg" alt="Collection"></v-img>
-          <v-img src="/footer_images/tea_time.jpg" alt="Tea Time"></v-img>
+          <v-img src="/footer_images/tea_pot.jpg" alt="Tea Time"></v-img>
           <v-img src="/footer_images/book2.jpg" alt="Papierwerkstatt"></v-img>
-
           <v-img src="/footer_images/sew.jpg" alt="Nähen"></v-img>
           <v-img src="/footer_images/kater_schroeder.jpg" alt="Kater Schröder"></v-img>
           <v-img src="/footer_images/flower.jpg" alt="Blumen"></v-img>
@@ -100,6 +99,17 @@ footer {
     font-style: normal;
     font-weight: 900;
     font-size: 1.1em;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  #footer-component-footer-gallery {
+    width: 100%;
+    height: 40vw;
+    flex-wrap: wrap;
+    div {
+      width: 18vw;
+    }
   }
 }
 </style>
