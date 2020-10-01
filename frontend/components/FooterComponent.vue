@@ -4,10 +4,13 @@
       <v-row>
         <div id="footer-component-footer-gallery">
           <v-img src="/footer_images/house.jpg" alt="Werkhof ichen"></v-img>
-          <v-img src="/footer_images/etui2.jpg" alt="Leder-Etui"></v-img>
-          <v-img src="/footer_images/collection3.jpg" alt="Collection"></v-img>
+          <v-img src="/footer_images/flower2.jpg" alt="Blumen"></v-img>
+
           <v-img src="/footer_images/tea_pot.jpg" alt="Tea Time"></v-img>
-          <v-img src="/footer_images/book2.jpg" alt="Papierwerkstatt"></v-img>
+          <v-img src="/footer_images/collection3.jpg" alt="Collection"></v-img>
+
+          <v-img src="/footer_images/physalis.jpg" alt="Physalis"></v-img>
+
           <v-img src="/footer_images/sew.jpg" alt="Nähen"></v-img>
           <v-img src="/footer_images/kater_schroeder.jpg" alt="Kater Schröder"></v-img>
           <v-img src="/footer_images/flower.jpg" alt="Blumen"></v-img>

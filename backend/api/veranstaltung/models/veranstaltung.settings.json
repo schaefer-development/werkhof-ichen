@@ -51,6 +51,9 @@
     "Beschreibung": {
       "type": "richtext",
       "required": true
+    },
+    "Anzeigedatum": {
+      "type": "richtext"
     }
   }
 }
