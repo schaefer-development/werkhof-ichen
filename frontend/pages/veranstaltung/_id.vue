@@ -26,9 +26,7 @@
           </p>
 
           <v-list-item-title class="ichen_blue--text text-h2">
-            {{
-            veranstaltung.Titel
-            }}
+            {{ veranstaltung.Titel }}
           </v-list-item-title>
 
           <v-card-text class="px-0">
@@ -65,7 +63,8 @@
                 text
                 type="success"
                 class="font-weight-bold"
-              >Es sind noch Plätze frei!</v-alert>
+                >Es sind noch Plätze frei!</v-alert
+              >
               <v-alert
                 v-else
                 text
@@ -83,8 +82,15 @@
                 class="mr-4 mb-4"
                 color="ichen_red white--text"
                 @click="toggleRegistration"
-              >{{ available ? 'Zur Anmeldung' : 'Zur Warteliste' }}</v-btn>
-              <v-btn class="mb-4" depressed color="ichen_blue white--text" @click="cancel">Zurück</v-btn>
+                >{{ available ? 'Zur Anmeldung' : 'Zur Warteliste' }}</v-btn
+              >
+              <v-btn
+                class="mb-4"
+                depressed
+                color="ichen_blue white--text"
+                @click="cancel"
+                >Zurück</v-btn
+              >
             </template>
           </v-card-text>
         </v-card>
