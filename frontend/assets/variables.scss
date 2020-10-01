@@ -163,12 +163,13 @@ $color-pack: false;
 }
 
 .v-card__title{
-  -moz-hyphens: none;
-  -o-hyphens: none;
-  -webkit-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
+  -moz-hyphens: none !important;
+  -o-hyphens: none !important;
+  -webkit-hyphens: none !important;
+  -ms-hyphens: none !important;
+  hyphens: none !important;
   line-height:1.25em !important;
+  word-break: normal !important;
 }
 
 
