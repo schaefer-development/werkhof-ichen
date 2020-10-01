@@ -7,12 +7,10 @@
         aspect-ratio="1"
         :src="veranstaltung.Vorschaubild.url"
       ></v-img>
-      <v-card-title class="ichen_blue--text text-h2">
-        {{ veranstaltung.Titel }}
-      </v-card-title>
+      <v-card-title class="ichen_blue--text text-h2">{{ veranstaltung.Titel }}</v-card-title>
       <v-card-text>
         <client-only>
-          <p>
+          <p class="ichen_brown--text">
             <strong>{{ veranstaltung.Preis }} Euro plus Materialkosten</strong>
           </p>
           <p v-html="$md.render(veranstaltung.Beschreibung)"></p>
@@ -25,8 +23,7 @@
           depressed
           color="ichen_red white--text"
           :to="{ name: 'terminabsprache-id', params: { id: veranstaltung.id } }"
-          >Termin anfragen</v-btn
-        >
+        >Termin anfragen</v-btn>
       </v-card-actions>
     </v-card>
   </v-col>
