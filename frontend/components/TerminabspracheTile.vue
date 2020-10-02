@@ -5,17 +5,19 @@
         class="white--text align-end"
         contain
         aspect-ratio="1"
-        :src="veranstaltung.Vorschaubild.url"
+        :src="terminabsprache.Vorschaubild.url"
       ></v-img>
-      <v-card-title class="ichen_blue--text text-h2">{{
-        veranstaltung.Titel
-      }}</v-card-title>
+      <v-card-title class="ichen_blue--text text-h2">
+        {{ terminabsprache.Titel }}
+      </v-card-title>
       <v-card-text>
         <client-only>
           <p class="ichen_brown--text">
-            <strong>{{ veranstaltung.Preis }} Euro plus Materialkosten</strong>
+            <strong
+              >{{ terminabsprache.Preis }} Euro plus Materialkosten</strong
+            >
           </p>
-          <p v-html="$md.render(veranstaltung.Beschreibung)"></p>
+          <p v-html="$md.render(terminabsprache.Beschreibung)"></p>
         </client-only>
       </v-card-text>
 
@@ -24,7 +26,10 @@
           nuxt
           depressed
           color="ichen_red white--text"
-          :to="{ name: 'terminabsprache-id', params: { id: veranstaltung.id } }"
+          :to="{
+            name: 'terminabsprache-id',
+            params: { id: terminabsprache.id },
+          }"
           >Termin anfragen</v-btn
         >
       </v-card-actions>
@@ -35,7 +40,7 @@
 <script>
 export default {
   props: {
-    veranstaltung: {
+    terminabsprache: {
       type: Object,
       required: true,
     },
