@@ -1,23 +1,27 @@
 <template>
-  <v-col xs="12" sm="6" lg="4">
+  <v-col cols="12" xs="12" sm="6" lg="4">
     <v-card rounded="0" flat>
       <v-img
         class="white--text align-end"
         contain
         aspect-ratio="1"
         :src="terminabsprache.Vorschaubild.url"
+        :srcset="terminabsprache.Vorschaubild | generateSrcset"
+        :sizes="terminabsprache.Vorschaubild | generateSizes"
       ></v-img>
-      <v-card-title class="ichen_blue--text text-h2">
-        {{ terminabsprache.Titel }}
-      </v-card-title>
+      <v-card-title class="ichen_blue--text text-h2 pt-6">{{
+        terminabsprache.Titel
+      }}</v-card-title>
       <v-card-text>
         <client-only>
-          <p class="ichen_brown--text">
-            <strong
-              >{{ terminabsprache.Preis }} Euro plus Materialkosten</strong
-            >
-          </p>
-          <p v-html="$md.render(terminabsprache.Beschreibung)"></p>
+          <div class="font-weight-bold">
+            {{ terminabsprache.Preis }} € (plus Materialkosten)
+          </div>
+
+          <div
+            class="pt-6"
+            v-html="$md.render(terminabsprache.Beschreibung)"
+          ></div>
         </client-only>
       </v-card-text>
 

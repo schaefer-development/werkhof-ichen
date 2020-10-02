@@ -7,11 +7,13 @@
           contain
           aspect-ratio="1"
           :src="veranstaltung.Vorschaubild.url"
+          :srcset="veranstaltung.Vorschaubild | generateSrcset"
+          :sizes="veranstaltung.Vorschaubild | generateSizes"
         ></v-img>
       </v-col>
       <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">
-        <v-card rounded="0" flat class="px-6 pt-8">
-          <p class="text-right">
+        <v-card rounded="0" flat class="px-0 pt-8">
+          <p class="text-right pr-3">
             <v-btn
               fab
               depressed
@@ -24,10 +26,9 @@
               <v-icon dark>mdi-close</v-icon>
             </v-btn>
           </p>
-
-          <v-list-item-title class="ichen_blue--text text-h2">
+          <v-card-title class="ichen_blue--text text-h2 px-0">
             {{ veranstaltung.Titel }}
-          </v-list-item-title>
+          </v-card-title>
 
           <v-card-text class="px-0">
             <p class="ichen_brown--text mb-0 pt-2 pb-2">

@@ -13,7 +13,7 @@
           <v-card-text class="white--text">
             <p>
               werkhof ichen
-              <br />ichen Schmitz <br />Diplom-Bekleidungs In­ge­ni­eu­rin
+              <br />Irmina Maria Schmitz <br />Diplom-Bekleidungs-Ingenieurin
               <br />
               <br />Im Alten Breidt 11a <br />53797 Lohmar-Breidt
               <br />
@@ -46,7 +46,7 @@
               rechts abbiegen (J.-Hofer-Weg) die 2. Möglichkeit rechts, dann
               liegt der werkhof ichen nach 50 m auf der linken Seite.
             </p>
-            <p class="pt-6">Ich freue mich auf Ihren Kontakt!</p>
+            <p>Ich freue mich auf Ihren Kontakt!</p>
           </v-card-text>
         </v-card>
       </v-col>

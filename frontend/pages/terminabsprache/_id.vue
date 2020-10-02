@@ -6,37 +6,36 @@
           class="white--text align-end"
           contain
           aspect-ratio="1"
-          :src="angebot.Vorschaubild.url"
+          :src="terminabsprache.Vorschaubild.url"
+          :srcset="terminabsprache.Vorschaubild | generateSrcset"
+          :sizes="terminabsprache.Vorschaubild | generateSizes"
         ></v-img>
       </v-col>
       <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">
         <v-card rounded="0" flat class="px-0 pt-8">
-          <v-list-item>
-            <v-list-item-content>
-              <v-list-item-title class="ichen_blue--text text-h2">
-                {{ angebot.Titel }}
-              </v-list-item-title>
-            </v-list-item-content>
-            <v-list-item-action>
-              <v-btn
-                fab
-                depressed
-                small
-                dark
-                aria-label="Abbrechen"
-                color="ichen_blue"
-                @click="cancel"
-              >
-                <v-icon dark>mdi-close</v-icon>
-              </v-btn>
-            </v-list-item-action>
-          </v-list-item>
+          <p class="text-right pr-3">
+            <v-btn
+              fab
+              depressed
+              small
+              dark
+              aria-label="Abbrechen"
+              color="ichen_blue"
+              @click="cancel"
+            >
+              <v-icon dark>mdi-close</v-icon>
+            </v-btn>
+          </p>
+          <v-card-title class="ichen_blue--text text-h2">{{
+            terminabsprache.Titel
+          }}</v-card-title>
           <v-card-text>
             <p class="ichen_brown--text">
-              <strong>{{ angebot.Preis }} Euro plus Materialkosten</strong>
+              <strong
+                >{{ terminabsprache.Preis }} Euro plus Materialkosten</strong
+              >
             </p>
-            <span v-html="$md.render(angebot.Beschreibung)"></span>
-
+            <span v-html="$md.render(terminabsprache.Beschreibung)"></span>
             <p class="pt-6">
               <v-alert text type="info" class="font-weight-bold">
                 Veranstaltungsangebote werden stets individuell vereinbart.
@@ -47,7 +46,6 @@
             <p class="py-6">
               Telefon:
               <a href="tel:+4922463197">02246 . 31 97</a>
-
               <br />Fax: 02246 . 94 94 090 <br />E-Mail:
               <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>
             </p>
@@ -64,10 +62,10 @@
 <script>
 export default {
   async asyncData(context) {
-    const angebot = await context.$axios.$get(
+    const terminabsprache = await context.$axios.$get(
       '/terminabspraches/' + context.params.id
     )
-    return { angebot }
+    return { terminabsprache }
   },
   methods: {
     cancel() {

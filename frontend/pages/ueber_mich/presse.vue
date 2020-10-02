@@ -25,13 +25,15 @@
             >Der Werkhof ichen in der Presse</v-card-title
           >
           <v-card-text>
-            <p>
+            <p class="text-uppercase">
               <strong>
-                Der Kölner Stadtanzeiger berichtete am 23.08.2010 über in seiner
+                Der Kölner Stadtanzeiger berichtete am 23.08.2010 in seiner
                 Reihe "Märkte und Macher" über Irmina Schmitz:
               </strong>
             </p>
-            <h3>Ein Faible für die Lederhose</h3>
+            <h3 class="text-h2 ichen_blue--text pt-3 pb-3">
+              Ein Faible für die Lederhose
+            </h3>
             <p>
               Lohmar - Auf der Büste im Atelier von Irmina Schmitz hängt ein
               bodenlanges gelbes Kleid aus Chiffon und Seide. „Das habe ich für
@@ -109,13 +111,15 @@
             width="75%"
           />
           <v-card-text>
-            <p class="pt-12">
+            <p class="text-uppercase pt-12">
               <strong>
                 Die Kölnische Rundschau berichtete am 15.11.2006 über die
                 Ausstellung auf dem werkhof ichen:
               </strong>
             </p>
-            <h3>Mode und mehr aus dem werkhof</h3>
+            <h3 class="text-h2 ichen_blue--text pt-3 pb-3">
+              Mode und mehr aus dem werkhof
+            </h3>
             <p>
               Bekleidungsingenieurin lud ihre Kolleginnen zur Ausstellung ein
             </p>

@@ -8,7 +8,8 @@
           class="white--text"
           color="ichen_red"
           @click="$vuetify.goTo('#termine')"
-        >Termine</v-btn>
+          >Termine</v-btn
+        >
       </v-col>
       <v-col cols="12" xs="12" sm="9" md="3" lg="2" xl="2" class="pa-6">
         <v-btn
@@ -17,7 +18,8 @@
           class="white--text"
           color="ichen_red"
           @click="$vuetify.goTo('#nach_absprache')"
-        >Nach Terminabsprache</v-btn>
+          >Nach Terminabsprache</v-btn
+        >
       </v-col>
       <v-col
         cols="12"
@@ -68,7 +70,9 @@
             xl="9"
             class="ichen_beige--text"
           >
-            <h2 class="ichen_beige--text text-h2">Kinder helfen Kinder in Not</h2>
+            <h2 class="ichen_beige--text text-h2">
+              Kinder helfen Kinder in Not
+            </h2>
             <p>
               Neben den eigentlichen Projekten während des Nähkurses, haben die
               Kinder die Möglichkeit, an einer Patchworkdecke zu arbeiten. Wenn
@@ -99,7 +103,9 @@
     <v-row id="termine">
       <v-col cols="12">
         <h2 class="ichen_green ichen_blue--text text-h2 pa-6">
-          <v-icon size="40" class="ichen_blue--text pr-3">mdi-calendar-month</v-icon>Termine
+          <v-icon size="40" class="ichen_blue--text pr-3"
+            >mdi-calendar-month</v-icon
+          >Termine
         </h2>
       </v-col>
       <template v-if="filtered.veranstaltungen.length">
@@ -112,8 +118,7 @@
       <template v-else>
         <v-col cols="12">
           <v-alert outlined type="info" class="font-weight-bold">
-            Zu diesen Kategorien gibt es keine anstehenden
-            Veranstaltungen.
+            Zu diesen Kategorien gibt es keine anstehenden Veranstaltungen.
           </v-alert>
         </v-col>
       </template>
@@ -121,7 +126,9 @@
     <v-row id="nach_absprache" class="pt-12">
       <v-col cols="12" class="mt-12">
         <h2 class="ichen_green ichen_blue--text text-h2 pa-6">
-          <v-icon size="40" class="ichen_blue--text pr-3">mdi-content-cut</v-icon>Nach Terminabsprache
+          <v-icon size="40" class="ichen_blue--text pr-3"
+            >mdi-content-cut</v-icon
+          >Nach Terminabsprache
         </h2>
       </v-col>
       <template v-if="filtered.terminabsprachen.length">

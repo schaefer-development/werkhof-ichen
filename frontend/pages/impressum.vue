@@ -19,7 +19,7 @@
             </p>
             <p>
               Werkhof ichen
-              <br />Diplom-Bekleidungs Ingenieurin <br />Irmina Maria Schmitz
+              <br />Diplom-Bekleidungs-Ingenieurin <br />Irmina Maria Schmitz
             </p>
             <p>
               Im Alten Breidt 11a

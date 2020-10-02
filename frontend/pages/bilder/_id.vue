@@ -4,7 +4,6 @@
       <v-col cols="12" xs="12" sm="12" md="12" lg="12" xl="12">
         <v-card class="pb-12" flat>
           <v-list-item class="px-6 pt-6">
-            <v-list-item-content></v-list-item-content>
             <v-list-item-action>
               <v-btn
                 fab

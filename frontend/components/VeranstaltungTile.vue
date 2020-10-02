@@ -6,21 +6,31 @@
         contain
         aspect-ratio="1"
         :src="veranstaltung.Vorschaubild.url"
+        :srcset="veranstaltung.Vorschaubild | generateSrcset"
+        :sizes="veranstaltung.Vorschaubild | generateSizes"
       ></v-img>
-      <v-card-title class="ichen_blue--text text-h2">
-        {{ veranstaltung.Titel }}
-      </v-card-title>
+      <v-card-title class="ichen_blue--text text-h2 pt-6">{{
+        veranstaltung.Titel
+      }}</v-card-title>
       <v-card-text>
-        <p class="ichen_brown--text mb-0 pt-2 pb-2">
-          <strong>{{ veranstaltung.Anzeigedatum }}</strong>
-        </p>
-        <p class="ichen_brown--text pb-3">
-          <strong>{{ veranstaltung.Preis }} Euro plus Materialkosten</strong>
-        </p>
         <client-only>
-          <p v-html="$md.render(veranstaltung.Beschreibung)"></p>
+          <!--<v-icon class="ichen_green--text pr-1">mdi-arrow-right</v-icon>-->
+
+          <div
+            class="font-weight-bold pt-6"
+            v-html="$md.render(veranstaltung.Anzeigedatum)"
+          ></div>
+          <div class="font-weight-bold">
+            {{ veranstaltung.Preis }} € (plus Materialkosten)
+          </div>
+
+          <div
+            class="pt-6"
+            v-html="$md.render(veranstaltung.Beschreibung)"
+          ></div>
         </client-only>
       </v-card-text>
+
       <v-card-text align="right">
         <template v-if="available">
           <strong class="success--text">
@@ -70,9 +80,5 @@ export default {
 <style lang="scss">
 .v-card__actions {
   justify-content: flex-end;
-}
-
-p.hr {
-  border-bottom: 2px dashed $ichen_yellow;
 }
 </style>
