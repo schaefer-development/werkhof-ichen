@@ -4,6 +4,20 @@ module.exports = function (anmeldung) {
   const veranstaltungs_datum = Date.parse(anmeldung.veranstaltung.Datum)
   return {
     text: `
+Werkhof ichen
+Irmina Schmitz
+
+Im Alten Breidt 11a
+53797 Lohmar-Breidt
+
+Telefon: 02246 . 31 97
+Fax: 02246 . 94 94 090
+E-Mail: info@werkhof-ichen.de
+Web: werkhof-ichen.de
+
+- - - - - -
+    
+
 Hallo  ${anmeldung.name},
 
 vielen Dank für Ihre Anmeldung für die Veranstaltung "${anmeldung.veranstaltung.Titel}" am ${format(veranstaltungs_datum, 'dd.MM.yyyy')}.
@@ -13,6 +27,8 @@ Zurzeit sind alle freien Plätze für diesen Kurs vergeben. Sobald ein Platz fre
 
 Viele Grüße und bis bald!
 ichen
+
+- - - - - -
 
 Rechtliche Hinweise:
 Der Teilnehmerplatz wird für Sie nach Vorauszahlung der Kursgebühr verbindlich reserviert. 
@@ -36,7 +52,7 @@ ichen
 <br />
 </p>
 <p>
-<hr>
+------
 <br />
 Rechtliche Hinweise:<br />
 Der Teilnehmerplatz wird für Sie nach Vorauszahlung der Kursgebühr verbindlich reserviert. 

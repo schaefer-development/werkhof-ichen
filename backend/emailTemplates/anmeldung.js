@@ -7,6 +7,19 @@ module.exports = function (anmeldung) {
   const date_payment = new Date(Math.min(veranstaltungs_datum, date_ahead))
   return {
     text: `
+Werkhof ichen
+Irmina Schmitz
+
+Im Alten Breidt 11a
+53797 Lohmar-Breidt
+
+Telefon: 02246 . 31 97
+Fax: 02246 . 94 94 090
+E-Mail: info@werkhof-ichen.de
+Web: werkhof-ichen.de
+
+- - - - - -
+
 Hallo  ${anmeldung.name},
 
 vielen Dank für Ihre Anmeldung für die Veranstaltung "${anmeldung.veranstaltung.Titel}" am ${format(veranstaltungs_datum, 'dd.MM.yyyy')}.
@@ -20,12 +33,28 @@ Bank: Kreissparkasse Köln
 Viele Grüße und bis bald!
 ichen
 
+- - - - - -
+
 Rechtliche Hinweise:
 Der Teilnehmerplatz wird für Sie nach Vorauszahlung der Kursgebühr verbindlich reserviert. 
 Sie haben die Möglichkeit, bis 14 Tage vor Beginn des Kurses von dieser Anmeldung zurück zu treten und die vorausgezahlte Kursgebühr wird zurückerstattet. 
 Es besteht kein Anspruch auf Rückerstattung der Gebühr bei einem Rücktritt außerhalb dieser Frist. Die Kursgebühr Erstattung erfolgt nur mit Attest oder wenn der Platz weitervergeben werden kann.
 `,
     html: `
+    <p>Werkhof ichen<br />
+    Irmina Schmitz</p>
+    <p>Im Alten Breidt 11a<br />
+    53797 Lohmar-Breidt</p>
+    <p>
+    Telefon: 02246 . 31 97<br />
+    Fax: 02246 . 94 94 090<br />
+    E-Mail: info@werkhof-ichen.de<br />
+    Web: werkhof-ichen.de</p>
+<p>
+<br />
+- - - - - -
+<br />
+</p>
 <p>Hallo  ${anmeldung.name},</p>
 <p>
 vielen Dank für Ihre Anmeldung für die Veranstaltung "${anmeldung.veranstaltung.Titel}" am ${format(veranstaltungs_datum, 'dd.MM.yyyy')}.</p>
@@ -43,7 +72,7 @@ ichen
 <br />
 </p>
 <p>
-<hr>
+- - - - - -
 <br />
 Rechtliche Hinweise:<br />
 Der Teilnehmerplatz wird für Sie nach Vorauszahlung der Kursgebühr verbindlich reserviert. 
