@@ -9,19 +9,17 @@
         :srcset="terminabsprache.Vorschaubild | generateSrcset"
         :sizes="terminabsprache.Vorschaubild | generateSizes"
       ></v-img>
-      <v-card-title class="ichen_blue--text text-h2 pt-6">{{
+      <v-card-title class="ichen_blue--text text-h2 pt-6">
+        {{
         terminabsprache.Titel
-      }}</v-card-title>
+        }}
+      </v-card-title>
       <v-card-text>
         <client-only>
-          <div class="font-weight-bold">
-            {{ terminabsprache.Preis }} € (plus Materialkosten)
-          </div>
-
           <div
-            class="pt-6"
-            v-html="$md.render(terminabsprache.Beschreibung)"
-          ></div>
+            class="font-weight-bold pt-3 pb-6 ichen_blue--text"
+          >{{ terminabsprache.Preis }} € (plus Materialkosten)</div>
+          <div v-html="$md.render(terminabsprache.Beschreibung)"></div>
         </client-only>
       </v-card-text>
 
@@ -34,8 +32,7 @@
             name: 'terminabsprache-id',
             params: { id: terminabsprache.id },
           }"
-          >Termin anfragen</v-btn
-        >
+        >Termin anfragen</v-btn>
       </v-card-actions>
     </v-card>
   </v-col>

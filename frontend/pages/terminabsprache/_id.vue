@@ -12,7 +12,7 @@
         ></v-img>
       </v-col>
       <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">
-        <v-card rounded="0" flat class="px-0 pt-8">
+        <v-card rounded="0" flat class="pt-8">
           <p class="text-right pr-3">
             <v-btn
               fab
@@ -26,15 +26,24 @@
               <v-icon dark>mdi-close</v-icon>
             </v-btn>
           </p>
-          <v-card-title class="ichen_blue--text text-h2">{{
+          <v-img
+            class="shortlist_divider py-6 mx-auto"
+            src="/sewing_needle_brown.svg"
+            alt="Nähnaht"
+            contain
+            justify="center"
+            width="95%"
+            max-width="300px"
+          />
+          <v-card-title class="ichen_blue--text text-h2">
+            {{
             terminabsprache.Titel
-          }}</v-card-title>
+            }}
+          </v-card-title>
           <v-card-text>
-            <p class="ichen_brown--text">
-              <strong
-                >{{ terminabsprache.Preis }} Euro plus Materialkosten</strong
-              >
-            </p>
+            <div
+              class="font-weight-bold ichen_blue--text pb-6"
+            >{{ terminabsprache.Preis }} € (plus Materialkosten)</div>
             <span v-html="$md.render(terminabsprache.Beschreibung)"></span>
             <p class="pt-6">
               <v-alert text type="info" class="font-weight-bold">
@@ -46,12 +55,11 @@
             <p class="py-6">
               Telefon:
               <a href="tel:+4922463197">02246 . 31 97</a>
-              <br />Fax: 02246 . 94 94 090 <br />E-Mail:
+              <br />Fax: 02246 . 94 94 090
+              <br />E-Mail:
               <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>
             </p>
-            <v-btn depressed color="ichen_blue white--text" @click="cancel"
-              >Zurück</v-btn
-            >
+            <v-btn depressed color="ichen_blue white--text" @click="cancel">Zurück</v-btn>
           </v-card-text>
         </v-card>
       </v-col>

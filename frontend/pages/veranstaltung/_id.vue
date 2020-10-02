@@ -26,32 +26,28 @@
               <v-icon dark>mdi-close</v-icon>
             </v-btn>
           </p>
-          <v-card-title class="ichen_blue--text text-h2 px-0">
-            {{ veranstaltung.Titel }}
-          </v-card-title>
-
-          <v-card-text class="px-0">
-            <p class="ichen_brown--text mb-0 pt-2 pb-2">
-              <strong>{{ veranstaltung.Anzeigedatum }}</strong>
-            </p>
-            <p class="ichen_brown--text pb-3">
-              <strong
-                >{{ veranstaltung.Preis }} Euro plus Materialkosten</strong
-              >
-            </p>
-
-            <p v-html="$md.render(veranstaltung.Beschreibung)"></p>
-          </v-card-text>
           <v-img
-            class="shortlist_divider py-8 mx-auto"
+            class="shortlist_divider py-6 mx-auto"
             src="/sewing_needle_brown.svg"
             alt="Nähnaht"
             contain
             justify="center"
-            width="100%"
-            max-width="500px"
+            width="95%"
+            max-width="300px"
           />
-          <v-card-text class="px-0">
+          <v-card-title class="ichen_blue--text text-h2">{{ veranstaltung.Titel }}</v-card-title>
+          <v-card-text>
+            <div
+              class="font-weight-bold ichen_blue--text"
+              v-html="$md.render(veranstaltung.Anzeigedatum)"
+            ></div>
+
+            <div
+              class="font-weight-bold ichen_blue--text pt-3 pb-6"
+            >{{ veranstaltung.Preis }} € (plus Materialkosten)</div>
+
+            <p v-html="$md.render(veranstaltung.Beschreibung)"></p>
+
             <v-expand-transition>
               <registration-form
                 v-show="displayForm"
@@ -65,16 +61,15 @@
                 v-if="available"
                 text
                 type="success"
-                class="font-weight-bold"
-                >Es sind noch Plätze frei!</v-alert
-              >
+                class="font-weight-bold mt-6"
+              >Es sind noch Plätze frei!</v-alert>
               <v-alert
                 v-else
                 text
                 flat
                 type="info"
                 icon="mdi-alert-circle"
-                class="font-weight-bold"
+                class="font-weight-bold mt-6"
               >
                 Aktuell sind alle Plätze belegt. Für den Fall, dass doch noch
                 ein Platz frei wird, können Sie sich hier auf die Warteliste
@@ -85,15 +80,8 @@
                 class="mr-4 mb-4"
                 color="ichen_red white--text"
                 @click="toggleRegistration"
-                >{{ available ? 'Zur Anmeldung' : 'Zur Warteliste' }}</v-btn
-              >
-              <v-btn
-                class="mb-4"
-                depressed
-                color="ichen_blue white--text"
-                @click="cancel"
-                >Zurück</v-btn
-              >
+              >{{ available ? 'Zur Anmeldung' : 'Zur Warteliste' }}</v-btn>
+              <v-btn class="mb-4" depressed color="ichen_blue white--text" @click="cancel">Zurück</v-btn>
             </template>
           </v-card-text>
         </v-card>

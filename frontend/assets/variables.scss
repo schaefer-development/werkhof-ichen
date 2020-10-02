@@ -182,3 +182,12 @@ $color-pack: false;
 .text-h2 a {
 text-decoration: none !important;
 }
+
+
+
+.v-list-item--link{
+  
+  &:before {
+    background-color:none !important;
+  }
+}
