@@ -10,12 +10,14 @@
         ></v-img>
       </v-col>
       <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">
-        <v-card rounded="0" flat class="px-6 pt-8">
+        <v-card rounded="0" flat class="px-0 pt-8">
           <v-list-item>
             <v-list-item-content>
-              <v-list-item-title class="ichen_blue--text text-h2">{{
+              <v-list-item-title class="ichen_blue--text text-h2">
+                {{
                 angebot.Titel
-              }}</v-list-item-title>
+                }}
+              </v-list-item-title>
             </v-list-item-content>
             <v-list-item-action>
               <v-btn
@@ -32,7 +34,11 @@
             </v-list-item-action>
           </v-list-item>
           <v-card-text>
-            <p v-html="$md.render(angebot.Beschreibung)"></p>
+            <p class="ichen_brown--text">
+              <strong>{{ angebot.Preis }} Euro plus Materialkosten</strong>
+            </p>
+            <span v-html="$md.render(angebot.Beschreibung)"></span>
+
             <p class="pt-6">
               <v-alert text type="info" class="font-weight-bold">
                 Veranstaltungsangebote werden stets individuell vereinbart.
@@ -44,12 +50,11 @@
               Telefon:
               <a href="tel:+4922463197">02246 . 31 97</a>
 
-              <br />Fax: 02246 . 94 94 090 <br />E-Mail:
+              <br />Fax: 02246 . 94 94 090
+              <br />E-Mail:
               <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>
             </p>
-            <v-btn depressed color="ichen_blue white--text" @click="cancel"
-              >Zurück</v-btn
-            >
+            <v-btn depressed color="ichen_blue white--text" @click="cancel">Zurück</v-btn>
           </v-card-text>
         </v-card>
       </v-col>
