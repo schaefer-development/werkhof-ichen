@@ -4,7 +4,7 @@ const { format } = require('date-fns')
 module.exports = function (anmeldung) {
   const veranstaltungs_datum = Date.parse(anmeldung.veranstaltung.Datum)
   const anmelde_datum = Date.parse(anmeldung.updated_at)
-  const date_ahead = addDays(veranstaltungs_datum, 3)
+  const date_ahead = addDays(anmelde_datum, 3)
   const date_payment = new Date(Math.min(veranstaltungs_datum, date_ahead))
   return {
     text: `
