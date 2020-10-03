@@ -184,10 +184,18 @@ text-decoration: none !important;
 }
 
 
-
-.v-list-item--link{
-  
+.v-list-item--link{  
   &:before {
     background-color:none !important;
   }
+}
+
+.v-card__actions {
+  justify-content: flex-end;
+}
+
+
+ul.booking_details {
+  list-style-type: square;
+  color: $ichen_green !important;
 }

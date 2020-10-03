@@ -10,15 +10,26 @@
         :sizes="terminabsprache.Vorschaubild | generateSizes"
       ></v-img>
       <v-card-title class="ichen_blue--text text-h2 pt-6">
-        {{
-        terminabsprache.Titel
-        }}
+        {{ terminabsprache.Titel }}
       </v-card-title>
       <v-card-text>
         <client-only>
-          <div
-            class="font-weight-bold pt-3 pb-6 ichen_blue--text"
-          >{{ terminabsprache.Preis }} € (plus Materialkosten)</div>
+          <ul class="booking_details pt-3 pb-1">
+            <li>
+              <div class="font-weight-bold ichen_blue--text">
+                {{ terminabsprache.Preis }} € (plus Materialkosten)
+              </div>
+            </li>
+          </ul>
+          <v-img
+            class="shortlist_divider py-6 mx-auto"
+            src="/sewing_needle_brown.svg"
+            alt="Nähnaht"
+            contain
+            justify="center"
+            width="95%"
+            max-width="300px"
+          />
           <div v-html="$md.render(terminabsprache.Beschreibung)"></div>
         </client-only>
       </v-card-text>
@@ -32,7 +43,8 @@
             name: 'terminabsprache-id',
             params: { id: terminabsprache.id },
           }"
-        >Termin anfragen</v-btn>
+          >Termin anfragen</v-btn
+        >
       </v-card-actions>
     </v-card>
   </v-col>
@@ -48,9 +60,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss">
-.v-card__actions {
-  justify-content: flex-end;
-}
-</style>

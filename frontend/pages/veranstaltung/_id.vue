@@ -26,26 +26,33 @@
               <v-icon dark>mdi-close</v-icon>
             </v-btn>
           </p>
-          <v-img
-            class="shortlist_divider py-6 mx-auto"
-            src="/sewing_needle_brown.svg"
-            alt="Nähnaht"
-            contain
-            justify="center"
-            width="95%"
-            max-width="300px"
-          />
-          <v-card-title class="ichen_blue--text text-h2">{{ veranstaltung.Titel }}</v-card-title>
+
+          <v-card-title class="ichen_blue--text text-h2">{{
+            veranstaltung.Titel
+          }}</v-card-title>
           <v-card-text>
-            <div
-              class="font-weight-bold ichen_blue--text"
-              v-html="$md.render(veranstaltung.Anzeigedatum)"
-            ></div>
-
-            <div
-              class="font-weight-bold ichen_blue--text pt-3 pb-6"
-            >{{ veranstaltung.Preis }} € (plus Materialkosten)</div>
-
+            <ul class="booking_details pt-3 pb-1">
+              <li>
+                <div
+                  class="font-weight-bold ichen_blue--text"
+                  v-html="$md.render(veranstaltung.Anzeigedatum)"
+                ></div>
+              </li>
+              <li>
+                <div class="font-weight-bold ichen_blue--text pt-3">
+                  {{ veranstaltung.Preis }} € (plus Materialkosten)
+                </div>
+              </li>
+            </ul>
+            <v-img
+              class="shortlist_divider py-6 mx-auto"
+              src="/sewing_needle_brown.svg"
+              alt="Nähnaht"
+              contain
+              justify="center"
+              width="95%"
+              max-width="350px"
+            />
             <p v-html="$md.render(veranstaltung.Beschreibung)"></p>
 
             <v-expand-transition>
@@ -62,7 +69,8 @@
                 text
                 type="success"
                 class="font-weight-bold mt-6"
-              >Es sind noch Plätze frei!</v-alert>
+                >Es sind noch Plätze frei!</v-alert
+              >
               <v-alert
                 v-else
                 text
@@ -80,8 +88,15 @@
                 class="mr-4 mb-4"
                 color="ichen_red white--text"
                 @click="toggleRegistration"
-              >{{ available ? 'Zur Anmeldung' : 'Zur Warteliste' }}</v-btn>
-              <v-btn class="mb-4" depressed color="ichen_blue white--text" @click="cancel">Zurück</v-btn>
+                >{{ available ? 'Zur Anmeldung' : 'Zur Warteliste' }}</v-btn
+              >
+              <v-btn
+                class="mb-4"
+                depressed
+                color="ichen_blue white--text"
+                @click="cancel"
+                >Zurück</v-btn
+              >
             </template>
           </v-card-text>
         </v-card>
