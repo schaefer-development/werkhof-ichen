@@ -2,7 +2,7 @@ const { format } = require('date-fns')
 
 module.exports = function (anmeldung) {
   const veranstaltungs_datum = Date.parse(anmeldung.veranstaltung.Datum)
-  const anmelde_datum = Date.parse(anmeldung.veranstaltung.updated_at)
+  const anmelde_datum = Date.parse(anmeldung.updated_at)
   return {
     text: `
     Werkhof ichen
