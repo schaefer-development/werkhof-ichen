@@ -11,12 +11,12 @@
         Falls Sie keine Bestätigung erhalten haben, nehmen Sie bitte Kontakt mit
         mir auf:
         <br />Telefon: 02246 . 31 97 oder per E-Mail:
-        <a
-          href="mailto:info@werkhof-ichen.de"
-        >info@werkhof-ichen.de</a>
+        <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>
       </p>
       <p>
-        <v-btn depressed color="ichen_blue white--text" @click="confirm">Verstanden</v-btn>
+        <v-btn depressed color="ichen_blue white--text" @click="confirm"
+          >Verstanden</v-btn
+        >
       </p>
     </template>
 
@@ -73,11 +73,19 @@
         </template>
       </v-checkbox>
       <v-alert text type="info" class="font-weight-bold">
-        <template v-if="available">Ihr Platz ist erst mit Zahlungseingang reserviert.</template>
+        <template v-if="available"
+          >Ihr Platz ist erst mit Zahlungseingang reserviert.</template
+        >
         <template v-else>
           Sobald ein Platz frei wird, melde ich mich bei Ihnen telefonisch oder
           per E-Mail.
         </template>
+      </v-alert>
+      <v-alert v-if="error" text type="error" class="font-weight-bold">
+        Ups, da ist etwas schief gelaufen. Bitte versuchen Sie es erneut und
+        wenn das Problem weiterhin besteht, kontaktieren Sie mich bitte per
+        E-Mail an
+        <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>.
       </v-alert>
 
       <v-btn
@@ -87,8 +95,15 @@
         :disabled="!valid"
         :loading="loading"
         @click="submit"
-      >{{ available ? 'Anmelden' : 'Auf Warteliste setzen' }}</v-btn>
-      <v-btn depressed class="mb-4" color="ichen_blue white--text" @click="cancel">Abbrechen</v-btn>
+        >{{ available ? 'Anmelden' : 'Auf Warteliste setzen' }}</v-btn
+      >
+      <v-btn
+        depressed
+        class="mb-4"
+        color="ichen_blue white--text"
+        @click="cancel"
+        >Abbrechen</v-btn
+      >
     </v-form>
   </div>
 </template>
@@ -126,6 +141,7 @@ export default {
     ],
     agbRules: [(v) => !!v || 'Sie müssen den AGB zustimmen, um fortzufahren'],
     success: false,
+    error: false,
     loading: false,
   }),
   computed: {
@@ -144,12 +160,19 @@ export default {
       this.loading = true
       const { anmeldung } = this
       anmeldung.veranstaltung = this.veranstaltung
-      await this.$axios.$post('/anmeldungs/', {
-        ...anmeldung,
-      })
-      this.loading = false
-      this.success = true
-      this.$vuetify.goTo('#registration-form', { duration: 1500 })
+      try {
+        await this.$axios.$post('/anmeldungs/', {
+          ...anmeldung,
+        })
+        this.success = true
+        this.$vuetify.goTo('#registration-form', { duration: 1500 })
+      } catch (err) {
+        // eslint-disable-next-line no-console
+        console.log(err)
+        this.error = true
+      } finally {
+        this.loading = false
+      }
     },
   },
 }
