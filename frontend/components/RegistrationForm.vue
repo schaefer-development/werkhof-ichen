@@ -1,6 +1,6 @@
 <template>
   <div id="registration-form">
-    <template v-if="success">
+    <v-alert v-if="success" type="success">
       <h3 class="ichen_blue--text text-h2 pb-6">Erfolgreich angemeldet</h3>
       <p>
         Sie erhalten in den nächsten Minuten eine Bestätigung Ihrer Anmeldung
@@ -18,10 +18,17 @@
           >Verstanden</v-btn
         >
       </p>
-    </template>
+    </v-alert>
 
     <v-form v-else ref="form" v-model="valid" class="pt-10">
-      <h3 class="ichen_blue--text text-h2 pb-6">Anmeldeformular</h3>
+      <h3 class="ichen_blue--text text-h2 pb-6">
+        <template v-if="available">
+          Anmeldeformular
+        </template>
+        <template v-else>
+          Auf Warteliste setzen
+        </template>
+      </h3>
       <v-text-field
         v-model="anmeldung.name"
         outlined
@@ -73,12 +80,23 @@
         </template>
       </v-checkbox>
       <v-alert text type="info" class="font-weight-bold">
-        <template v-if="available"
-          >Ihr Platz ist erst mit Zahlungseingang reserviert.</template
-        >
+        <template v-if="available">
+          <p>
+            Es sind noch Plätze frei!
+          </p>
+          <p>
+            Ihr Platz ist erst mit Zahlungseingang reserviert.
+          </p>
+        </template>
         <template v-else>
-          Sobald ein Platz frei wird, melde ich mich bei Ihnen telefonisch oder
-          per E-Mail.
+          <p>
+            Aktuell sind alle Plätze belegt. Für den Fall, dass doch noch ein
+            Platz frei wird, können Sie sich hier auf die Warteliste setzen.
+          </p>
+          <p>
+            Sobald ein Platz frei wird, melde ich mich bei Ihnen telefonisch
+            oder per E-Mail.
+          </p>
         </template>
       </v-alert>
       <v-alert v-if="error" text type="error" class="font-weight-bold">
@@ -165,7 +183,7 @@ export default {
           ...anmeldung,
         })
         this.success = true
-        this.$vuetify.goTo('#registration-form', { duration: 1500 })
+        this.$vuetify.goTo('#registration-form', { duration: 0 })
       } catch (err) {
         // eslint-disable-next-line no-console
         console.log(err)
