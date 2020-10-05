@@ -69,7 +69,7 @@
           </p>
         </v-alert>
 
-        <v-form v-else ref="form" v-model="valid" class="pt-10">
+        <v-form v-else v-model="valid" class="pt-10">
           <p v-html="$md.render(veranstaltung.Beschreibung)"></p>
 
           <h3 class="ichen_blue--text text-h2 pb-6">
@@ -86,6 +86,7 @@
             :rules="requiredRules"
             required
             label="Vor- und Nachname"
+            @change="normalize"
           ></v-text-field>
 
           <v-text-field
@@ -94,14 +95,20 @@
             :rules="emailRules"
             required
             label="E-Mailadresse"
+            @change="normalize"
           ></v-text-field>
           <v-text-field
             v-model="anmeldung.telefonNummer"
             outlined
             :rules="phoneNumberRules"
             label="Telefonnummer"
+            @change="normalize"
           ></v-text-field>
-          <v-text-field v-model="anmeldung.strasseHausnummer" outlined>
+          <v-text-field
+            v-model="anmeldung.strasseHausnummer"
+            outlined
+            @change="normalize"
+          >
             <template v-slot:label>
               <div>
                 <div>Straße und Hausnummer</div>
@@ -109,7 +116,7 @@
               </div>
             </template>
           </v-text-field>
-          <v-text-field v-model="anmeldung.plzOrt" outlined>
+          <v-text-field v-model="anmeldung.plzOrt" outlined @change="normalize">
             <template v-slot:label>
               <div>
                 <div>Postleitzahl und Ort</div>
@@ -182,8 +189,8 @@
 
 <script>
 import isAvailable from '~/helpers/isAvailable.js'
-const emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
+// eslint-disable-next-line no-useless-escape
+const emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
 export default {
   props: {
@@ -229,6 +236,11 @@ export default {
     },
     cancel() {
       this.$emit('cancel')
+    },
+    normalize() {
+      for (const key in this.anmeldung) {
+        this.anmeldung[key] = this.anmeldung[key].trim()
+      }
     },
     async submit() {
       this.loading = true
