@@ -5,11 +5,12 @@
       :key="veranstaltung.id"
       class="shortlist_item pt-2"
     >
-      <p>
+      <p class="ma-0">
         <strong>{{ veranstaltung.Titel }}</strong>
-        <br />
-        {{ veranstaltung.Datum | formatDate }} Uhr
       </p>
+      <div class v-html="$md.render(veranstaltung.Anzeigedatum)"></div>
+
+      <p>{{ veranstaltung.Kurzbeschreibung }}</p>
       <client-only placeholder="Anmelden">
         <div class="text-right">
           <v-btn
@@ -17,8 +18,7 @@
             :to="{ name: 'veranstaltung-id', params: { id: veranstaltung.id } }"
             depressed
             color="ichen_red white--text"
-            >Mehr</v-btn
-          >
+          >Mehr</v-btn>
         </div>
       </client-only>
       <v-img

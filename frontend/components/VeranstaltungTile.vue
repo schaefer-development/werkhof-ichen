@@ -9,9 +9,7 @@
         :srcset="veranstaltung.Vorschaubild | generateSrcset"
         :sizes="veranstaltung.Vorschaubild | generateSizes"
       ></v-img>
-      <v-card-title class="ichen_blue--text text-h2 pt-3">
-        {{ veranstaltung.Titel }}
-      </v-card-title>
+      <v-card-title class="ichen_blue--text text-h2 pt-3">{{ veranstaltung.Titel }}</v-card-title>
       <v-card-text>
         <client-only>
           <ul class="booking_details pt-3 pb-1">
@@ -22,9 +20,9 @@
               ></div>
             </li>
             <li>
-              <div class="font-weight-bold ichen_blue--text pt-3">
-                {{ veranstaltung.Preis }} € (plus Materialkosten)
-              </div>
+              <div
+                class="font-weight-bold ichen_blue--text pt-3"
+              >{{ veranstaltung.Preis }} € (plus Materialkosten)</div>
             </li>
           </ul>
 
@@ -37,7 +35,7 @@
             width="95%"
             max-width="300px"
           />
-          <div v-html="$md.render(veranstaltung.Beschreibung)"></div>
+          <p>{{ veranstaltung.Kurzbeschreibung }}</p>
         </client-only>
       </v-card-text>
 
@@ -50,8 +48,7 @@
         </template>
         <template v-else>
           <strong class="ichen_blue--text">
-            <v-icon color="ichen_blue" class="pr-1">mdi-alert-circle</v-icon
-            >Leider ausgebucht
+            <v-icon color="ichen_blue" class="pr-1">mdi-alert-circle</v-icon>Leider ausgebucht
           </strong>
         </template>
       </v-card-text>
@@ -66,8 +63,7 @@
             params: { id: veranstaltung.id },
             hash: '#registration-form',
           }"
-          >{{ available ? 'Anmelden' : 'Warteliste' }}</v-btn
-        >
+        >{{ available ? 'Anmelden' : 'Warteliste' }}</v-btn>
       </v-card-actions>
     </v-card>
   </v-col>
