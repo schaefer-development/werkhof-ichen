@@ -20,6 +20,7 @@ module.exports = {
   lifecycles: {
 
     async afterCreate(anmeldung, data) {
+      const { SMTP_DEFAULT_REPLY_TO = 'default-reply-to@example.org' } = process.env
       strapi.log.debug('Anmeldung created!', anmeldung, data)
       const { veranstaltung } = anmeldung
       const emailTemplate = (await isAvailable(veranstaltung)) ? templateAnmeldung : templateWarteliste
@@ -27,6 +28,7 @@ module.exports = {
 
       await strapi.plugins['email'].services.email.send({
         to: anmeldung.email,
+        cc: SMTP_DEFAULT_REPLY_TO,
         subject: 'Ihre Anmeldung auf werkhof-ichen.de',
         text,
         html
