@@ -182,6 +182,8 @@
 
 <script>
 import isAvailable from '~/helpers/isAvailable.js'
+const emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 
 export default {
   props: {
@@ -209,7 +211,7 @@ export default {
     ],
     emailRules: [
       (v) => !!v || 'muss ausgefüllt werden',
-      (v) => /.+@.+\..+/.test(v) || 'muss gültig sein',
+      (v) => emailRegExp.test(v) || 'muss gültig sein',
     ],
     agbRules: [(v) => !!v || 'Sie müssen den AGB zustimmen, um fortzufahren'],
     success: false,
