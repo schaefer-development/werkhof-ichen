@@ -61,7 +61,11 @@
           nuxt
           depressed
           color="ichen_red white--text"
-          :to="{ name: 'veranstaltung-id', params: { id: veranstaltung.id } }"
+          :to="{
+            name: 'veranstaltung-id',
+            params: { id: veranstaltung.id },
+            hash: '#registration-form',
+          }"
           >{{ available ? 'Anmelden' : 'Warteliste' }}</v-btn
         >
       </v-card-actions>
