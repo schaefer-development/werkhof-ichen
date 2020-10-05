@@ -102,11 +102,7 @@
 
     <v-row id="termine">
       <v-col cols="12">
-        <h2 class="ichen_green ichen_blue--text text-h2 pa-6">
-          <v-icon size="40" class="ichen_blue--text pr-3"
-            >mdi-calendar-month</v-icon
-          >Termine
-        </h2>
+        <h2 class="ichen_green ichen_blue--text text-h2 pa-6">Termine</h2>
       </v-col>
       <template v-if="filtered.veranstaltungen.length">
         <veranstaltung-tile
@@ -117,18 +113,17 @@
       </template>
       <template v-else>
         <v-col cols="12">
-          <v-alert outlined type="info" class="font-weight-bold">
-            Zu diesen Kategorien gibt es keine anstehenden Veranstaltungen.
-          </v-alert>
+          <v-alert outlined type="info" class="font-weight-bold"
+            >Zu diesen Kategorien gibt es keine anstehenden
+            Veranstaltungen.</v-alert
+          >
         </v-col>
       </template>
     </v-row>
     <v-row id="nach_absprache" class="pt-12">
       <v-col cols="12" class="mt-12">
         <h2 class="ichen_green ichen_blue--text text-h2 pa-6">
-          <v-icon size="40" class="ichen_blue--text pr-3"
-            >mdi-content-cut</v-icon
-          >Nach Terminabsprache
+          Nach Terminabsprache
         </h2>
       </v-col>
       <template v-if="filtered.terminabsprachen.length">
