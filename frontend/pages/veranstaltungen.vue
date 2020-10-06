@@ -113,10 +113,9 @@
       </template>
       <template v-else>
         <v-col cols="12">
-          <v-alert outlined type="info" class="font-weight-bold"
-            >Zu diesen Kategorien gibt es keine anstehenden
-            Veranstaltungen.</v-alert
-          >
+          <v-alert outlined type="info" class="font-weight-bold">
+            Zu diesen Kategorien gibt es keine anstehenden Veranstaltungen.
+          </v-alert>
         </v-col>
       </template>
     </v-row>
@@ -189,6 +188,11 @@ export default {
         ),
       }
     },
+  },
+  head() {
+    return {
+      title: ' | Veranstaltungen',
+    }
   },
 }
 </script>
