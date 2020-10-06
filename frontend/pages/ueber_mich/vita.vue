@@ -2,7 +2,10 @@
   <v-container>
     <v-row class="pb-xs-6">
       <v-col cols="12">
-        <v-img src="/header_images/header_kontakt.jpg" alt="Werkhof ichen" />
+        <v-img
+          src="/header_images/header_flowers.jpg"
+          alt="werkhof ichen: Blumen"
+        />
       </v-col>
     </v-row>
     <v-row>
