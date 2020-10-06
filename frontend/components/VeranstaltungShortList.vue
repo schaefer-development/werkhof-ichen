@@ -8,11 +8,11 @@
       <p class="ma-0">
         <strong>{{ veranstaltung.Titel }}</strong>
       </p>
-      <div class v-html="$md.render(veranstaltung.Anzeigedatum)"></div>
+      <div class="anzeigedatum" v-html="$md.render(veranstaltung.Anzeigedatum)"></div>
 
       <p>{{ veranstaltung.Kurzbeschreibung }}</p>
       <client-only placeholder="Anmelden">
-        <div class="text-right">
+        <div>
           <v-btn
             nuxt
             :to="{ name: 'veranstaltung-id', params: { id: veranstaltung.id } }"
@@ -45,7 +45,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" >
 .shortlist .shortlist_item:last-child .v-image {
   display: none;
 }
