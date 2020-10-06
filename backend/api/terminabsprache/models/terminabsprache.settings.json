@@ -37,6 +37,9 @@
     },
     "Preis": {
       "type": "integer"
+    },
+    "Dauer": {
+      "type": "richtext"
     }
   }
 }
