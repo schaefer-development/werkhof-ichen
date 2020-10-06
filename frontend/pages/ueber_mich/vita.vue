@@ -47,7 +47,10 @@
       <v-col cols="12" xs="12" sm="4" md="4" lg="4" xl="4">
         <v-img src="/with_you.jpg" alt="Ich bin bei Dir" />
         <br />
-        <v-img src="/breidter_maedchen.jpg" alt="Ich bin ein Breidter Mädchen" />
+        <v-img
+          src="/breidter_maedchen.jpg"
+          alt="Ich bin ein Breidter Mädchen"
+        />
       </v-col>
     </v-row>
   </v-container>

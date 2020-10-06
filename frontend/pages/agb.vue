@@ -61,13 +61,12 @@
               Sollten Sie einen gebuchten Kurs – aus welchen Gründen auch immer
               – nicht besuchen können, gelten die folgenden Stornobedingungen:
               Der Rücktritt hat schriftlich zu erfolgen (per Post oder E-Mail).
-              Stornierung bis 4 Wochen vor Kursbeginn wird ohne Storno-Gebühren
+              Stornierung bis 2 Wochen vor Kursbeginn wird ohne Storno-Gebühren
               bearbeitet. Sie erhalten die gesamte Kursgebühr erstattet. (Bitte
-              teilen Sie mir hierfür Ihre Bankverbindungen mit.) Mit Beginn der
-              4. Woche bis 14 Tage vor Kursbeginn erstatte ich Ihnen 50% der
-              Kursgebühr. Bitte haben Sie Verständnis, dass ich Stornierungen ab
-              dem 13. Tag vor Kursbeginn nicht mehr berücksichtigen kann und
-              eine Erstattung der Kursgebühr entfällt.
+              teilen Sie mir hierfür Ihre Bankverbindungen mit.). Bitte haben
+              Sie Verständnis, dass ich Stornierungen ab dem 13. Tag vor
+              Kursbeginn nicht mehr berücksichtigen kann und eine Erstattung der
+              Kursgebühr entfällt.
             </p>
           </v-card-text>
         </v-card>
