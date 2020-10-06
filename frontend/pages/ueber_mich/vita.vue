@@ -2,7 +2,7 @@
   <v-container>
     <v-row class="pb-xs-6">
       <v-col cols="12">
-        <v-img src="/header_images/header_hand.jpg" alt="werkhof ichen" />
+        <v-img src="/header_images/header_kontakt.jpg" alt="Werkhof ichen" />
       </v-col>
     </v-row>
     <v-row>
@@ -47,10 +47,7 @@
       <v-col cols="12" xs="12" sm="4" md="4" lg="4" xl="4">
         <v-img src="/with_you.jpg" alt="Ich bin bei Dir" />
         <br />
-        <v-img
-          src="/breidter_maedchen.jpg"
-          alt="Ich bin ein Breidter Mädchen"
-        />
+        <v-img src="/breidter_maedchen.jpg" alt="Ich bin ein Breidter Mädchen" />
       </v-col>
     </v-row>
   </v-container>
