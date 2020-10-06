@@ -33,12 +33,12 @@
             Falls Sie keine Bestätigungsmail erhalten haben, nehmen Sie bitte
             Kontakt mit mir auf:
             <br />Telefon: 02246 . 31 97 oder per E-Mail:
-            <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>
+            <a
+              href="mailto:info@werkhof-ichen.de"
+            >info@werkhof-ichen.de</a>
           </p>
           <p>
-            <v-btn depressed color="ichen_blue white--text" @click="confirm"
-              >Verstanden</v-btn
-            >
+            <v-btn depressed color="ichen_blue white--text" @click="confirm">Verstanden</v-btn>
           </p>
         </v-alert>
 
@@ -56,17 +56,15 @@
               <v-icon dark>mdi-close</v-icon>
             </v-btn>
           </p>
-          <v-card-title class="ichen_blue--text text-h2 px-0">
-            {{ veranstaltung.Titel }}
-          </v-card-title>
+          <v-card-title class="ichen_blue--text text-h2 px-0">{{ veranstaltung.Titel }}</v-card-title>
           <div
             class="event_detail ichen_brown--text font-weight-bold"
             v-html="$md.render(veranstaltung.Anzeigedatum)"
           ></div>
 
-          <div class="event_detail ichen_brown--text font-weight-bold">
-            {{ veranstaltung.Preis }} € (plus Materialkosten)
-          </div>
+          <div
+            class="event_detail ichen_brown--text font-weight-bold"
+          >{{ veranstaltung.Preis }} € (plus Materialkosten)</div>
 
           <v-img
             class="shortlist_divider pt-6 pb-7 my-0 mx-auto"
@@ -93,15 +91,12 @@
           <p class="pt-6 pb-3 ma-0">
             <template v-if="available">
               <strong class="ichen_green--text">
-                <v-icon color="ichen_green" class="pr-1"
-                  >mdi-check-circle</v-icon
-                >Noch Plätze frei
+                <v-icon color="ichen_green" class="pr-1">mdi-check-circle</v-icon>Noch Plätze frei
               </strong>
             </template>
             <template v-else>
-              <strong class="ichen_red--text">
-                <v-icon color="ichen_red" class="pr-1">mdi-alert-circle</v-icon
-                >Aktuell sind alle Plätze belegt, es gibt aber eine WARTELISTE.
+              <strong class="error--text">
+                <v-icon color="error" class="pr-1">mdi-alert-circle</v-icon>Aktuell sind alle Plätze belegt, es gibt aber eine WARTELISTE.
               </strong>
               <br />
             </template>
@@ -136,11 +131,7 @@
             label="Telefonnummer"
             @change="normalize"
           ></v-text-field>
-          <v-text-field
-            v-model="anmeldung.strasseHausnummer"
-            outlined
-            @change="normalize"
-          >
+          <v-text-field v-model="anmeldung.strasseHausnummer" outlined @change="normalize">
             <template v-slot:label>
               <div>
                 <div>Straße und Hausnummer</div>
@@ -163,16 +154,13 @@
                   Ich habe die
                   <nuxt-link to="/agb">AGB</nuxt-link>&nbsp;und die
                   Informationen zum
-                  <nuxt-link to="/datenschutz">Datenschutz</nuxt-link
-                  >&nbsp;gelesen und stimme beiden zu.
+                  <nuxt-link to="/datenschutz">Datenschutz</nuxt-link>&nbsp;gelesen und stimme beiden zu.
                 </div>
               </div>
             </template>
           </v-checkbox>
           <v-alert text type="info" class="font-weight-bold mt-4 mb-10">
-            <template v-if="available"
-              >Ihr Platz ist erst mit Zahlungseingang reserviert.</template
-            >
+            <template v-if="available">Ihr Platz ist erst mit Zahlungseingang reserviert.</template>
             <template v-else>
               Sobald ein Platz frei wird, melde ich mich bei Ihnen telefonisch
               oder per E-Mail.
@@ -182,7 +170,9 @@
             Ups, da ist etwas schief gelaufen. Bitte versuchen Sie es erneut und
             wenn das Problem weiterhin besteht, kontaktieren Sie mich bitte per
             E-Mail an
-            <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>.
+            <a
+              href="mailto:info@werkhof-ichen.de"
+            >info@werkhof-ichen.de</a>.
           </v-alert>
 
           <v-btn
@@ -192,15 +182,8 @@
             :disabled="!valid"
             :loading="loading"
             @click="submit"
-            >{{ available ? 'Anmelden' : 'Auf Warteliste setzen' }}</v-btn
-          >
-          <v-btn
-            depressed
-            class="mb-4"
-            color="ichen_blue white--text"
-            @click="cancel"
-            >Abbrechen</v-btn
-          >
+          >{{ available ? 'Anmelden' : 'Auf Warteliste setzen' }}</v-btn>
+          <v-btn depressed class="mb-4" color="ichen_blue white--text" @click="cancel">Abbrechen</v-btn>
         </v-form>
       </div>
     </v-card-text>
