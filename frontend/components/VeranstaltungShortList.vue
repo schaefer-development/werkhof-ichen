@@ -8,7 +8,10 @@
       <p class="ma-0">
         <strong>{{ veranstaltung.Titel }}</strong>
       </p>
-      <div class="anzeigedatum" v-html="$md.render(veranstaltung.Anzeigedatum)"></div>
+      <div
+        class="anzeigedatum"
+        v-html="$md.render(veranstaltung.Anzeigedatum)"
+      ></div>
 
       <p>{{ veranstaltung.Kurzbeschreibung }}</p>
       <client-only placeholder="Anmelden">
@@ -18,7 +21,8 @@
             :to="{ name: 'veranstaltung-id', params: { id: veranstaltung.id } }"
             depressed
             color="ichen_red white--text"
-          >Mehr</v-btn>
+            >Mehr</v-btn
+          >
         </div>
       </client-only>
       <v-img
@@ -45,7 +49,7 @@ export default {
 }
 </script>
 
-<style lang="scss" >
+<style lang="scss">
 .shortlist .shortlist_item:last-child .v-image {
   display: none;
 }
