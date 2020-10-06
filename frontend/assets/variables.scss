@@ -92,13 +92,13 @@ $material-dark: (
 
 $headings: (
   h1: (
-    'size': 1.5em,
+    'size': 1.7em,
     'weight': 900,
     'line-height': 1.5,
     'font-family': 'Overlock',
   ),
   h2: (
-    'size': 1.4em,
+    'size': 1.6em,
     'weight': 900,
     'line-height': 1.5,
     'font-family': 'Overlock',
@@ -190,12 +190,19 @@ text-decoration: none !important;
   }
 }
 
-.v-card__actions {
-  justify-content: flex-end;
-}
-
 
 ul.booking_details {
   list-style-type: square;
   color: $ichen_green !important;
+  li div{
+    color:rgba(0,0,0,0.9); 
+   }
+}
+
+
+div.event_detail {
+  padding-bottom: 1em;
+  p {
+    margin-bottom: 0;
+  }
 }
