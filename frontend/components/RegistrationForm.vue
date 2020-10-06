@@ -1,64 +1,37 @@
 <template>
-  <v-card id="registration-form" rounded="0" flat class="px-0 pt-8">
-    <p class="text-right pr-3">
-      <v-btn
-        fab
-        depressed
-        small
-        dark
-        aria-label="Abbrechen"
-        color="ichen_blue"
-        @click="cancel"
-      >
-        <v-icon dark>mdi-close</v-icon>
-      </v-btn>
-    </p>
-
-    <v-card-title class="ichen_blue--text text-h2">{{
-      veranstaltung.Titel
-    }}</v-card-title>
+  <v-card id="registration-form" rounded="0" flat class="px-0 pt-4">
     <v-card-text>
-      <ul class="booking_details pt-3 pb-1">
-        <li>
-          <div
-            class="font-weight-bold ichen_blue--text"
-            v-html="$md.render(veranstaltung.Anzeigedatum)"
-          ></div>
-        </li>
-        <li>
-          <div class="font-weight-bold ichen_blue--text pt-3">
-            {{ veranstaltung.Preis }} € (plus Materialkosten)
-          </div>
-        </li>
-      </ul>
-      <v-img
-        class="shortlist_divider py-6 mx-auto"
-        src="/sewing_needle_brown.svg"
-        alt="Nähnaht"
-        contain
-        justify="center"
-        width="95%"
-        max-width="350px"
-      />
       <div id="alert-wrapper">
         <v-alert v-if="success" type="success">
-          <h3 class="ichen_blue--text text-h2 pb-6">
-            <template v-if="available">
-              Erfolgreich angemeldet
-            </template>
-            <template v-else>
-              Erfolgreich zur Warteliste hinzugefügt
-            </template>
-          </h3>
+          <template v-if="available">
+            <!-- -->
+            <!-- -->
+            <span class="font-weight-bold">DAS HAT GEKLAPPT!</span>
+            <h3 class="py-6 ichen_blue--text text-h2">
+              Erfolgreich angemeldet für:
+              <br />
+              {{ veranstaltung.Titel }}
+            </h3>
+            <!-- -->
+          </template>
+          <template v-else>
+            <!-- -->
+            <span class="font-weight-bold">DAS HAT GEKLAPPT!</span>
+            <h3 class="py-6 ichen_blue--text text-h2">
+              Erfolgreich zur Warteliste hinzugefügt:
+              <br />
+              {{ veranstaltung.Titel }}
+            </h3>
+            <!-- -->
+          </template>
           <p>
-            Sie erhalten in den nächsten Minuten eine Bestätigung Ihrer
-            Anmeldung mit allen weiteren Details per E-Mail. Wenn Sie keine
-            Nachricht erhalten haben, schauen Sie auch bitte einmal in Ihrem
-            Spamordner nach.
+            Sie erhalten in den nächsten Minuten eine Bestätigungsmail mit allen
+            weiteren Details. Wenn Sie keine Nachricht erhalten haben, schauen
+            Sie auch bitte einmal in Ihrem Spamordner nach.
           </p>
           <p>
-            Falls Sie keine Bestätigung erhalten haben, nehmen Sie bitte Kontakt
-            mit mir auf:
+            Falls Sie keine Bestätigungsmail erhalten haben, nehmen Sie bitte
+            Kontakt mit mir auf:
             <br />Telefon: 02246 . 31 97 oder per E-Mail:
             <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>
           </p>
@@ -69,17 +42,76 @@
           </p>
         </v-alert>
 
-        <v-form v-else v-model="valid" class="pt-10">
+        <v-form v-else v-model="valid">
+          <p class="text-right my-0">
+            <v-btn
+              fab
+              depressed
+              small
+              dark
+              aria-label="Abbrechen"
+              color="ichen_blue"
+              @click="cancel"
+            >
+              <v-icon dark>mdi-close</v-icon>
+            </v-btn>
+          </p>
+          <v-card-title class="ichen_blue--text text-h2 px-0">
+            {{ veranstaltung.Titel }}
+          </v-card-title>
+          <div
+            class="event_detail ichen_brown--text font-weight-bold"
+            v-html="$md.render(veranstaltung.Anzeigedatum)"
+          ></div>
+
+          <div class="event_detail ichen_brown--text font-weight-bold">
+            {{ veranstaltung.Preis }} € (plus Materialkosten)
+          </div>
+
+          <v-img
+            class="shortlist_divider pt-6 pb-7 my-0 mx-auto"
+            src="/sewing_needle_brown.svg"
+            alt="Nähnaht"
+            contain
+            justify="center"
+            width="95%"
+            max-width="350px"
+          />
           <p v-html="$md.render(veranstaltung.Beschreibung)"></p>
 
-          <h3 class="ichen_blue--text text-h2 pb-6">
+          <!-- -->
+
+          <v-img
+            class="shortlist_divider pt-6 pb-7 mx-auto"
+            src="/sewing_needle_brown.svg"
+            alt="Nähnaht"
+            contain
+            justify="center"
+            width="95%"
+            max-width="350px"
+          />
+          <p class="pt-6 pb-3 ma-0">
             <template v-if="available">
-              Anmeldeformular
+              <strong class="ichen_green--text">
+                <v-icon color="ichen_green" class="pr-1"
+                  >mdi-check-circle</v-icon
+                >Noch Plätze frei
+              </strong>
             </template>
             <template v-else>
-              Auf Warteliste setzen
+              <strong class="ichen_red--text">
+                <v-icon color="ichen_red" class="pr-1">mdi-alert-circle</v-icon
+                >Aktuell sind alle Plätze belegt, es gibt aber eine WARTELISTE.
+              </strong>
+              <br />
             </template>
+          </p>
+          <!-- -->
+          <h3 class="ichen_blue--text text-h2">
+            <template v-if="available">Anmeldeformular</template>
+            <template v-else>Auf Warteliste setzen</template>
           </h3>
+          <p></p>
           <v-text-field
             v-model="anmeldung.name"
             outlined
@@ -94,7 +126,7 @@
             outlined
             :rules="emailRules"
             required
-            label="E-Mailadresse"
+            label="E-Mailadresse (beispiel@beispiel.de – keine Leerzeichen)"
             @change="normalize"
           ></v-text-field>
           <v-text-field
@@ -137,25 +169,13 @@
               </div>
             </template>
           </v-checkbox>
-          <v-alert text type="info" class="font-weight-bold">
-            <template v-if="available">
-              <p>
-                Es sind noch Plätze frei!
-              </p>
-              <p>
-                Ihr Platz ist erst mit Zahlungseingang reserviert.
-              </p>
-            </template>
+          <v-alert text type="info" class="font-weight-bold mt-4 mb-10">
+            <template v-if="available"
+              >Ihr Platz ist erst mit Zahlungseingang reserviert.</template
+            >
             <template v-else>
-              <p>
-                Aktuell sind alle Plätze belegt. Für den Fall, dass doch noch
-                ein Platz frei wird, können Sie sich hier auf die Warteliste
-                setzen.
-              </p>
-              <p>
-                Sobald ein Platz frei wird, melde ich mich bei Ihnen telefonisch
-                oder per E-Mail.
-              </p>
+              Sobald ein Platz frei wird, melde ich mich bei Ihnen telefonisch
+              oder per E-Mail.
             </template>
           </v-alert>
           <v-alert v-if="error" text type="error" class="font-weight-bold">
@@ -209,16 +229,16 @@ export default {
       strasseHausnummer: '',
     },
     agb: false,
-    requiredRules: [(v) => !!v || 'muss ausgefüllt werden'],
+    requiredRules: [(v) => !!v || 'Muss ausgefüllt werden'],
     phoneNumberRules: [
-      (v) => !!v || 'muss ausgefüllt werden',
+      (v) => !!v || 'Muss ausgefüllt werden',
       (v) =>
         /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s./0-9]*$/g.test(v) ||
         'muss gültig sein',
     ],
     emailRules: [
-      (v) => !!v || 'muss ausgefüllt werden',
-      (v) => emailRegExp.test(v) || 'muss gültig sein',
+      (v) => !!v || 'Muss ausgefüllt werden',
+      (v) => emailRegExp.test(v) || 'Muss gültig sein',
     ],
     agbRules: [(v) => !!v || 'Sie müssen den AGB zustimmen, um fortzufahren'],
     success: false,

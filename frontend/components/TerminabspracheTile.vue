@@ -9,18 +9,18 @@
         :srcset="terminabsprache.Vorschaubild | generateSrcset"
         :sizes="terminabsprache.Vorschaubild | generateSizes"
       ></v-img>
-      <v-card-title class="ichen_blue--text text-h2 pt-6">
-        {{ terminabsprache.Titel }}
-      </v-card-title>
+      <v-card-title class="ichen_blue--text text-h2 pt-6">{{
+        terminabsprache.Titel
+      }}</v-card-title>
       <v-card-text>
         <client-only>
-          <ul class="booking_details pt-3 pb-1">
-            <li>
-              <div class="font-weight-bold ichen_blue--text">
-                {{ terminabsprache.Preis }} € (plus Materialkosten)
-              </div>
-            </li>
-          </ul>
+          <div class="event_detail">{{ terminabsprache.Dauer }}</div>
+          <div class="event_detail">
+            <strong class="ichen_brown--text"
+              >{{ terminabsprache.Preis }} € (plus Materialkosten)</strong
+            >
+          </div>
+
           <v-img
             class="shortlist_divider py-6 mx-auto"
             src="/sewing_needle_brown.svg"
@@ -30,22 +30,23 @@
             width="95%"
             max-width="300px"
           />
-          <div v-html="$md.render(terminabsprache.Beschreibung)"></div>
+          <div
+            class="pb-3"
+            v-html="$md.render(terminabsprache.Beschreibung)"
+          ></div>
         </client-only>
-      </v-card-text>
 
-      <v-card-actions class="pt-1 pb-8 pr-4">
-        <v-btn
-          nuxt
-          depressed
-          color="ichen_red white--text"
-          :to="{
-            name: 'terminabsprache-id',
-            params: { id: terminabsprache.id },
-          }"
-          >Termin anfragen</v-btn
-        >
-      </v-card-actions>
+        <v-alert text type="info" class="font-weight-bold">
+          Veranstaltungsangebote werden stets individuell vereinbart.
+          Kontaktieren Sie mich gerne für eine unverbindliche Auskunft.
+        </v-alert>
+        <p class="pt-3">
+          Telefon:
+          <a href="tel:+4922463197">02246 . 31 97</a>
+          <br />Fax: 02246 . 94 94 090 <br />E-Mail:
+          <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>
+        </p>
+      </v-card-text>
     </v-card>
   </v-col>
 </template>
@@ -60,3 +61,19 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+.____event_detail {
+  display: block;
+  padding-left: 20px;
+  font-weight: bold;
+  &:before {
+    content: '–';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: -20px;
+    color: $ichen_red;
+  }
+}
+</style>

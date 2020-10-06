@@ -9,22 +9,19 @@
         :srcset="veranstaltung.Vorschaubild | generateSrcset"
         :sizes="veranstaltung.Vorschaubild | generateSizes"
       ></v-img>
-      <v-card-title class="ichen_blue--text text-h2 pt-3">{{ veranstaltung.Titel }}</v-card-title>
+      <v-card-title class="ichen_blue--text text-h2 pt-6">
+        {{ veranstaltung.Titel }}
+      </v-card-title>
       <v-card-text>
         <client-only>
-          <ul class="booking_details pt-3 pb-1">
-            <li>
-              <div
-                class="font-weight-bold ichen_blue--text"
-                v-html="$md.render(veranstaltung.Anzeigedatum)"
-              ></div>
-            </li>
-            <li>
-              <div
-                class="font-weight-bold ichen_blue--text pt-3"
-              >{{ veranstaltung.Preis }} € (plus Materialkosten)</div>
-            </li>
-          </ul>
+          <div
+            class="event_detail ichen_brown--text font-weight-bold"
+            v-html="$md.render(veranstaltung.Anzeigedatum)"
+          ></div>
+
+          <div class="event_detail ichen_brown--text font-weight-bold">
+            {{ veranstaltung.Preis }} € (plus Materialkosten)
+          </div>
 
           <v-img
             class="shortlist_divider py-6 mx-auto"
@@ -39,21 +36,7 @@
         </client-only>
       </v-card-text>
 
-      <v-card-text align="right">
-        <template v-if="available">
-          <strong class="success--text">
-            <v-icon color="success" class="pr-1">mdi-check-circle</v-icon>Noch
-            Plätze frei
-          </strong>
-        </template>
-        <template v-else>
-          <strong class="ichen_blue--text">
-            <v-icon color="ichen_blue" class="pr-1">mdi-alert-circle</v-icon>Leider ausgebucht
-          </strong>
-        </template>
-      </v-card-text>
-
-      <v-card-actions class="pt-1 pb-8 pr-4">
+      <v-card-actions class="px-4">
         <v-btn
           nuxt
           depressed
@@ -63,7 +46,8 @@
             params: { id: veranstaltung.id },
             hash: '#registration-form',
           }"
-        >{{ available ? 'Anmelden' : 'Warteliste' }}</v-btn>
+          >Mehr</v-btn
+        >
       </v-card-actions>
     </v-card>
   </v-col>
@@ -88,7 +72,10 @@ export default {
 </script>
 
 <style lang="scss">
-.v-card__actions {
-  justify-content: flex-end;
+div.anzeigedatum {
+  padding-bottom: 1em;
+  p {
+    margin-bottom: 0;
+  }
 }
 </style>
