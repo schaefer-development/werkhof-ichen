@@ -19,13 +19,21 @@
             </v-list-item-action>
           </v-list-item>
           <br />
-          <h2 class="text-center ichen_blue--text text-h2 py-3">{{ bilderstrecke.Titel }}</h2>
+          <h2 class="text-center ichen_blue--text text-h2 py-3">
+            {{ bilderstrecke.Titel }}
+          </h2>
           <v-carousel hide-delimiters>
             <v-carousel-item
               v-for="Bild in bilderstrecke.Bilder"
               :key="Bild.id"
               contain
               :src="Bild.url"
+              sizes="
+          (min-width:1904px) 570px,
+          (min-width:1264px) 371px,
+          (min-width:960px) 426px,
+          (min-width:600px) 50vw,
+          100vw"
             ></v-carousel-item>
           </v-carousel>
         </v-card>
@@ -42,6 +50,11 @@ export default {
     )
     return { bilderstrecke }
   },
+  head() {
+    return {
+      title: ' | Bilder',
+    }
+  },
 }
 </script>
 
@@ -54,14 +67,3 @@ export default {
   }
 }
 </style>
-
-
-<script>
-export default {
-    head() {
-    return {
-      title: ' | Bilder',
-    }
-  },
-}
-</script>
