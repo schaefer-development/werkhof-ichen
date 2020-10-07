@@ -20,14 +20,17 @@
             class="white--text align-end"
             :src="bilderstrecke.Bilder[0].url"
             gradient="to top, rgba(54, 47, 43,.6), rgba(54, 47, 43,0)"
+            :srcset="bilderstrecke.Bilder[0] | generateSrcset"
+            sizes="
+          (min-width:1904px) 570px,
+          (min-width:1264px) 371px,
+          (min-width:960px) 276px,
+          (min-width:600px) 33vw,
+          100vw"
           >
             <div class="fill-height bottom-gradient"></div>
-            <v-card-title class="text-h2 px-6 py-0">
-              {{ bilderstrecke.Titel }}
-            </v-card-title>
-            <v-icon dark size="40" class="white--text px-6 pb-6"
-              >mdi-arrow-right</v-icon
-            >
+            <v-card-title class="text-h2 px-6 py-0">{{ bilderstrecke.Titel }}</v-card-title>
+            <v-icon dark size="40" class="white--text px-6 pb-6">mdi-arrow-right</v-icon>
           </v-img>
         </v-card>
       </v-col>
