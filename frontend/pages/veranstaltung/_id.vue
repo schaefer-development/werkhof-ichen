@@ -8,15 +8,10 @@
           aspect-ratio="1"
           :src="veranstaltung.Vorschaubild.url"
           :srcset="veranstaltung.Vorschaubild | generateSrcset"
-          :sizes="veranstaltung.Vorschaubild | generateSizes"
         ></v-img>
       </v-col>
       <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">
-        <registration-form
-          :veranstaltung="veranstaltung"
-          @cancel="back"
-          @confirm="back"
-        ></registration-form>
+        <registration-form :veranstaltung="veranstaltung" @cancel="back" @confirm="back"></registration-form>
       </v-col>
     </v-row>
   </v-container>

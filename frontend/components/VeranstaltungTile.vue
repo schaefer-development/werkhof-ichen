@@ -7,11 +7,8 @@
         aspect-ratio="1"
         :src="veranstaltung.Vorschaubild.url"
         :srcset="veranstaltung.Vorschaubild | generateSrcset"
-        :sizes="veranstaltung.Vorschaubild | generateSizes"
       ></v-img>
-      <v-card-title class="ichen_blue--text text-h2 pt-6">
-        {{ veranstaltung.Titel }}
-      </v-card-title>
+      <v-card-title class="ichen_blue--text text-h2 pt-6">{{ veranstaltung.Titel }}</v-card-title>
       <v-card-text>
         <client-only>
           <div
@@ -19,9 +16,9 @@
             v-html="$md.render(veranstaltung.Anzeigedatum)"
           ></div>
 
-          <div class="event_detail ichen_brown--text font-weight-bold">
-            {{ veranstaltung.Preis }} € (plus Materialkosten)
-          </div>
+          <div
+            class="event_detail ichen_brown--text font-weight-bold"
+          >{{ veranstaltung.Preis }} € (plus Materialkosten)</div>
 
           <v-img
             class="shortlist_divider py-6 mx-auto"
@@ -46,8 +43,7 @@
             params: { id: veranstaltung.id },
             hash: '#registration-form',
           }"
-          >Mehr</v-btn
-        >
+        >Mehr</v-btn>
       </v-card-actions>
     </v-card>
   </v-col>

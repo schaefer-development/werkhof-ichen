@@ -8,7 +8,6 @@
           aspect-ratio="1"
           :src="terminabsprache.Vorschaubild.url"
           :srcset="terminabsprache.Vorschaubild | generateSrcset"
-          :sizes="terminabsprache.Vorschaubild | generateSizes"
         ></v-img>
       </v-col>
       <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">
@@ -27,15 +26,13 @@
             </v-btn>
           </p>
 
-          <v-card-title class="ichen_blue--text text-h2">
-            {{ terminabsprache.Titel }}
-          </v-card-title>
+          <v-card-title class="ichen_blue--text text-h2">{{ terminabsprache.Titel }}</v-card-title>
           <v-card-text>
             <ul class="booking_details pt-3 pb-1">
               <li>
-                <div class="font-weight-bold ichen_blue--text">
-                  {{ terminabsprache.Preis }} € (plus Materialkosten)
-                </div>
+                <div
+                  class="font-weight-bold ichen_blue--text"
+                >{{ terminabsprache.Preis }} € (plus Materialkosten)</div>
               </li>
             </ul>
             <v-img
@@ -59,12 +56,11 @@
             <p class="py-6">
               Telefon:
               <a href="tel:+4922463197">02246 . 31 97</a>
-              <br />Fax: 02246 . 94 94 090 <br />E-Mail:
+              <br />Fax: 02246 . 94 94 090
+              <br />E-Mail:
               <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>
             </p>
-            <v-btn depressed color="ichen_blue white--text" @click="cancel"
-              >Zurück</v-btn
-            >
+            <v-btn depressed color="ichen_blue white--text" @click="cancel">Zurück</v-btn>
           </v-card-text>
         </v-card>
       </v-col>
