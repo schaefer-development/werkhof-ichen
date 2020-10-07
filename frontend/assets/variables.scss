@@ -149,7 +149,6 @@ $color-pack: false;
 
 .v-card{
   margin-bottom: 2em;
-  
   &:after{
     content:"";
     position: absolute;
@@ -163,12 +162,13 @@ $color-pack: false;
   }
 }
 
+
 .v-card__title{
-  -moz-hyphens: none !important;
-  -o-hyphens: none !important;
-  -webkit-hyphens: none !important;
-  -ms-hyphens: none !important;
-  hyphens: none !important;
+  -moz-hyphens: auto !important;
+  -o-hyphens: auto !important;
+  -webkit-hyphens: auto !important;
+  -ms-hyphens: auto !important;
+  hyphens: auto !important;
   line-height:1.25em !important;
   word-break: normal !important;
 }
