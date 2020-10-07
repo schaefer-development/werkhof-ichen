@@ -45,5 +45,10 @@ export default {
       this.$router.back()
     },
   },
+  head() {
+    return {
+      title: ' | Veranstaltungsdetails',
+    }
+  },
 }
 </script>

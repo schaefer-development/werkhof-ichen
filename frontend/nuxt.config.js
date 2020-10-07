@@ -163,7 +163,6 @@ export default {
         return '/veranstaltung/' + veranstaltung.id
       })
 
-
       return veranstaltungen
     },
   },

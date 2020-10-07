@@ -10,7 +10,9 @@
             alt="werkhof ichen in Lohmar Breidt"
           ></v-img>
           <v-card-title class="text-h2">
-            <nuxt-link to="/werkhof" class="ichen_blue--text">werkhof ichen</nuxt-link>
+            <nuxt-link to="/werkhof" class="ichen_blue--text"
+              >werkhof ichen</nuxt-link
+            >
           </v-card-title>
           <v-card-text>
             <p>
@@ -22,7 +24,9 @@
               Kurse und Veranstaltungen in einer anregenden Atmosphäre.
             </p>
             <div>
-              <v-btn dark nuxt to="/werkhof" depressed color="ichen_red">Mehr</v-btn>
+              <v-btn dark nuxt to="/werkhof" depressed color="ichen_red"
+                >Mehr</v-btn
+              >
             </div>
           </v-card-text>
         </v-card>
@@ -36,7 +40,9 @@
           ></v-img>
 
           <v-card-title class="text-h2">
-            <nuxt-link to="/anfertigungen/leder" class="ichen_blue--text">Anfertigungen</nuxt-link>
+            <nuxt-link to="/anfertigungen/leder" class="ichen_blue--text"
+              >Anfertigungen</nuxt-link
+            >
           </v-card-title>
           <v-card-text>
             <p>
@@ -48,7 +54,9 @@
               beispielsweise Lederhosen und -jacken.
             </p>
             <div>
-              <v-btn nuxt to="/anfertigungen/leder" depressed color="ichen_red">Mehr</v-btn>
+              <v-btn nuxt to="/anfertigungen/leder" depressed color="ichen_red"
+                >Mehr</v-btn
+              >
             </div>
           </v-card-text>
         </v-card>
@@ -62,10 +70,14 @@
             alt="Nähen im werkhof ichen"
           ></v-img>
           <v-card-title class="text-h2">
-            <nuxt-link to="/veranstaltungen" class="ichen_yellow--text">Veranstaltungen</nuxt-link>
+            <nuxt-link to="/veranstaltungen" class="ichen_yellow--text"
+              >Veranstaltungen</nuxt-link
+            >
           </v-card-title>
           <v-card-text v-if="veranstaltungen">
-            <veranstaltung-short-list :veranstaltungen="veranstaltungen"></veranstaltung-short-list>
+            <veranstaltung-short-list
+              :veranstaltungen="veranstaltungen"
+            ></veranstaltung-short-list>
 
             <v-img
               class="shortlist_divider py-8 mx-auto"
@@ -83,10 +95,16 @@
                 to="/veranstaltungen"
                 depressed
                 color="ichen_red white--text"
-              >Alle anzeigen</v-btn>
+                >Alle anzeigen</v-btn
+              >
             </div>
 
-            <v-alert rounded="0" outlined type="info" class="ichen_yellow--text">
+            <v-alert
+              rounded="0"
+              outlined
+              type="info"
+              class="ichen_yellow--text"
+            >
               <h3>Veranstaltungen können wieder stattfinden.</h3>
             </v-alert>
             <p>
@@ -120,7 +138,7 @@ export default {
     })
     return { veranstaltungen }
   },
-      head() {
+  head() {
     return {
       title: ' | Hallo',
     }

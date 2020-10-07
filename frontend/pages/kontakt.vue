@@ -13,18 +13,15 @@
           <v-card-text class="white--text">
             <p>
               werkhof ichen
-              <br />Irmina Maria Schmitz
-              <br />Diplom-Bekleidungs-Ingenieurin
+              <br />Irmina Maria Schmitz <br />Diplom-Bekleidungs-Ingenieurin
               <br />
-              <br />Im Alten Breidt 11a
-              <br />53797 Lohmar-Breidt
+              <br />Im Alten Breidt 11a <br />53797 Lohmar-Breidt
               <br />
             </p>
             <p>
               Telefon:
               <a href="tel:+4922463197">02246 . 31 97</a>
-              <br />Fax: 02246 . 94 94 090
-              <br />E-Mail:
+              <br />Fax: 02246 . 94 94 090 <br />E-Mail:
               <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>
             </p>
           </v-card-text>
@@ -106,7 +103,7 @@ export default {
   },
   head() {
     return {
-       title: ' | Kontakt',
+      title: ' | Kontakt',
       link: [
         {
           rel: 'stylesheet',
@@ -115,8 +112,6 @@ export default {
       ],
     }
   },
-
-
 }
 </script>
 

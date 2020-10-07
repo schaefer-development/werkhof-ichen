@@ -27,12 +27,10 @@ export default {
   components: {
     AnfertigungenWrapper,
   },
-      head() {
+  head() {
     return {
       title: ' | Anfertigungen: weitere Materialien',
     }
   },
 }
 </script>
-
-

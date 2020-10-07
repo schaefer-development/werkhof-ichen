@@ -2,7 +2,10 @@
   <v-container>
     <v-row class="pb-xs-6">
       <v-col cols="12">
-        <v-img src="/header_images/header_book.jpg" alt="werkhof ichen: Lebenslauf" />
+        <v-img
+          src="/header_images/header_book.jpg"
+          alt="werkhof ichen: Lebenslauf"
+        />
       </v-col>
     </v-row>
     <v-row>
@@ -18,7 +21,9 @@
         xl="8"
       >
         <v-card rounded="0" flat class="ichen_beige">
-          <v-card-title class="text-h2">Der werkhof ichen in der Presse</v-card-title>
+          <v-card-title class="text-h2"
+            >Der werkhof ichen in der Presse</v-card-title
+          >
           <v-card-text>
             <p class="text-uppercase">
               <strong>
@@ -26,7 +31,9 @@
                 Reihe "Märkte und Macher" über Irmina Schmitz:
               </strong>
             </p>
-            <h3 class="text-h2 ichen_blue--text pt-3 pb-3">Ein Faible für die Lederhose</h3>
+            <h3 class="text-h2 ichen_blue--text pt-3 pb-3">
+              Ein Faible für die Lederhose
+            </h3>
             <p>
               Lohmar - Auf der Büste im Atelier von Irmina Schmitz hängt ein
               bodenlanges gelbes Kleid aus Chiffon und Seide. „Das habe ich für
@@ -110,8 +117,12 @@
                 Ausstellung auf dem werkhof ichen:
               </strong>
             </p>
-            <h3 class="text-h2 ichen_blue--text pt-3 pb-3">Mode und mehr aus dem werkhof</h3>
-            <p>Bekleidungsingenieurin lud ihre Kolleginnen zur Ausstellung ein</p>
+            <h3 class="text-h2 ichen_blue--text pt-3 pb-3">
+              Mode und mehr aus dem werkhof
+            </h3>
+            <p>
+              Bekleidungsingenieurin lud ihre Kolleginnen zur Ausstellung ein
+            </p>
             <p>
               LOHMAR. Idyllisch im Grünen gelegen ist der werkhof ichen in
               Lohmar-Breidt, wo die Dipl. Bekleidungsing. Irmina Schmitz unter
@@ -156,7 +167,7 @@
 
 <script>
 export default {
-    head() {
+  head() {
     return {
       title: ' | Presseberichte',
     }
