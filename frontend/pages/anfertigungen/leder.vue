@@ -23,10 +23,19 @@
           </li>
         </ul>
         <br />
-        <p class="pb-3">
+        <p>
           Das Rinderleder stammt aus Deutschland oder Österreich. Büffelleder
           aus Thailand wird hier in Deutschland ökogerecht weiterbearbeitet.
         </p>
+        <v-img
+          class="py-12 mx-auto"
+          src="/schriftzug_werkstatt.jpg"
+          alt="Schriftzug Werkhof"
+          contain
+          justify="center"
+          width="100%"
+          max-width="800px"
+        />
 
         <strong>Anfertigung einer Lederhose</strong>
         <p>
@@ -65,7 +74,8 @@
         </v-simple-table>
         <p>
           Mit Strickbündchen am Hosensaum: 10 Euro Aufpreis
-          <br />Verlängerung bis 8 cm: 15 Euro <br />Schmutzfang: 15 Euro
+          <br />Verlängerung bis 8 cm: 15 Euro
+          <br />Schmutzfang: 15 Euro
           <br />Ledermix: 10 Euro
         </p>
         <p>
@@ -110,9 +120,9 @@
         </v-simple-table>
       </v-card-text>
       <v-img
-        class="shortlist_divider py-8 mx-auto"
-        src="/sewing_needle_brown.svg"
-        alt="Nähnaht"
+        class="py-3 mx-auto"
+        src="/leather_trouser_04.jpg"
+        alt="Lederhosen für Erwachsene"
         contain
         justify="center"
         width="100%"
@@ -244,6 +254,11 @@ export default {
           preis_plus_pro_groesse: '+ 60 Euro',
         },
       ],
+    }
+  },
+      head() {
+    return {
+      title: ' | Anfertigungen: Leder',
     }
   },
 }
