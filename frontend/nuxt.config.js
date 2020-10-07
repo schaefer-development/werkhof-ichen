@@ -164,7 +164,7 @@ export default {
       })
 
 
-      return veranstaltungen.concat(terminabsprachen)
+      return veranstaltungen
     },
   },
 }
