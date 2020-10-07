@@ -7,20 +7,24 @@
     </v-row>
     <v-row>
       <v-col cols="12" xs="12" sm="6" md="4" lg="4" xl="4">
+        <v-img src="/emaille_schild.jpg" alt="Emaille Schild werkhof ichen" />
         <v-card rounded="0" flat class="ichen_green">
           <v-card-title class="text-h2">Kontakt</v-card-title>
           <v-card-text class="white--text">
             <p>
               werkhof ichen
-              <br />Irmina Maria Schmitz <br />Diplom-Bekleidungs-Ingenieurin
+              <br />Irmina Maria Schmitz
+              <br />Diplom-Bekleidungs-Ingenieurin
               <br />
-              <br />Im Alten Breidt 11a <br />53797 Lohmar-Breidt
+              <br />Im Alten Breidt 11a
+              <br />53797 Lohmar-Breidt
               <br />
             </p>
             <p>
               Telefon:
               <a href="tel:+4922463197">02246 . 31 97</a>
-              <br />Fax: 02246 . 94 94 090 <br />E-Mail:
+              <br />Fax: 02246 . 94 94 090
+              <br />E-Mail:
               <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>
             </p>
           </v-card-text>
