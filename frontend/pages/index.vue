@@ -3,7 +3,12 @@
     <v-row>
       <v-col cols="12" xs="12" sm="6" md="4">
         <v-card rounded="0" flat>
-          <v-img class="align-end" aspect-ratio="1" src="/werkhof_01.jpg"></v-img>
+          <v-img
+            class="align-end"
+            aspect-ratio="1"
+            src="/werkhof_01.jpg"
+            alt="werkhof ichen in Lohmar Breidt"
+          ></v-img>
           <v-card-title class="text-h2">
             <nuxt-link to="/werkhof" class="ichen_blue--text">werkhof ichen</nuxt-link>
           </v-card-title>
@@ -24,7 +29,11 @@
       </v-col>
       <v-col cols="12" xs="12" sm="6" md="4">
         <v-card rounded="0" flat dark class="ichen_green">
-          <v-img aspect-ratio="1" src="/leather_trouser_02.jpg"></v-img>
+          <v-img
+            aspect-ratio="1"
+            src="/leather_trouser_02.jpg"
+            alt="Lederhosen genäht von ichen Schmitz"
+          ></v-img>
 
           <v-card-title class="text-h2">
             <nuxt-link to="/anfertigungen/leder" class="ichen_blue--text">Anfertigungen</nuxt-link>
@@ -46,7 +55,12 @@
       </v-col>
       <v-col cols="12" xs="12" sm="6" md="4">
         <v-card rounded="0" flat dark class="ichen_blue">
-          <v-img class="align-end" aspect-ratio="1" src="/sew_detail.jpg"></v-img>
+          <v-img
+            class="align-end"
+            aspect-ratio="1"
+            src="/sew_detail.jpg"
+            alt="Nähen im werkhof ichen"
+          ></v-img>
           <v-card-title class="text-h2">
             <nuxt-link to="/veranstaltungen" class="ichen_yellow--text">Veranstaltungen</nuxt-link>
           </v-card-title>
