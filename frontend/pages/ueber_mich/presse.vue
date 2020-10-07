@@ -22,7 +22,7 @@
       >
         <v-card rounded="0" flat class="ichen_beige">
           <v-card-title class="text-h2"
-            >Der Werkhof ichen in der Presse</v-card-title
+            >Der werkhof ichen in der Presse</v-card-title
           >
           <v-card-text>
             <p class="text-uppercase">
@@ -87,7 +87,7 @@
               schon mal machen wollten. Das kann eine Papierlampe sein, ein
               Acrylgemälde oder vielleicht auch etwas Gebackenes.“
             </p>
-            <p class="pb-12">
+            <p class="pb-8">
               Denn Brotbacken ist in dem Atelier ebenfalls möglich, es gibt
               einen „Backes“, der mit Holz geheizt wird. Mit Gestaltung und
               Handarbeit ist Schmitz schon ganz früh in Berührung gekommen. Ihre
@@ -103,15 +103,15 @@
             </p>
           </v-card-text>
           <v-img
-            class="shortlist_divider pa-8 mx-auto"
+            class="shortlist_divider pa-0 mx-auto"
             src="/sewing_needle_brown.svg"
             alt="Nähnaht"
             contain
             justify="center"
-            width="75%"
+            width="60%"
           />
           <v-card-text>
-            <p class="text-uppercase pt-12">
+            <p class="text-uppercase pt-8">
               <strong>
                 Die Kölnische Rundschau berichtete am 15.11.2006 über die
                 Ausstellung auf dem werkhof ichen:

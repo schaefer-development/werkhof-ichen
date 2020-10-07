@@ -6,14 +6,14 @@
           <v-img
             src="/logo_ichen.svg"
             class="d-none d-sm-flex"
-            alt="Logo Werkhof ichen"
+            alt="Logo werkhof ichen"
             max-width="150px"
           />
           <v-img
             src="/logo_ichen.svg"
             width="80px"
             class="d-flex d-sm-none"
-            alt="Logo Werkhof ichen"
+            alt="Logo werkhof ichen"
           />
         </nuxt-link>
 

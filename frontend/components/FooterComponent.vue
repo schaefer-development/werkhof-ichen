@@ -3,7 +3,7 @@
     <v-container fluid class="pt-0 pb-3">
       <v-row>
         <div id="footer-component-footer-gallery">
-          <v-img src="/footer_images/house.jpg" alt="Werkhof ichen"></v-img>
+          <v-img src="/footer_images/house.jpg" alt="werkhof ichen"></v-img>
           <v-img src="/footer_images/tea_pot.jpg" alt="Tea Time"></v-img>
           <v-img src="/footer_images/flower3.jpg" alt="Blumen"></v-img>
           <v-img src="/footer_images/collection3.jpg" alt="Collection"></v-img>
@@ -27,7 +27,7 @@
         <v-col cols="12" sm="6" md="4" lg="3" xl="2" align="center">
           <v-img
             src="/logo_ichen_outline.svg"
-            alt="Logo Werkhof ichen"
+            alt="Logo werkhof ichen"
             max-width="180px"
           />
         </v-col>

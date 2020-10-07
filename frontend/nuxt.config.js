@@ -37,7 +37,7 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    titleTemplate: 'Werkhof ichen %s',
+    titleTemplate: 'werkhof ichen %s',
     title: '',
     meta: [
       { charset: 'utf-8' },
@@ -89,7 +89,7 @@ export default {
   },
 
   manifest: {
-    name: 'Werkhof ichen',
+    name: 'werkhof ichen',
     short_name: 'ichen',
     theme_color: colors.ichen_blue,
     background_color: colors.ichen_beige,

@@ -18,7 +18,7 @@
               Telemediengesetz ist:
             </p>
             <p>
-              Werkhof ichen
+              werkhof ichen
               <br />Diplom-Bekleidungs-Ingenieurin <br />Irmina Maria Schmitz
             </p>
             <p>

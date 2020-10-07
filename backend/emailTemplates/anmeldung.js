@@ -45,9 +45,9 @@ Es besteht kein Anspruch auf Rückerstattung der Gebühr bei einem Rücktritt au
 `,
     html: `
     <p>
-    <img src="https://res.cloudinary.com/dk6nbbr6c/image/upload/v1601728064/logo_ichen_mail_bqwwvn.png" alt="Logo Werkhof ichen" /><br/>
+    <img src="https://res.cloudinary.com/dk6nbbr6c/image/upload/v1601728064/logo_ichen_mail_bqwwvn.png" alt="Logo werkhof ichen" /><br/>
     </p>
-    <p><strong>Werkhof ichen</strong><br />
+    <p><strong>werkhof ichen</strong><br />
     
     Irmina Schmitz</p>
     <p>Im Alten Breidt 11a<br />

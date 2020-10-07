@@ -56,7 +56,7 @@
               max-height="200px"
               max-width="200px"
               src="/kinder_helfen_kindern.jpg"
-              alt="Kindern helfen Kindern | Werkhof ichen"
+              alt="Kindern helfen Kindern | werkhof ichen"
               aspect-ratio="1"
             />
           </v-col>
@@ -113,9 +113,10 @@
       </template>
       <template v-else>
         <v-col cols="12">
-          <v-alert outlined type="info" class="font-weight-bold">
-            Zu diesen Kategorien gibt es keine anstehenden Veranstaltungen.
-          </v-alert>
+          <v-alert outlined type="info" class="font-weight-bold"
+            >Zu diesen Kategorien gibt es keine anstehenden
+            Veranstaltungen.</v-alert
+          >
         </v-col>
       </template>
     </v-row>

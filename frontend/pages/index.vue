@@ -10,12 +10,12 @@
           ></v-img>
           <v-card-title class="text-h2">
             <nuxt-link to="/werkhof" class="ichen_blue--text"
-              >Werkhof ichen</nuxt-link
+              >werkhof ichen</nuxt-link
             >
           </v-card-title>
           <v-card-text>
             <p>
-              Der „Werkhof ichen“ ist ein stilvoll ausgebautes Fachwerkgehöft am
+              Der „werkhof ichen“ ist ein stilvoll ausgebautes Fachwerkgehöft am
               Rande des bergischen Landes.
             </p>
             <p>

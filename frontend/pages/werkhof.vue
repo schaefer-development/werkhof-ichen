@@ -4,26 +4,26 @@
       <v-col cols="12">
         <v-img
           src="/header_images/header_werkhof_inside.jpg"
-          alt="Der Werkhof ichen in Breidt"
+          alt="Der werkhof ichen in Breidt"
         />
       </v-col>
     </v-row>
     <v-row>
       <v-col cols="12" xs="12" sm="6" md="4">
-        <v-img src="/entry_01.jpg" alt="Eingang zum Werkhof ichen" />
+        <v-img src="/entry_01.jpg" alt="Eingang zum werkhof ichen" />
         <br />
         <v-img src="/tea_time.jpg" alt="Tea time" />
         <br />
         <v-img src="/ribbons.jpg" alt="Stoffbänder" />
         <br />
-        <v-img src="/anfertigungen.jpg" alt="Werkhof ichen Anfertigungen" />
+        <v-img src="/anfertigungen.jpg" alt="werkhof ichen Anfertigungen" />
       </v-col>
       <v-col cols="12" xs="12" sm="6" md="4">
         <v-card rounded="0" flat class="ichen_beige">
-          <v-card-title class="text-h2">Werkhof ichen</v-card-title>
+          <v-card-title class="text-h2">werkhof ichen</v-card-title>
           <v-card-text v-if="veranstaltungen">
             <p>
-              Werkhof ichen ist ein zum Teil denkmalgeschütztes und stilvoll
+              Der werkhof ichen ist ein zum Teil denkmalgeschütztes und stilvoll
               ausgebautes Fachwerkgehöft am Rande des bergischen Landes. In
               diesem einladenden Ambiente werden Kurse im künstlerischen
               Handwerk angeboten. Der Kursraum bietet ein großzügiges

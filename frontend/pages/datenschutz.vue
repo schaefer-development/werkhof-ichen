@@ -4,7 +4,7 @@
       <v-col cols="12">
         <v-img
           src="/header_images/header_ghosts.jpg"
-          alt="Werkhof ichen: Textilgespenster"
+          alt="werkhof ichen: Textilgespenster"
         />
       </v-col>
     </v-row>
