@@ -7,4 +7,3 @@ Vue.filter('generateSrcset', function (image) {
     .map((format) => `${format.url} ${format.width}w`)
   return srcsets.join(',')
 })
-

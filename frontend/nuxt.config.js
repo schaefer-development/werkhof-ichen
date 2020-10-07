@@ -163,8 +163,7 @@ export default {
         return '/veranstaltung/' + veranstaltung.id
       })
 
-
-      return veranstaltungen.concat(terminabsprachen)
+      return veranstaltungen
     },
   },
 }
