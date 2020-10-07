@@ -2,10 +2,7 @@
   <v-container>
     <v-row class="pb-xs-6">
       <v-col cols="12">
-        <v-img
-          src="/header_images/header_spiral.jpg"
-          alt="werkhof ichen: Auswahl von Leder"
-        />
+        <v-img src="/header_images/header_spiral.jpg" alt="werkhof ichen: Auswahl von Leder" />
       </v-col>
     </v-row>
     <v-row>
@@ -22,13 +19,9 @@
         xl="8"
       >
         <v-card rounded="0" flat>
-          <v-card-title class="text-h2"
-            >Allgemeine Geschäftsbedingungen (AGB)</v-card-title
-          >
+          <v-card-title class="text-h2">Allgemeine Geschäftsbedingungen (AGB)</v-card-title>
           <v-card-text>
-            <h3 class="pt-3">
-              Zu jedem fairen Angebot gehören ein paar Spielregeln:
-            </h3>
+            <h3 class="pt-3">Zu jedem fairen Angebot gehören ein paar Spielregeln:</h3>
             <h3 class="pt-8">Anmeldung:</h3>
             <p>
               Ihre Anmeldung wird gültig mit dem Zahlungseingang der
@@ -83,3 +76,14 @@ ol.agb_list {
   }
 }
 </style>
+
+
+<script>
+export default {
+    head() {
+    return {
+      title: ' | Allgemeine Geschäftsbedingungen (AGB)',
+    }
+  },
+}
+</script>

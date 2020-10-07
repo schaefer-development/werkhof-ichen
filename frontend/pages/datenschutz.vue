@@ -2,10 +2,7 @@
   <v-container>
     <v-row class="pb-xs-6">
       <v-col cols="12">
-        <v-img
-          src="/header_images/header_ghosts.jpg"
-          alt="werkhof ichen: Textilgespenster"
-        />
+        <v-img src="/header_images/header_ghosts.jpg" alt="werkhof ichen: Textilgespenster" />
       </v-col>
     </v-row>
     <v-row class="align-baseline">
@@ -37,13 +34,15 @@
             <h3 class="pt-8">Verantwortlicher</h3>
             <p>
               werkhof ichen
-              <br />Dipl.-Ing. Irmina Maria Schmitz <br />Im Alten Breidt 11a
+              <br />Dipl.-Ing. Irmina Maria Schmitz
+              <br />Im Alten Breidt 11a
               <br />53797 Lohmar-Breidt
             </p>
             <p>
               Telefon:
               <a href="tel:+4922463197">02246 . 31 97</a>
-              <br />Fax: 02246 . 94 94 090 <br />E-Mail:
+              <br />Fax: 02246 . 94 94 090
+              <br />E-Mail:
               <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>
               <br />Link zum
               <nuxt-link to="/impressum">Impressum</nuxt-link>
@@ -75,9 +74,7 @@
                 Zurverfügungstellung des Onlineangebotes, seiner Funktionen und
                 Inhalte.
               </li>
-              <li>
-                Beantwortung von Kontaktanfragen und Kommunikation mit Nutzern.
-              </li>
+              <li>Beantwortung von Kontaktanfragen und Kommunikation mit Nutzern.</li>
               <li>Sicherheitsmaßnahmen.</li>
               <li>Reichweitenmessung/Marketing</li>
             </ul>
@@ -181,9 +178,7 @@
               des Datenschutzes durch Technikgestaltung und durch
               datenschutzfreundliche Voreinstellungen (Art. 25 DSGVO).
             </p>
-            <h3 class="pt-8">
-              Zusammenarbeit mit Auftragsverarbeitern und Dritten
-            </h3>
+            <h3 class="pt-8">Zusammenarbeit mit Auftragsverarbeitern und Dritten</h3>
             <p>
               Sofern wir im Rahmen unserer Verarbeitung Daten gegenüber anderen
               Personen und Unternehmen (Auftragsverarbeitern oder Dritten)
@@ -256,9 +251,7 @@
               Widerspruch kann insbesondere gegen die Verarbeitung für Zwecke
               der Direktwerbung erfolgen.
             </p>
-            <h3 class="pt-8">
-              Cookies und Widerspruchsrecht bei Direktwerbung
-            </h3>
+            <h3 class="pt-8">Cookies und Widerspruchsrecht bei Direktwerbung</h3>
             <p>
               Als „Cookies“ werden kleine Dateien bezeichnet, die auf Rechnern
               der Nutzer gespeichert werden. Innerhalb der Cookies können
@@ -299,13 +292,15 @@
               Onlinemarketing eingesetzten Cookies kann bei einer Vielzahl der
               Dienste, vor allem im Fall des Trackings, über die
               US-amerikanische Seite
-              <a href="http://www.aboutads.info/choices/" target="_blanc"
-                >http://www.aboutads.info/choices/</a
-              >
+              <a
+                href="http://www.aboutads.info/choices/"
+                target="_blanc"
+              >http://www.aboutads.info/choices/</a>
               oder die EU-Seite
-              <a href="http://www.youronlinechoices.com/" target="_blanc"
-                >http://www.youronlinechoices.com/</a
-              >
+              <a
+                href="http://www.youronlinechoices.com/"
+                target="_blanc"
+              >http://www.youronlinechoices.com/</a>
               erklärt werden. Des Weiteren kann die Speicherung von Cookies
               mittels deren Abschaltung in den Einstellungen des Browsers
               erreicht werden. Bitte beachten Sie, dass dann gegebenenfalls
@@ -523,8 +518,7 @@
               <a
                 href="https://developers.facebook.com/docs/plugins/"
                 target="_blanc"
-                >https://developers.facebook.com/docs/plugins/</a
-              >.
+              >https://developers.facebook.com/docs/plugins/</a>.
             </p>
             <p>
               Facebook ist unter dem Privacy-Shield-Abkommen zertifiziert und
@@ -533,8 +527,7 @@
               <a
                 href="https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&status=Active"
                 target="_blanc"
-                >https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&status=Active</a
-              >).
+              >https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&status=Active</a>).
             </p>
             <p>
               Wenn ein Nutzer eine Funktion dieses Onlineangebotes aufruft, die
@@ -566,9 +559,10 @@
               Rechte und Einstellungsmöglichkeiten zum Schutz der Privatsphäre
               der Nutzer, können diese den Datenschutzhinweisen von Facebook
               entnehmen:
-              <a target="_blanc" href="https://www.facebook.com/about/privacy/"
-                >https://www.facebook.com/about/privacy/</a
-              >
+              <a
+                target="_blanc"
+                href="https://www.facebook.com/about/privacy/"
+              >https://www.facebook.com/about/privacy/</a>
               .
             </p>
             <p>
@@ -582,25 +576,27 @@
               <a
                 target="_blanc"
                 href="https://www.facebook.com/settings?tab=ads"
-                >https://www.facebook.com/settings?tab=ads</a
-              >
+              >https://www.facebook.com/settings?tab=ads</a>
               oder über die US-amerikanische Seite
-              <a target="_blanc" href="http://www.aboutads.info/choices/"
-                >http://www.aboutads.info/choices/</a
-              >
+              <a
+                target="_blanc"
+                href="http://www.aboutads.info/choices/"
+              >http://www.aboutads.info/choices/</a>
               oder die EU-Seite
-              <a target="_blanc" href="http://www.youronlinechoices.com/"
-                >http://www.youronlinechoices.com/</a
-              >
+              <a
+                target="_blanc"
+                href="http://www.youronlinechoices.com/"
+              >http://www.youronlinechoices.com/</a>
               . Die Einstellungen erfolgen plattformunabhängig, d.h. sie werden
               für alle Geräte, wie Desktopcomputer oder mobile Geräte
               übernommen.
             </p>
             <p>
               Erstellt mit
-              <a href="https://datenschutz-generator.de/" target="_blanc"
-                >Datenschutz-Generator.de</a
-              >
+              <a
+                href="https://datenschutz-generator.de/"
+                target="_blanc"
+              >Datenschutz-Generator.de</a>
               von RA Dr. Thomas Schwenke
             </p>
           </v-card-text>
@@ -609,3 +605,14 @@
     </v-row>
   </v-container>
 </template>
+
+
+<script>
+export default {
+    head() {
+    return {
+      title: ' | Datenschutz',
+    }
+  },
+}
+</script>

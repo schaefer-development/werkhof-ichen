@@ -2,10 +2,7 @@
   <v-container>
     <v-row class="pb-xs-6">
       <v-col cols="12">
-        <v-img
-          src="/header_images/header_flowers.jpg"
-          alt="werkhof ichen: Blumen"
-        />
+        <v-img src="/header_images/header_flowers.jpg" alt="werkhof ichen: Blumen" />
       </v-col>
     </v-row>
     <v-row>
@@ -50,11 +47,19 @@
       <v-col cols="12" xs="12" sm="4" md="4" lg="4" xl="4">
         <v-img src="/with_you.jpg" alt="Ich bin bei Dir" />
         <br />
-        <v-img
-          src="/breidter_maedchen.jpg"
-          alt="Ich bin ein Breidter Mädchen"
-        />
+        <v-img src="/breidter_maedchen.jpg" alt="Ich bin ein Breidter Mädchen" />
       </v-col>
     </v-row>
   </v-container>
 </template>
+
+
+<script>
+export default {
+    head() {
+    return {
+      title: ' | Vita',
+    }
+  },
+}
+</script>

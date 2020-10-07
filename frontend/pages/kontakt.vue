@@ -106,6 +106,7 @@ export default {
   },
   head() {
     return {
+       title: ' | Kontakt',
       link: [
         {
           rel: 'stylesheet',
@@ -114,6 +115,8 @@ export default {
       ],
     }
   },
+
+
 }
 </script>
 

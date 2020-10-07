@@ -19,9 +19,7 @@
             </v-list-item-action>
           </v-list-item>
           <br />
-          <h2 class="text-center ichen_blue--text text-h2 py-3">
-            {{ bilderstrecke.Titel }}
-          </h2>
+          <h2 class="text-center ichen_blue--text text-h2 py-3">{{ bilderstrecke.Titel }}</h2>
           <v-carousel hide-delimiters>
             <v-carousel-item
               v-for="Bild in bilderstrecke.Bilder"
@@ -56,3 +54,14 @@ export default {
   }
 }
 </style>
+
+
+<script>
+export default {
+    head() {
+    return {
+      title: ' | Bilder',
+    }
+  },
+}
+</script>

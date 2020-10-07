@@ -3,15 +3,9 @@
     <v-row>
       <v-col cols="12" xs="12" sm="6" md="4">
         <v-card rounded="0" flat>
-          <v-img
-            class="align-end"
-            aspect-ratio="1"
-            src="/werkhof_01.jpg"
-          ></v-img>
+          <v-img class="align-end" aspect-ratio="1" src="/werkhof_01.jpg"></v-img>
           <v-card-title class="text-h2">
-            <nuxt-link to="/werkhof" class="ichen_blue--text"
-              >werkhof ichen</nuxt-link
-            >
+            <nuxt-link to="/werkhof" class="ichen_blue--text">werkhof ichen</nuxt-link>
           </v-card-title>
           <v-card-text>
             <p>
@@ -23,9 +17,7 @@
               Kurse und Veranstaltungen in einer anregenden Atmosphäre.
             </p>
             <div>
-              <v-btn dark nuxt to="/werkhof" depressed color="ichen_red"
-                >Mehr</v-btn
-              >
+              <v-btn dark nuxt to="/werkhof" depressed color="ichen_red">Mehr</v-btn>
             </div>
           </v-card-text>
         </v-card>
@@ -35,9 +27,7 @@
           <v-img aspect-ratio="1" src="/leather_trouser_02.jpg"></v-img>
 
           <v-card-title class="text-h2">
-            <nuxt-link to="/anfertigungen/leder" class="ichen_blue--text"
-              >Anfertigungen</nuxt-link
-            >
+            <nuxt-link to="/anfertigungen/leder" class="ichen_blue--text">Anfertigungen</nuxt-link>
           </v-card-title>
           <v-card-text>
             <p>
@@ -49,29 +39,19 @@
               beispielsweise Lederhosen und -jacken.
             </p>
             <div>
-              <v-btn nuxt to="/anfertigungen/leder" depressed color="ichen_red"
-                >Mehr</v-btn
-              >
+              <v-btn nuxt to="/anfertigungen/leder" depressed color="ichen_red">Mehr</v-btn>
             </div>
           </v-card-text>
         </v-card>
       </v-col>
       <v-col cols="12" xs="12" sm="6" md="4">
         <v-card rounded="0" flat dark class="ichen_blue">
-          <v-img
-            class="align-end"
-            aspect-ratio="1"
-            src="/sew_detail.jpg"
-          ></v-img>
+          <v-img class="align-end" aspect-ratio="1" src="/sew_detail.jpg"></v-img>
           <v-card-title class="text-h2">
-            <nuxt-link to="/veranstaltungen" class="ichen_yellow--text"
-              >Veranstaltungen</nuxt-link
-            >
+            <nuxt-link to="/veranstaltungen" class="ichen_yellow--text">Veranstaltungen</nuxt-link>
           </v-card-title>
           <v-card-text v-if="veranstaltungen">
-            <veranstaltung-short-list
-              :veranstaltungen="veranstaltungen"
-            ></veranstaltung-short-list>
+            <veranstaltung-short-list :veranstaltungen="veranstaltungen"></veranstaltung-short-list>
 
             <v-img
               class="shortlist_divider py-8 mx-auto"
@@ -89,16 +69,10 @@
                 to="/veranstaltungen"
                 depressed
                 color="ichen_red white--text"
-                >Alle anzeigen</v-btn
-              >
+              >Alle anzeigen</v-btn>
             </div>
 
-            <v-alert
-              rounded="0"
-              outlined
-              type="info"
-              class="ichen_yellow--text"
-            >
+            <v-alert rounded="0" outlined type="info" class="ichen_yellow--text">
               <h3>Veranstaltungen können wieder stattfinden.</h3>
             </v-alert>
             <p>
@@ -131,6 +105,11 @@ export default {
       },
     })
     return { veranstaltungen }
+  },
+      head() {
+    return {
+      title: ' | Hallo',
+    }
   },
 }
 </script>
