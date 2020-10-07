@@ -162,12 +162,8 @@ export default {
       veranstaltungen = veranstaltungen.map((veranstaltung) => {
         return '/veranstaltung/' + veranstaltung.id
       })
-      let { data: terminabsprachen } = await axios.get(
-        `${apiUrl}/terminabspraches`
-      )
-      terminabsprachen = terminabsprachen.map((terminabsprache) => {
-        return '/terminabsprache/' + terminabsprache.id
-      })
+
+
       return veranstaltungen.concat(terminabsprachen)
     },
   },

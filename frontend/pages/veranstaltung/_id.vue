@@ -8,6 +8,12 @@
           aspect-ratio="1"
           :src="veranstaltung.Vorschaubild.url"
           :srcset="veranstaltung.Vorschaubild | generateSrcset"
+          sizes="
+          (min-width:1904px) 570px,
+          (min-width:1264px) 371px,
+          (min-width:960px) 276px,
+          (min-width:600px) 33vw,
+          100vw"
         ></v-img>
       </v-col>
       <v-col cols="12" xs="12" sm="8" md="8" lg="8" xl="8">

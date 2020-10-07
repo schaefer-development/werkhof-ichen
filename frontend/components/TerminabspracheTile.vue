@@ -7,6 +7,12 @@
         aspect-ratio="1"
         :src="terminabsprache.Vorschaubild.url"
         :srcset="terminabsprache.Vorschaubild | generateSrcset"
+        sizes="
+          (min-width:1904px) 570px,
+          (min-width:1264px) 371px,
+          (min-width:960px) 426px,
+          (min-width:600px) 50vw,
+          100vw"
       ></v-img>
       <v-card-title class="ichen_blue--text text-h2 pt-6">{{ terminabsprache.Titel }}</v-card-title>
       <v-card-text>
