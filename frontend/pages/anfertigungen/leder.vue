@@ -73,10 +73,9 @@
           </tbody>
         </v-simple-table>
         <p>
-          Mit Strickbündchen am Hosensaum: 10 Euro Aufpreis
-          <br />Verlängerung bis 8 cm: 15 Euro
-          <br />Schmutzfang: 15 Euro
-          <br />Ledermix: 10 Euro
+          Mit Strickbündchen am Hosensaum: 20 Euro Aufpreis
+          <br />Verlängerung bis 8 cm: 20 Euro Aufpreis <br />Schmutzfang: 20
+          Euro Aufpreis <br />Ledermix: 10 Euro Aufpreis
         </p>
         <p>
           Spezielle Modellwünsche oder Sonderanfertigungen nach Absprache
@@ -174,37 +173,37 @@ export default {
       kinderlederhosen: [
         {
           groesse: '86',
-          preis: 106,
+          preis: 116,
           seitenlaenge: 49,
         },
         {
           groesse: '92',
-          preis: 112,
+          preis: 122,
           seitenlaenge: 54,
         },
         {
           groesse: '98',
-          preis: 118,
+          preis: 128,
           seitenlaenge: 59,
         },
         {
           groesse: '104',
-          preis: 124,
+          preis: 134,
           seitenlaenge: 64,
         },
         {
           groesse: '110',
-          preis: 130,
+          preis: 140,
           seitenlaenge: 69,
         },
         {
           groesse: '116',
-          preis: 136,
+          preis: 146,
           seitenlaenge: 74,
         },
         {
           groesse: '122',
-          preis: 142,
+          preis: 152,
           seitenlaenge: 79,
         },
       ],
@@ -212,51 +211,51 @@ export default {
       erwachsenenlederhosen: [
         {
           material: 'Rindleder (Glatt/ Nubuk)',
-          preis: 'ca. 600',
-          preis_plus_pro_groesse: '+ 25 Euro',
-        },
-        {
-          material: 'Rehbock',
           preis: 'ca. 800',
           preis_plus_pro_groesse: '+ 40 Euro',
         },
         {
+          material: 'Rehbock',
+          preis: 'ca. 1000',
+          preis_plus_pro_groesse: '+ 50 Euro',
+        },
+        {
           material: 'Hirsch',
-          preis: 'ca. 950',
-          preis_plus_pro_groesse: '+ 45 Euro',
+          preis: 'ca. 1150',
+          preis_plus_pro_groesse: '+ 60 Euro',
         },
         {
           material: 'Elch',
-          preis: 'ca. 1050',
-          preis_plus_pro_groesse: '+ 50 Euro',
+          preis: 'ca. 1250',
+          preis_plus_pro_groesse: '+ 70 Euro',
         },
       ],
 
       erwachsenenlederjacke: [
         {
           material: 'Rindleder (Glatt/ Nubuk)',
-          preis: 'ca. 850',
-          preis_plus_pro_groesse: '+ 35 Euro',
+          preis: 'ca. 1000',
+          preis_plus_pro_groesse: '+ 50 Euro',
         },
         {
           material: 'Rehbock',
-          preis: 'ca. 1100',
-          preis_plus_pro_groesse: '+ 45 Euro',
+          preis: 'ca. 1250',
+          preis_plus_pro_groesse: '+ 60 Euro',
         },
         {
           material: 'Hirsch',
-          preis: 'ca. 1300',
-          preis_plus_pro_groesse: '+ 55 Euro',
+          preis: 'ca. 1450',
+          preis_plus_pro_groesse: '+ 70 Euro',
         },
         {
           material: 'Elch',
-          preis: 'ca. 1400',
-          preis_plus_pro_groesse: '+ 60 Euro',
+          preis: 'ca. 1550',
+          preis_plus_pro_groesse: '+ 80 Euro',
         },
       ],
     }
   },
-      head() {
+  head() {
     return {
       title: ' | Anfertigungen: Leder',
     }
