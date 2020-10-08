@@ -14,16 +14,13 @@
           (min-width:600px) 50vw,
           100vw"
       ></v-img>
-      <v-card-title class="ichen_blue--text text-h2 pt-6">
-        {{
-        terminabsprache.Titel
-        }}
-      </v-card-title>
+      <v-card-title class="ichen_blue--text text-h2 pt-6">{{ terminabsprache.Titel }}</v-card-title>
       <v-card-text>
         <client-only>
           <div
             class="event_detail ichen_brown--text font-weight-bold pa-0"
-          >{{ terminabsprache.Dauer_und_Preis }}</div>
+            v-html="$md.render(terminabsprache.Dauer_und_Preis)"
+          ></div>
           <v-img
             class="shortlist_divider py-6 mx-auto"
             src="/sewing_needle_brown.svg"
@@ -62,4 +59,3 @@ export default {
   },
 }
 </script>
-

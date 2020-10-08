@@ -45,7 +45,8 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'werkhof ichen Lohmar: Nähkurse für Kinder/ Jugendliche/ Erwachsene, Geburtstag-Näh-Events, großzügiges Platzangebot, Anfertigungen, Kinderlederhosen',
+        content:
+          'werkhof ichen Lohmar: Nähkurse für Kinder/ Jugendliche/ Erwachsene, Geburtstag-Näh-Events, großzügiges Platzangebot, Anfertigungen, Kinderlederhosen',
       },
     ],
   },

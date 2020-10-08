@@ -1,7 +1,6 @@
 <template>
   <v-app>
     <div id="background"></div>
-
     <drawer ref="drawer"></drawer>
     <header-component @toggleDrawer="toggleDrawer"></header-component>
 

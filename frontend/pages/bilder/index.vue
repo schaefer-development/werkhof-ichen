@@ -29,8 +29,12 @@
           100vw"
           >
             <div class="fill-height bottom-gradient"></div>
-            <v-card-title class="text-h2 px-6 py-0">{{ bilderstrecke.Titel }}</v-card-title>
-            <v-icon dark size="40" class="white--text px-6 pb-6">mdi-arrow-right</v-icon>
+            <v-card-title class="text-h2 px-6 py-0">{{
+              bilderstrecke.Titel
+            }}</v-card-title>
+            <v-icon dark size="40" class="white--text px-6 pb-6"
+              >mdi-arrow-right</v-icon
+            >
           </v-img>
         </v-card>
       </v-col>
