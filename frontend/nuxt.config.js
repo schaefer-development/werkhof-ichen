@@ -45,7 +45,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Kreativ-Atelier in Lohmar-Breidt mit großzügigem Platzangebot. Nähkurse für Kinder, Jugendliche & Erwachsene. Papier- & Lederkurse, Freundinnen-Nähtreff',
+        content: 'werkhof ichen Lohmar: Nähkurse für Kinder/ Jugendliche/ Erwachsene, Geburtstag-Näh-Events, großzügiges Platzangebot, Anfertigungen, Kinderlederhosen',
       },
     ],
   },
