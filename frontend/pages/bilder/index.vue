@@ -19,7 +19,7 @@
             aspect-ratio="1"
             class="white--text align-end"
             :src="bilderstrecke.Bilder[0].url"
-            gradient="to top, rgba(54, 47, 43,.6), rgba(54, 47, 43,0)"
+            gradient="to top, rgba(30, 48, 54,.75), rgba(57, 91, 102,0) 50%"
             :srcset="bilderstrecke.Bilder[0] | generateSrcset"
             sizes="
           (min-width:1904px) 570px,
