@@ -21,5 +21,5 @@ $ docker-compose down -v
 $ docker-compose up
 
 # open another terminal and run:
-$ cat backups/<DUMP> | docker-compose exec -T db pg_restore -U <POSTGRES_USER> -d postgres
+$ cat backups/<DUMP> | docker-compose exec -T db pg_restore -c -U <POSTGRES_USER> -d postgres
 ```
