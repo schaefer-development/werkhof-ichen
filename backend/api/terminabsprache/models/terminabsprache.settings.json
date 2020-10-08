@@ -35,10 +35,7 @@
       "plugin": "upload",
       "required": false
     },
-    "Preis": {
-      "type": "integer"
-    },
-    "Dauer": {
+    "Dauer_und_Preis": {
       "type": "richtext"
     }
   }
