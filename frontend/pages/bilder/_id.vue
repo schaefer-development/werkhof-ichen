@@ -22,7 +22,7 @@
           (min-width:960px) 276px,
           (min-width:600px) 33vw,
           100vw"
-            >></v-carousel-item>
+            ></v-carousel-item>
           </v-carousel>
         </v-card>
       </v-col>
