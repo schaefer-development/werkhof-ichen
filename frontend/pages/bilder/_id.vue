@@ -17,10 +17,9 @@
               :src="Bild.url"
               :srcset="Bild | generateSrcset"
               sizes="
-          (min-width:1904px) 570px,
-          (min-width:1264px) 371px,
-          (min-width:960px) 276px,
-          (min-width:600px) 33vw,
+          (min-width:1904px) 1761px,
+          (min-width:1264px) 1161px,
+          (min-width:960px) 876px,
           100vw"
             ></v-carousel-item>
           </v-carousel>
