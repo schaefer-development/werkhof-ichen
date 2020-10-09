@@ -21,6 +21,8 @@ if (process.env.NODE_ENV === 'development') {
 const apiUrl = process.env.API_URL || 'http://localhost:1337'
 const clientUrl = process.env.URL || 'http://localhost:3000'
 
+const description = 'werkhof ichen Lohmar: Nähkurse für Kinder/ Jugendliche/ Erwachsene, Geburtstag-Näh-Events, großzügiges Platzangebot, Anfertigungen, Kinderlederhosen'
+
 export default {
   /*
    ** Nuxt rendering mode
@@ -45,8 +47,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content:
-          'werkhof ichen Lohmar: Nähkurse für Kinder/ Jugendliche/ Erwachsene, Geburtstag-Näh-Events, großzügiges Platzangebot, Anfertigungen, Kinderlederhosen',
+        content: description,
       },
     ],
   },
@@ -86,6 +87,7 @@ export default {
   pwa: {
     meta: {
       lang: 'de',
+      description,
     },
   },
 
