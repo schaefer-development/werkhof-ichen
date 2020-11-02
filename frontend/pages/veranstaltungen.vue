@@ -49,6 +49,33 @@
 
     <v-row>
       <v-col cols="12">
+        <v-row class="ichen_blue pa-6 mx-1 mt-12 mb-0" align="center">
+          <v-col cols="12" xs="12" sm="12" md="12" lg="12" xl="12">
+            <v-alert
+              rounded="0"
+              outlined
+              type="info"
+              class="ichen_yellow--text"
+            >
+              <h3>Coronabedingt keine Veranstaltungen</h3>
+            </v-alert>
+            <p class="white--text">
+              Zur Eindämmung der Corona-Pandemie dürfen in der Zeit vom 2.11.
+              bis 30.11.2020 meine Kurse leider nicht stattfinden.
+              <br />Ich hoffe sehr, dass im Dezember und Januar wieder ein
+              entspannter Kursbetrieb möglich sein wird. Alle Teilnehmenden
+              informiere ich persönlich (in der Regel per E-Mail) darüber, ob
+              und ggf. wie ihr Kurs dann fortgesetzt werden kann. Die Gebühr für
+              Kurstage, die letztlich endgültig ausfallen, erstatte ich Ihnen
+              selbstverständlich. <br />Bis dahin <br />ichen
+            </p>
+          </v-col>
+        </v-row>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-col cols="12">
         <v-row class="ichen_blue pa-6 mx-1 mt-12 mb-12" align="center">
           <v-col cols="12" xs="12" sm="3" md="3" lg="3" xl="3" align="center">
             <v-img
@@ -60,6 +87,7 @@
               aspect-ratio="1"
             />
           </v-col>
+
           <v-col
             align="left"
             cols="12"
@@ -113,9 +141,10 @@
       </template>
       <template v-else>
         <v-col cols="12">
-          <v-alert outlined type="info" class="font-weight-bold">
-            Zu diesen Kategorien gibt es keine anstehenden Veranstaltungen.
-          </v-alert>
+          <v-alert outlined type="info" class="font-weight-bold"
+            >Zu diesen Kategorien gibt es keine anstehenden
+            Veranstaltungen.</v-alert
+          >
         </v-col>
       </template>
     </v-row>

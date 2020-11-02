@@ -75,6 +75,35 @@
             >
           </v-card-title>
           <v-card-text v-if="veranstaltungen">
+            <v-alert
+              rounded="0"
+              outlined
+              type="info"
+              class="ichen_yellow--text"
+            >
+              <h3>Coronabedingt keine Veranstaltungen</h3>
+            </v-alert>
+
+            <p>
+              Zur Eindämmung der Corona-Pandemie dürfen in der Zeit vom 2.11.
+              bis 30.11.2020 meine Kurse leider nicht stattfinden.
+              <br />Ich hoffe sehr, dass im Dezember und Januar wieder ein
+              entspannter Kursbetrieb möglich sein wird. Alle Teilnehmenden
+              informiere ich persönlich (in der Regel per E-Mail) darüber, ob
+              und ggf. wie ihr Kurs dann fortgesetzt werden kann. Die Gebühr für
+              Kurstage, die letztlich endgültig ausfallen, erstatte ich Ihnen
+              selbstverständlich. <br />Bis dahin <br />ichen
+              <br />
+            </p>
+            <v-img
+              class="shortlist_divider py-8 mx-auto"
+              src="/sewing_needle_beige.svg"
+              alt="Nähnaht"
+              contain
+              justify="center"
+              width="100%"
+              max-width="400px"
+            />
             <veranstaltung-short-list
               :veranstaltungen="veranstaltungen"
             ></veranstaltung-short-list>
@@ -98,23 +127,6 @@
                 >Alle anzeigen</v-btn
               >
             </div>
-
-            <v-alert
-              rounded="0"
-              outlined
-              type="info"
-              class="ichen_yellow--text"
-            >
-              <h3>Veranstaltungen können wieder stattfinden.</h3>
-            </v-alert>
-            <p>
-              Bitte beachten Sie die Hinweise bezüglich der Hygienevorschriften
-              etc. im Rahmen der Corona Pandemie.
-              <br />Bei grippeähnlichen Symptomen oder wenn es in Ihrem
-              persönlichen Umfeld einen bestätigten Infektionsfall mit Covid 19
-              (Coronavirus-Sars-Cov2) gibt, bitte ich Sie von einer
-              Kursteilnahme abzusehen.
-            </p>
           </v-card-text>
         </v-card>
       </v-col>
