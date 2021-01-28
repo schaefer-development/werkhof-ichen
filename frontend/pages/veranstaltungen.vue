@@ -61,13 +61,14 @@
             </v-alert>
             <p class="white--text">
              Zur Eindämmung der Corona-Pandemie dürfen in der Zeit vom 2.11.2020
-              bis 31.1.2021 meine Kurse leider nicht stattfinden.
-              <br />Ich hoffe sehr, dass im Februar wieder ein
+              bis 14.2.2021 meine Kurse leider nicht stattfinden.
+              <br />Ich hoffe sehr, dass danach wieder ein
               entspannter Kursbetrieb möglich sein wird. Alle Teilnehmenden
               informiere ich persönlich (in der Regel per E-Mail) darüber, ob
               und ggf. wie ihr Kurs dann fortgesetzt werden kann. Die Gebühr für
               Kurstage, die letztlich endgültig ausfallen, erstatte ich Ihnen
               selbstverständlich. <br />Bis dahin <br />ichen
+              <br />
             </p>
           </v-col>
         </v-row>
