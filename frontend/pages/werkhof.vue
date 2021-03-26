@@ -82,7 +82,7 @@
 
             <p>
              Zur Eindämmung der Corona-Pandemie dürfen in der Zeit vom 2.11.2020
-              bis 28.3.2021 meine Kurse leider nicht stattfinden.
+              bis 18.4.2021 meine Kurse leider nicht stattfinden.
               <br />Ich hoffe sehr, dass danach wieder ein
               entspannter Kursbetrieb möglich sein wird. Alle Teilnehmenden
               informiere ich persönlich (in der Regel per E-Mail) darüber, ob
