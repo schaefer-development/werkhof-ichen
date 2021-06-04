@@ -81,6 +81,27 @@
               type="info"
               class="ichen_yellow--text"
             >
+              <h3>HURRA, Kurse dürfen wieder stattfinden</h3>
+            </v-alert>
+            <p>
+              Durch die aktuelle positive Entwicklung der
+              Corona-Infektionszahlen darf ich wieder Kurse in meinen
+              Räumlichkeiten anbieten.
+              <br />
+              BITTE BEACHTEN SIE DIE HYGIENEAUFLAGEN wie negativer Coronatest
+              oder 2-facher Impfnachweis bzw. Immunitätsnachweis. Außerdem
+              besteht eine FFP2-Maskenpflicht.
+              <br />
+              Falls Änderungen auftreten sollten, werde ich Sie als Teilnehmer
+              umgehend informieren.
+            </p>
+
+            <!-- <v-alert
+              rounded="0"
+              outlined
+              type="info"
+              class="ichen_yellow--text"
+            >
               <h3>Coronabedingt keine Veranstaltungen</h3>
             </v-alert>
 
@@ -94,7 +115,7 @@
               Kurstage, die letztlich endgültig ausfallen, erstatte ich Ihnen
               selbstverständlich. <br />Bis dahin <br />ichen
               <br />
-            </p>
+            </p>-->
             <v-img
               class="shortlist_divider py-8 mx-auto"
               src="/sewing_needle_beige.svg"

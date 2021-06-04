@@ -57,18 +57,19 @@
               type="info"
               class="ichen_yellow--text"
             >
-              <h3>Coronabedingt keine Veranstaltungen</h3>
+              <h3>HURRA, Kurse dürfen wieder stattfinden</h3>
             </v-alert>
-            <p class="white--text">
-             Zur Eindämmung der Corona-Pandemie dürfen in der Zeit vom 2.11.2020
-              bis 30.6.2021 meine Kurse leider nicht stattfinden.
-              <br />Ich hoffe sehr, dass danach wieder ein
-              entspannter Kursbetrieb möglich sein wird. Alle Teilnehmenden
-              informiere ich persönlich (in der Regel per E-Mail) darüber, ob
-              und ggf. wie ihr Kurs dann fortgesetzt werden kann. Die Gebühr für
-              Kurstage, die letztlich endgültig ausfallen, erstatte ich Ihnen
-              selbstverständlich. <br />Bis dahin <br />ichen
+            <p>
+              Durch die aktuelle positive Entwicklung der
+              Corona-Infektionszahlen darf ich wieder Kurse in meinen
+              Räumlichkeiten anbieten.
               <br />
+              BITTE BEACHTEN SIE DIE HYGIENEAUFLAGEN wie negativer Coronatest
+              oder 2-facher Impfnachweis bzw. Immunitätsnachweis. Außerdem
+              besteht eine FFP2-Maskenpflicht.
+              <br />
+              Falls Änderungen auftreten sollten, werde ich Sie als Teilnehmer
+              umgehend informieren.
             </p>
           </v-col>
         </v-row>
