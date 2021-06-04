@@ -83,7 +83,7 @@
             >
               <h3>HURRA, Kurse dürfen wieder stattfinden</h3>
             </v-alert>
-            <p>
+             <p class="white--text"> 
               Durch die aktuelle positive Entwicklung der
               Corona-Infektionszahlen darf ich wieder Kurse in meinen
               Räumlichkeiten anbieten.
