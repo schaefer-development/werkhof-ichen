@@ -1,5 +1,6 @@
 'use strict';
 
+const pluralize = require('pluralize')
 /**
  * An asynchronous bootstrap function that runs before
  * your application gets started.
@@ -10,4 +11,10 @@
  * See more details here: https://strapi.io/documentation/v3.x/concepts/configurations.html#bootstrap
  */
 
-module.exports = () => {};
+module.exports = () => {
+  pluralize.addPluralRule('veranstaltung', 'veranstaltungen')
+  pluralize.addPluralRule('anmeldung', 'anmeldungen')
+  pluralize.addPluralRule('veranstaltung', 'veranstaltungen')
+  pluralize.addPluralRule('terminabsprache', 'terminabsprachen')
+  pluralize.addPluralRule('bilderstrecke', 'bilderstrecken')
+};
