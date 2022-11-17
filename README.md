@@ -1,25 +1,20 @@
-# Usage
+# frontend
 
-Source code of website [werkhof-ichen.de](werkhof-ichen.de).
+## Build Setup
 
-## Docker setup
-
-The `docker-compose.yml` configuration in this repository is supposed to provide
-a close-to-production installation.
-
-Run:
-```
-docker-compose up
-```
-
-### Restore database backup
-
-Run:
 ```bash
-$ docker-compose down -v
-# followed by
-$ docker-compose up
+# install dependencies
+$ yarn install
 
-# open another terminal and run:
-$ cat backups/<DUMP> | docker-compose exec -T db pg_restore -c -U <POSTGRES_USER> -d postgres
+# serve with hot reload at localhost:3000
+$ yarn dev
+
+# build for production and launch server
+$ yarn build
+$ yarn start
+
+# generate static project
+$ yarn generate
 ```
+
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

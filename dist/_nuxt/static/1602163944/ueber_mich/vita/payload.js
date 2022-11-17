@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/ueber_mich/vita", {data:[{}],fetch:[],mutations:void 0});

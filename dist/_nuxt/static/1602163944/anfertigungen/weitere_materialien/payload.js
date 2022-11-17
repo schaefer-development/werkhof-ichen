@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/anfertigungen/weitere_materialien", {data:[{}],fetch:[],mutations:void 0});
