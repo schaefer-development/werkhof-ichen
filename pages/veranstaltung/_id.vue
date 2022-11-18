@@ -6,8 +6,7 @@
           class="white--text align-end"
           contain
           aspect-ratio="1"
-          :src="veranstaltung.Vorschaubild.url"
-          :srcset="veranstaltung.Vorschaubild | generateSrcset"
+          :src="veranstaltung.vorschaubild.url"
           sizes="
           (min-width:1904px) 570px,
           (min-width:1264px) 371px,
@@ -28,16 +27,37 @@
 </template>
 
 <script>
+import { gql } from 'nuxt-graphql-request';
 import RegistrationForm from '~/components/RegistrationForm'
 
 export default {
   components: {
     RegistrationForm,
   },
-  async asyncData(context) {
-    const veranstaltung = await context.$axios.$get(
-      '/veranstaltungs/' + context.params.id
-    )
+  async asyncData({ $graphql, params }) {
+    const query = gql`
+      query veranstaltung($id: ID!) {
+        veranstaltung(where: {id: $id}) {
+          id
+          titel
+          datum
+          preis
+          maximaleAnzahlTeilnehmer
+          beschreibung {
+            html
+          }
+          anzeigedatum
+          kurzbeschreibung
+          vorschaubild {
+            url
+          }
+          anmeldungen {
+            id
+          }
+        }
+      }
+    `
+    const { veranstaltung } = await $graphql.default.request(query, params);
     return { veranstaltung }
   },
   methods: {

@@ -18,7 +18,7 @@
           <v-img
             aspect-ratio="1"
             class="white--text align-end"
-            :src="bilderstrecke.Bilder[0].url"
+            :src="bilderstrecke.bilder[0].url"
             gradient="to top, rgba(30, 48, 54,.75), rgba(57, 91, 102,0) 50%"
             :srcset="bilderstrecke.Bilder[0] | generateSrcset"
             sizes="
@@ -30,7 +30,7 @@
           >
             <div class="fill-height bottom-gradient"></div>
             <v-card-title class="text-h2 px-6 py-0">{{
-              bilderstrecke.Titel
+              bilderstrecke.titel
             }}</v-card-title>
             <v-icon dark size="40" class="white--text px-6 pb-6"
               >mdi-arrow-right</v-icon
@@ -43,9 +43,17 @@
 </template>
 
 <script>
+import { gql } from 'nuxt-graphql-request';
 export default {
-  async asyncData(context) {
-    const bilderstrecken = await context.$axios.$get('/bilderstreckes/')
+  async asyncData({ $graphql }) {
+    const query = gql`
+      query bilderstrecken {
+        bilderstrecken {
+          id
+        }
+      }
+    `
+    const { bilderstrecken } = await $graphql.default.request(query)
     return { bilderstrecken }
   },
   head() {

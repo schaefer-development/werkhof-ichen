@@ -5,8 +5,7 @@
         class="white--text align-end"
         contain
         aspect-ratio="1"
-        :src="veranstaltung.Vorschaubild.url"
-        :srcset="veranstaltung.Vorschaubild | generateSrcset"
+        :src="veranstaltung.vorschaubild.url"
         sizes="
           (min-width:1904px) 570px,
           (min-width:1264px) 371px,
@@ -15,17 +14,17 @@
           100vw"
       ></v-img>
       <v-card-title class="ichen_blue--text text-h2 pt-6">
-        {{ veranstaltung.Titel }}
+        {{ veranstaltung.titel }}
       </v-card-title>
       <v-card-text>
         <client-only>
           <div
             class="event_detail ichen_brown--text font-weight-bold"
-            v-html="$md.render(veranstaltung.Anzeigedatum)"
+            v-html="veranstaltung.anzeigedatum"
           ></div>
 
           <div class="event_detail ichen_brown--text font-weight-bold pa-0">
-            {{ veranstaltung.Preis }} € (plus Materialkosten)
+            {{ veranstaltung.preis }} € (plus Materialkosten)
           </div>
 
           <v-img

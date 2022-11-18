@@ -28,14 +28,6 @@ export default {
       title: 'werkhof ichen',
     }
   },
-  async mounted() {
-    try {
-      // ping heroku to wake it up
-      await this.$axios.$get('/veranstaltungs/count')
-    } catch {
-      /* ignore */
-    }
-  },
   methods: {
     toggleDrawer() {
       this.$refs.drawer.toggleDrawer()

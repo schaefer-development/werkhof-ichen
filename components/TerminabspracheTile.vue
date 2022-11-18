@@ -5,8 +5,7 @@
         class="white--text align-end"
         contain
         aspect-ratio="1"
-        :src="terminabsprache.Vorschaubild.url"
-        :srcset="terminabsprache.Vorschaubild | generateSrcset"
+        :src="terminabsprache.vorschaubild.url"
         sizes="
           (min-width:1904px) 570px,
           (min-width:1264px) 371px,
@@ -15,13 +14,13 @@
           100vw"
       ></v-img>
       <v-card-title class="ichen_blue--text text-h2 pt-6">{{
-        terminabsprache.Titel
+        terminabsprache.titel
       }}</v-card-title>
       <v-card-text>
         <client-only>
           <div
             class="event_detail ichen_brown--text font-weight-bold pa-0"
-            v-html="$md.render(terminabsprache.Dauer_und_Preis)"
+            v-html="terminabsprache.dauerUndPreis"
           ></div>
           <v-img
             class="shortlist_divider py-6 mx-auto"
@@ -34,7 +33,7 @@
           />
           <div
             class="pb-3"
-            v-html="$md.render(terminabsprache.Beschreibung)"
+            v-html="terminabsprache.beschreibung.html"
           ></div>
         </client-only>
 

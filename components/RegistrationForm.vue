@@ -10,7 +10,7 @@
             <h3 class="py-6 ichen_blue--text text-h2">
               Erfolgreich angemeldet für:
               <br />
-              {{ veranstaltung.Titel }}
+              {{ veranstaltung.titel }}
             </h3>
             <!-- -->
           </template>
@@ -20,7 +20,7 @@
             <h3 class="py-6 ichen_blue--text text-h2">
               Erfolgreich zur Warteliste hinzugefügt:
               <br />
-              {{ veranstaltung.Titel }}
+              {{ veranstaltung.titel }}
             </h3>
             <!-- -->
           </template>
@@ -57,15 +57,15 @@
             </v-btn>
           </p>
           <v-card-title class="ichen_blue--text text-h2 px-0">{{
-            veranstaltung.Titel
+            veranstaltung.titel
           }}</v-card-title>
           <div
             class="event_detail ichen_brown--text font-weight-bold"
-            v-html="$md.render(veranstaltung.Anzeigedatum)"
+            v-html="veranstaltung.anzeigedatum"
           ></div>
 
           <div class="event_detail ichen_brown--text font-weight-bold">
-            {{ veranstaltung.Preis }} € (plus Materialkosten)
+            {{ veranstaltung.preis }} € (plus Materialkosten)
           </div>
 
           <v-img
@@ -77,7 +77,7 @@
             width="95%"
             max-width="350px"
           />
-          <p v-html="$md.render(veranstaltung.Beschreibung)"></p>
+          <p v-html="veranstaltung.beschreibung.html"></p>
 
           <!-- -->
 
@@ -266,19 +266,20 @@ export default {
       this.loading = true
       const { anmeldung } = this
       anmeldung.veranstaltung = this.veranstaltung
-      try {
-        await this.$axios.$post('/anmeldungs/', {
-          ...anmeldung,
-        })
-        this.success = true
-        this.$vuetify.goTo('#alert-wrapper', { duration: 0 })
-      } catch (err) {
-        // eslint-disable-next-line no-console
-        console.log(err)
-        this.error = true
-      } finally {
-        this.loading = false
-      }
+      console.log('TODO: implement signup')
+      // try {
+      //   await this.$axios.$post('/anmeldungs/', {
+      //     ...anmeldung,
+      //   })
+      //   this.success = true
+      //   this.$vuetify.goTo('#alert-wrapper', { duration: 0 })
+      // } catch (err) {
+      //   // eslint-disable-next-line no-console
+      //   console.log(err)
+      //   this.error = true
+      // } finally {
+      //   this.loading = false
+      // }
     },
   },
 }

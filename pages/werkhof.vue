@@ -79,7 +79,7 @@
             >
               <h3>HURRA, Kurse dürfen wieder stattfinden</h3>
             </v-alert>
-             <p class="white--text"> 
+             <p class="white--text">
               Durch die aktuelle positive Entwicklung der
               Corona-Infektionszahlen darf ich wieder Kurse in meinen
               Räumlichkeiten anbieten.
@@ -130,19 +130,37 @@
 
 <script>
 import VeranstaltungShortList from '../components/VeranstaltungShortList.vue'
+import { gql } from 'nuxt-graphql-request';
 
 export default {
   components: {
     VeranstaltungShortList,
   },
-  async asyncData({ $axios }) {
-    const veranstaltungen = await $axios.$get('/veranstaltungs', {
-      params: {
-        _sort: 'Datum:ASC',
-        _limit: 3,
-        Datum_gte: new Date(),
-      },
-    })
+  async asyncData({ $graphql }) {
+    const query = gql`
+      query kommendeVeranstaltungen($today: DateTime) {
+        veranstaltungen(orderBy: datum_ASC, where: {datum_lt: $today}, first: 3) {
+          id
+          titel
+          datum
+          preis
+          maximaleAnzahlTeilnehmer
+          beschreibung {
+            html
+          }
+          anzeigedatum
+          kurzbeschreibung
+          vorschaubild {
+            url
+          }
+          anmeldungen {
+            id
+          }
+        }
+      }
+    `
+    const today = new Date().toISOString()
+    const { veranstaltungen } = await $graphql.default.request(query, { today });
     return { veranstaltungen }
   },
   head() {

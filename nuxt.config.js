@@ -1,5 +1,3 @@
-import axios from 'axios'
-
 const GQL_HOST = 'https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clakyyrxk19kn01ta1ckn11y7/master'
 
 const colors = {
@@ -12,12 +10,6 @@ const colors = {
   ichen_blue: '#2a434c',
   ichen_red: '#e0124d',
   ichen_brown: '#48413d',
-}
-
-const axiosConfig = {}
-if (process.env.NODE_ENV === 'development') {
-  axiosConfig.proxy = true
-  axiosConfig.prefix = '/api'
 }
 
 const apiUrl = process.env.API_URL || 'http://localhost:1337'
@@ -76,8 +68,6 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
     '@nuxtjs/markdownit',
@@ -107,12 +97,6 @@ export default {
     hostname: clientUrl,
     gzip: true,
   },
-
-  /*
-   ** Axios module configuration
-   ** See https://axios.nuxtjs.org/options
-   */
-  axios: axiosConfig,
 
   proxy: {
     '/uploads/': {
@@ -160,24 +144,5 @@ export default {
    */
   build: {
     transpile: ['mapbox-gl-controls/lib/styles'],
-  },
-
-  generate: {
-    async routes() {
-      let { data: veranstaltungen } = await axios.get(
-        `${apiUrl}/veranstaltungs`,
-        {
-          params: {
-            _sort: 'Datum:ASC',
-            Datum_gte: new Date(),
-          },
-        }
-      )
-      veranstaltungen = veranstaltungen.map((veranstaltung) => {
-        return '/veranstaltung/' + veranstaltung.id
-      })
-
-      return veranstaltungen
-    },
   },
 }

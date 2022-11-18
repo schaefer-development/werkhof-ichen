@@ -17,15 +17,14 @@
             </v-btn>
           </p>
           <h2 class="text-center ichen_blue--text text-h2 pt-0 pb-3">
-            {{ bilderstrecke.Titel }}
+            {{ bilderstrecke.titel }}
           </h2>
           <v-carousel hide-delimiters>
             <v-carousel-item
-              v-for="Bild in bilderstrecke.Bilder"
-              :key="Bild.id"
+              v-for="bild in bilderstrecke.bilder"
+              :key="bild.id"
               contain
-              :src="Bild.url"
-              :srcset="Bild | generateSrcset"
+              :src="bild.url"
               sizes="
           (min-width:1904px) 1761px,
           (min-width:1264px) 1161px,
@@ -40,11 +39,21 @@
 </template>
 
 <script>
+import { gql } from 'nuxt-graphql-request';
 export default {
-  async asyncData(context) {
-    const bilderstrecke = await context.$axios.$get(
-      '/bilderstreckes/' + context.params.id
-    )
+  async asyncData({ $graphql, params }) {
+    const query = gql`
+      query bilderstrecke($id: ID!) {
+        bilderstrecke(where: {id: $id}) {
+          id
+          bilder {
+            id
+            url
+          }
+        }
+      }
+    `
+    const { bilderstrecke } = await $graphql.default.request(query, params);
     return { bilderstrecke }
   },
   head() {

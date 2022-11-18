@@ -59,7 +59,7 @@
             >
               <h3>HURRA, Kurse dürfen wieder stattfinden</h3>
             </v-alert>
-            <p class="white--text"> 
+            <p class="white--text">
               Durch die aktuelle positive Entwicklung der
               Corona-Infektionszahlen darf ich wieder Kurse in meinen
               Räumlichkeiten anbieten.
@@ -178,22 +178,46 @@
 <script>
 import VeranstaltungTile from '~/components/VeranstaltungTile.vue'
 import TerminabspracheTile from '~/components/TerminabspracheTile.vue'
+import { gql } from 'nuxt-graphql-request';
 
 export default {
   components: {
     VeranstaltungTile,
     TerminabspracheTile,
   },
-  async asyncData(context) {
-    const [veranstaltungen, terminabsprachen] = await Promise.all([
-      context.$axios.$get('/veranstaltungs', {
-        params: {
-          _sort: 'Datum:ASC',
-          Datum_gte: new Date(),
-        },
-      }),
-      context.$axios.$get('/terminabspraches'),
-    ])
+  async asyncData({ $graphql }) {
+    const query = gql`
+      query veranstaltungenUndTerminabsprachen($today: DateTime) {
+        terminabsprachen {
+          id
+          titel
+          beschreibung {
+            text
+          }
+          dauerUndPreis
+          vorschaubild {
+            url
+          }
+        }
+        veranstaltungen(orderBy: datum_ASC, where: {datum_lt: $today}) {
+          id
+          titel
+          datum
+          preis
+          maximaleAnzahlTeilnehmer
+          beschreibung {
+            text
+          }
+          anzeigedatum
+          kurzbeschreibung
+          vorschaubild {
+            url
+          }
+        }
+      }
+    `
+    const today = new Date().toISOString()
+    const { veranstaltungen, terminabsprachen } = await $graphql.default.request(query, { today });
     const items = [
       { key: 'kurse_fuer_erwachsene', name: 'Kurse für Erwachsene' },
       {

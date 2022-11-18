@@ -162,7 +162,7 @@ export default {
   components: {
     VeranstaltungShortList,
   },
-  async asyncData({ $axios, $graphql }) {
+  async asyncData({ $graphql }) {
     const query = gql`
     query veranstaltungen {
       veranstaltungen {
@@ -172,12 +172,15 @@ export default {
         preis
         maximaleAnzahlTeilnehmer
         beschreibung {
-          text
+          html
         }
         anzeigedatum
         kurzbeschreibung
         vorschaubild {
-          fileName
+          url
+        }
+        anmeldungen {
+          id
         }
       }
     }
