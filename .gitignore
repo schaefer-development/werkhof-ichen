@@ -36,3 +36,4 @@ $RECYCLE.BIN/
 backups/
 .env
 node_modules/
+.nuxt
