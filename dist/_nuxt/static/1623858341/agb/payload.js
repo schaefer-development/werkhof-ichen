@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/agb", {data:[{}],fetch:[],mutations:void 0});

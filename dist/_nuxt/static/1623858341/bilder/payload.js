@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/bilder", {data:[{bilderstrecken:[]}],fetch:[],mutations:void 0});
