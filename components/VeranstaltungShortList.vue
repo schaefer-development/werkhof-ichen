@@ -6,14 +6,14 @@
       class="shortlist_item pt-2"
     >
       <p class="ma-0">
-        <strong>{{ veranstaltung.Titel }}</strong>
+        <strong>{{ veranstaltung.titel }}</strong>
       </p>
       <div
         class="anzeigedatum"
-        v-html="$md.render(veranstaltung.Anzeigedatum)"
+        v-html="veranstaltung.anzeigedatum"
       ></div>
 
-      <p>{{ veranstaltung.Kurzbeschreibung }}</p>
+      <p>{{ veranstaltung.kurzbeschreibung }}</p>
       <client-only placeholder="Anmelden">
         <div>
           <v-btn

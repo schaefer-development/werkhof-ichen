@@ -1,5 +1,7 @@
 import axios from 'axios'
 
+const GQL_HOST = 'https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clakyyrxk19kn01ta1ckn11y7/master'
+
 const colors = {
   primary: '#000000',
   error: '#E0124D',
@@ -69,7 +71,7 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ['@nuxtjs/vuetify', '@nuxtjs/netlify-files'],
+  buildModules: ['@nuxtjs/vuetify', '@nuxtjs/netlify-files', 'nuxt-graphql-request'],
   /*
    ** Nuxt.js modules
    */
@@ -119,6 +121,14 @@ export default {
     '/api/': {
       target: apiUrl,
       pathRewrite: { '^/api/': '' },
+    },
+  },
+
+  graphql: {
+    clients: {
+      default: {
+        endpoint: GQL_HOST,
+      },
     },
   },
 
