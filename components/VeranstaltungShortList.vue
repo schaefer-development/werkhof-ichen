@@ -10,7 +10,7 @@
       </p>
       <div
         class="anzeigedatum"
-        v-html="veranstaltung.anzeigedatum"
+        v-html="$md.render(veranstaltung.anzeigedatum)"
       ></div>
 
       <p>{{ veranstaltung.kurzbeschreibung }}</p>

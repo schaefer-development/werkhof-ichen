@@ -20,7 +20,7 @@
         <client-only>
           <div
             class="event_detail ichen_brown--text font-weight-bold"
-            v-html="veranstaltung.anzeigedatum"
+            v-html="$md.render(veranstaltung.anzeigedatum)"
           ></div>
 
           <div class="event_detail ichen_brown--text font-weight-bold pa-0">

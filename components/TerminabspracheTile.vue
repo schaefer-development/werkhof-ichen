@@ -20,7 +20,7 @@
         <client-only>
           <div
             class="event_detail ichen_brown--text font-weight-bold pa-0"
-            v-html="terminabsprache.dauerUndPreis"
+            v-html="$md.render(terminabsprache.dauerUndPreis)"
           ></div>
           <v-img
             class="shortlist_divider py-6 mx-auto"
