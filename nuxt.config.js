@@ -1,4 +1,6 @@
 const GQL_HOST = 'https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clakyyrxk19kn01ta1ckn11y7/master'
+const FUNCTIONS_HOST = 'http://localhost:9999/.netlify/functions'
+const clientUrl = process.env.URL || 'http://localhost:3000'
 
 const colors = {
   primary: '#000000',
@@ -12,8 +14,6 @@ const colors = {
   ichen_brown: '#48413d',
 }
 
-const apiUrl = process.env.API_URL || 'http://localhost:1337'
-const clientUrl = process.env.URL || 'http://localhost:3000'
 
 const description =
   'werkhof ichen Lohmar: Nähkurse für Kinder/ Jugendliche/ Erwachsene, Geburtstag-Näh-Events, großzügiges Platzangebot, Anfertigungen, Kinderlederhosen'
@@ -63,10 +63,15 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/markdownit',
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
-    '@nuxtjs/markdownit',
   ],
+
+  axios: {
+    proxy: true
+  },
 
   markdownit: {
     injected: true,
@@ -93,13 +98,15 @@ export default {
     gzip: true,
   },
 
+  // use proxy module only for development - on production we use _redirects
   proxy: {
-    '/uploads/': {
-      target: apiUrl,
+    '/graphql/': {
+      target: GQL_HOST,
+      pathRewrite: { '^/graphql/': '' },
     },
-    '/api/': {
-      target: apiUrl,
-      pathRewrite: { '^/api/': '' },
+    '/functions/': {
+      target: FUNCTIONS_HOST,
+      pathRewrite: { '^/functions/': '' },
     },
   },
 
