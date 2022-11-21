@@ -267,19 +267,19 @@ export default {
       const { anmeldung } = this
       anmeldung.veranstaltung = this.veranstaltung
       console.log('TODO: implement signup')
-      // try {
-      //   await this.$axios.$post('/anmeldungs/', {
-      //     ...anmeldung,
-      //   })
-      //   this.success = true
-      //   this.$vuetify.goTo('#alert-wrapper', { duration: 0 })
-      // } catch (err) {
-      //   // eslint-disable-next-line no-console
-      //   console.log(err)
-      //   this.error = true
-      // } finally {
-      //   this.loading = false
-      // }
+      try {
+        await this.$axios.$post('/functions/register/', {
+          ...anmeldung,
+        })
+        this.success = true
+        this.$vuetify.goTo('#alert-wrapper', { duration: 0 })
+      } catch (err) {
+        // eslint-disable-next-line no-console
+        console.log(err)
+        this.error = true
+      } finally {
+        this.loading = false
+      }
     },
   },
 }
