@@ -169,6 +169,7 @@
               </div>
             </template>
           </v-checkbox>
+          <vue-hcaptcha :sitekey="HCAPTCHA_SITEKEY" @verify="verify"></vue-hcaptcha>
           <v-alert text type="info" class="font-weight-bold mt-4 mb-10">
             <template v-if="available"
               >Ihr Platz ist erst mit Zahlungseingang reserviert.</template
@@ -189,7 +190,7 @@
             class="mr-4 mb-4"
             depressed
             color="ichen_red white--text"
-            :disabled="!valid"
+            :disabled="!valid || !anmeldung.hCaptchaResult"
             :loading="loading"
             @click="submit"
             >{{ available ? 'Anmelden' : 'Auf Warteliste setzen' }}</v-btn
@@ -208,11 +209,17 @@
 </template>
 
 <script>
+import VueHcaptcha from '@hcaptcha/vue-hcaptcha';
 import isAvailable from '~/helpers/isAvailable.js'
 // eslint-disable-next-line no-useless-escape
 const emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
+const HCAPTCHA_SITEKEY = process.env.NUXT_ENV_HCAPTCHA_SITEKEY
+
 export default {
+  components: {
+    VueHcaptcha,
+  },
   props: {
     veranstaltung: {
       type: Object,
@@ -220,8 +227,10 @@ export default {
     },
   },
   data: () => ({
+    HCAPTCHA_SITEKEY,
     valid: true,
     anmeldung: {
+      hCaptchaResult: '',
       name: '',
       email: '',
       telefonNummer: '',
@@ -262,11 +271,14 @@ export default {
         this.anmeldung[key] = this.anmeldung[key].trim()
       }
     },
+    verify(hCaptchaResult) {
+      this.anmeldung.hCaptchaResult = hCaptchaResult
+    },
     async submit() {
       this.loading = true
       const { anmeldung } = this
+
       anmeldung.veranstaltung = this.veranstaltung
-      console.log('TODO: implement signup')
       try {
         await this.$axios.$post('/functions/register/', {
           ...anmeldung,

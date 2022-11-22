@@ -21,6 +21,7 @@ export type Veranstaltung = {
 }
 
 export type RegistrationPayload = {
+  hCaptchaResult: string
   name: string
   email: string
   telefonNummer: string

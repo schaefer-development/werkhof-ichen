@@ -3,6 +3,8 @@ import { GraphQLClient, gql } from 'graphql-request'
 import { Handler } from '@netlify/functions'
 import * as templates from './emailTemplates'
 import nodemailer from 'nodemailer'
+import { verify } from 'hcaptcha';
+
 
 const {
   SMTP_HOST,
@@ -12,7 +14,8 @@ const {
   SMTP_DEFAULT_REPLY_TO = 'default-reply-to@example.org',
   SMTP_DEFAULT_FROM = 'default-from@example.org',
   HYGRAPH_HOST,
-  HYGRAPH_TOKEN
+  HYGRAPH_TOKEN,
+  HCAPTCHA_SECRET,
 } = process.env
 
 const mutation = gql`
@@ -59,8 +62,11 @@ const isAvailable = async (veranstaltung: RegistrationPayload['veranstaltung']) 
 
 export const handler: Handler = async (event) => {
   const anmeldung: RegistrationPayload = JSON.parse(event.body)
+  const { name, email, telefonNummer, strasseHausnummer, veranstaltung, hCaptchaResult } = anmeldung
 
-  const { name, email, telefonNummer, strasseHausnummer, veranstaltung } = anmeldung
+	const verificationData = await verify(HCAPTCHA_SECRET, hCaptchaResult)
+	if(!verificationData.success) throw new Error('HCaptcha Verification failed');
+
   const variables = { name, email, telefonNummer, strasseHausnummer, veranstaltungId: veranstaltung.id }
   const graphqlResponse = await graphQLClient.request(mutation, variables)
 
