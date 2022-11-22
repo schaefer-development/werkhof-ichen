@@ -1,33 +1,19 @@
+import type { RegistrationPayload } from './types'
 import { GraphQLClient, gql } from 'graphql-request'
 import { Handler } from '@netlify/functions'
+import * as templates from './emailTemplates'
+import nodemailer from 'nodemailer'
 
-type Veranstaltung = {
-  id: string
-  titel: string
-  datum: string
-  preis: number
-  maximaleAnzahlTeilnehmer: number
-  beschreibung: {
-    html: string
-  }
-  kurzbeschreibung: string
-  anzeigedatum: string
-  vorschaubild: {
-    url: string
-  }
-  anmeldungen: unknown[]
-}
-
-type RegistrationPayload = {
-  name: string
-  email: string
-  telefonNummer: string
-  strasseHausnummer: string
-  veranstaltung: Veranstaltung
-}
-
-const GQL_HOST = 'https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clakyyrxk19kn01ta1ckn11y7/master'
-const HYGRAPH_TOKEN = process.env.HYGRAPH_TOKEN
+const {
+  SMTP_HOST,
+  SMTP_PORT,
+  SMTP_USERNAME,
+  SMTP_PASSWORD,
+  SMTP_DEFAULT_REPLY_TO = 'default-reply-to@example.org',
+  SMTP_DEFAULT_FROM = 'default-from@example.org',
+  HYGRAPH_HOST,
+  HYGRAPH_TOKEN
+} = process.env
 
 const mutation = gql`
 mutation anmeldung($name: String!, $email: String!, $strasseUndHausnummer: String, $plzUndOrt: String, $telefonnummer: String, $veranstaltungId: ID!) {
@@ -36,25 +22,60 @@ mutation anmeldung($name: String!, $email: String!, $strasseUndHausnummer: Strin
   ) {
     id
     name
+    updatedAt
     veranstaltung {
       id
       titel
+      datum
+      preis
     }
   }
 }
 `
 
-const graphQLClient = new GraphQLClient(GQL_HOST, {
+const transporter = nodemailer.createTransport({
+  host: SMTP_HOST,
+  port: SMTP_PORT,
+  auth: {
+    user: SMTP_USERNAME,
+    pass: SMTP_PASSWORD,
+  },
+  secure: false, // true for 465, false for other ports
+});
+
+
+const graphQLClient = new GraphQLClient(HYGRAPH_HOST, {
   headers: {
     authorization: `Bearer ${HYGRAPH_TOKEN}`,
   },
 })
 
-export const handler: Handler = async (event, context) => {
-  const data: RegistrationPayload = JSON.parse(event.body)
-  const { name, email, telefonNummer, strasseHausnummer, veranstaltung } = data
+const isAvailable = async (veranstaltung: RegistrationPayload['veranstaltung']) => {
+  const { maximaleAnzahlTeilnehmer } = veranstaltung
+  if (!maximaleAnzahlTeilnehmer) return true
+  const countAnmeldungen = veranstaltung.anmeldungen.length
+  return countAnmeldungen <= maximaleAnzahlTeilnehmer
+}
+
+export const handler: Handler = async (event) => {
+  const anmeldung: RegistrationPayload = JSON.parse(event.body)
+
+  const { name, email, telefonNummer, strasseHausnummer, veranstaltung } = anmeldung
   const variables = { name, email, telefonNummer, strasseHausnummer, veranstaltungId: veranstaltung.id }
-  await graphQLClient.request(mutation, variables)
+  const graphqlResponse = await graphQLClient.request(mutation, variables)
+
+  const { createAnmeldung } = graphqlResponse
+  const emailTemplate = isAvailable(createAnmeldung) ? templates.register : templates.waitingList
+  const { text, html } = emailTemplate(createAnmeldung)
+  console.log(text, html)
+  await transporter.sendMail({
+    from: SMTP_DEFAULT_FROM,
+    cc: SMTP_DEFAULT_REPLY_TO,
+    to: anmeldung.email,
+    subject: 'Ihre Anmeldung auf werkhof-ichen.de',
+    text,
+    html
+  })
 
   return {
     statusCode: 200,
