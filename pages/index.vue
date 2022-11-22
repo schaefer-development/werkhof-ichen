@@ -164,8 +164,8 @@ export default {
   },
   async asyncData({ $graphql }) {
     const query = gql`
-    query veranstaltungen {
-      veranstaltungen {
+    query veranstaltungen($today: DateTime) {
+      veranstaltungen(orderBy: datum_ASC, where: {datum_lt: $today}) {
         id
         titel
         datum
@@ -185,7 +185,8 @@ export default {
       }
     }
     `
-    const { veranstaltungen } = await $graphql.default.request(query);
+    const today = new Date().toISOString()
+    const { veranstaltungen } = await $graphql.default.request(query, { today });
     return { veranstaltungen }
   },
   head() {

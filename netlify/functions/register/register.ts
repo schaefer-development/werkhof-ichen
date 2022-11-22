@@ -67,7 +67,6 @@ export const handler: Handler = async (event) => {
   const { createAnmeldung } = graphqlResponse
   const emailTemplate = isAvailable(createAnmeldung) ? templates.register : templates.waitingList
   const { text, html } = emailTemplate(createAnmeldung)
-  console.log(text, html)
   await transporter.sendMail({
     from: SMTP_DEFAULT_FROM,
     cc: SMTP_DEFAULT_REPLY_TO,
