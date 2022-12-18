@@ -1,5 +1,7 @@
-const GQL_HOST = 'https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clakyyrxk19kn01ta1ckn11y7/master'
-const FUNCTIONS_HOST = 'http://localhost:9999/.netlify/functions'
+require('dotenv').config()
+
+const HYGRAPH_HOST = process.env.HYGRAPH_HOST
+const FUNCTIONS_HOST = process.env.FUNCTIONS_HOST || 'http://localhost:9999/.netlify/functions'
 const clientUrl = process.env.URL || 'http://localhost:3000'
 
 const colors = {
@@ -101,7 +103,7 @@ export default {
   // use proxy module only for development - on production we use _redirects
   proxy: {
     '/graphql/': {
-      target: GQL_HOST,
+      target: HYGRAPH_HOST,
       pathRewrite: { '^/graphql/': '' },
     },
     '/functions/': {
@@ -113,7 +115,7 @@ export default {
   graphql: {
     clients: {
       default: {
-        endpoint: GQL_HOST,
+        endpoint: HYGRAPH_HOST,
       },
     },
   },
