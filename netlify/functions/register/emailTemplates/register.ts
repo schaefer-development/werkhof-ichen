@@ -7,7 +7,7 @@ export function register(anmeldung: GraphqlCreateAnmeldung) {
   const veranstaltungs_datum = Date.parse(anmeldung.veranstaltung.datum)
   const anmelde_datum = Date.parse(anmeldung.updatedAt)
   const date_ahead = addDays(anmelde_datum, 3)
-  const date_payment = new Date(Math.min(veranstaltungs_datum, date_ahead.getDate()))
+  const date_payment = new Date(Math.min(veranstaltungs_datum, date_ahead.valueOf()))
   return {
     text: `
 Werkhof ichen
