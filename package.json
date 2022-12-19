@@ -7,7 +7,9 @@
     "generate": "NODE_OPTIONS=--openssl-legacy-provider nuxt generate",
     "serve": "nuxt serve",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "lint": "yarn lint:js"
+    "lint": "yarn lint:js",
+    "maildev": "maildev",
+    "functions:serve": "netlify functions:serve"
   },
   "dependencies": {
     "@hcaptcha/vue-hcaptcha": "^0.3.2",
@@ -37,6 +39,8 @@
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-prettier": "^4.2.1",
     "graphql": "^16.6.0",
+    "maildev": "^2.0.5",
+    "netlify-cli": "^12.4.0",
     "nuxt-graphql-request": "^6.0.1",
     "prettier": "^2.8.1"
   }

@@ -53,7 +53,7 @@ const graphQLClient = new GraphQLClient(HYGRAPH_HOST, {
   },
 })
 
-const isAvailable = async (veranstaltung: RegistrationPayload['veranstaltung']) => {
+const isAvailable = (veranstaltung: RegistrationPayload['veranstaltung']) => {
   const { maximaleAnzahlTeilnehmer } = veranstaltung
   if (!maximaleAnzahlTeilnehmer) return true
   const countAnmeldungen = veranstaltung.anmeldungen.length
@@ -71,7 +71,7 @@ export const handler: Handler = async (event) => {
   const graphqlResponse = await graphQLClient.request(mutation, variables)
 
   const { createAnmeldung } = graphqlResponse
-  const emailTemplate = isAvailable(createAnmeldung) ? templates.register : templates.waitingList
+  const emailTemplate = isAvailable(veranstaltung) ? templates.register : templates.waitingList
   const { text, html } = emailTemplate(createAnmeldung)
   await transporter.sendMail({
     from: SMTP_DEFAULT_FROM,

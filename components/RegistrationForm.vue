@@ -169,7 +169,9 @@
               </div>
             </template>
           </v-checkbox>
-          <vue-hcaptcha :sitekey="HCAPTCHA_SITEKEY" @verify="verify"></vue-hcaptcha>
+          <client-only>
+            <vue-hcaptcha :sitekey="HCAPTCHA_SITEKEY" @verify="verify"></vue-hcaptcha>
+          </client-only>
           <v-alert text type="info" class="font-weight-bold mt-4 mb-10">
             <template v-if="available"
               >Ihr Platz ist erst mit Zahlungseingang reserviert.</template
