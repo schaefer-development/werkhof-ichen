@@ -18,9 +18,9 @@
           <v-img
             aspect-ratio="1"
             class="white--text align-end"
-            :src="bilderstrecke.bilder[0].url"
             gradient="to top, rgba(30, 48, 54,.75), rgba(57, 91, 102,0) 50%"
-            :srcset="bilderstrecke.Bilder[0] | generateSrcset"
+            :src="bilderstrecke.bilder[0].url"
+            :srcset="bilderstrecke.bilder[0] | generateSrcset"
             sizes="
           (min-width:1904px) 570px,
           (min-width:1264px) 371px,

@@ -177,7 +177,12 @@ export default {
         anzeigedatum
         kurzbeschreibung
         vorschaubild {
+          width
           url
+          thumbnail: url(transformation: {image: {resize: {width: 250}}})
+          small: url(transformation: {image: {resize: {width: 500}}})
+          medium: url(transformation: {image: {resize: {width: 750}}})
+          large: url(transformation: {image: {resize: {width: 1000}}})
         }
         anmeldungen {
           id

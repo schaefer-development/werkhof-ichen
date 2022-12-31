@@ -7,6 +7,7 @@
           contain
           aspect-ratio="1"
           :src="veranstaltung.vorschaubild.url"
+          :srcset="veranstaltung.vorschaubild | generateSrcset"
           sizes="
           (min-width:1904px) 570px,
           (min-width:1264px) 371px,
@@ -49,7 +50,12 @@ export default {
           anzeigedatum
           kurzbeschreibung
           vorschaubild {
+            width
             url
+            thumbnail: url(transformation: {image: {resize: {width: 250}}})
+            small: url(transformation: {image: {resize: {width: 500}}})
+            medium: url(transformation: {image: {resize: {width: 750}}})
+            large: url(transformation: {image: {resize: {width: 1000}}})
           }
           anmeldungen {
             id
