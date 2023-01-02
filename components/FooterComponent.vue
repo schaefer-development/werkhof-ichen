@@ -1,122 +1,100 @@
 <template>
-  <v-footer dark padless>
-    <v-container fluid class="pt-0 pb-3">
-      <v-row>
-        <div id="footer-component-footer-gallery">
-          <v-img src="/footer_images/house.jpg" alt="werkhof ichen"></v-img>
-          <v-img src="/footer_images/tea_pot.jpg" alt="Tea Time"></v-img>
-          <v-img src="/footer_images/flower3.jpg" alt="Blumen"></v-img>
-          <v-img src="/footer_images/collection3.jpg" alt="Collection"></v-img>
-          <v-img src="/footer_images/physalis.jpg" alt="Physalis"></v-img>
-          <v-img src="/footer_images/sew.jpg" alt="Nähen"></v-img>
-          <v-img
-            src="/footer_images/kater_schroeder.jpg"
-            alt="Kater Schröder"
-          ></v-img>
-          <v-img src="/footer_images/flower.jpg" alt="Blumen"></v-img>
-          <v-img src="/footer_images/stone.jpg" alt="Textur"></v-img>
-          <v-img src="/footer_images/lamp.jpg" alt="Lampe"></v-img>
-        </div>
-      </v-row>
+  <v-footer padless>
+    <div class="footerWrapper flex flex-col">
+      <div class="footerImages w-full flex flex-wrap">
+        <img
+          class="w-[20%] md:w-[10%] aspect-square"
+          src="/footer_images/house.jpg"
+          alt="Werkhof Ichen"
+        />
+        <img
+          class="w-[20%] md:w-[10%] aspect-square"
+          src="/footer_images/tea_pot.jpg"
+          alt="Tea Time"
+        />
+        <img
+          class="w-[20%] md:w-[10%] aspect-square"
+          src="/footer_images/flower3.jpg"
+          alt="Blumen"
+        />
+        <img
+          class="w-[20%] md:w-[10%] aspect-square"
+          src="/footer_images/collection3.jpg"
+          alt="Collection"
+        />
+        <img
+          class="w-[20%] md:w-[10%] aspect-square"
+          src="/footer_images/physalis.jpg"
+          alt="Physalis"
+        />
+        <img
+          class="w-[20%] md:w-[10%] aspect-square"
+          src="/footer_images/sew.jpg"
+          alt="Nähen"
+        />
+        <img
+          class="w-[20%] md:w-[10%] aspect-square"
+          src="/footer_images/kater_schroeder.jpg"
+          alt="Kater Schrdöer"
+        />
+        <img
+          class="w-[20%] md:w-[10%] aspect-square"
+          src="/footer_images/flower.jpg"
+          alt="Werkhof Ichen"
+        />
+        <img
+          class="w-[20%] md:w-[10%] aspect-square"
+          src="/footer_images/stone.jpg"
+          alt="Textur"
+        />
+        <img
+          class="w-[20%] md:w-[10%] aspect-square"
+          src="/footer_images/lamp.jpg"
+          alt="Lampe"
+        />
+      </div>
 
-      <v-row
-        justify="center"
-        align="center"
-        class="footer-component-bottom-row pt-8 pl-12 pb-3 pr-12"
+      <div
+        class="footerContact w-full max-w-xl mx-auto py-12 px-2 flex flex-row items-center justify-center"
       >
-        <v-col cols="12" sm="6" md="4" lg="3" xl="2" align="center">
-          <v-img
+        <div class="left w-full h-full flex items-center justify-center">
+          <img
+            class="w-6/12 max-w-[180px]"
             src="/logo_ichen_outline.svg"
-            alt="Logo werkhof ichen"
-            max-width="180px"
+            alt="Logo Werkhof Ichen"
           />
-        </v-col>
-        <v-col cols="12" sm="6" md="4" lg="3" xl="2">
-          <p class="pl-2">
-            <a href="tel:+4922463197">02246 . 31 97</a>
+        </div>
+        <div class="right w-full text-white text-sm px-2">
+          <p>
+            <a href="tel:+4922463197" class="text-white">02246 . 31 97</a>
             <br />
-            <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>
+            <a href="mailto:info@werkhof-ichen.de" class="text-white"
+              >info@werkhof-ichen.de</a
+            >
           </p>
-
-          <p class="pl-2">
-            <nuxt-link to="/datenschutz">Datenschutz</nuxt-link>
+          <p>
+            <nuxt-link to="/datenschutz" class="text-white"
+              >Datenschutz</nuxt-link
+            >
             <br />
-            <nuxt-link to="/impressum">Impressum</nuxt-link>
+            <nuxt-link to="/impressum" class="text-white">Impressum</nuxt-link>
             <br />
-            <nuxt-link to="/agb">AGB</nuxt-link>
+            <nuxt-link to="/agb" class="text-white">AGB</nuxt-link>
             <br />
             Copyright {{ new Date().getFullYear() }}
           </p>
-
-          <p>
-            <v-btn
-              icon
-              link
-              target="_blank"
-              rel="noopener"
-              aria-label="Facebook"
-              href="https://de-de.facebook.com/pages/category/Education/Werkhof-ichen-130771390426775/"
-            >
-              <v-icon medium>mdi-facebook</v-icon>
-            </v-btn>
-            <v-btn
-              link
-              target="_blank"
-              rel="noopener"
-              aria-label="Instagram"
-              href="https://www.instagram.com/irmina_schmitz/"
-              icon
-            >
-              <v-icon medium>mdi-instagram</v-icon>
-            </v-btn>
-          </p>
-        </v-col>
-      </v-row>
-    </v-container>
+        </div>
+      </div>
+    </div>
   </v-footer>
 </template>
 
-<style scoped lang="scss">
+<style scoped>
 footer {
   background-color: rgba(54, 47, 43, 0.93) !important;
 }
-#footer-component-footer-gallery {
-  width: 100%;
-  height: 10vw;
-  display: flex;
-  div {
-    width: 10vw;
-  }
-}
-.footer-component-bottom-row {
-  font-size: 0.85em;
-  a {
-    color: #fff;
-    text-decoration: none;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    &:hover {
-      color: $ichen_yellow !important;
-    }
-  }
-  strong {
-    font-family: 'Overlock';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 1.1em;
-  }
-}
 
-@media only screen and (max-width: 960px) {
-  #footer-component-footer-gallery {
-    width: 100%;
-    height: 40vw;
-    flex-wrap: wrap;
-    div {
-      width: 18vw;
-    }
-  }
+.right a {
+  color: white;
 }
 </style>
