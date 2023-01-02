@@ -46,7 +46,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@mdi/font/css/materialdesignicons.css'],
+  css: ['@mdi/font/css/materialdesignicons.css', '@/assets/css/main.css'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -60,7 +60,7 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ['@nuxtjs/vuetify', '@nuxtjs/netlify-files', 'nuxt-graphql-request'],
+  buildModules: ['@nuxtjs/vuetify', '@nuxtjs/netlify-files', 'nuxt-graphql-request', '@nuxt/postcss8'],
   /*
    ** Nuxt.js modules
    */
@@ -148,5 +148,11 @@ export default {
    */
   build: {
     transpile: ['mapbox-gl-controls/lib/styles'],
+    postcss: {
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+      },
+    },
   },
 }
