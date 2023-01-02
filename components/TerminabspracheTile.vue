@@ -23,15 +23,9 @@
             class="event_detail ichen_brown--text font-weight-bold pa-0"
             v-html="$md.render(terminabsprache.dauerUndPreis)"
           ></div>
-          <v-img
-            class="shortlist_divider py-6 mx-auto"
-            src="/sewing_needle_brown.svg"
-            alt="Nähnaht"
-            contain
-            justify="center"
-            width="95%"
-            max-width="300px"
-          />
+          <div class="w-full max-w-[400px] h-12 py-12 mx-auto flex items-center justify-center">
+                <img src="/sewing_needle_brown.svg" alt="Nähnadel" />
+              </div>
           <div
             class="pb-3"
             v-html="terminabsprache.beschreibung.html"

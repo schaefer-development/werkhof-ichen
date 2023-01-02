@@ -68,28 +68,15 @@
             {{ veranstaltung.preis }} € (plus Materialkosten)
           </div>
 
-          <v-img
-            class="shortlist_divider pt-6 pb-7 my-0 mx-auto"
-            src="/sewing_needle_brown.svg"
-            alt="Nähnaht"
-            contain
-            justify="center"
-            width="95%"
-            max-width="350px"
-          />
+          <div class="w-full max-w-[400px] h-12 py-12 mx-auto flex items-center justify-center">
+                <img src="/sewing_needle_brown.svg" alt="Nähnadel" />
+              </div>
           <p v-html="veranstaltung.beschreibung.html"></p>
 
           <!-- -->
-
-          <v-img
-            class="shortlist_divider pt-6 pb-7 mx-auto"
-            src="/sewing_needle_brown.svg"
-            alt="Nähnaht"
-            contain
-            justify="center"
-            width="95%"
-            max-width="350px"
-          />
+          <div class="w-full max-w-[400px] h-12 py-12 mx-auto flex items-center justify-center">
+                <img src="/sewing_needle_brown.svg" alt="Nähnadel" />
+              </div>
           <p class="pt-6 pb-3 ma-0">
             <template v-if="available">
               <strong class="ichen_green--text">

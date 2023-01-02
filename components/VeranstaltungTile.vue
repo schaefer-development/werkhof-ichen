@@ -14,6 +14,13 @@
           (min-width:600px) 50vw,
           100vw"
       ></v-img>
+
+
+
+      <div class="w-full border aspect-quare">
+        <img src="veranstaltung.vorschaubild.url"></img>
+        sdfsdf
+      </div>
       <v-card-title class="ichen_blue--text text-h2 pt-6">
         {{ veranstaltung.titel }}
       </v-card-title>
@@ -28,15 +35,11 @@
             {{ veranstaltung.preis }} € (plus Materialkosten)
           </div>
 
-          <v-img
-            class="shortlist_divider py-6 mx-auto"
-            src="/sewing_needle_brown.svg"
-            alt="Nähnaht"
-            contain
-            justify="center"
-            width="95%"
-            max-width="300px"
-          />
+          <div
+            class="w-full max-w-[400px] h-12 py-12 mx-auto flex items-center justify-center"
+          >
+            <img src="/sewing_needle_brown.svg" alt="Nähnadel" />
+          </div>
           <p>{{ veranstaltung.Kurzbeschreibung }}</p>
         </client-only>
       </v-card-text>
@@ -59,7 +62,7 @@
 </template>
 
 <script>
-import isAvailable from '~/helpers/isAvailable'
+import isAvailable from "~/helpers/isAvailable";
 
 export default {
   props: {
@@ -70,10 +73,10 @@ export default {
   },
   computed: {
     available() {
-      return isAvailable(this.veranstaltung)
+      return isAvailable(this.veranstaltung);
     },
   },
-}
+};
 </script>
 
 <style lang="scss">
