@@ -91,27 +91,15 @@
               Falls Änderungen auftreten sollten, werde ich Sie als Teilnehmer
               umgehend informieren.
             </p>
-            <v-img
-              class="shortlist_divider py-8 mx-auto"
-              src="/sewing_needle_beige.svg"
-              alt="Nähnaht"
-              contain
-              justify="center"
-              width="100%"
-              max-width="400px"
-            />
+            <div class="w-full max-w-[400px] h-12 py-12 mx-auto flex items-center justify-center">
+                <img src="/sewing_needle_beige.svg" alt="Nähnadel" />
+              </div>
             <veranstaltung-short-list
               :veranstaltungen="veranstaltungen"
             ></veranstaltung-short-list>
-            <v-img
-              class="shortlist_divider py-8 mx-auto"
-              src="/sewing_needle_beige.svg"
-              alt="Nähnaht"
-              contain
-              justify="center"
-              width="100%"
-              max-width="400px"
-            />
+            <div class="w-full max-w-[400px] h-12 py-12 mx-auto flex items-center justify-center">
+                <img src="/sewing_needle_beige.svg" alt="Nähnadel" />
+              </div>
             <div class="text-right pb-12">
               <v-btn
                 nuxt

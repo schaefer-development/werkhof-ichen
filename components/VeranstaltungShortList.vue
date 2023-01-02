@@ -25,12 +25,12 @@
           >
         </div>
       </client-only>
-      <div class="w-full max-w-[400px] h-12 py-12 mx-auto flex items-center justify-center">
-                <img src="/sewing_needle_beige.svg" alt="Nähnadel" />
-              </div>
+      <div
+        class="w-full max-w-[400px] h-12 py-12 mx-auto flex items-center justify-center"
+      >
+        <img src="/sewing_needle_beige.svg" alt="Nähnadel" />
+      </div>
     </div>
-
-
   </div>
 </template>
 
@@ -42,7 +42,7 @@ export default {
       required: true,
     },
   },
-}
+};
 </script>
 
 <style lang="scss">
