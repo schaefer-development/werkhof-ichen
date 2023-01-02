@@ -6,6 +6,7 @@
         contain
         aspect-ratio="1"
         :src="veranstaltung.vorschaubild.url"
+        :srcset="veranstaltung.vorschaubild | generateSrcset"
         sizes="
           (min-width:1904px) 570px,
           (min-width:1264px) 371px,

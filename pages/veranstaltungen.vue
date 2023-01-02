@@ -196,7 +196,12 @@ export default {
           }
           dauerUndPreis
           vorschaubild {
+            width
             url
+            thumbnail: url(transformation: {image: {resize: {width: 250}}})
+            small: url(transformation: {image: {resize: {width: 500}}})
+            medium: url(transformation: {image: {resize: {width: 750}}})
+            large: url(transformation: {image: {resize: {width: 1000}}})
           }
         }
         veranstaltungen(orderBy: datum_ASC, where: {datum_lt: $today}) {

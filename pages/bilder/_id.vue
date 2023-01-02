@@ -25,6 +25,7 @@
               :key="bild.id"
               contain
               :src="bild.url"
+              :srcset="bild | generateSrcset"
               sizes="
           (min-width:1904px) 1761px,
           (min-width:1264px) 1161px,
@@ -48,7 +49,12 @@ export default {
           id
           bilder {
             id
+            width
             url
+            thumbnail: url(transformation: {image: {resize: {width: 250}}})
+            small: url(transformation: {image: {resize: {width: 500}}})
+            medium: url(transformation: {image: {resize: {width: 750}}})
+            large: url(transformation: {image: {resize: {width: 1000}}})
           }
         }
       }
