@@ -13,7 +13,12 @@
         <v-btn icon @click.stop="toggleDrawer">
           <v-icon size="50">mdi-close</v-icon>
         </v-btn>
-      </v-toolbar>
+     </v-toolbar>
+
+      <div class="flex justify-center items-center block mx-6 py-6 h-6">
+        <img class="w-full-b max-w-[400px] mx-auto" src="/sewing_needle_beige.svg" alt="Nähnadel" />
+      </div>
+
       <v-list flat nav class="px-0">
         <v-list-item nuxt link to="/">Startseite</v-list-item>
         <v-list-item nuxt link to="/werkhof">Werkhof</v-list-item>
