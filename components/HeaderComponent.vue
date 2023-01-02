@@ -2,20 +2,17 @@
   <v-app-bar height="200px" flat color="transparent" absolute app clipped-left>
     <v-container class="pa-0">
       <v-toolbar color="transparent" flat>
-        <nuxt-link to="/">
-          <v-img
-            src="/logo_ichen.svg"
-            class="d-none d-sm-flex"
-            alt="Logo werkhof ichen"
-            max-width="150px"
-          />
-          <v-img
-            src="/logo_ichen.svg"
-            width="80px"
-            class="d-flex d-sm-none"
-            alt="Logo werkhof ichen"
-          />
-        </nuxt-link>
+
+
+
+<div class="relative w-full max-w-[150px] aspect-square">
+  <a href="/" class="w-full h-full flex justify-center items-center">
+      <img class="w-10/12" src="/logo_ichen.svg" alt="Logo Werkhof Ichen" />
+  </a>
+</div>
+
+
+
 
         <v-spacer></v-spacer>
         <v-btn
