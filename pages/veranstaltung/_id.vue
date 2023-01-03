@@ -3,9 +3,7 @@
     <v-row>
       <v-col cols="12" xs="12" sm="4" md="4" lg="4" xl="4">
         <v-img
-          class="white--text align-end"
-          contain
-          aspect-ratio="1"
+          class="w-full aspect-square object-cover object-center"
           :src="veranstaltung.vorschaubild.url"
           :srcset="veranstaltung.vorschaubild | generateSrcset"
           sizes="
