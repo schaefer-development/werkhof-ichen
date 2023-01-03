@@ -9,6 +9,7 @@ const colors = {
   error: '#E0124D',
   secondary: '#ECE1CB',
   ichen_beige: '#ece1cb',
+  ichen_sand: '#debd88',
   ichen_yellow: '#e5bc80',
   ichen_green: '#709726',
   ichen_blue: '#2a434c',
