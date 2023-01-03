@@ -64,22 +64,18 @@
             alt="Logo Werkhof Ichen"
           />
         </div>
-        <div class="right w-full text-white text-sm px-2">
+        <div class="right w-full text-sm px-2">
           <p>
-            <a href="tel:+4922463197" class="text-white">02246 . 31 97</a>
+            <a href="tel:+4922463197">02246 . 31 97</a>
             <br />
-            <a href="mailto:info@werkhof-ichen.de" class="text-white"
-              >info@werkhof-ichen.de</a
-            >
+            <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>
           </p>
           <p>
-            <nuxt-link to="/datenschutz" class="text-white"
-              >Datenschutz</nuxt-link
-            >
+            <nuxt-link to="/datenschutz">Datenschutz</nuxt-link>
             <br />
-            <nuxt-link to="/impressum" class="text-white">Impressum</nuxt-link>
+            <nuxt-link to="/impressum">Impressum</nuxt-link>
             <br />
-            <nuxt-link to="/agb" class="text-white">AGB</nuxt-link>
+            <nuxt-link to="/agb">AGB</nuxt-link>
             <br />
             Copyright {{ new Date().getFullYear() }}
           </p>
@@ -94,7 +90,8 @@ footer {
   background-color: rgba(54, 47, 43, 0.93) !important;
 }
 
+.right,
 .right a {
-  color: white;
+  color: #debd88;
 }
 </style>
