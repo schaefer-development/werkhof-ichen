@@ -204,7 +204,7 @@ export default {
             large: url(transformation: {image: {resize: {width: 1000}}})
           }
         }
-        veranstaltungen(orderBy: datum_ASC, where: {datum_lt: $today}) {
+        veranstaltungen(orderBy: datum_ASC, where: {datum_gt: $today}) {
           id
           titel
           datum
