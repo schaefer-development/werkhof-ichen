@@ -47,6 +47,7 @@ export default {
           }
           anzeigedatum
           kurzbeschreibung
+          kategorie
           vorschaubild {
             width
             url

@@ -195,6 +195,7 @@ export default {
             text
           }
           dauerUndPreis
+          kategorie
           vorschaubild {
             width
             url
@@ -215,6 +216,7 @@ export default {
           }
           anzeigedatum
           kurzbeschreibung
+          kategorie
           vorschaubild {
             width
             url
@@ -246,10 +248,10 @@ export default {
         return { veranstaltungen, terminabsprachen }
       return {
         veranstaltungen: veranstaltungen.filter((v) =>
-          selected.includes(v.Kategorie)
+          selected.includes(v.kategorie)
         ),
         terminabsprachen: terminabsprachen.filter((v) =>
-          selected.includes(v.Kategorie)
+          selected.includes(v.kategorie)
         ),
       }
     },
