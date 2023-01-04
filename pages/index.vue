@@ -152,7 +152,7 @@ export default {
   async asyncData({ $graphql }) {
     const query = gql`
     query veranstaltungen($today: DateTime) {
-      veranstaltungen(orderBy: datum_ASC, where: {datum_lt: $today}) {
+      veranstaltungen(orderBy: datum_ASC, where: {datum_gt: $today}, first: 3) {
         id
         titel
         datum
