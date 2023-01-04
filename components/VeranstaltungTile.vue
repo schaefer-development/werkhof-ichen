@@ -14,13 +14,6 @@
           (min-width:600px) 50vw,
           100vw"
       ></v-img>
-
-
-
-      <div class="w-full border aspect-quare">
-        <img src="veranstaltung.vorschaubild.url"></img>
-        sdfsdf
-      </div>
       <v-card-title class="ichen_blue--text text-h2 pt-6">
         {{ veranstaltung.titel }}
       </v-card-title>
