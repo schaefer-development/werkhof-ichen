@@ -57,7 +57,7 @@
               type="info"
               class="ichen_yellow--text"
             >
-              <h3>HURRA, Kurse dürfen wieder stattfinden</h3>
+              <h3 class="text-xl font-bold">HURRA, Kurse dürfen wieder stattfinden</h3>
             </v-alert>
             <p class="white--text">
               Durch die aktuelle positive Entwicklung der

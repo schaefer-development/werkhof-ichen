@@ -3,7 +3,7 @@
     <v-card rounded="0" flat>
       <v-img
         class="white--text align-end"
-        contain
+        cover
         aspect-ratio="1"
         :src="veranstaltung.vorschaubild.url"
         :srcset="veranstaltung.vorschaubild | generateSrcset"
