@@ -47,6 +47,7 @@ export default {
       query bilderstrecke($id: ID!) {
         bilderstrecke(where: {id: $id}) {
           id
+          titel
           bilder {
             id
             width

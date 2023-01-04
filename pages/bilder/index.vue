@@ -50,6 +50,7 @@ export default {
       query bilderstrecken {
         bilderstrecken {
           id
+          titel
           bilder(first: 1) {
             id
             width
