@@ -35,3 +35,10 @@ $RECYCLE.BIN/
 
 backups/
 .env
+node_modules/
+.nuxt
+
+# Local Netlify folder
+.netlify
+dist
+static/sw.js
