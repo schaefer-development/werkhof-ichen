@@ -17,7 +17,6 @@ const colors = {
   ichen_brown: '#48413d',
 }
 
-
 const description =
   'werkhof ichen Lohmar: Nähkurse für Kinder/ Jugendliche/ Erwachsene, Geburtstag-Näh-Events, großzügiges Platzangebot, Anfertigungen, Kinderlederhosen'
 
@@ -73,7 +72,7 @@ export default {
   ],
 
   axios: {
-    proxy: process.env.NODE_ENV !== 'production'
+    proxy: true
   },
 
   markdownit: {
