@@ -73,7 +73,7 @@ export default {
   ],
 
   axios: {
-    proxy: true
+    proxy: process.env.NODE_ENV !== 'production'
   },
 
   markdownit: {
