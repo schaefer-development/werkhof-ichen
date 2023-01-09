@@ -21,6 +21,9 @@ const description =
   'werkhof ichen Lohmar: Nähkurse für Kinder/ Jugendliche/ Erwachsene, Geburtstag-Näh-Events, großzügiges Platzangebot, Anfertigungen, Kinderlederhosen'
 
 export default {
+  generate:{
+    interval: 200
+  },
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
