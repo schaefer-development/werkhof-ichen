@@ -42,7 +42,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "graphql": "^16.6.0",
     "maildev": "^2.0.5",
-    "netlify-cli": "^12.4.0",
+    "netlify-cli": "^12.7.0",
     "nuxt-graphql-request": "^6.0.1",
     "postcss": "^8.4.20",
     "prettier": "^2.8.1",
