@@ -48,7 +48,7 @@ export default {
         bilderstrecke(where: {id: $id}) {
           id
           titel
-          bilder {
+          bilder(first: 100) {
             id
             width
             url
