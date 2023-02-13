@@ -71,35 +71,13 @@
           >
 
           <v-card-text v-if="veranstaltungen">
-            <v-alert
-              rounded="0"
-              outlined
-              type="info"
-              class="ichen_yellow--text"
-            >
-              <h3>HURRA, Kurse dürfen wieder stattfinden</h3>
-            </v-alert>
-             <p class="white--text">
-              Durch die aktuelle positive Entwicklung der
-              Corona-Infektionszahlen darf ich wieder Kurse in meinen
-              Räumlichkeiten anbieten.
-              <br />
-              BITTE BEACHTEN SIE DIE HYGIENEAUFLAGEN wie negativer Coronatest
-              oder 2-facher Impfnachweis bzw. Immunitätsnachweis. Außerdem
-              besteht eine FFP2-Maskenpflicht.
-              <br />
-              Falls Änderungen auftreten sollten, werde ich Sie als Teilnehmer
-              umgehend informieren.
-            </p>
-            <div class="w-full max-w-[400px] h-12 py-12 mx-auto flex items-center justify-center">
+             <div class="w-full max-w-[400px] h-12 py-12 mx-auto flex items-center justify-center">
                 <img src="/sewing_needle_beige.svg" alt="Nähnadel" />
               </div>
             <veranstaltung-short-list
               :veranstaltungen="veranstaltungen"
             ></veranstaltung-short-list>
-            <div class="w-full max-w-[400px] h-12 py-12 mx-auto flex items-center justify-center">
-                <img src="/sewing_needle_beige.svg" alt="Nähnadel" />
-              </div>
+
             <div class="text-right pb-12">
               <v-btn
                 nuxt

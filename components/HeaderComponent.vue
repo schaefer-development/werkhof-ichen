@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar height="200px" flat color="transparent" absolute app clipped-left>
+  <v-app-bar height="200px" flat color="transparent" absolute app clipped-left class="px-12">
     <v-container class="pa-0">
       <v-toolbar color="transparent" flat>
 
@@ -11,10 +11,8 @@
   </a>
 </div>
 
-
-
-
         <v-spacer></v-spacer>
+
         <v-btn
           icon
           link
@@ -26,6 +24,7 @@
         >
           <v-icon size="30" medium>mdi-facebook</v-icon>
         </v-btn>
+
         <v-btn
           class="mr-3"
           link
@@ -38,9 +37,11 @@
         >
           <v-icon size="30">mdi-instagram</v-icon>
         </v-btn>
+
         <v-app-bar-nav-icon aria-label="Open Drawer" @click.stop="toggleDrawer">
           <v-icon size="50">mdi-menu</v-icon>
         </v-app-bar-nav-icon>
+
       </v-toolbar>
     </v-container>
   </v-app-bar>

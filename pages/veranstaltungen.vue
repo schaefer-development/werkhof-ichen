@@ -46,7 +46,7 @@
         ></v-select>
       </v-col>
     </v-row>
-
+<!--
     <v-row>
       <v-col cols="12">
         <v-row class="ichen_blue pa-6 mx-1 mt-12 mb-0" align="center">
@@ -75,6 +75,8 @@
         </v-row>
       </v-col>
     </v-row>
+
+    -->
 
     <v-row>
       <v-col cols="12">

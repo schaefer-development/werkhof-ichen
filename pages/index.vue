@@ -75,26 +75,8 @@
             >
           </v-card-title>
           <v-card-text v-if="veranstaltungen">
-            <v-alert
-              rounded="0"
-              outlined
-              type="info"
-              class="ichen_yellow--text"
-            >
-              <h3>HURRA, Kurse dürfen wieder stattfinden</h3>
-            </v-alert>
-             <p class="white--text">
-              Durch die aktuelle positive Entwicklung der
-              Corona-Infektionszahlen darf ich wieder Kurse in meinen
-              Räumlichkeiten anbieten.
-              <br />
-              BITTE BEACHTEN SIE DIE HYGIENEAUFLAGEN wie negativer Coronatest
-              oder 2-facher Impfnachweis bzw. Immunitätsnachweis. Außerdem
-              besteht eine FFP2-Maskenpflicht.
-              <br />
-              Falls Änderungen auftreten sollten, werde ich Sie als Teilnehmer
-              umgehend informieren.
-            </p>
+ 
+
 
             <!-- <v-alert
               rounded="0"
