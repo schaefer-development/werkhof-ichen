@@ -18,11 +18,20 @@ const {
   HCAPTCHA_SECRET,
 } = process.env
 
-const mutation = gql`
+const createMutation = gql`
 mutation anmeldung($name: String!, $email: String!, $strasseUndHausnummer: String, $plzUndOrt: String, $telefonnummer: String, $veranstaltungId: ID!) {
   createAnmeldung(
     data: {name: $name, email: $email, strasseUndHausnummer: $strasseUndHausnummer, plzUndOrt: $plzUndOrt, telefonnummer: $telefonnummer, veranstaltung: {connect: {id: $veranstaltungId}}}
   ) {
+    id
+  }
+}
+`
+
+const publishMutation  = gql`
+mutation anmeldung($id: ID!) {
+  publishAnmeldung(where: {id: $id}, to: PUBLISHED) {
+    stage
     id
     name
     updatedAt
@@ -68,11 +77,12 @@ export const handler: Handler = async (event) => {
 	if(!verificationData.success) throw new Error('HCaptcha Verification failed');
 
   const variables = { name, email, telefonNummer, strasseHausnummer, veranstaltungId: veranstaltung.id }
-  const graphqlResponse = await graphQLClient.request(mutation, variables)
-
-  const { createAnmeldung } = graphqlResponse
+  const createAnmeldungResponse = await graphQLClient.request(createMutation, variables)
+  const { createAnmeldung: { id } } = createAnmeldungResponse
+  const publishAnmeldungResponse = await graphQLClient.request(publishMutation, { id })
+  const { publishAnmeldung } = publishAnmeldungResponse
   const emailTemplate = isAvailable(veranstaltung) ? templates.register : templates.waitingList
-  const { text, html } = emailTemplate(createAnmeldung)
+  const { text, html } = emailTemplate(publishAnmeldung)
   await transporter.sendMail({
     from: SMTP_DEFAULT_FROM,
     cc: SMTP_DEFAULT_REPLY_TO,
