@@ -45,5 +45,6 @@ export default {
   background-position: 50% 0%;
   background-size: cover;
   background-image: url('../static/bg.jpg');
+  /* this repository is active! */
 }
 </style>
