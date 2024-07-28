@@ -25,7 +25,8 @@
           ></div>
 
           <div class="event_detail ichen_brown--text font-weight-bold pa-0">
-            {{ veranstaltung.preis }} € (plus Materialkosten)
+            {{ veranstaltung.preis }} € (plus Materialkosten)<br>
+            Maximale Teilnehmeranzahl: {{ veranstaltung.maximaleAnzahlTeilnehmer }}
           </div>
 
           <div
