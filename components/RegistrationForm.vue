@@ -65,8 +65,10 @@
           ></div>
 
           <div class="event_detail ichen_brown--text font-weight-bold">
-            {{ veranstaltung.preis }} € (plus Materialkosten)
+            Preis: {{ veranstaltung.preis }} Euro + Materialkosten<br>
+            Maximale Teilnehmeranzahl: {{ veranstaltung.maximaleAnzahlTeilnehmer }}
           </div>
+
 
           <div class="w-full max-w-[400px] h-12 py-12 mx-auto flex items-center justify-center">
                 <img src="/sewing_needle_brown.svg" alt="Nähnadel" />
