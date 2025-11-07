@@ -39,12 +39,12 @@
               der Kursleiterin, sondern hat auch Gelegenheit zum produktiven
               Austausch mit Gleichgesinnten.
             </p>
-            <p>
+             <!--   <p>
               Hier kann sich jeder einzelne Teilnehmer so ausbreiten, daß selbst
               in „Coronazeiten“ mehr als der geforderte Abstand zum benachbarten
               Arbeitsplatz gewährleistet wird.
             </p>
-            <p>
+        <p>
               In der Werkstatt werden nach den Wünschen der Kunden Unikate aus
               hochwertigen Stoffen/Ledern und Papier hergestellt und die eigene
               Kollektion erweitert.
@@ -52,7 +52,7 @@
             <p>
               Für Kinder, die den WALDKINDERGARTEN besuchen, entstehen z.B.
               Kinderlederhosen und vieles andere mehr.
-            </p>
+            </p>-->
             <p>Sie sind herzlich eingeladen.</p>
             <p>
               Wenn Sie Fragen haben, kontaktieren Sie mich gerne:

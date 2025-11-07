@@ -31,7 +31,7 @@
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col cols="12" xs="12" sm="6" md="4">
+     <!-- <v-col cols="12" xs="12" sm="6" md="4">
         <v-card rounded="0" flat dark class="ichen_green">
           <v-img
             aspect-ratio="1"
@@ -60,7 +60,7 @@
             </div>
           </v-card-text>
         </v-card>
-      </v-col>
+      </v-col>-->
       <v-col cols="12" xs="12" sm="6" md="4">
         <v-card rounded="0" flat dark class="ichen_blue">
           <v-img

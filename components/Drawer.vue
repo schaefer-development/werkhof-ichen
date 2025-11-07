@@ -22,7 +22,7 @@
       <v-list flat nav class="px-0">
         <v-list-item nuxt link to="/">Startseite</v-list-item>
         <v-list-item nuxt link to="/werkhof">Werkhof</v-list-item>
-        <v-list-group flat no-action>
+       <!-- <v-list-group flat no-action>
           <template v-slot:activator>
             <v-list-item>Anfertigungen</v-list-item>
           </template>
@@ -30,7 +30,7 @@
           <v-list-item nuxt link to="/anfertigungen/weitere_materialien"
             >Weitere Materialien</v-list-item
           >
-        </v-list-group>
+        </v-list-group>-->
         <v-list-item nuxt link to="/veranstaltungen"
           >Veranstaltungen</v-list-item
         >
