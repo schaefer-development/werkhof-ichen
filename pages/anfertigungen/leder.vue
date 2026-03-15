@@ -56,7 +56,7 @@
       />
       <v-card-text>
         <h3 class="pt-6">Kinderlederhose</h3>
-        <v-simple-table class="b-8">
+        <v-table class="b-8">
           <thead>
             <tr>
               <th class="text-left">Größe</th>
@@ -71,7 +71,7 @@
               <td>{{ item.seitenlaenge }}</td>
             </tr>
           </tbody>
-        </v-simple-table>
+        </v-table>
         <p>
           Mit Strickbündchen am Hosensaum: 20 Euro Aufpreis
           <br />Verlängerung bis 8 cm: 20 Euro Aufpreis <br />Schmutzfang: 20
@@ -101,7 +101,7 @@
         <h3 class="pt-6">Lederhosen für Erwachsene</h3>
         <h4>Damengröße 38 oder Herrengröße 48</h4>
 
-        <v-simple-table class="py-12">
+        <v-table class="py-12">
           <thead>
             <tr>
               <th class="text-left">Material</th>
@@ -116,7 +116,7 @@
               <td>{{ item.preis_plus_pro_groesse }}</td>
             </tr>
           </tbody>
-        </v-simple-table>
+        </v-table>
       </v-card-text>
       <v-img
         class="py-3 mx-auto"
@@ -130,7 +130,7 @@
       <v-card-text>
         <h3 class="pt-6">Lederjacke für Erwachsene</h3>
         <h4>Damengröße 38 oder Herrengröße 48</h4>
-        <v-simple-table class="py-8">
+        <v-table class="py-8">
           <thead>
             <tr>
               <th class="text-left">Material</th>
@@ -145,7 +145,7 @@
               <td>{{ item.preis_plus_pro_groesse }}</td>
             </tr>
           </tbody>
-        </v-simple-table>
+        </v-table>
         <p>
           Da ich auf die individuellen Wünsche meiner Kunden eingehe, kann ich
           nur Circa-Preise angeben.
@@ -161,106 +161,96 @@
   </anfertigungen-wrapper>
 </template>
 
-<script>
+<script setup>
 import AnfertigungenWrapper from '~/components/AnfertigungenWrapper'
 
-export default {
-  components: {
-    AnfertigungenWrapper,
+const kinderlederhosen = [
+  {
+    groesse: '86',
+    preis: 116,
+    seitenlaenge: 49,
   },
-  data() {
-    return {
-      kinderlederhosen: [
-        {
-          groesse: '86',
-          preis: 116,
-          seitenlaenge: 49,
-        },
-        {
-          groesse: '92',
-          preis: 122,
-          seitenlaenge: 54,
-        },
-        {
-          groesse: '98',
-          preis: 128,
-          seitenlaenge: 59,
-        },
-        {
-          groesse: '104',
-          preis: 134,
-          seitenlaenge: 64,
-        },
-        {
-          groesse: '110',
-          preis: 140,
-          seitenlaenge: 69,
-        },
-        {
-          groesse: '116',
-          preis: 146,
-          seitenlaenge: 74,
-        },
-        {
-          groesse: '122',
-          preis: 152,
-          seitenlaenge: 79,
-        },
-      ],
+  {
+    groesse: '92',
+    preis: 122,
+    seitenlaenge: 54,
+  },
+  {
+    groesse: '98',
+    preis: 128,
+    seitenlaenge: 59,
+  },
+  {
+    groesse: '104',
+    preis: 134,
+    seitenlaenge: 64,
+  },
+  {
+    groesse: '110',
+    preis: 140,
+    seitenlaenge: 69,
+  },
+  {
+    groesse: '116',
+    preis: 146,
+    seitenlaenge: 74,
+  },
+  {
+    groesse: '122',
+    preis: 152,
+    seitenlaenge: 79,
+  },
+]
 
-      erwachsenenlederhosen: [
-        {
-          material: 'Rindleder (Glatt/ Nubuk)',
-          preis: 'ca. 800',
-          preis_plus_pro_groesse: '+ 40 Euro',
-        },
-        {
-          material: 'Rehbock',
-          preis: 'ca. 1000',
-          preis_plus_pro_groesse: '+ 50 Euro',
-        },
-        {
-          material: 'Hirsch',
-          preis: 'ca. 1150',
-          preis_plus_pro_groesse: '+ 60 Euro',
-        },
-        {
-          material: 'Elch',
-          preis: 'ca. 1250',
-          preis_plus_pro_groesse: '+ 70 Euro',
-        },
-      ],
+const erwachsenenlederhosen = [
+  {
+    material: 'Rindleder (Glatt/ Nubuk)',
+    preis: 'ca. 800',
+    preis_plus_pro_groesse: '+ 40 Euro',
+  },
+  {
+    material: 'Rehbock',
+    preis: 'ca. 1000',
+    preis_plus_pro_groesse: '+ 50 Euro',
+  },
+  {
+    material: 'Hirsch',
+    preis: 'ca. 1150',
+    preis_plus_pro_groesse: '+ 60 Euro',
+  },
+  {
+    material: 'Elch',
+    preis: 'ca. 1250',
+    preis_plus_pro_groesse: '+ 70 Euro',
+  },
+]
 
-      erwachsenenlederjacke: [
-        {
-          material: 'Rindleder (Glatt/ Nubuk)',
-          preis: 'ca. 1000',
-          preis_plus_pro_groesse: '+ 50 Euro',
-        },
-        {
-          material: 'Rehbock',
-          preis: 'ca. 1250',
-          preis_plus_pro_groesse: '+ 60 Euro',
-        },
-        {
-          material: 'Hirsch',
-          preis: 'ca. 1450',
-          preis_plus_pro_groesse: '+ 70 Euro',
-        },
-        {
-          material: 'Elch',
-          preis: 'ca. 1550',
-          preis_plus_pro_groesse: '+ 80 Euro',
-        },
-      ],
-    }
+const erwachsenenlederjacke = [
+  {
+    material: 'Rindleder (Glatt/ Nubuk)',
+    preis: 'ca. 1000',
+    preis_plus_pro_groesse: '+ 50 Euro',
   },
-  head() {
-    return {
-      title: ' | Anfertigungen: Leder',
-    }
+  {
+    material: 'Rehbock',
+    preis: 'ca. 1250',
+    preis_plus_pro_groesse: '+ 60 Euro',
   },
-}
+  {
+    material: 'Hirsch',
+    preis: 'ca. 1450',
+    preis_plus_pro_groesse: '+ 70 Euro',
+  },
+  {
+    material: 'Elch',
+    preis: 'ca. 1550',
+    preis_plus_pro_groesse: '+ 80 Euro',
+  },
+]
+
+useHead({
+  title: ' | Anfertigungen: Leder',
+})
 </script>
 
 <style lang="scss" scoped>

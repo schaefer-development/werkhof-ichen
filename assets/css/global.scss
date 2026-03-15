@@ -1,0 +1,103 @@
+/* Global styles moved from components */
+
+.shortlist .shortlist_item:last-child .v-image {
+  display: none;
+}
+
+div.anzeigedatum {
+  padding-bottom: 1em;
+  p {
+    margin-bottom: 0;
+  }
+}
+
+header {
+  .v-toolbar__content button[aria-label='Open Drawer'] {
+    &:before {
+      background-color: rgba(0, 0, 0, 0) !important;
+    }
+    &:hover {
+      :before {
+        background-color: rgba(0, 0, 0, 0) !important;
+      }
+    }
+    span {
+      color: $ichen_blue;
+      &:hover {
+        color: $ichen_red;
+      }
+    }
+  }
+}
+
+.main-drawer {
+  .v-toolbar__content {
+    padding: 7px 30px !important;
+    button {
+      background-color: rgba(0, 0, 0, 0) !important;
+      &:before,
+      &:after {
+        background-color: rgba(0, 0, 0, 0) !important;
+      }
+      &:hover {
+        color: $ichen_red !important;
+        background-color: rgba(0, 0, 0, 0) !important;
+        &:before,
+        &:after {
+          background-color: rgba(0, 0, 0, 0) !important;
+        }
+      }
+    }
+  }
+  .drawer-background-image {
+    opacity: 0.02;
+    left: -20%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  a.v-list-item--active {
+    background-color: $ichen_red !important;
+    color: #fff !important;
+  }
+  .v-list-item,
+  .v-list-group .v-list-group__header {
+    font-family: 'Overlock';
+    font-style: normal;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.9rem;
+    padding: 7px 30px !important;
+    border-radius: 0 !important;
+    margin-bottom: 0 !important;
+    &:hover {
+      background-color: $ichen_blue_dark !important;
+    }
+  }
+  .v-list-group {
+    .v-list-group__header {
+      .v-list-item {
+        padding: 0 !important;
+      }
+      .v-list-group__header__append-icon {
+        color: #fff !important;
+      }
+    }
+    .v-list-group__items {
+      border-top: 1px dashed #fff;
+      border-bottom: 1px dashed #fff;
+      background-color: $ichen_blue_light;
+      a {
+        font-family: 'Fira Sans';
+        font-style: normal;
+        font-weight: 400;
+        text-transform: none;
+        letter-spacing: 0;
+        &.v-list-item--active {
+          color: #fff !important;
+        }
+      }
+    }
+  }
+}

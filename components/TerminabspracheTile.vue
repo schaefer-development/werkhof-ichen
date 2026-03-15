@@ -6,7 +6,7 @@
         contain
         aspect-ratio="1"
         :src="terminabsprache.vorschaubild.url"
-        :srcset="terminabsprache.vorschaubild | generateSrcset"
+        :srcset="generateSrcset(terminabsprache.vorschaubild)"
         sizes="
           (min-width:1904px) 570px,
           (min-width:1264px) 371px,
@@ -32,7 +32,7 @@
           ></div>
         </client-only>
 
-        <v-alert text type="info" class="font-weight-bold">
+        <v-alert variant="text" type="info" class="font-weight-bold">
           Veranstaltungsangebote werden stets individuell vereinbart.
           Kontaktieren Sie mich gerne für eine unverbindliche Auskunft.
         </v-alert>
@@ -48,12 +48,17 @@
 </template>
 
 <script>
+import { generateSrcset } from '~/composables/generateSrcset'
+
 export default {
   props: {
     terminabsprache: {
       type: Object,
       required: true,
     },
+  },
+  methods: {
+    generateSrcset,
   },
 }
 </script>

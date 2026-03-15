@@ -59,12 +59,8 @@
   </v-container>
 </template>
 
-<script>
-export default {
-  head() {
-    return {
-      title: ' | Vita',
-    }
-  },
-}
+<script setup>
+useHead({
+  title: ' | Vita',
+})
 </script>

@@ -6,7 +6,7 @@
         cover
         aspect-ratio="1"
         :src="veranstaltung.vorschaubild.url"
-        :srcset="veranstaltung.vorschaubild | generateSrcset"
+        :srcset="generateSrcset(veranstaltung.vorschaubild)"
         sizes="
           (min-width:1904px) 570px,
           (min-width:1264px) 371px,
@@ -40,14 +40,9 @@
 
       <v-card-actions class="px-4">
         <v-btn
-          nuxt
-          depressed
+          variant="flat"
           color="ichen_red white--text"
-          :to="{
-            name: 'veranstaltung-id',
-            params: { id: veranstaltung.id },
-            hash: '#registration-form',
-          }"
+          :to="`/veranstaltung/${veranstaltung.id}#registration-form`"
           >Mehr</v-btn
         >
       </v-card-actions>
@@ -56,7 +51,7 @@
 </template>
 
 <script>
-import isAvailable from "~/helpers/isAvailable";
+import { generateSrcset } from '~/composables/generateSrcset'
 
 export default {
   props: {
@@ -65,19 +60,10 @@ export default {
       required: true,
     },
   },
-  computed: {
-    available() {
-      return isAvailable(this.veranstaltung);
-    },
+  methods: {
+    generateSrcset,
   },
 };
 </script>
 
-<style lang="scss">
-div.anzeigedatum {
-  padding-bottom: 1em;
-  p {
-    margin-bottom: 0;
-  }
-}
-</style>
+<style lang="scss"></style>

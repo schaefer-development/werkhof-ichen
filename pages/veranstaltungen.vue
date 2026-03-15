@@ -4,20 +4,20 @@
       <v-col cols="12" xs="12" sm="3" md="3" lg="2" xl="2" class="pa-6">
         <v-btn
           large
-          depressed
+          variant="flat"
           class="white--text"
           color="ichen_red"
-          @click="$vuetify.goTo('#termine')"
+          @click="goTo('#termine')"
           >Termine</v-btn
         >
       </v-col>
       <v-col cols="12" xs="12" sm="9" md="3" lg="2" xl="2" class="pa-6">
         <v-btn
           large
-          depressed
+          variant="flat"
           class="white--text"
           color="ichen_red"
-          @click="$vuetify.goTo('#nach_absprache')"
+          @click="goTo('#nach_absprache')"
           >Nach Terminabsprache</v-btn
         >
       </v-col>
@@ -35,9 +35,9 @@
       >
         <v-select
           v-model="selected"
-          filled
+          variant="filled"
           :items="items"
-          item-text="name"
+          item-title="name"
           item-value="key"
           label="NACH KATEGORIE FILTERN"
           hide-details
@@ -145,7 +145,7 @@
       </template>
       <template v-else>
         <v-col cols="12">
-          <v-alert outlined type="info" class="font-weight-bold"
+          <v-alert variant="outlined" type="info" class="font-weight-bold"
             >Zu diesen Kategorien gibt es keine anstehenden
             Veranstaltungen.</v-alert
           >
@@ -167,7 +167,7 @@
       </template>
       <template v-else>
         <v-col cols="12">
-          <v-alert outlined type="info" class="font-weight-bold">
+          <v-alert variant="outlined" type="info" class="font-weight-bold">
             Zu dieser Kategorie gibt es aktuell keine Angebote mit
             Terminabsprache.
           </v-alert>
@@ -177,93 +177,97 @@
   </v-container>
 </template>
 
-<script>
-import VeranstaltungTile from '~/components/VeranstaltungTile.vue'
-import TerminabspracheTile from '~/components/TerminabspracheTile.vue'
-import { gql } from 'nuxt-graphql-request';
+<script setup>
+import { gql } from 'graphql-request'
+import { useGoTo } from 'vuetify'
 
-export default {
-  components: {
-    VeranstaltungTile,
-    TerminabspracheTile,
-  },
-  async asyncData({ $graphql }) {
-    const query = gql`
-      query veranstaltungenUndTerminabsprachen($today: DateTime) {
-        terminabsprachen {
-          id
-          titel
-          beschreibung {
-            text
-          }
-          dauerUndPreis
-          kategorie
-          vorschaubild {
-            width
-            url
-            thumbnail: url(transformation: {image: {resize: {width: 250}}})
-            small: url(transformation: {image: {resize: {width: 500}}})
-            medium: url(transformation: {image: {resize: {width: 750}}})
-            large: url(transformation: {image: {resize: {width: 1000}}})
-          }
-        }
-        veranstaltungen(orderBy: datum_ASC, where: {datum_gt: $today}) {
-          id
-          titel
-          datum
-          preis
-          maximaleAnzahlTeilnehmer
-          beschreibung {
-            text
-          }
-          anzeigedatum
-          kurzbeschreibung
-          kategorie
-          vorschaubild {
-            width
-            url
-            thumbnail: url(transformation: {image: {resize: {width: 250}}})
-            small: url(transformation: {image: {resize: {width: 500}}})
-            medium: url(transformation: {image: {resize: {width: 750}}})
-            large: url(transformation: {image: {resize: {width: 1000}}})
-          }
-        }
+const { $graphql } = useNuxtApp()
+const goTo = useGoTo()
+
+const query = gql`
+  query veranstaltungenUndTerminabsprachen($today: DateTime) {
+    terminabsprachen {
+      id
+      titel
+      beschreibung {
+        text
       }
-    `
-    const today = new Date().toISOString()
-    const { veranstaltungen, terminabsprachen } = await $graphql.default.request(query, { today });
-    const items = [
-      { key: 'kurse_fuer_erwachsene', name: 'Kurse für Erwachsene' },
-      {
-        key: 'kurse_fuer_kinder_und_jugendliche',
-        name: 'Kurse für Kinder und Jugendliche',
-      },
-      { key: 'geburtstagsevents', name: 'Geburtstagsevents' },
-      { key: 'unkategorisiert', name: 'Unkategorisiert' },
-    ]
-    return { veranstaltungen, terminabsprachen, items, selected: [] }
-  },
-  computed: {
-    filtered() {
-      const { selected, veranstaltungen, terminabsprachen } = this
-      if (!selected || !selected.length)
-        return { veranstaltungen, terminabsprachen }
-      return {
-        veranstaltungen: veranstaltungen.filter((v) =>
-          selected.includes(v.kategorie)
-        ),
-        terminabsprachen: terminabsprachen.filter((v) =>
-          selected.includes(v.kategorie)
-        ),
+      dauerUndPreis
+      kategorie
+      vorschaubild {
+        width
+        url
+        thumbnail: url(transformation: { image: { resize: { width: 250 } } })
+        small: url(transformation: { image: { resize: { width: 500 } } })
+        medium: url(transformation: { image: { resize: { width: 750 } } })
+        large: url(transformation: { image: { resize: { width: 1000 } } })
       }
-    },
-  },
-  head() {
-    return {
-      title: ' | Veranstaltungen',
     }
+    veranstaltungen(orderBy: datum_ASC, where: { datum_gt: $today }) {
+      id
+      titel
+      datum
+      preis
+      maximaleAnzahlTeilnehmer
+      beschreibung {
+        text
+      }
+      anzeigedatum
+      kurzbeschreibung
+      kategorie
+      vorschaubild {
+        width
+        url
+        thumbnail: url(transformation: { image: { resize: { width: 250 } } })
+        small: url(transformation: { image: { resize: { width: 500 } } })
+        medium: url(transformation: { image: { resize: { width: 750 } } })
+        large: url(transformation: { image: { resize: { width: 1000 } } })
+      }
+    }
+  }
+`
+
+const today = new Date().toISOString()
+const { data } = await useAsyncData('veranstaltungen', () =>
+  $graphql.request(query, { today })
+)
+
+const veranstaltungen = computed(() => data.value?.veranstaltungen ?? [])
+const terminabsprachen = computed(() => data.value?.terminabsprachen ?? [])
+
+const items = [
+  { key: 'kurse_fuer_erwachsene', name: 'Kurse für Erwachsene' },
+  {
+    key: 'kurse_fuer_kinder_und_jugendliche',
+    name: 'Kurse für Kinder und Jugendliche',
   },
-}
+  { key: 'geburtstagsevents', name: 'Geburtstagsevents' },
+  { key: 'unkategorisiert', name: 'Unkategorisiert' },
+]
+
+const selected = ref([])
+
+const filtered = computed(() => {
+  if (!selected.value || !selected.value.length) {
+    return {
+      veranstaltungen: veranstaltungen.value,
+      terminabsprachen: terminabsprachen.value,
+    }
+  }
+
+  return {
+    veranstaltungen: veranstaltungen.value.filter((v) =>
+      selected.value.includes(v.kategorie)
+    ),
+    terminabsprachen: terminabsprachen.value.filter((v) =>
+      selected.value.includes(v.kategorie)
+    ),
+  }
+})
+
+useHead({
+  title: ' | Veranstaltungen',
+})
 </script>
 
 <style lang="scss">

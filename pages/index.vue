@@ -24,7 +24,7 @@
               Kurse und Veranstaltungen in einer anregenden Atmosphäre.
             </p>
             <div>
-              <v-btn dark nuxt to="/werkhof" depressed color="ichen_red"
+              <v-btn dark to="/werkhof" variant="flat" color="ichen_red"
                 >Mehr</v-btn
               >
             </div>
@@ -54,7 +54,7 @@
               beispielsweise Lederhosen und -jacken.
             </p>
             <div>
-              <v-btn nuxt to="/anfertigungen/leder" depressed color="ichen_red"
+              <v-btn to="/anfertigungen/leder" variant="flat" color="ichen_red"
                 >Mehr</v-btn
               >
             </div>
@@ -109,11 +109,7 @@
 
 
             <div class="pb-12">
-              <v-btn
-                nuxt
-                to="/veranstaltungen"
-                depressed
-                color="ichen_red white--text"
+              <v-btn to="/veranstaltungen" variant="flat" color="ichen_red white--text"
                 >Alle anzeigen</v-btn
               >
             </div>
@@ -124,50 +120,49 @@
   </v-container>
 </template>
 
-<script>
-import { gql } from 'nuxt-graphql-request';
+<script setup>
+import { gql } from 'graphql-request'
 import VeranstaltungShortList from '../components/VeranstaltungShortList.vue'
-export default {
-  components: {
-    VeranstaltungShortList,
-  },
-  async asyncData({ $graphql }) {
-    const query = gql`
-    query veranstaltungen($today: DateTime) {
-      veranstaltungen(orderBy: datum_ASC, where: {datum_gt: $today}, first: 3) {
+
+const { $graphql } = useNuxtApp()
+
+const query = gql`
+  query veranstaltungen($today: DateTime) {
+    veranstaltungen(orderBy: datum_ASC, where: { datum_gt: $today }, first: 3) {
+      id
+      titel
+      datum
+      preis
+      maximaleAnzahlTeilnehmer
+      beschreibung {
+        html
+      }
+      anzeigedatum
+      kurzbeschreibung
+      kategorie
+      vorschaubild {
+        width
+        url
+        thumbnail: url(transformation: { image: { resize: { width: 250 } } })
+        small: url(transformation: { image: { resize: { width: 500 } } })
+        medium: url(transformation: { image: { resize: { width: 750 } } })
+        large: url(transformation: { image: { resize: { width: 1000 } } })
+      }
+      anmeldungen {
         id
-        titel
-        datum
-        preis
-        maximaleAnzahlTeilnehmer
-        beschreibung {
-          html
-        }
-        anzeigedatum
-        kurzbeschreibung
-        kategorie
-        vorschaubild {
-          width
-          url
-          thumbnail: url(transformation: {image: {resize: {width: 250}}})
-          small: url(transformation: {image: {resize: {width: 500}}})
-          medium: url(transformation: {image: {resize: {width: 750}}})
-          large: url(transformation: {image: {resize: {width: 1000}}})
-        }
-        anmeldungen {
-          id
-        }
       }
     }
-    `
-    const today = new Date().toISOString()
-    const { veranstaltungen } = await $graphql.default.request(query, { today });
-    return { veranstaltungen }
-  },
-  head() {
-    return {
-      title: ' | Hallo',
-    }
-  },
-}
+  }
+`
+
+const today = new Date().toISOString()
+const { data } = await useAsyncData('index-veranstaltungen', () =>
+  $graphql.request(query, { today })
+)
+
+const veranstaltungen = computed(() => data.value?.veranstaltungen ?? [])
+
+useHead({
+  title: ' | Hallo',
+})
 </script>

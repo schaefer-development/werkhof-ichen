@@ -5,7 +5,7 @@
     <header-component @toggleDrawer="toggleDrawer"></header-component>
 
     <v-main class="pb-16 px-12">
-      <nuxt />
+      <NuxtPage />
     </v-main>
 
     <footer-component></footer-component>
@@ -44,7 +44,7 @@ export default {
   background-repeat: no-repeat;
   background-position: 50% 0%;
   background-size: cover;
-  background-image: url('../static/bg.jpg');
+  background-image: url('/bg.jpg');
   /* this repository is active! */
 }
 </style>

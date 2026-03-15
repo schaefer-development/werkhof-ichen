@@ -160,12 +160,8 @@
   </v-container>
 </template>
 
-<script>
-export default {
-  head() {
-    return {
-      title: ' | Presseberichte',
-    }
-  },
-}
+<script setup>
+useHead({
+  title: ' | Presseberichte',
+})
 </script>

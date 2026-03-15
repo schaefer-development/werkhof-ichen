@@ -1,8 +1,9 @@
 require('dotenv').config()
 
-const HYGRAPH_HOST = process.env.HYGRAPH_HOST
-const FUNCTIONS_HOST = process.env.FUNCTIONS_HOST || 'http://localhost:9999/.netlify/functions'
-const clientUrl = process.env.URL || 'http://localhost:3000'
+const HYGRAPH_HOST = process.env.HYGRAPH_HOST || ''
+const FUNCTIONS_HOST =
+  process.env.FUNCTIONS_HOST || 'http://localhost:9999/.netlify/functions'
+const clientUrl = process.env.NUXT_PUBLIC_SITE_URL || process.env.URL || 'http://localhost:3000'
 
 const colors = {
   primary: '#000000',
@@ -20,142 +21,109 @@ const colors = {
 const description =
   'werkhof ichen Lohmar: Nähkurse für Kinder/ Jugendliche/ Erwachsene, Geburtstag-Näh-Events, großzügiges Platzangebot, Anfertigungen, Kinderlederhosen'
 
-export default {
-  generate:{
-    interval: 200
+export default defineNuxtConfig({
+  app: {
+    head: {
+      titleTemplate: 'werkhof ichen %s',
+      title: '',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          hid: 'description',
+          name: 'description',
+          content: description,
+        },
+      ],
+    },
   },
-  /*
-   ** Nuxt target
-   ** See https://nuxtjs.org/api/configuration-target
-   */
-  target: 'static',
-  /*
-   ** Headers of the page
-   ** See https://nuxtjs.org/api/configuration-head
-   */
-  head: {
-    titleTemplate: 'werkhof ichen %s',
-    title: '',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content: description,
-      },
-    ],
-  },
-  /*
-   ** Global CSS
-   */
-  css: ['@mdi/font/css/materialdesignicons.css', '@/assets/css/main.css'],
-  /*
-   ** Plugins to load before mounting the App
-   ** https://nuxtjs.org/guide/plugins
-   */
-  plugins: ['~plugins/formatDate.js', '~plugins/responsiveImages.js'],
-  /*
-   ** Auto import components
-   ** See https://nuxtjs.org/api/configuration-components
-   */
-  components: true,
-  /*
-   ** Nuxt.js dev-modules
-   */
-  buildModules: ['@nuxtjs/vuetify', '@nuxtjs/netlify-files', 'nuxt-graphql-request', '@nuxt/postcss8'],
-  /*
-   ** Nuxt.js modules
-   */
-  modules: [
-    '@nuxtjs/axios',
-    '@nuxtjs/markdownit',
-    '@nuxtjs/pwa',
-    '@nuxtjs/sitemap',
+  css: [
+    '@mdi/font/css/materialdesignicons.css',
+    'vuetify/styles',
+    '@/assets/css/main.css',
+    '@/assets/css/global.scss',
   ],
-
-  axios: {
-    proxy: true
-  },
-
-  markdownit: {
-    injected: true,
-  },
-
-  pwa: {
-    meta: {
-      lang: 'de',
-      description,
+  plugins: ['~/plugins/markdownit.ts', '~/plugins/graphql.ts'],
+  modules: [
+    '@nuxtjs/sitemap',
+    '@vite-pwa/nuxt',
+    'vuetify-nuxt-module',
+  ],
+  runtimeConfig: {
+    hygraphToken: process.env.HYGRAPH_TOKEN || '',
+    public: {
+      hygraphHost: HYGRAPH_HOST,
+      functionsHost: FUNCTIONS_HOST,
+      siteUrl: clientUrl,
+      mapboxToken: process.env.NUXT_PUBLIC_MAPBOX_TOKEN || '',
+      hcaptchaSitekey:
+        process.env.NUXT_PUBLIC_HCAPTCHA_SITEKEY ||
+        process.env.NUXT_ENV_HCAPTCHA_SITEKEY ||
+        '',
     },
   },
 
-  manifest: {
-    name: 'werkhof ichen',
-    short_name: 'ichen',
-    theme_color: colors.ichen_blue,
-    background_color: colors.ichen_beige,
-    lang: 'de',
+  pwa: {
+    registerType: 'autoUpdate',
+    manifest: {
+      name: 'werkhof ichen',
+      short_name: 'ichen',
+      theme_color: colors.ichen_blue,
+      background_color: colors.ichen_beige,
+      lang: 'de',
+    },
   },
 
   /* sitemap */
   sitemap: {
-    hostname: clientUrl,
+    siteUrl: clientUrl,
     gzip: true,
   },
-
-  // use proxy module only for development - on production we use _redirects
-  proxy: {
-    '/graphql/': {
-      target: HYGRAPH_HOST,
-      pathRewrite: { '^/graphql/': '' },
-    },
-    '/functions/': {
-      target: FUNCTIONS_HOST,
-      pathRewrite: { '^/functions/': '' },
-    },
+  site: {
+    url: clientUrl,
   },
-
-  graphql: {
-    clients: {
-      default: {
-        endpoint: HYGRAPH_HOST,
-      },
-    },
-  },
-
-  /** loading: false, **/
-
-  /*
-   ** vuetify module configuration
-   ** https://github.com/nuxt-community/vuetify-module
-   */
   vuetify: {
-    treeShake: true,
-    customVariables: ['~/assets/variables.scss'],
-    defaultAssets: false,
-    theme: {
-      themes: {
-        light: {
-          accent: colors.ichen_green,
-          success: colors.ichen_green,
-          warning: colors.error,
-          info: colors.ichen_blue,
-          ...colors,
+    vuetifyOptions: {
+      theme: {
+        defaultTheme: 'light',
+        themes: {
+          light: {
+            colors: {
+              accent: colors.ichen_green,
+              success: colors.ichen_green,
+              warning: colors.error,
+              info: colors.ichen_blue,
+              ...colors,
+            },
+          },
         },
       },
     },
   },
-  /*
-   ** Build configuration
-   ** See https://nuxtjs.org/api/configuration-build/
-   */
-  build: {
-    transpile: ['mapbox-gl-controls/lib/styles'],
-    postcss: {
-      plugins: {
-        tailwindcss: {},
-        autoprefixer: {},
+  postcss: {
+    plugins: {
+      '@tailwindcss/postcss': {},
+      autoprefixer: {},
+    },
+  },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use \"@/assets/variables.scss\" as *;',
+        },
       },
     },
   },
-}
+  nitro: {
+    preset: 'netlify',
+    prerender: {
+      interval: 250,
+      concurrency: 1,
+      failOnError: false,
+    },
+  },
+  build: {
+    transpile: ['mapbox-gl-controls/lib/styles'],
+  },
+})

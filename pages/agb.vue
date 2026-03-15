@@ -85,12 +85,8 @@ ol.agb_list {
 }
 </style>
 
-<script>
-export default {
-  head() {
-    return {
-      title: ' | Allgemeine Geschäftsbedingungen (AGB)',
-    }
-  },
-}
+<script setup>
+useHead({
+  title: ' | Allgemeine Geschäftsbedingungen (AGB)',
+})
 </script>

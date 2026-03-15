@@ -54,38 +54,32 @@
   </v-container>
 </template>
 
-<script>
+<script setup>
 import mapboxgl from 'mapbox-gl'
+import 'mapbox-gl/dist/mapbox-gl.css'
 
-export default {
-  data() {
-    return {
-      access_token:
-        'pk.eyJ1Ijoiam9zZW4iLCJhIjoiY2llcXQ4aTd0MDEzaHZ4a21jejVrcHdyMiJ9.SPCThtA30WGuMPwFxju_8w',
-      map: {},
-    }
-  },
-  mounted() {
-    this.createMap()
-  },
-  methods: {
-    createMap() {
-      mapboxgl.accessToken = this.access_token
-      this.map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/josen/ckd5rgq6z0vwx1ir38367xhb1',
-        zoom: 11.5,
-        center: [7.2719627, 50.8557119],
-        minZoom: 2,
-        maxZoom: 20,
-      })
-      this.map.addControl(new mapboxgl.NavigationControl())
+const config = useRuntimeConfig()
+const accessToken = config.public.mapboxToken
 
-      new mapboxgl.Marker({
-        color: '#e0124d',
-      })
-        .setPopup(
-          new mapboxgl.Popup().setHTML(`
+const map = ref()
+
+const createMap = () => {
+  mapboxgl.accessToken = accessToken
+  map.value = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/josen/ckd5rgq6z0vwx1ir38367xhb1',
+    zoom: 11.5,
+    center: [7.2719627, 50.8557119],
+    minZoom: 2,
+    maxZoom: 20,
+  })
+  map.value.addControl(new mapboxgl.NavigationControl())
+
+  new mapboxgl.Marker({
+    color: '#e0124d',
+  })
+    .setPopup(
+      new mapboxgl.Popup().setHTML(`
       <p>
       <strong>werkhof ichen</strong><br>
       ichen Schmitz<br>
@@ -96,23 +90,18 @@ export default {
       E-Mail: <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a><br>
 
       </p>`)
-        )
-        .setLngLat([7.2719627, 50.8557119])
-        .addTo(this.map)
-    },
-  },
-  head() {
-    return {
-      title: ' | Kontakt',
-      link: [
-        {
-          rel: 'stylesheet',
-          href: 'https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css',
-        },
-      ],
-    }
-  },
+    )
+    .setLngLat([7.2719627, 50.8557119])
+    .addTo(map.value)
 }
+
+onMounted(() => {
+  createMap()
+})
+
+useHead({
+  title: ' | Kontakt',
+})
 </script>
 
 <style lang="scss">

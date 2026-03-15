@@ -29,7 +29,7 @@
             <p>Ups ... Da ist was schiefgelaufen.</p>
             <p>
               Möchten Sie zurück zur
-              <nuxt-link to="/">Startseite</nuxt-link>?
+              <NuxtLink to="/">Startseite</NuxtLink>?
             </p>
           </v-card-text>
         </v-card>
@@ -38,27 +38,22 @@
   </v-container>
 </template>
 
-<script>
-export default {
-  layout: 'empty',
-  props: {
-    error: {
-      type: Object,
-      default: null,
-    },
+<script setup>
+const props = defineProps({
+  error: {
+    type: Object,
+    default: null,
   },
-  data() {
-    return {
-      pageNotFound: 'Fehler 404 – Seite nicht gefunden',
-      otherError: 'Ein Fehler ist aufgetreten',
-    }
-  },
-  head() {
-    const title =
-      this.error.statusCode === 404 ? this.pageNotFound : this.otherError
-    return {
-      title,
-    }
-  },
-}
+})
+
+const pageNotFound = 'Fehler 404 – Seite nicht gefunden'
+const otherError = 'Ein Fehler ist aufgetreten'
+
+const title = computed(() =>
+  props.error?.statusCode === 404 ? pageNotFound : otherError
+)
+
+useHead({
+  title: title.value,
+})
 </script>
