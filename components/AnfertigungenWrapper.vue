@@ -14,14 +14,12 @@
             <p>
               <v-list flat nav color="transparent" class="px-0">
                 <v-list-item
-                  nuxt
                   link
                   to="/anfertigungen/leder"
                   class="white--text text-h3 ma-0 px-8"
                   >Leder</v-list-item
                 >
                 <v-list-item
-                  nuxt
                   link
                   to="/anfertigungen/weitere_materialien"
                   class="white--text text-h3 ma-0 px-8"

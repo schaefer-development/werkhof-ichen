@@ -610,12 +610,8 @@
   </v-container>
 </template>
 
-<script>
-export default {
-  head() {
-    return {
-      title: ' | Datenschutz',
-    }
-  },
-}
+<script setup>
+useHead({
+  title: ' | Datenschutz',
+})
 </script>

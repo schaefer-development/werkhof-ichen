@@ -36,7 +36,7 @@
             <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a>
           </p>
           <p>
-            <v-btn depressed color="ichen_blue white--text" @click="confirm"
+            <v-btn variant="flat" color="ichen_blue white--text" @click="confirm"
               >Verstanden</v-btn
             >
           </p>
@@ -46,7 +46,7 @@
           <p class="text-right my-0">
             <v-btn
               fab
-              depressed
+              variant="flat"
               small
               dark
               aria-label="Abbrechen"
@@ -103,7 +103,7 @@
           <p></p>
           <v-text-field
             v-model="anmeldung.name"
-            outlined
+            variant="outlined"
             :rules="requiredRules"
             required
             label="Vor- und Nachname"
@@ -112,7 +112,7 @@
 
           <v-text-field
             v-model="anmeldung.email"
-            outlined
+            variant="outlined"
             :rules="emailRules"
             required
             label="E-Mailadresse (beispiel@beispiel.de – keine Leerzeichen)"
@@ -120,14 +120,14 @@
           ></v-text-field>
           <v-text-field
             v-model="anmeldung.telefonNummer"
-            outlined
+            variant="outlined"
             :rules="phoneNumberRules"
             label="Telefonnummer"
             @change="normalize"
           ></v-text-field>
           <v-text-field
             v-model="anmeldung.strasseHausnummer"
-            outlined
+            variant="outlined"
             @change="normalize"
           >
             <template v-slot:label>
@@ -137,7 +137,7 @@
               </div>
             </template>
           </v-text-field>
-          <v-text-field v-model="anmeldung.plzOrt" outlined @change="normalize">
+          <v-text-field v-model="anmeldung.plzOrt" variant="outlined" @change="normalize">
             <template v-slot:label>
               <div>
                 <div>Postleitzahl und Ort</div>
@@ -161,7 +161,7 @@
           <client-only>
             <vue-hcaptcha :sitekey="HCAPTCHA_SITEKEY" @verify="verify"></vue-hcaptcha>
           </client-only>
-          <v-alert text type="info" class="font-weight-bold mt-4 mb-10">
+          <v-alert variant="text" type="info" class="font-weight-bold mt-4 mb-10">
             <template v-if="available"
               >Ihr Platz ist erst mit Zahlungseingang reserviert.</template
             >
@@ -170,7 +170,7 @@
               oder per E-Mail.
             </template>
           </v-alert>
-          <v-alert v-if="error" text type="error" class="font-weight-bold">
+          <v-alert v-if="error" variant="text" type="error" class="font-weight-bold">
             Ups, da ist etwas schief gelaufen. Bitte versuchen Sie es erneut und
             wenn das Problem weiterhin besteht, kontaktieren Sie mich bitte per
             E-Mail an
@@ -179,7 +179,7 @@
 
           <v-btn
             class="mr-4 mb-4"
-            depressed
+            variant="flat"
             color="ichen_red white--text"
             :disabled="!valid || !anmeldung.hCaptchaResult"
             :loading="loading"
@@ -187,7 +187,7 @@
             >{{ available ? 'Anmelden' : 'Auf Warteliste setzen' }}</v-btn
           >
           <v-btn
-            depressed
+            variant="flat"
             class="mb-4"
             color="ichen_blue white--text"
             @click="cancel"
@@ -199,91 +199,92 @@
   </v-card>
 </template>
 
-<script>
-import VueHcaptcha from '@hcaptcha/vue-hcaptcha';
+<script setup>
+import VueHcaptcha from '@hcaptcha/vue3-hcaptcha'
+import { useGoTo } from 'vuetify'
 import isAvailable from '~/helpers/isAvailable.js'
+
 // eslint-disable-next-line no-useless-escape
 const emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
-const HCAPTCHA_SITEKEY = process.env.NUXT_ENV_HCAPTCHA_SITEKEY
+const props = defineProps({
+  veranstaltung: {
+    type: Object,
+    required: true,
+  },
+})
 
-export default {
-  components: {
-    VueHcaptcha,
-  },
-  props: {
-    veranstaltung: {
-      type: Object,
-      required: true,
-    },
-  },
-  data: () => ({
-    HCAPTCHA_SITEKEY,
-    valid: true,
-    anmeldung: {
-      hCaptchaResult: '',
-      name: '',
-      email: '',
-      telefonNummer: '',
-      plzOrt: '',
-      strasseHausnummer: '',
-    },
-    agb: false,
-    requiredRules: [(v) => !!v || 'Muss ausgefüllt werden'],
-    phoneNumberRules: [
-      (v) => !!v || 'Muss ausgefüllt werden',
-      (v) =>
-        /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s./0-9]*$/g.test(v) ||
-        'muss gültig sein',
-    ],
-    emailRules: [
-      (v) => !!v || 'Muss ausgefüllt werden',
-      (v) => emailRegExp.test(v) || 'Muss gültig sein',
-    ],
-    agbRules: [(v) => !!v || 'Sie müssen den AGB zustimmen, um fortzufahren'],
-    success: false,
-    error: false,
-    loading: false,
-  }),
-  computed: {
-    available() {
-      return isAvailable(this.veranstaltung)
-    },
-  },
-  methods: {
-    confirm() {
-      this.$emit('confirm')
-    },
-    cancel() {
-      this.$emit('cancel')
-    },
-    normalize() {
-      for (const key in this.anmeldung) {
-        this.anmeldung[key] = this.anmeldung[key].trim()
-      }
-    },
-    verify(hCaptchaResult) {
-      this.anmeldung.hCaptchaResult = hCaptchaResult
-    },
-    async submit() {
-      this.loading = true
-      const { anmeldung } = this
+const emit = defineEmits(['confirm', 'cancel'])
+const goTo = useGoTo()
+const config = useRuntimeConfig()
+const HCAPTCHA_SITEKEY = config.public.hcaptchaSitekey
 
-      anmeldung.veranstaltung = this.veranstaltung
-      try {
-        await this.$axios.$post('/functions/register/', {
-          ...anmeldung,
-        })
-        this.success = true
-        this.$vuetify.goTo('#alert-wrapper', { duration: 0 })
-      } catch (err) {
-        // eslint-disable-next-line no-console
-        console.log(err)
-        this.error = true
-      } finally {
-        this.loading = false
-      }
-    },
-  },
+const valid = ref(true)
+const anmeldung = reactive({
+  hCaptchaResult: '',
+  name: '',
+  email: '',
+  telefonNummer: '',
+  plzOrt: '',
+  strasseHausnummer: '',
+})
+const agb = ref(false)
+const success = ref(false)
+const error = ref(false)
+const loading = ref(false)
+
+const requiredRules = [(v) => !!v || 'Muss ausgefüllt werden']
+const phoneNumberRules = [
+  (v) => !!v || 'Muss ausgefüllt werden',
+  (v) =>
+    /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s./0-9]*$/g.test(v) ||
+    'muss gültig sein',
+]
+const emailRules = [
+  (v) => !!v || 'Muss ausgefüllt werden',
+  (v) => emailRegExp.test(v) || 'Muss gültig sein',
+]
+const agbRules = [(v) => !!v || 'Sie müssen den AGB zustimmen, um fortzufahren']
+
+const available = computed(() => isAvailable(props.veranstaltung))
+
+const confirm = () => emit('confirm')
+const cancel = () => emit('cancel')
+
+const normalize = () => {
+  for (const key in anmeldung) {
+    const value = anmeldung[key]
+    if (typeof value === 'string') {
+      anmeldung[key] = value.trim()
+    }
+  }
+}
+
+const verify = (hCaptchaResult) => {
+  anmeldung.hCaptchaResult = hCaptchaResult
+}
+
+const submit = async () => {
+  loading.value = true
+  error.value = false
+
+  const payload = {
+    ...anmeldung,
+    veranstaltung: props.veranstaltung,
+  }
+
+  try {
+    await $fetch(`${config.public.functionsHost}/register/`, {
+      method: 'POST',
+      body: payload,
+    })
+    success.value = true
+    goTo('#alert-wrapper', { duration: 0 })
+  } catch (err) {
+    console.log(err)
+    error.value = true
+  } finally {
+    loading.value = false
+  }
 }
 </script>

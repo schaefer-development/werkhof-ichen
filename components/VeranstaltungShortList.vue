@@ -17,9 +17,8 @@
       <client-only placeholder="Anmelden">
         <div>
           <v-btn
-            nuxt
-            :to="{ name: 'veranstaltung-id', params: { id: veranstaltung.id } }"
-            depressed
+            :to="`/veranstaltung/${veranstaltung.id}`"
+            variant="flat"
             color="ichen_red white--text"
             >Mehr</v-btn
           >
@@ -45,8 +44,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.shortlist .shortlist_item:last-child .v-image {
-  display: none;
-}
-</style>
+<style lang="scss"></style>

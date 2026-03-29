@@ -20,17 +20,10 @@
   </anfertigungen-wrapper>
 </template>
 
-<script>
+<script setup>
 import AnfertigungenWrapper from '~/components/AnfertigungenWrapper'
 
-export default {
-  components: {
-    AnfertigungenWrapper,
-  },
-  head() {
-    return {
-      title: ' | Anfertigungen: weitere Materialien',
-    }
-  },
-}
+useHead({
+  title: ' | Anfertigungen: weitere Materialien',
+})
 </script>

@@ -105,12 +105,8 @@
   </v-container>
 </template>
 
-<script>
-export default {
-  head() {
-    return {
-      title: ' | Impressum',
-    }
-  },
-}
+<script setup>
+useHead({
+  title: ' | Impressum',
+})
 </script>

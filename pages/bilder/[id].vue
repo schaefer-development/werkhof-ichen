@@ -6,11 +6,10 @@
           <p align="right" class="px-6 pt-6">
             <v-btn
               fab
-              depressed
+              variant="flat"
               small
               aria-label="Abbrechen"
               color="ichen_blue"
-              nuxt
               to="/bilder"
             >
               <v-icon dark class="white--text">mdi-close</v-icon>
@@ -25,7 +24,7 @@
               :key="bild.id"
               contain
               :src="bild.url"
-              :srcset="bild | generateSrcset"
+              :srcset="generateSrcset(bild)"
               sizes="
           (min-width:1904px) 1761px,
           (min-width:1264px) 1161px,
@@ -39,36 +38,43 @@
   </v-container>
 </template>
 
-<script>
-import { gql } from 'nuxt-graphql-request';
-export default {
-  async asyncData({ $graphql, params }) {
-    const query = gql`
-      query bilderstrecke($id: ID!) {
-        bilderstrecke(where: {id: $id}) {
-          id
-          titel
-          bilder(first: 100) {
-            id
-            width
-            url
-            thumbnail: url(transformation: {image: {resize: {width: 250}}})
-            small: url(transformation: {image: {resize: {width: 500}}})
-            medium: url(transformation: {image: {resize: {width: 750}}})
-            large: url(transformation: {image: {resize: {width: 1000}}})
-          }
-        }
+<script setup>
+import { gql } from 'graphql-request'
+import { generateSrcset } from '~/composables/generateSrcset'
+
+const { $graphql } = useNuxtApp()
+const route = useRoute()
+const id = computed(() =>
+  Array.isArray(route.params.id) ? route.params.id[0] : route.params.id
+)
+
+const query = gql`
+  query bilderstrecke($id: ID!) {
+    bilderstrecke(where: { id: $id }) {
+      id
+      titel
+      bilder(first: 100) {
+        id
+        width
+        url
+        thumbnail: url(transformation: { image: { resize: { width: 250 } } })
+        small: url(transformation: { image: { resize: { width: 500 } } })
+        medium: url(transformation: { image: { resize: { width: 750 } } })
+        large: url(transformation: { image: { resize: { width: 1000 } } })
       }
-    `
-    const { bilderstrecke } = await $graphql.default.request(query, params);
-    return { bilderstrecke }
-  },
-  head() {
-    return {
-      title: ' | Bilder',
     }
-  },
-}
+  }
+`
+
+const { data } = await useAsyncData(`bilderstrecke-${id.value ?? 'unknown'}`, () =>
+  id.value ? $graphql.request(query, { id: id.value }) : null
+)
+
+const bilderstrecke = computed(() => data.value?.bilderstrecke ?? { bilder: [] })
+
+useHead({
+  title: ' | Bilder',
+})
 </script>
 
 <style lang="scss">

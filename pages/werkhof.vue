@@ -79,11 +79,7 @@
             ></veranstaltung-short-list>
 
             <div class="text-right pb-12">
-              <v-btn
-                nuxt
-                to="/veranstaltungen"
-                depressed
-                color="ichen_red white--text"
+              <v-btn to="/veranstaltungen" variant="flat" color="ichen_red white--text"
                 >Alle anzeigen</v-btn
               >
             </div>
@@ -94,51 +90,49 @@
   </v-container>
 </template>
 
-<script>
+<script setup>
+import { gql } from 'graphql-request'
 import VeranstaltungShortList from '../components/VeranstaltungShortList.vue'
-import { gql } from 'nuxt-graphql-request';
 
-export default {
-  components: {
-    VeranstaltungShortList,
-  },
-  async asyncData({ $graphql }) {
-    const query = gql`
-      query kommendeVeranstaltungen($today: DateTime) {
-        veranstaltungen(orderBy: datum_ASC, where: {datum_gt: $today}, first: 3) {
-          id
-          titel
-          datum
-          preis
-          maximaleAnzahlTeilnehmer
-          beschreibung {
-            html
-          }
-          anzeigedatum
-          kurzbeschreibung
-          kategorie
-          vorschaubild {
-            width
-            url
-            thumbnail: url(transformation: {image: {resize: {width: 250}}})
-            small: url(transformation: {image: {resize: {width: 500}}})
-            medium: url(transformation: {image: {resize: {width: 750}}})
-            large: url(transformation: {image: {resize: {width: 1000}}})
-          }
-          anmeldungen {
-            id
-          }
-        }
+const { $graphql } = useNuxtApp()
+
+const query = gql`
+  query kommendeVeranstaltungen($today: DateTime) {
+    veranstaltungen(orderBy: datum_ASC, where: { datum_gt: $today }, first: 3) {
+      id
+      titel
+      datum
+      preis
+      maximaleAnzahlTeilnehmer
+      beschreibung {
+        html
       }
-    `
-    const today = new Date().toISOString()
-    const { veranstaltungen } = await $graphql.default.request(query, { today });
-    return { veranstaltungen }
-  },
-  head() {
-    return {
-      title: ' | Der Werkhof',
+      anzeigedatum
+      kurzbeschreibung
+      kategorie
+      vorschaubild {
+        width
+        url
+        thumbnail: url(transformation: { image: { resize: { width: 250 } } })
+        small: url(transformation: { image: { resize: { width: 500 } } })
+        medium: url(transformation: { image: { resize: { width: 750 } } })
+        large: url(transformation: { image: { resize: { width: 1000 } } })
+      }
+      anmeldungen {
+        id
+      }
     }
-  },
-}
+  }
+`
+
+const today = new Date().toISOString()
+const { data } = await useAsyncData('werkhof-veranstaltungen', () =>
+  $graphql.request(query, { today })
+)
+
+const veranstaltungen = computed(() => data.value?.veranstaltungen ?? [])
+
+useHead({
+  title: ' | Der Werkhof',
+})
 </script>
