@@ -1,0 +1,36 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    groups:
+      patch-and-minor:
+        update-types:
+          - "minor"
+          - "patch"
+    ignore:
+      # Nuxt-2-only / frozen packages — no Nuxt-2-compatible release newer
+      # than what's pinned exists; newer majors are Nuxt 3-only rewrites.
+      - dependency-name: "nuxt"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@nuxtjs/sitemap"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@nuxtjs/vuetify"
+      - dependency-name: "@nuxtjs/pwa"
+      - dependency-name: "@nuxtjs/markdownit"
+      - dependency-name: "@nuxtjs/netlify-files"
+      - dependency-name: "nuxt-graphql-request"
+      - dependency-name: "vuetify"
+        update-types: ["version-update:semver-major"]
+      # typescript-eslint currently caps typescript support at <6.1.0 — don't
+      # propose TypeScript 7.x until that ceiling lifts.
+      - dependency-name: "typescript"
+        versions: [">=6.1.0"]
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
