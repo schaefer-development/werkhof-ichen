@@ -38,7 +38,7 @@
         <v-list-item nuxt link to="/bilder">Bilder</v-list-item>
         <v-list-item nuxt link to="/kontakt">Kontakt</v-list-item>
         <v-list-group no-action>
-          <template v-slot:activator flat>
+          <template v-slot:activator>
             <v-list-item>Über mich</v-list-item>
           </template>
 
