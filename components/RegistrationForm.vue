@@ -271,9 +271,12 @@ export default {
 
       anmeldung.veranstaltung = this.veranstaltung
       try {
-        await this.$axios.$post('/functions/register/', {
-          ...anmeldung,
+        const res = await fetch('/functions/register/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(anmeldung),
         })
+        if (!res.ok) throw new Error(`Request failed: ${res.status}`)
         this.success = true
         this.$vuetify.goTo('#alert-wrapper', { duration: 0 })
       } catch (err) {

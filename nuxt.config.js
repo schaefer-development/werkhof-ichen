@@ -68,15 +68,10 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    '@nuxtjs/axios',
     '@nuxtjs/markdownit',
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
   ],
-
-  axios: {
-    proxy: true
-  },
 
   markdownit: {
     injected: true,
