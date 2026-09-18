@@ -5,6 +5,14 @@
 ```bash
 # install dependencies
 $ npm install
+```
+
+If `npm install` fails while building `sharp`, you have libvips installed
+system-wide, and `sharp` (a dependency of the Netlify CLI) tries to compile
+against it instead of using its prebuilt binary. Install with
+`SHARP_IGNORE_GLOBAL_LIBVIPS=1 npm install` (or `npm ci`) instead.
+
+```bash
 
 # serve with hot reload at localhost:3000
 $ npm run dev
