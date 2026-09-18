@@ -24,7 +24,10 @@ const description =
 
 export default {
   generate: {
-    interval: 200,
+    // Hygraph's free plan allows 5 uncached requests/s and 10 concurrent
+    // queries (429 beyond that). Render two routes at a time, 500 ms apart.
+    concurrency: 2,
+    interval: 500,
   },
   /*
    ** Nuxt target
