@@ -1,6 +1,6 @@
 <template>
   <anfertigungen-wrapper>
-    <template v-slot:banner>
+    <template #banner>
       <v-img
         src="/header_images/header_other_materials_collage.jpg"
         alt="werkhof ichen: Andere Textilien"

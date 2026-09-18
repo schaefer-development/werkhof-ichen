@@ -67,15 +67,15 @@ export default {
     const { veranstaltung } = await $graphql.default.request(query, params)
     return { veranstaltung }
   },
-  methods: {
-    back() {
-      this.$router.back()
-    },
-  },
   head() {
     return {
       title: ' | Veranstaltungsdetails',
     }
+  },
+  methods: {
+    back() {
+      this.$router.back()
+    },
   },
 }
 </script>

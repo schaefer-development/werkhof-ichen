@@ -134,7 +134,7 @@
             outlined
             @change="normalize"
           >
-            <template v-slot:label>
+            <template #label>
               <div>
                 <div>Straße und Hausnummer</div>
                 <small>(optional)</small>
@@ -142,7 +142,7 @@
             </template>
           </v-text-field>
           <v-text-field v-model="anmeldung.plzOrt" outlined @change="normalize">
-            <template v-slot:label>
+            <template #label>
               <div>
                 <div>Postleitzahl und Ort</div>
                 <small>(optional)</small>
@@ -150,7 +150,7 @@
             </template>
           </v-text-field>
           <v-checkbox v-model="agb" :rules="agbRules" required>
-            <template v-slot:label>
+            <template #label>
               <div>
                 <div>
                   Ich habe die
@@ -288,7 +288,6 @@ export default {
         this.success = true
         this.$vuetify.goTo('#alert-wrapper', { duration: 0 })
       } catch (err) {
-        // eslint-disable-next-line no-console
         console.log(err)
         this.error = true
       } finally {

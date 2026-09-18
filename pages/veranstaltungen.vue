@@ -248,6 +248,11 @@ export default {
     ]
     return { veranstaltungen, terminabsprachen, items, selected: [] }
   },
+  head() {
+    return {
+      title: ' | Veranstaltungen',
+    }
+  },
   computed: {
     filtered() {
       const { selected, veranstaltungen, terminabsprachen } = this
@@ -262,11 +267,6 @@ export default {
         ),
       }
     },
-  },
-  head() {
-    return {
-      title: ' | Veranstaltungen',
-    }
   },
 }
 </script>
