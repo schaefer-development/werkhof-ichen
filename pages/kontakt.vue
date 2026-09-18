@@ -65,6 +65,17 @@ export default {
       map: {},
     }
   },
+  head() {
+    return {
+      title: ' | Kontakt',
+      link: [
+        {
+          rel: 'stylesheet',
+          href: 'https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css',
+        },
+      ],
+    }
+  },
   mounted() {
     this.createMap()
   },
@@ -100,17 +111,6 @@ export default {
         .setLngLat([7.2719627, 50.8557119])
         .addTo(this.map)
     },
-  },
-  head() {
-    return {
-      title: ' | Kontakt',
-      link: [
-        {
-          rel: 'stylesheet',
-          href: 'https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css',
-        },
-      ],
-    }
   },
 }
 </script>

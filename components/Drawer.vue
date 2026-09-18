@@ -1,6 +1,6 @@
 <template>
   <v-navigation-drawer v-model="drawer" temporary app color="ichen_blue">
-    <template v-slot:img>
+    <template #img>
       <v-img
         contain
         class="drawer-background-image"
@@ -42,7 +42,7 @@
         <v-list-item nuxt link to="/bilder">Bilder</v-list-item>
         <v-list-item nuxt link to="/kontakt">Kontakt</v-list-item>
         <v-list-group no-action>
-          <template v-slot:activator>
+          <template #activator>
             <v-list-item>Über mich</v-list-item>
           </template>
 

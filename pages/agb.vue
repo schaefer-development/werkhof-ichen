@@ -78,14 +78,6 @@
   </v-container>
 </template>
 
-<style lang="scss">
-ol.agb_list {
-  li {
-    padding: 1em 0 !important;
-  }
-}
-</style>
-
 <script>
 export default {
   head() {
@@ -95,3 +87,11 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+ol.agb_list {
+  li {
+    padding: 1em 0 !important;
+  }
+}
+</style>

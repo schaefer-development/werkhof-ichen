@@ -1,6 +1,6 @@
 <template>
   <anfertigungen-wrapper>
-    <template v-slot:banner>
+    <template #banner>
       <v-img
         src="https://res.cloudinary.com/dk6nbbr6c/image/upload/v1597151779/ichen/header_leather_osru49.jpg"
         alt="werkhof ichen: Eine Auswahl von Leder"

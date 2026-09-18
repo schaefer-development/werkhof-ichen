@@ -72,7 +72,6 @@ export default {
     '@nuxtjs/vuetify',
     '@nuxtjs/netlify-files',
     'nuxt-graphql-request',
-    '@nuxt/postcss8',
   ],
   /*
    ** Nuxt.js modules
@@ -160,9 +159,11 @@ export default {
   build: {
     transpile: ['mapbox-gl-controls/lib/styles'],
     postcss: {
-      plugins: {
-        tailwindcss: {},
-        autoprefixer: {},
+      postcssOptions: {
+        plugins: {
+          tailwindcss: {},
+          autoprefixer: {},
+        },
       },
     },
   },
