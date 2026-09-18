@@ -17,3 +17,8 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run generate
+        env:
+          # Read-only: the public Content API endpoint, same one committed in
+          # _redirects. Never add HYGRAPH_TOKEN here; only the registration
+          # function uses it (to write), and generate never calls that.
+          HYGRAPH_HOST: https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clakyyrxk19kn01ta1ckn11y7/master

@@ -10,7 +10,7 @@
   },
   "scripts": {
     "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider nuxt",
-    "generate": "cross-env NODE_OPTIONS=--openssl-legacy-provider nuxt generate",
+    "generate": "cross-env NODE_OPTIONS=--openssl-legacy-provider nuxt generate --fail-on-error",
     "serve": "nuxt serve",
     "lint": "eslint .",
     "maildev": "maildev",
