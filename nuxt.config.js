@@ -69,6 +69,7 @@ export default {
    */
   modules: [
     '@nuxtjs/markdownit',
+    '@nuxtjs/proxy',
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
   ],
