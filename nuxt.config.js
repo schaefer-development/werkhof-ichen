@@ -3,6 +3,7 @@ require('dotenv').config()
 const HYGRAPH_HOST = process.env.HYGRAPH_HOST
 const FUNCTIONS_HOST = process.env.FUNCTIONS_HOST || 'http://localhost:9999/.netlify/functions'
 const clientUrl = process.env.URL || 'http://localhost:3000'
+const isDev = process.env.NODE_ENV !== 'production'
 
 const colors = {
   primary: '#000000',
@@ -69,7 +70,9 @@ export default {
    */
   modules: [
     '@nuxtjs/markdownit',
-    '@nuxtjs/proxy',
+    // dev only: the proxy targets below need HYGRAPH_HOST, which builds
+    // (CI, Netlify) may not have; production routes via _redirects instead
+    ...(isDev ? ['@nuxtjs/proxy'] : []),
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
   ],
