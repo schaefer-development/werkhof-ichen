@@ -35,6 +35,9 @@ updates:
         update-types: ['version-update:semver-major']
       - dependency-name: 'mapbox-gl'
         update-types: ['version-update:semver-major']
+      # Types should track the pinned Node major (24, see .node-version).
+      - dependency-name: '@types/node'
+        update-types: ['version-update:semver-major']
       # typescript-eslint currently caps typescript support at <6.1.0 — don't
       # propose TypeScript 7.x until that ceiling lifts.
       - dependency-name: 'typescript'
