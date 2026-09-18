@@ -25,6 +25,16 @@ updates:
       - dependency-name: 'nuxt-graphql-request'
       - dependency-name: 'vuetify'
         update-types: ['version-update:semver-major']
+      # Newer releases of these can't be bundled by Nuxt 2's webpack 4
+      # (unparseable syntax / no `main` entry), or are capped by a frozen
+      # Nuxt 2 module. Revisit when moving off Nuxt 2.
+      - dependency-name: 'graphql'
+        update-types: ['version-update:semver-major']
+      - dependency-name: 'graphql-request'
+      - dependency-name: 'date-fns'
+        update-types: ['version-update:semver-major']
+      - dependency-name: 'mapbox-gl'
+        update-types: ['version-update:semver-major']
       # typescript-eslint currently caps typescript support at <6.1.0 — don't
       # propose TypeScript 7.x until that ceiling lifts.
       - dependency-name: 'typescript'

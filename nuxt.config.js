@@ -56,7 +56,7 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: ['~plugins/formatDate.js', '~plugins/responsiveImages.js'],
+  plugins: ['~plugins/responsiveImages.js'],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
