@@ -107,7 +107,7 @@ export default {
       link: [
         {
           rel: 'stylesheet',
-          href: 'https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css',
+          href: 'https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css',
         },
       ],
     }
