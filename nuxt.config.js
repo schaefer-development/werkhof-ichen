@@ -114,9 +114,9 @@ export default {
       target: HYGRAPH_HOST,
       pathRewrite: { '^/graphql/': '' },
     },
-    '/functions/': {
+    '/api/functions/': {
       target: FUNCTIONS_HOST,
-      pathRewrite: { '^/functions/': '' },
+      pathRewrite: { '^/api/functions/': '' },
     },
   },
 
