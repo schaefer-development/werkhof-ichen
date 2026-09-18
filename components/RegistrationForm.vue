@@ -279,7 +279,7 @@ export default {
 
       anmeldung.veranstaltung = this.veranstaltung
       try {
-        const res = await fetch('/functions/register/', {
+        const res = await fetch('/api/functions/register/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(anmeldung),
