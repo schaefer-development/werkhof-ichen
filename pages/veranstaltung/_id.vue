@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import { gql } from 'nuxt-graphql-request';
+import { gql } from 'nuxt-graphql-request'
 import RegistrationForm from '~/components/RegistrationForm'
 
 export default {
@@ -36,7 +36,7 @@ export default {
   async asyncData({ $graphql, params }) {
     const query = gql`
       query veranstaltung($id: ID!) {
-        veranstaltung(where: {id: $id}) {
+        veranstaltung(where: { id: $id }) {
           id
           titel
           datum
@@ -51,10 +51,12 @@ export default {
           vorschaubild {
             width
             url
-            thumbnail: url(transformation: {image: {resize: {width: 250}}})
-            small: url(transformation: {image: {resize: {width: 500}}})
-            medium: url(transformation: {image: {resize: {width: 750}}})
-            large: url(transformation: {image: {resize: {width: 1000}}})
+            thumbnail: url(
+              transformation: { image: { resize: { width: 250 } } }
+            )
+            small: url(transformation: { image: { resize: { width: 500 } } })
+            medium: url(transformation: { image: { resize: { width: 750 } } })
+            large: url(transformation: { image: { resize: { width: 1000 } } })
           }
           anmeldungen {
             id
@@ -62,7 +64,7 @@ export default {
         }
       }
     `
-    const { veranstaltung } = await $graphql.default.request(query, params);
+    const { veranstaltung } = await $graphql.default.request(query, params)
     return { veranstaltung }
   },
   methods: {

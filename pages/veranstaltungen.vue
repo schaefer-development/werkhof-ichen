@@ -46,7 +46,7 @@
         ></v-select>
       </v-col>
     </v-row>
-<!--
+    <!--
     <v-row>
       <v-col cols="12">
         <v-row class="ichen_blue pa-6 mx-1 mt-12 mb-0" align="center">
@@ -180,7 +180,7 @@
 <script>
 import VeranstaltungTile from '~/components/VeranstaltungTile.vue'
 import TerminabspracheTile from '~/components/TerminabspracheTile.vue'
-import { gql } from 'nuxt-graphql-request';
+import { gql } from 'nuxt-graphql-request'
 
 export default {
   components: {
@@ -201,13 +201,15 @@ export default {
           vorschaubild {
             width
             url
-            thumbnail: url(transformation: {image: {resize: {width: 250}}})
-            small: url(transformation: {image: {resize: {width: 500}}})
-            medium: url(transformation: {image: {resize: {width: 750}}})
-            large: url(transformation: {image: {resize: {width: 1000}}})
+            thumbnail: url(
+              transformation: { image: { resize: { width: 250 } } }
+            )
+            small: url(transformation: { image: { resize: { width: 500 } } })
+            medium: url(transformation: { image: { resize: { width: 750 } } })
+            large: url(transformation: { image: { resize: { width: 1000 } } })
           }
         }
-        veranstaltungen(orderBy: datum_ASC, where: {datum_gt: $today}) {
+        veranstaltungen(orderBy: datum_ASC, where: { datum_gt: $today }) {
           id
           titel
           datum
@@ -222,16 +224,19 @@ export default {
           vorschaubild {
             width
             url
-            thumbnail: url(transformation: {image: {resize: {width: 250}}})
-            small: url(transformation: {image: {resize: {width: 500}}})
-            medium: url(transformation: {image: {resize: {width: 750}}})
-            large: url(transformation: {image: {resize: {width: 1000}}})
+            thumbnail: url(
+              transformation: { image: { resize: { width: 250 } } }
+            )
+            small: url(transformation: { image: { resize: { width: 500 } } })
+            medium: url(transformation: { image: { resize: { width: 750 } } })
+            large: url(transformation: { image: { resize: { width: 1000 } } })
           }
         }
       }
     `
     const today = new Date().toISOString()
-    const { veranstaltungen, terminabsprachen } = await $graphql.default.request(query, { today });
+    const { veranstaltungen, terminabsprachen } =
+      await $graphql.default.request(query, { today })
     const items = [
       { key: 'kurse_fuer_erwachsene', name: 'Kurse für Erwachsene' },
       {
@@ -250,10 +255,10 @@ export default {
         return { veranstaltungen, terminabsprachen }
       return {
         veranstaltungen: veranstaltungen.filter((v) =>
-          selected.includes(v.kategorie)
+          selected.includes(v.kategorie),
         ),
         terminabsprachen: terminabsprachen.filter((v) =>
-          selected.includes(v.kategorie)
+          selected.includes(v.kategorie),
         ),
       }
     },

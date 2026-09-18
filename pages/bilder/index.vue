@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import { gql } from 'nuxt-graphql-request';
+import { gql } from 'nuxt-graphql-request'
 export default {
   async asyncData({ $graphql }) {
     const query = gql`
@@ -55,10 +55,12 @@ export default {
             id
             width
             url
-            thumbnail: url(transformation: {image: {resize: {width: 250}}})
-            small: url(transformation: {image: {resize: {width: 500}}})
-            medium: url(transformation: {image: {resize: {width: 750}}})
-            large: url(transformation: {image: {resize: {width: 1000}}})
+            thumbnail: url(
+              transformation: { image: { resize: { width: 250 } } }
+            )
+            small: url(transformation: { image: { resize: { width: 500 } } })
+            medium: url(transformation: { image: { resize: { width: 750 } } })
+            large: url(transformation: { image: { resize: { width: 1000 } } })
           }
         }
       }

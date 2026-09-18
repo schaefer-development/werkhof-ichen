@@ -25,8 +25,9 @@
           ></div>
 
           <div class="event_detail ichen_brown--text font-weight-bold pa-0">
-            {{ veranstaltung.preis }} € (plus Materialkosten)<br>
-            Maximale Teilnehmeranzahl: {{ veranstaltung.maximaleAnzahlTeilnehmer }}
+            {{ veranstaltung.preis }} € (plus Materialkosten)<br />
+            Maximale Teilnehmeranzahl:
+            {{ veranstaltung.maximaleAnzahlTeilnehmer }}
           </div>
 
           <div
@@ -56,7 +57,7 @@
 </template>
 
 <script>
-import isAvailable from "~/helpers/isAvailable";
+import isAvailable from '~/helpers/isAvailable'
 
 export default {
   props: {
@@ -67,10 +68,10 @@ export default {
   },
   computed: {
     available() {
-      return isAvailable(this.veranstaltung);
+      return isAvailable(this.veranstaltung)
     },
   },
-};
+}
 </script>
 
 <style lang="scss">

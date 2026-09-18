@@ -95,7 +95,7 @@ export default {
       Telefon: 02246 . 31 97<br>
       E-Mail: <a href="mailto:info@werkhof-ichen.de">info@werkhof-ichen.de</a><br>
 
-      </p>`)
+      </p>`),
         )
         .setLngLat([7.2719627, 50.8557119])
         .addTo(this.map)

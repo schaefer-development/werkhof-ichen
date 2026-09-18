@@ -1,15 +1,24 @@
 <template>
-  <v-app-bar height="200px" flat color="transparent" absolute app clipped-left class="px-12">
+  <v-app-bar
+    height="200px"
+    flat
+    color="transparent"
+    absolute
+    app
+    clipped-left
+    class="px-12"
+  >
     <v-container class="pa-0">
       <v-toolbar color="transparent" flat>
-
-
-
-<div class="relative w-full max-w-[150px] aspect-square">
-  <a href="/" class="w-full h-full flex justify-center items-center">
-      <img class="w-10/12" src="/logo_ichen.svg" alt="Logo Werkhof Ichen" />
-  </a>
-</div>
+        <div class="relative w-full max-w-[150px] aspect-square">
+          <a href="/" class="w-full h-full flex justify-center items-center">
+            <img
+              class="w-10/12"
+              src="/logo_ichen.svg"
+              alt="Logo Werkhof Ichen"
+            />
+          </a>
+        </div>
 
         <v-spacer></v-spacer>
 
@@ -41,7 +50,6 @@
         <v-app-bar-nav-icon aria-label="Open Drawer" @click.stop="toggleDrawer">
           <v-icon size="50">mdi-menu</v-icon>
         </v-app-bar-nav-icon>
-
       </v-toolbar>
     </v-container>
   </v-app-bar>

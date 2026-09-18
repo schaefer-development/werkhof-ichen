@@ -1,7 +1,8 @@
 require('dotenv').config()
 
 const HYGRAPH_HOST = process.env.HYGRAPH_HOST
-const FUNCTIONS_HOST = process.env.FUNCTIONS_HOST || 'http://localhost:9999/.netlify/functions'
+const FUNCTIONS_HOST =
+  process.env.FUNCTIONS_HOST || 'http://localhost:9999/.netlify/functions'
 const clientUrl = process.env.URL || 'http://localhost:3000'
 const isDev = process.env.NODE_ENV !== 'production'
 
@@ -22,8 +23,8 @@ const description =
   'werkhof ichen Lohmar: Nähkurse für Kinder/ Jugendliche/ Erwachsene, Geburtstag-Näh-Events, großzügiges Platzangebot, Anfertigungen, Kinderlederhosen'
 
 export default {
-  generate:{
-    interval: 200
+  generate: {
+    interval: 200,
   },
   /*
    ** Nuxt target
@@ -64,7 +65,12 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ['@nuxtjs/vuetify', '@nuxtjs/netlify-files', 'nuxt-graphql-request', '@nuxt/postcss8'],
+  buildModules: [
+    '@nuxtjs/vuetify',
+    '@nuxtjs/netlify-files',
+    'nuxt-graphql-request',
+    '@nuxt/postcss8',
+  ],
   /*
    ** Nuxt.js modules
    */
