@@ -65,20 +65,24 @@
           ></div>
 
           <div class="event_detail ichen_brown--text font-weight-bold">
-            {{ veranstaltung.preis }} € (plus Materialkosten)<br>
-            Maximale Teilnehmeranzahl: {{ veranstaltung.maximaleAnzahlTeilnehmer }}
+            {{ veranstaltung.preis }} € (plus Materialkosten)<br />
+            Maximale Teilnehmeranzahl:
+            {{ veranstaltung.maximaleAnzahlTeilnehmer }}
           </div>
 
-
-          <div class="w-full max-w-[400px] h-12 py-12 mx-auto flex items-center justify-center">
-                <img src="/sewing_needle_brown.svg" alt="Nähnadel" />
-              </div>
+          <div
+            class="w-full max-w-[400px] h-12 py-12 mx-auto flex items-center justify-center"
+          >
+            <img src="/sewing_needle_brown.svg" alt="Nähnadel" />
+          </div>
           <p v-html="veranstaltung.beschreibung.html"></p>
 
           <!-- -->
-          <div class="w-full max-w-[400px] h-12 py-12 mx-auto flex items-center justify-center">
-                <img src="/sewing_needle_brown.svg" alt="Nähnadel" />
-              </div>
+          <div
+            class="w-full max-w-[400px] h-12 py-12 mx-auto flex items-center justify-center"
+          >
+            <img src="/sewing_needle_brown.svg" alt="Nähnadel" />
+          </div>
           <p class="pt-6 pb-3 ma-0">
             <template v-if="available">
               <strong class="ichen_green--text">
@@ -159,7 +163,10 @@
             </template>
           </v-checkbox>
           <client-only>
-            <vue-hcaptcha :sitekey="HCAPTCHA_SITEKEY" @verify="verify"></vue-hcaptcha>
+            <vue-hcaptcha
+              :sitekey="HCAPTCHA_SITEKEY"
+              @verify="verify"
+            ></vue-hcaptcha>
           </client-only>
           <v-alert text type="info" class="font-weight-bold mt-4 mb-10">
             <template v-if="available"
@@ -200,10 +207,11 @@
 </template>
 
 <script>
-import VueHcaptcha from '@hcaptcha/vue-hcaptcha';
+import VueHcaptcha from '@hcaptcha/vue-hcaptcha'
 import isAvailable from '~/helpers/isAvailable.js'
-// eslint-disable-next-line no-useless-escape
-const emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+const emailRegExp =
+  // eslint-disable-next-line no-useless-escape
+  /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
 const HCAPTCHA_SITEKEY = process.env.NUXT_ENV_HCAPTCHA_SITEKEY
 

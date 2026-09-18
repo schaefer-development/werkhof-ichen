@@ -40,27 +40,29 @@
 </template>
 
 <script>
-import { gql } from 'nuxt-graphql-request';
+import { gql } from 'nuxt-graphql-request'
 export default {
   async asyncData({ $graphql, params }) {
     const query = gql`
       query bilderstrecke($id: ID!) {
-        bilderstrecke(where: {id: $id}) {
+        bilderstrecke(where: { id: $id }) {
           id
           titel
           bilder(first: 100) {
             id
             width
             url
-            thumbnail: url(transformation: {image: {resize: {width: 250}}})
-            small: url(transformation: {image: {resize: {width: 500}}})
-            medium: url(transformation: {image: {resize: {width: 750}}})
-            large: url(transformation: {image: {resize: {width: 1000}}})
+            thumbnail: url(
+              transformation: { image: { resize: { width: 250 } } }
+            )
+            small: url(transformation: { image: { resize: { width: 500 } } })
+            medium: url(transformation: { image: { resize: { width: 750 } } })
+            large: url(transformation: { image: { resize: { width: 1000 } } })
           }
         }
       }
     `
-    const { bilderstrecke } = await $graphql.default.request(query, params);
+    const { bilderstrecke } = await $graphql.default.request(query, params)
     return { bilderstrecke }
   },
   head() {

@@ -102,9 +102,11 @@
               nicht individuell gestaltet sind“, bekennt sie.
             </p>
           </v-card-text>
-          <div class="w-full max-w-[400px] h-12 py-12 mx-auto flex items-center justify-center">
-                <img src="/sewing_needle_brown.svg" alt="Nähnadel" />
-              </div>
+          <div
+            class="w-full max-w-[400px] h-12 py-12 mx-auto flex items-center justify-center"
+          >
+            <img src="/sewing_needle_brown.svg" alt="Nähnadel" />
+          </div>
           <v-card-text>
             <p class="text-uppercase pt-8">
               <strong>

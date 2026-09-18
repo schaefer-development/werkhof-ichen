@@ -23,13 +23,12 @@
             class="event_detail ichen_brown--text font-weight-bold pa-0"
             v-html="$md.render(terminabsprache.dauerUndPreis)"
           ></div>
-          <div class="w-full max-w-[400px] h-12 py-12 mx-auto flex items-center justify-center">
-                <img src="/sewing_needle_brown.svg" alt="Nähnadel" />
-              </div>
           <div
-            class="pb-3"
-            v-html="terminabsprache.beschreibung.html"
-          ></div>
+            class="w-full max-w-[400px] h-12 py-12 mx-auto flex items-center justify-center"
+          >
+            <img src="/sewing_needle_brown.svg" alt="Nähnadel" />
+          </div>
+          <div class="pb-3" v-html="terminabsprache.beschreibung.html"></div>
         </client-only>
 
         <v-alert text type="info" class="font-weight-bold">

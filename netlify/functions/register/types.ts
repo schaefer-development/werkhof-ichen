@@ -29,10 +29,9 @@ export type RegistrationPayload = {
   veranstaltung: Veranstaltung
 }
 
-
-export type GraphqlCreateAnmeldung =  {
-  "id": string,
-  "name": string
-  "updatedAt": string
+export type GraphqlCreateAnmeldung = {
+  id: string
+  name: string
+  updatedAt: string
   veranstaltung: Pick<Veranstaltung, 'id' | 'titel' | 'datum' | 'preis'>
 }

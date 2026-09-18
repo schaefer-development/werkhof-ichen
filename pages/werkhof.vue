@@ -39,7 +39,7 @@
               der Kursleiterin, sondern hat auch Gelegenheit zum produktiven
               Austausch mit Gleichgesinnten.
             </p>
-             <!--   <p>
+            <!--   <p>
               Hier kann sich jeder einzelne Teilnehmer so ausbreiten, daß selbst
               in „Coronazeiten“ mehr als der geforderte Abstand zum benachbarten
               Arbeitsplatz gewährleistet wird.
@@ -71,9 +71,11 @@
           >
 
           <v-card-text v-if="veranstaltungen">
-             <div class="w-full max-w-[400px] h-12 py-12 mx-auto flex items-center justify-center">
-                <img src="/sewing_needle_beige.svg" alt="Nähnadel" />
-              </div>
+            <div
+              class="w-full max-w-[400px] h-12 py-12 mx-auto flex items-center justify-center"
+            >
+              <img src="/sewing_needle_beige.svg" alt="Nähnadel" />
+            </div>
             <veranstaltung-short-list
               :veranstaltungen="veranstaltungen"
             ></veranstaltung-short-list>
@@ -96,7 +98,7 @@
 
 <script>
 import VeranstaltungShortList from '../components/VeranstaltungShortList.vue'
-import { gql } from 'nuxt-graphql-request';
+import { gql } from 'nuxt-graphql-request'
 
 export default {
   components: {
@@ -105,7 +107,11 @@ export default {
   async asyncData({ $graphql }) {
     const query = gql`
       query kommendeVeranstaltungen($today: DateTime) {
-        veranstaltungen(orderBy: datum_ASC, where: {datum_gt: $today}, first: 3) {
+        veranstaltungen(
+          orderBy: datum_ASC
+          where: { datum_gt: $today }
+          first: 3
+        ) {
           id
           titel
           datum
@@ -120,10 +126,12 @@ export default {
           vorschaubild {
             width
             url
-            thumbnail: url(transformation: {image: {resize: {width: 250}}})
-            small: url(transformation: {image: {resize: {width: 500}}})
-            medium: url(transformation: {image: {resize: {width: 750}}})
-            large: url(transformation: {image: {resize: {width: 1000}}})
+            thumbnail: url(
+              transformation: { image: { resize: { width: 250 } } }
+            )
+            small: url(transformation: { image: { resize: { width: 500 } } })
+            medium: url(transformation: { image: { resize: { width: 750 } } })
+            large: url(transformation: { image: { resize: { width: 1000 } } })
           }
           anmeldungen {
             id
@@ -132,7 +140,7 @@ export default {
       }
     `
     const today = new Date().toISOString()
-    const { veranstaltungen } = await $graphql.default.request(query, { today });
+    const { veranstaltungen } = await $graphql.default.request(query, { today })
     return { veranstaltungen }
   },
   head() {
