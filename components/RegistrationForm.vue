@@ -299,8 +299,22 @@ export default {
 </script>
 
 <style lang="scss">
-iframe div.interface-wrapper {
-  position: relative;
-  border: 1px solid red !important;
+.captcha-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+  padding: 16px 0;
+}
+
+/* Nur auf Mobilgeräten */
+@media (max-width: 600px) {
+  .captcha-wrapper {
+    padding: 24px 0;
+  }
+
+  form {
+    overflow: visible;
+  }
 }
 </style>
