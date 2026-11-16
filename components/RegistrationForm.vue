@@ -297,3 +297,10 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+iframe div.interface-wrapper {
+  position: relative;
+  border: 1px solid red !important;
+}
+</style>

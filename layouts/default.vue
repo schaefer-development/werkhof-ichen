@@ -4,7 +4,7 @@
     <drawer ref="drawer"></drawer>
     <header-component @toggleDrawer="toggleDrawer"></header-component>
 
-    <v-main class="pb-16 px-12">
+    <v-main class="pb-16 px-2">
       <nuxt />
     </v-main>
 
